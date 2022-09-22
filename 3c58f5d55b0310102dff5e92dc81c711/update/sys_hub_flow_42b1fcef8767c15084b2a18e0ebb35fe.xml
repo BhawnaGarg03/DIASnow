@@ -10,12 +10,12 @@
         <copied_from_name>LMN-OrderTask-Initiate-Billing</copied_from_name>
         <description>The Flow will trigger at the Order Task level and initiate the billing for each product order.</description>
         <internal_name>test_changebilling</internal_name>
-        <label_cache>[{"name":"Updated_1.current.order_line_item.product_specification.code","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Product Specification➛Code","reference":"","reference_display":"Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"code"},{"name":"Updated_1.current.order_line_item.order","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order","reference":"sn_csm_om_order","reference_display":"Order","type":"reference","base_type":"reference","parent_table_name":"sn_csm_om_order_line_item","column_name":"order"},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.__dont_treat_as_error__","label":"2 - LMN-SOM-Publish Message➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"907ff9ac-d17c-488c-9f11-573a2415aaa9"}},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.__action_status__","label":"2 - LMN-SOM-Publish Message➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"6841676e-ffaa-461f-b352-41d3cce7ca79"}},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.response","label":"2 - LMN-SOM-Publish Message➛Response","reference_display":"Response","type":"object","base_type":"object","attributes":{"sourceId":"74346140-0638-4d43-8658-9ffa68b6f19e","uiTypeLabel":"Object","co_type_name":"FDcbc19a55e76c9950831c06325326407e","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"2ea8f476-65f3-41b1-9519-d0723b3ec602","uiType":"object","uiUniqueId":"eb70be77-d495-4fe6-8f32-643f1b765b3e"}},{"name":"Updated_1.current.product_specification.product_code","label":"Trigger - Record Updated➛Product Order Record➛Product Specification (Deprecated)➛Product Code","reference":"","reference_display":"Product Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"product_code"},{"name":"Updated_1.current.order_line_item.order.external_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"external_id"},{"name":"Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.external_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_id"},{"name":"Updated_1.current.version","label":"Trigger - Record Updated➛Product Order Record➛Version","reference":"","reference_display":"Version","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"version"},{"name":"Updated_1.current.order_line_item.order.order_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛Customer Order","reference":"","reference_display":"Customer Order","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"order_id"},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.__dont_treat_as_error__","label":"2 - Publish Message➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.__action_status__","label":"2 - Publish Message➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.response","label":"2 - Publish Message➛Response","reference_display":"Response","type":"object","base_type":"object","attributes":{"sourceId":"74346140-0638-4d43-8658-9ffa68b6f19e","uiTypeLabel":"Object","co_type_name":"FD5de273ea58f020100848dfa711887d0a","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"2ea8f476-65f3-41b1-9519-d0723b3ec602","uiType":"object","uiUniqueId":"eb70be77-d495-4fe6-8f32-643f1b765b3e"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.responsearr","label":"1 - LMN-Kafka-Msg-OrderStartBilling➛responseArr","reference_display":"responseArr","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"502f66b8-2573-4b38-be15-f9e1d40e619b"}},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item","reference":"sn_csm_om_order_line_item","reference_display":"Order Line Item","type":"reference","base_type":"reference","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"order_line_item"},{"name":"Updated_1.current.account.u_billing_account_number","label":"Trigger - Record Updated➛Product Order Record➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.external_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_id"},{"name":"Created_1.current.characteristics","label":"Trigger - Record Created➛Order Task Record➛Characteristics","reference":"","reference_display":"Characteristics","type":"glide_var","base_type":"glide_var","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"characteristics"},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.__action_status__","label":"1 - LMN-Kafka-Msg-OrderStartBilling➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"106d033f-db92-4c25-8243-4f69067ff7d4"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.__dont_treat_as_error__","label":"1 - LMN-Kafka-Msg-OrderStartBilling➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"98781492-ac5c-4c91-b0bb-78475c0610c3"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.orderpayload","label":"1 - LMN-Kafka-Msg-OrderStartBilling➛orderPayload","reference_display":"orderPayload","type":"array.object","base_type":"array.object","attributes":{"sourceId":"356856c6-f3ad-492d-86b6-17d6f83f8228","pwd2droppable":"true","child_name":"prodorderobj_child0","uiUniqueId":"cb1d6723-e086-4d08-9b17-173164677e1a","uiTypeLabel":"Array.Object","co_type_name":"FD9be5d62696974dd0b2be67413f64bbcd","child_label":"prodorderobj_child0","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"71aafb8a-a423-4e34-b954-17dccd33b5bc","uiType":"array.object","child_type":"object","child_uiUniqueId":"7c8b4ef3-bae4-413e-8fff-71b3d82d723c"}},{"name":"Created_1.current.order_line_item.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.order.external_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"external_id"},{"name":"Created_1.current.version","label":"Trigger - Record Created➛Order Task Record➛Version","reference":"","reference_display":"Version","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"version"},{"name":"Created_1.current.order_line_item.order_line_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Customer Order Line","reference":"","reference_display":"Customer Order Line","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"order_line_id"},{"name":"Created_1.current.correlation_id","label":"Trigger - Record Created➛Order Task Record➛Correlation ID","reference":"","reference_display":"Correlation ID","type":"string","base_type":"string","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"correlation_id"},{"name":"Created_1.current.order_line_item.order.order_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Customer Order","reference":"","reference_display":"Customer Order","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"order_id"},{"name":"Created_1.current.order_line_item.product_specification.code","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Product Specification➛Code","reference":"","reference_display":"Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"code"},{"name":"Created_1.current.order_line_item.sys_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created_1.current.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.order.account.u_billing_account_name","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Account➛Billing Account Name","reference":"","reference_display":"Billing Account Name","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_name"},{"name":"Created_1.current.order_line_item.order.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Updated_1.current.order","label":"Trigger - Record Updated➛Product Order Record➛Order","reference":"","reference_display":"Order","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"order"}]</label_cache>
+        <label_cache>[{"name":"ff905fb8-1f66-4714-99e6-76380ac52fc9.scheduled_end_date_time","label":"1 - Wait for a duration of time➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"ff905fb8-1f66-4714-99e6-76380ac52fc9.total_duration","label":"1 - Wait for a duration of time➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Updated_1.current.order_line_item.product_specification.code","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Product Specification➛Code","reference":"","reference_display":"Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"code"},{"name":"Updated_1.current.order_line_item.order","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order","reference":"sn_csm_om_order","reference_display":"Order","type":"reference","base_type":"reference","parent_table_name":"sn_csm_om_order_line_item","column_name":"order"},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.__dont_treat_as_error__","label":"3 - LMN-SOM-Publish Message➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"907ff9ac-d17c-488c-9f11-573a2415aaa9"}},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.__action_status__","label":"3 - LMN-SOM-Publish Message➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"6841676e-ffaa-461f-b352-41d3cce7ca79"}},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.response","label":"3 - LMN-SOM-Publish Message➛Response","reference_display":"Response","type":"object","base_type":"object","attributes":{"sourceId":"74346140-0638-4d43-8658-9ffa68b6f19e","uiTypeLabel":"Object","co_type_name":"FDcbc19a55e76c9950831c06325326407e","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"2ea8f476-65f3-41b1-9519-d0723b3ec602","uiType":"object","uiUniqueId":"eb70be77-d495-4fe6-8f32-643f1b765b3e"}},{"name":"Updated_1.current.product_specification.product_code","label":"Trigger - Record Updated➛Product Order Record➛Product Specification (Deprecated)➛Product Code","reference":"","reference_display":"Product Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"product_code"},{"name":"Updated_1.current.order_line_item.order.external_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"external_id"},{"name":"Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.external_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_id"},{"name":"Updated_1.current.version","label":"Trigger - Record Updated➛Product Order Record➛Version","reference":"","reference_display":"Version","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"version"},{"name":"Updated_1.current.order_line_item.order.order_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛Customer Order","reference":"","reference_display":"Customer Order","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"order_id"},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.__dont_treat_as_error__","label":"2 - Publish Message➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.__action_status__","label":"2 - Publish Message➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.response","label":"2 - Publish Message➛Response","reference_display":"Response","type":"object","base_type":"object","attributes":{"sourceId":"74346140-0638-4d43-8658-9ffa68b6f19e","uiTypeLabel":"Object","co_type_name":"FD5de273ea58f020100848dfa711887d0a","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"2ea8f476-65f3-41b1-9519-d0723b3ec602","uiType":"object","uiUniqueId":"eb70be77-d495-4fe6-8f32-643f1b765b3e"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.responsearr","label":"2 - LMN-Kafka-Msg-OrderStartBilling➛responseArr","reference_display":"responseArr","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"502f66b8-2573-4b38-be15-f9e1d40e619b"}},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item","reference":"sn_csm_om_order_line_item","reference_display":"Order Line Item","type":"reference","base_type":"reference","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"order_line_item"},{"name":"Updated_1.current.account.u_billing_account_number","label":"Trigger - Record Updated➛Product Order Record➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.external_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_id"},{"name":"Created_1.current.characteristics","label":"Trigger - Record Created➛Order Task Record➛Characteristics","reference":"","reference_display":"Characteristics","type":"glide_var","base_type":"glide_var","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"characteristics"},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.__action_status__","label":"2 - LMN-Kafka-Msg-OrderStartBilling➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"106d033f-db92-4c25-8243-4f69067ff7d4"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.__dont_treat_as_error__","label":"2 - LMN-Kafka-Msg-OrderStartBilling➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"98781492-ac5c-4c91-b0bb-78475c0610c3"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.orderpayload","label":"2 - LMN-Kafka-Msg-OrderStartBilling➛orderPayload","reference_display":"orderPayload","type":"array.object","base_type":"array.object","attributes":{"sourceId":"356856c6-f3ad-492d-86b6-17d6f83f8228","pwd2droppable":"true","child_name":"prodorderobj_child0","uiUniqueId":"cb1d6723-e086-4d08-9b17-173164677e1a","uiTypeLabel":"Array.Object","co_type_name":"FD9be5d62696974dd0b2be67413f64bbcd","child_label":"prodorderobj_child0","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"71aafb8a-a423-4e34-b954-17dccd33b5bc","uiType":"array.object","child_type":"object","child_uiUniqueId":"7c8b4ef3-bae4-413e-8fff-71b3d82d723c"}},{"name":"Created_1.current.order_line_item.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.order.external_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"external_id"},{"name":"Created_1.current.version","label":"Trigger - Record Created➛Order Task Record➛Version","reference":"","reference_display":"Version","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"version"},{"name":"Created_1.current.order_line_item.order_line_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Customer Order Line","reference":"","reference_display":"Customer Order Line","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"order_line_id"},{"name":"Created_1.current.correlation_id","label":"Trigger - Record Created➛Order Task Record➛Correlation ID","reference":"","reference_display":"Correlation ID","type":"string","base_type":"string","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"correlation_id"},{"name":"Created_1.current.order_line_item.order.order_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Customer Order","reference":"","reference_display":"Customer Order","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"order_id"},{"name":"Created_1.current.order_line_item.product_specification.code","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Product Specification➛Code","reference":"","reference_display":"Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"code"},{"name":"Created_1.current.order_line_item.sys_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created_1.current.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.order.account.u_billing_account_name","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Account➛Billing Account Name","reference":"","reference_display":"Billing Account Name","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_name"},{"name":"Created_1.current.order_line_item.order.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Updated_1.current.order","label":"Trigger - Record Updated➛Product Order Record➛Order","reference":"","reference_display":"Order","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"order"}]</label_cache>
         <master_snapshot>e22334a387a7c15084b2a18e0ebb354f</master_snapshot>
         <name>LMN-OrderTask-ChangeBilling</name>
         <natlang/>
         <outputs/>
-        <remote_trigger_id>70f98ce51be99150b7b3edf1b24bcb3d</remote_trigger_id>
+        <remote_trigger_id>2bc2816387b19d10b25aa8ec0ebb3567</remote_trigger_id>
         <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
@@ -28,7 +28,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>42b1fcef8767c15084b2a18e0ebb35fe</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name>LMN-OrderTask-ChangeBilling</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
@@ -36,7 +36,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_flow_42b1fcef8767c15084b2a18e0ebb35fe</sys_update_name>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:46</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:36:56</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=42b1fcef8767c15084b2a18e0ebb35fe"/>
@@ -58,42 +58,42 @@
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
         <sys_created_by>AD12076</sys_created_by>
-        <sys_created_on>2022-08-25 22:02:46</sys_created_on>
+        <sys_created_on>2022-09-13 17:34:43</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>70f98ce51be99150b7b3edf1b24bcb3d</sys_id>
+        <sys_id>2bc2816387b19d10b25aa8ec0ebb3567</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_overrides/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:46</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:43</sys_updated_on>
         <table>sn_ind_tmt_orm_product_order</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
-        <data>{"table":"sys_trigger_runner_mapping","id":"3cf98ce51be99150b7b3edf1b24bcb3d","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <data>{"table":"sys_trigger_runner_mapping","id":"27c2816387b19d10b25aa8ec0ebb3568","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
         <identifier>42b1fcef8767c15084b2a18e0ebb35fe</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>AD12076</sys_created_by>
-        <sys_created_on>2022-08-25 22:02:46</sys_created_on>
-        <sys_id>3cf98ce51be99150b7b3edf1b24bcb3d</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_created_on>2022-09-13 17:34:43</sys_created_on>
+        <sys_id>27c2816387b19d10b25aa8ec0ebb3568</sys_id>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:46</sys_updated_on>
-        <trigger display_value="">70f98ce51be99150b7b3edf1b24bcb3d</trigger>
+        <sys_updated_on>2022-09-13 17:36:56</sys_updated_on>
+        <trigger display_value="">2bc2816387b19d10b25aa8ec0ebb3567</trigger>
     </sys_trigger_runner_mapping>
     <sys_json_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
-        <document_id>3cf98ce51be99150b7b3edf1b24bcb3d</document_id>
+        <document_id>27c2816387b19d10b25aa8ec0ebb3568</document_id>
         <field>trigger_runner</field>
         <length>144</length>
         <position>0</position>
         <source_table>sys_trigger_runner_mapping</source_table>
         <sys_created_by>AD12076</sys_created_by>
-        <sys_created_on>2022-08-25 22:02:46</sys_created_on>
-        <sys_id>34f98ce51be99150b7b3edf1b24bcb3e</sys_id>
+        <sys_created_on>2022-09-13 17:34:43</sys_created_on>
+        <sys_id>ebc2816387b19d10b25aa8ec0ebb3581</sys_id>
     </sys_json_chunk>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=42b1fcef8767c15084b2a18e0ebb35fe^sys_idNOT IN3cf98ce51be99150b7b3edf1b24bcb3d"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=42b1fcef8767c15084b2a18e0ebb35fe^sys_idNOT IN27c2816387b19d10b25aa8ec0ebb3568"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=42b1fcef8767c15084b2a18e0ebb35fe^sys_idNOT IN85a2b46387a7c15084b2a18e0ebb3528"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment/>
@@ -107,7 +107,7 @@
         <sys_mod_count>41</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:46</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:44</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -176,7 +176,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD98f94ce537e99150e8dfa42d4d4f584d,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD92c2016326b19d1011cf6aac3a7d19d1,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -241,7 +241,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:46</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:44</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -322,7 +322,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:46</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:43</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -403,7 +403,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:46</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:44</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -426,7 +426,7 @@
         <comment/>
         <display_text/>
         <flow display_value="LMN-OrderTask-ChangeBilling">42b1fcef8767c15084b2a18e0ebb35fe</flow>
-        <order>2</order>
+        <order>3</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>AD12076</sys_created_by>
@@ -435,7 +435,7 @@
         <sys_mod_count>80</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:46</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:44</sys_updated_on>
         <ui_id>6fd71fe7-3cfc-4947-a9a5-6c48ed746717</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=585a4fe547a89d50fec76621e36d4393"/>
@@ -461,10 +461,10 @@
         <sys_created_by>AD12076</sys_created_by>
         <sys_created_on>2022-07-07 19:00:25</sys_created_on>
         <sys_id>dc5a4fe547a89d50fec76621e36d4396</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:36</sys_updated_on>
-        <value>DDC.PROD.BILLINGORDERHANDLER.BILLINGANDRATING.BILLING.SERVICENOWPRODUCTORDER.COMMAND</value>
+        <sys_updated_on>2022-07-07 19:00:25</sys_updated_on>
+        <value>DDC.TEST2.BILLINGORDERHANDLER.BILLINGANDRATING.BILLING.SERVICENOWPRODUCTORDER.COMMAND</value>
         <variable display_value="Topic">e2c15a55876c995099d253d73cbb35f8</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=585a4fe547a89d50fec76621e36d4393"/>
@@ -486,9 +486,9 @@
         <sys_created_by>AD12076</sys_created_by>
         <sys_created_on>2022-07-07 19:00:25</sys_created_on>
         <sys_id>905a4fe547a89d50fec76621e36d4396</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-17 03:28:25</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:22</sys_updated_on>
         <table>var__m_sys_hub_action_input_e2c15a55876c995099d253d73cbb35f2</table>
         <value>{"version":"1.0","complexObject":{"name$":"FDaec15a555a6c99501904ca8019f03cf5","$COCollectionField":[{"value":{"$cv":{"$c":"java.lang.String","$v":""}},"key":{"$cv":{"$c":"java.lang.String","$v":""}}}]},"complexObjectSchema":{"FlowDesigner:FDaec15a555a6c99501904ca8019f03cf5":{"$COCollectionField":[{"Messages_child0":{"value":"String","value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].value\\\":\\\"{{1674b43a-47da-4375-af79-bf62be0cd8f8.responsearr}}\\\"}\",\"default_value\":\"\",\"label\":\"Value\",\"mandatory\":\"true\",\"order\":\"2\",\"max_length\":\"0\"}"},"key":"String","key.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].key\\\":\\\"{{Updated_1.current.order_line_item.order.order_id}}\\\"}\",\"default_value\":\"\",\"label\":\"Key\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Messages\",\"mandatory\":\"false\",\"child_name\":\"Messages_child0\",\"uiUniqueId\":\"165ec4bb-c28f-4295-9fe4-08df2917300d\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDaec15a555a6c99501904ca8019f03cf5\",\"child_label\":\"Messages_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"d90b3ece-696b-41e7-bc4b-e692de81d76e\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDaec15a555a6c99501904ca8019f03cf5.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Messages\",\"mandatory\":\"false\",\"child_name\":\"Messages_child0\",\"uiUniqueId\":\"165ec4bb-c28f-4295-9fe4-08df2917300d\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDaec15a555a6c99501904ca8019f03cf5\",\"child_label\":\"Messages_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"d90b3ece-696b-41e7-bc4b-e692de81d76e\"}"}},"serializationFormat":"JSON"}</value>
     </sys_element_mapping>
@@ -514,7 +514,7 @@
         <comment/>
         <display_text/>
         <flow display_value="LMN-OrderTask-ChangeBilling">42b1fcef8767c15084b2a18e0ebb35fe</flow>
-        <order>1</order>
+        <order>2</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>AD12076</sys_created_by>
@@ -523,7 +523,7 @@
         <sys_mod_count>118</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:46</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:44</sys_updated_on>
         <ui_id>1674b43a-47da-4375-af79-bf62be0cd8f8</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=96b1302387a7c15084b2a18e0ebb351f"/>
@@ -535,10 +535,10 @@
         <sys_created_by>AD12076</sys_created_by>
         <sys_created_on>2022-05-24 19:58:49</sys_created_on>
         <sys_id>1eb1302387a7c15084b2a18e0ebb3524</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:36</sys_updated_on>
-        <value>DDC.PROD.BILLINGORDERHANDLER.BILLINGANDRATING.BILLING.SERVICENOWPRODUCTORDER.COMMAND</value>
+        <sys_updated_on>2022-07-07 19:00:25</sys_updated_on>
+        <value>DDC.TEST2.BILLINGORDERHANDLER.BILLINGANDRATING.BILLING.SERVICENOWPRODUCTORDER.COMMAND</value>
         <variable display_value="messageName">07e5d62687974dd025a20edc0ebb3538</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -716,7 +716,68 @@
     </sys_hub_input_scripts>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=96b1302387a7c15084b2a18e0ebb351f"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=42b1fcef8767c15084b2a18e0ebb35fe"/>
-    <sys_hub_flow_logic action="delete_multiple" query="flow=42b1fcef8767c15084b2a18e0ebb35fe"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=42b1fcef8767c15084b2a18e0ebb35fe^sys_idNOT IN0eb24d2387b19d10b25aa8ec0ebb355d"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">8eb24d2387b19d10b25aa8ec0ebb355c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="LMN-OrderTask-ChangeBilling">42b1fcef8767c15084b2a18e0ebb35fe</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>AD12076</sys_created_by>
+        <sys_created_on>2022-09-13 17:34:21</sys_created_on>
+        <sys_id>0eb24d2387b19d10b25aa8ec0ebb355d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-09-13 17:34:44</sys_updated_on>
+        <ui_id>ff905fb8-1f66-4714-99e6-76380ac52fc9</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=0eb24d2387b19d10b25aa8ec0ebb355d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>0eb24d2387b19d10b25aa8ec0ebb355d</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AD12076</sys_created_by>
+        <sys_created_on>2022-09-13 17:34:21</sys_created_on>
+        <sys_id>5eb24d2387b19d10b25aa8ec0ebb3564</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-09-13 17:34:21</sys_updated_on>
+        <value>1970-01-01 00:02:00</value>
+        <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>0eb24d2387b19d10b25aa8ec0ebb355d</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AD12076</sys_created_by>
+        <sys_created_on>2022-09-13 17:34:21</sys_created_on>
+        <sys_id>92b24d2387b19d10b25aa8ec0ebb3564</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-09-13 17:34:21</sys_updated_on>
+        <value/>
+        <variable display_value="Timer relative duration operator">dca4105473031300b61e66476bf6a726</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e^id=0eb24d2387b19d10b25aa8ec0ebb355d"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=0eb24d2387b19d10b25aa8ec0ebb355d"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=0eb24d2387b19d10b25aa8ec0ebb355d"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=42b1fcef8767c15084b2a18e0ebb35fe"/>
     <sys_hub_flow_variable action="delete_multiple" query="model=42b1fcef8767c15084b2a18e0ebb35fe"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_42b1fcef8767c15084b2a18e0ebb35fe^sys_idNOT IN4da2b46387a7c15084b2a18e0ebb3521,96b1302387a7c15084b2a18e0ebb350d,deb1302387a7c15084b2a18e0ebb3510"/>
@@ -807,8 +868,8 @@
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:46</sys_updated_on>
-        <trigger display_value="">70f98ce51be99150b7b3edf1b24bcb3d</trigger>
+        <sys_updated_on>2022-09-13 17:34:43</sys_updated_on>
+        <trigger display_value="">2bc2816387b19d10b25aa8ec0ebb3567</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=42b1fcef8767c15084b2a18e0ebb35fe"/>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
@@ -822,7 +883,7 @@
         <copied_from_name/>
         <description>The Flow will trigger at the Order Task level and initiate the billing for each product order.</description>
         <internal_name>test_changebilling</internal_name>
-        <label_cache>[{"name":"Updated_1.current.order_line_item.product_specification.code","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Product Specification➛Code","reference":"","reference_display":"Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"code"},{"name":"Updated_1.current.order_line_item.order","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order","reference":"sn_csm_om_order","reference_display":"Order","type":"reference","base_type":"reference","parent_table_name":"sn_csm_om_order_line_item","column_name":"order"},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.__dont_treat_as_error__","label":"2 - LMN-SOM-Publish Message➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"907ff9ac-d17c-488c-9f11-573a2415aaa9"}},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.__action_status__","label":"2 - LMN-SOM-Publish Message➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"6841676e-ffaa-461f-b352-41d3cce7ca79"}},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.response","label":"2 - LMN-SOM-Publish Message➛Response","reference_display":"Response","type":"object","base_type":"object","attributes":{"sourceId":"74346140-0638-4d43-8658-9ffa68b6f19e","uiTypeLabel":"Object","co_type_name":"FDcbc19a55e76c9950831c06325326407e","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"2ea8f476-65f3-41b1-9519-d0723b3ec602","uiType":"object","uiUniqueId":"eb70be77-d495-4fe6-8f32-643f1b765b3e"}},{"name":"Updated_1.current.product_specification.product_code","label":"Trigger - Record Updated➛Product Order Record➛Product Specification (Deprecated)➛Product Code","reference":"","reference_display":"Product Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"product_code"},{"name":"Updated_1.current.order_line_item.order.external_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"external_id"},{"name":"Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.external_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_id"},{"name":"Updated_1.current.version","label":"Trigger - Record Updated➛Product Order Record➛Version","reference":"","reference_display":"Version","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"version"},{"name":"Updated_1.current.order_line_item.order.order_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛Customer Order","reference":"","reference_display":"Customer Order","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"order_id"},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.__dont_treat_as_error__","label":"2 - Publish Message➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.__action_status__","label":"2 - Publish Message➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.response","label":"2 - Publish Message➛Response","reference_display":"Response","type":"object","base_type":"object","attributes":{"sourceId":"74346140-0638-4d43-8658-9ffa68b6f19e","uiTypeLabel":"Object","co_type_name":"FD5de273ea58f020100848dfa711887d0a","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"2ea8f476-65f3-41b1-9519-d0723b3ec602","uiType":"object","uiUniqueId":"eb70be77-d495-4fe6-8f32-643f1b765b3e"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.responsearr","label":"1 - LMN-Kafka-Msg-OrderStartBilling➛responseArr","reference_display":"responseArr","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"502f66b8-2573-4b38-be15-f9e1d40e619b"}},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item","reference":"sn_csm_om_order_line_item","reference_display":"Order Line Item","type":"reference","base_type":"reference","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"order_line_item"},{"name":"Updated_1.current.account.u_billing_account_number","label":"Trigger - Record Updated➛Product Order Record➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.external_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_id"},{"name":"Created_1.current.characteristics","label":"Trigger - Record Created➛Order Task Record➛Characteristics","reference":"","reference_display":"Characteristics","type":"glide_var","base_type":"glide_var","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"characteristics"},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.__action_status__","label":"1 - LMN-Kafka-Msg-OrderStartBilling➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"106d033f-db92-4c25-8243-4f69067ff7d4"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.__dont_treat_as_error__","label":"1 - LMN-Kafka-Msg-OrderStartBilling➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"98781492-ac5c-4c91-b0bb-78475c0610c3"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.orderpayload","label":"1 - LMN-Kafka-Msg-OrderStartBilling➛orderPayload","reference_display":"orderPayload","type":"array.object","base_type":"array.object","attributes":{"sourceId":"356856c6-f3ad-492d-86b6-17d6f83f8228","pwd2droppable":"true","child_name":"prodorderobj_child0","uiUniqueId":"cb1d6723-e086-4d08-9b17-173164677e1a","uiTypeLabel":"Array.Object","co_type_name":"FD9be5d62696974dd0b2be67413f64bbcd","child_label":"prodorderobj_child0","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"71aafb8a-a423-4e34-b954-17dccd33b5bc","uiType":"array.object","child_type":"object","child_uiUniqueId":"7c8b4ef3-bae4-413e-8fff-71b3d82d723c"}},{"name":"Created_1.current.order_line_item.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.order.external_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"external_id"},{"name":"Created_1.current.version","label":"Trigger - Record Created➛Order Task Record➛Version","reference":"","reference_display":"Version","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"version"},{"name":"Created_1.current.order_line_item.order_line_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Customer Order Line","reference":"","reference_display":"Customer Order Line","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"order_line_id"},{"name":"Created_1.current.correlation_id","label":"Trigger - Record Created➛Order Task Record➛Correlation ID","reference":"","reference_display":"Correlation ID","type":"string","base_type":"string","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"correlation_id"},{"name":"Created_1.current.order_line_item.order.order_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Customer Order","reference":"","reference_display":"Customer Order","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"order_id"},{"name":"Created_1.current.order_line_item.product_specification.code","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Product Specification➛Code","reference":"","reference_display":"Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"code"},{"name":"Created_1.current.order_line_item.sys_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created_1.current.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.order.account.u_billing_account_name","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Account➛Billing Account Name","reference":"","reference_display":"Billing Account Name","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_name"},{"name":"Created_1.current.order_line_item.order.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Updated_1.current.order","label":"Trigger - Record Updated➛Product Order Record➛Order","reference":"","reference_display":"Order","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"order"}]</label_cache>
+        <label_cache>[{"name":"ff905fb8-1f66-4714-99e6-76380ac52fc9.scheduled_end_date_time","label":"1 - Wait for a duration of time➛Scheduled End date/time","reference_display":"Scheduled End date/time","type":"glide_date_time","base_type":"glide_date_time","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"ff905fb8-1f66-4714-99e6-76380ac52fc9.total_duration","label":"1 - Wait for a duration of time➛Total Duration","reference_display":"Total Duration","type":"glide_duration","base_type":"glide_duration","attributes":{"pills_draggable_inside_block":"false","pills_draggable_outside_block":"true"}},{"name":"Updated_1.current.order_line_item.product_specification.code","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Product Specification➛Code","reference":"","reference_display":"Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"code"},{"name":"Updated_1.current.order_line_item.order","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order","reference":"sn_csm_om_order","reference_display":"Order","type":"reference","base_type":"reference","parent_table_name":"sn_csm_om_order_line_item","column_name":"order"},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.__dont_treat_as_error__","label":"3 - LMN-SOM-Publish Message➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"907ff9ac-d17c-488c-9f11-573a2415aaa9"}},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.__action_status__","label":"3 - LMN-SOM-Publish Message➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"6841676e-ffaa-461f-b352-41d3cce7ca79"}},{"name":"6fd71fe7-3cfc-4947-a9a5-6c48ed746717.response","label":"3 - LMN-SOM-Publish Message➛Response","reference_display":"Response","type":"object","base_type":"object","attributes":{"sourceId":"74346140-0638-4d43-8658-9ffa68b6f19e","uiTypeLabel":"Object","co_type_name":"FDcbc19a55e76c9950831c06325326407e","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"2ea8f476-65f3-41b1-9519-d0723b3ec602","uiType":"object","uiUniqueId":"eb70be77-d495-4fe6-8f32-643f1b765b3e"}},{"name":"Updated_1.current.product_specification.product_code","label":"Trigger - Record Updated➛Product Order Record➛Product Specification (Deprecated)➛Product Code","reference":"","reference_display":"Product Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"product_code"},{"name":"Updated_1.current.order_line_item.order.external_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"external_id"},{"name":"Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.external_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_id"},{"name":"Updated_1.current.version","label":"Trigger - Record Updated➛Product Order Record➛Version","reference":"","reference_display":"Version","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"version"},{"name":"Updated_1.current.order_line_item.order.order_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Order➛Customer Order","reference":"","reference_display":"Customer Order","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"order_id"},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.__dont_treat_as_error__","label":"2 - Publish Message➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.__action_status__","label":"2 - Publish Message➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FDACTIONSTATUS","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"c7550c12-7f40-4ed4-9e51-cb9b287f975e.response","label":"2 - Publish Message➛Response","reference_display":"Response","type":"object","base_type":"object","attributes":{"sourceId":"74346140-0638-4d43-8658-9ffa68b6f19e","uiTypeLabel":"Object","co_type_name":"FD5de273ea58f020100848dfa711887d0a","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"2ea8f476-65f3-41b1-9519-d0723b3ec602","uiType":"object","uiUniqueId":"eb70be77-d495-4fe6-8f32-643f1b765b3e"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.responsearr","label":"2 - LMN-Kafka-Msg-OrderStartBilling➛responseArr","reference_display":"responseArr","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"502f66b8-2573-4b38-be15-f9e1d40e619b"}},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item","label":"Trigger - Record Updated➛Product Order Record➛Order Line Item","reference":"sn_csm_om_order_line_item","reference_display":"Order Line Item","type":"reference","base_type":"reference","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"order_line_item"},{"name":"Updated_1.current.account.u_billing_account_number","label":"Trigger - Record Updated➛Product Order Record➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.external_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_id"},{"name":"Created_1.current.characteristics","label":"Trigger - Record Created➛Order Task Record➛Characteristics","reference":"","reference_display":"Characteristics","type":"glide_var","base_type":"glide_var","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"characteristics"},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.__action_status__","label":"2 - LMN-Kafka-Msg-OrderStartBilling➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"106d033f-db92-4c25-8243-4f69067ff7d4"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.__dont_treat_as_error__","label":"2 - LMN-Kafka-Msg-OrderStartBilling➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"98781492-ac5c-4c91-b0bb-78475c0610c3"}},{"name":"1674b43a-47da-4375-af79-bf62be0cd8f8.orderpayload","label":"2 - LMN-Kafka-Msg-OrderStartBilling➛orderPayload","reference_display":"orderPayload","type":"array.object","base_type":"array.object","attributes":{"sourceId":"356856c6-f3ad-492d-86b6-17d6f83f8228","pwd2droppable":"true","child_name":"prodorderobj_child0","uiUniqueId":"cb1d6723-e086-4d08-9b17-173164677e1a","uiTypeLabel":"Array.Object","co_type_name":"FD9be5d62696974dd0b2be67413f64bbcd","child_label":"prodorderobj_child0","child_type_label":"Object","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","sourceType":"step","sourceUiUniqueId":"71aafb8a-a423-4e34-b954-17dccd33b5bc","uiType":"array.object","child_type":"object","child_uiUniqueId":"7c8b4ef3-bae4-413e-8fff-71b3d82d723c"}},{"name":"Created_1.current.order_line_item.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.order.external_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛External ID","reference":"","reference_display":"External ID","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"external_id"},{"name":"Created_1.current.version","label":"Trigger - Record Created➛Order Task Record➛Version","reference":"","reference_display":"Version","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"version"},{"name":"Created_1.current.order_line_item.order_line_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Customer Order Line","reference":"","reference_display":"Customer Order Line","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"order_line_id"},{"name":"Created_1.current.correlation_id","label":"Trigger - Record Created➛Order Task Record➛Correlation ID","reference":"","reference_display":"Correlation ID","type":"string","base_type":"string","parent_table_name":"sn_ind_tmt_orm_order_task","column_name":"correlation_id"},{"name":"Created_1.current.order_line_item.order.order_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Customer Order","reference":"","reference_display":"Customer Order","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order","column_name":"order_id"},{"name":"Created_1.current.order_line_item.product_specification.code","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Product Specification➛Code","reference":"","reference_display":"Code","type":"string","base_type":"string","parent_table_name":"sn_prd_pm_product_specification","column_name":"code"},{"name":"Created_1.current.order_line_item.sys_id","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created_1.current.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Created_1.current.order_line_item.order.account.u_billing_account_name","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Account➛Billing Account Name","reference":"","reference_display":"Billing Account Name","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_name"},{"name":"Created_1.current.order_line_item.order.account.u_billing_account_number","label":"Trigger - Record Created➛Order Task Record➛Order Line Item➛Order➛Account➛Billing Account Number","reference":"","reference_display":"Billing Account Number","type":"string","base_type":"string","parent_table_name":"customer_account","column_name":"u_billing_account_number"},{"name":"Updated_1.current.order","label":"Trigger - Record Updated➛Product Order Record➛Order","reference":"","reference_display":"Order","type":"integer","base_type":"integer","parent_table_name":"sn_ind_tmt_orm_product_order","column_name":"order"}]</label_cache>
         <master>true</master>
         <name>LMN-OrderTask-ChangeBilling</name>
         <natlang/>
@@ -847,7 +908,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:43</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:39</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=e22334a387a7c15084b2a18e0ebb354f"/>
@@ -865,7 +926,7 @@
         <sys_mod_count>38</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:46</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:43</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -999,7 +1060,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:43</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:38</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1080,7 +1141,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:43</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:38</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1096,7 +1157,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD98f94ce537e99150e8dfa42d4d4f584d,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD92c2016326b19d1011cf6aac3a7d19d1,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -1161,7 +1222,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:43</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:38</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1184,7 +1245,7 @@
         <comment/>
         <display_text/>
         <flow display_value="LMN-OrderTask-ChangeBilling">e22334a387a7c15084b2a18e0ebb354f</flow>
-        <order>1</order>
+        <order>2</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>AD12076</sys_created_by>
@@ -1193,7 +1254,7 @@
         <sys_mod_count>50</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:43</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:39</sys_updated_on>
         <ui_id>1674b43a-47da-4375-af79-bf62be0cd8f8</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=762334a387a7c15084b2a18e0ebb3581"/>
@@ -1205,10 +1266,10 @@
         <sys_created_by>AD12076</sys_created_by>
         <sys_created_on>2022-05-24 20:05:08</sys_created_on>
         <sys_id>722334a387a7c15084b2a18e0ebb3585</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:43</sys_updated_on>
-        <value>DDC.PROD.BILLINGORDERHANDLER.BILLINGANDRATING.BILLING.SERVICENOWPRODUCTORDER.COMMAND</value>
+        <sys_updated_on>2022-07-07 19:00:35</sys_updated_on>
+        <value>DDC.TEST2.BILLINGORDERHANDLER.BILLINGANDRATING.BILLING.SERVICENOWPRODUCTORDER.COMMAND</value>
         <variable display_value="messageName">07e5d62687974dd025a20edc0ebb3538</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1381,7 +1442,7 @@
         <comment/>
         <display_text/>
         <flow display_value="LMN-OrderTask-ChangeBilling">e22334a387a7c15084b2a18e0ebb354f</flow>
-        <order>2</order>
+        <order>3</order>
         <parent_ui_id/>
         <sys_class_name>sys_hub_action_instance</sys_class_name>
         <sys_created_by>AD12076</sys_created_by>
@@ -1390,7 +1451,7 @@
         <sys_mod_count>36</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:43</sys_updated_on>
+        <sys_updated_on>2022-09-13 17:34:39</sys_updated_on>
         <ui_id>6fd71fe7-3cfc-4947-a9a5-6c48ed746717</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a25a032947a89d50fec76621e36d4319"/>
@@ -1402,10 +1463,10 @@
         <sys_created_by>AD12076</sys_created_by>
         <sys_created_on>2022-07-07 19:00:35</sys_created_on>
         <sys_id>b65a032947a89d50fec76621e36d431b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 22:02:43</sys_updated_on>
-        <value>DDC.PROD.BILLINGORDERHANDLER.BILLINGANDRATING.BILLING.SERVICENOWPRODUCTORDER.COMMAND</value>
+        <sys_updated_on>2022-07-07 19:00:35</sys_updated_on>
+        <value>DDC.TEST2.BILLINGORDERHANDLER.BILLINGANDRATING.BILLING.SERVICENOWPRODUCTORDER.COMMAND</value>
         <variable display_value="Topic">e2c15a55876c995099d253d73cbb35f8</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1462,7 +1523,68 @@
     <sys_hub_input_scripts action="delete_multiple" query="instance=a25a032947a89d50fec76621e36d4319"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=a25a032947a89d50fec76621e36d4319"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=e22334a387a7c15084b2a18e0ebb354f"/>
-    <sys_hub_flow_logic action="delete_multiple" query="flow=e22334a387a7c15084b2a18e0ebb354f"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=e22334a387a7c15084b2a18e0ebb354f^sys_idNOT INd2c2016387b19d10b25aa8ec0ebb35be"/>
+    <sys_hub_flow_logic action="INSERT_OR_UPDATE">
+        <block display_value="">8eb24d2387b19d10b25aa8ec0ebb355c</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <decision_table_inputs/>
+        <display_text/>
+        <extended_inputs/>
+        <flow display_value="LMN-OrderTask-ChangeBilling">e22334a387a7c15084b2a18e0ebb354f</flow>
+        <flow_variable/>
+        <flow_variables_assigned/>
+        <inputs/>
+        <logic_definition display_value="Wait for a duration of time">fdb2541473031300b61e66476bf6a70e</logic_definition>
+        <order>1</order>
+        <outputs_assigned/>
+        <outputs_to_assign/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic</sys_class_name>
+        <sys_created_by>AD12076</sys_created_by>
+        <sys_created_on>2022-09-13 17:34:38</sys_created_on>
+        <sys_id>d2c2016387b19d10b25aa8ec0ebb35be</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-09-13 17:34:39</sys_updated_on>
+        <ui_id>ff905fb8-1f66-4714-99e6-76380ac52fc9</ui_id>
+        <workflow_inputs/>
+        <workflow_reference/>
+    </sys_hub_flow_logic>
+    <sys_variable_value action="delete_multiple" query="document_key=d2c2016387b19d10b25aa8ec0ebb35be"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>d2c2016387b19d10b25aa8ec0ebb35be</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AD12076</sys_created_by>
+        <sys_created_on>2022-09-13 17:34:38</sys_created_on>
+        <sys_id>5ac2016387b19d10b25aa8ec0ebb35d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-09-13 17:34:38</sys_updated_on>
+        <value>1970-01-01 00:02:00</value>
+        <variable display_value="Duration">ef145c1473031300b61e66476bf6a7be</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_flow_logic</document>
+        <document_key>d2c2016387b19d10b25aa8ec0ebb35be</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AD12076</sys_created_by>
+        <sys_created_on>2022-09-13 17:34:38</sys_created_on>
+        <sys_id>96c2016387b19d10b25aa8ec0ebb35d0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-09-13 17:34:38</sys_updated_on>
+        <value/>
+        <variable display_value="Timer relative duration operator">dca4105473031300b61e66476bf6a726</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_logic_input_fdb2541473031300b61e66476bf6a70e^id=d2c2016387b19d10b25aa8ec0ebb35be"/>
+    <sys_hub_flow_logic_ext_input action="delete_multiple" query="model=d2c2016387b19d10b25aa8ec0ebb35be"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d2c2016387b19d10b25aa8ec0ebb35be"/>
     <sys_hub_pill_compound action="delete_multiple" query="attached_to=e22334a387a7c15084b2a18e0ebb354f"/>
     <sys_hub_flow_variable action="delete_multiple" query="model=e22334a387a7c15084b2a18e0ebb354f"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_e22334a387a7c15084b2a18e0ebb354f^sys_idNOT INb22334a387a7c15084b2a18e0ebb356f,b62334a387a7c15084b2a18e0ebb355e,be2334a387a7c15084b2a18e0ebb3566"/>
@@ -1541,6 +1663,6 @@
     <sys_hub_flow action="UPDATE">
         <sys_id>42b1fcef8767c15084b2a18e0ebb35fe</sys_id>
         <latest_snapshot>e22334a387a7c15084b2a18e0ebb354f</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch4a-06-21-2022_07-12-2022_1907.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch4b-07-19-2022_08-09-2022_1837.zip</compiler_build>
     </sys_hub_flow>
 </record_update>
