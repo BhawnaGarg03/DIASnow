@@ -24,12 +24,7 @@ function continueOK() {
         alert('Please fill mandatory fields.');
         return;
     }
-	else
-	if (!win_os < 0 || !mac_os < 0 || !linux_os < 0 ) {
-        alert('currency cannot be less than 0.');
-        return;
-    }
-      }
+	
 	
     var sec_prd = "";
 
@@ -68,35 +63,46 @@ function continueOK() {
     GlideDialogWindow.get().destroy();
 
 
+}
 
 function continueCancel() {
     //alert("Cancelled");
     GlideDialogWindow.get().destroy();
 }
 
-
 function sumTotalNoOfEndpoints(cntrl) {
     var windowsOS = document.getElementById('win_os').value;
+	if(windowsOS <0){
+		alert("No negative values allowed");
+		cntrl.value = '';
+	}
     if (windowsOS == '')
         windowsOS = 0;
     var macOS = document.getElementById('mac_os').value;
+	if(macOS <0){
+		alert("No negative values allowed");
+		cntrl.value = '';
+	}
     if (macOS == '')
         macOS = 0;
     var linuxOS = document.getElementById('linux_os').value;
+	if(linuxOS <0){
+		alert("No negative values allowed");
+		cntrl.value = '';
+	}
     if (linuxOS == '')
         linuxOS = 0;
     totalVal = parseInt(document.getElementById('total').value);
     var total = parseInt(windowsOS) + parseInt(macOS) + parseInt(linuxOS);
-	
-    if (total > totalVal);
-	else
-		if (total < totalVal);
-	{
+    if (total > totalVal) {
+        cntrl.value = '';
+        alert('Total Number of Endpoints should be distributed among different OS versions');
+    }
+if ((total < totalVal) &&  (windowsOS != '') && (macOS != '') && (linuxOS != '')) {
         cntrl.value = '';
         alert('Total Number of Endpoints should be distributed among different OS versions');
     }
 
-          
 }]]></client_script>
         <description/>
         <direct>false</direct>
@@ -259,13 +265,13 @@ padding:0px;
         <sys_created_by>AD11373</sys_created_by>
         <sys_created_on>2022-07-07 02:01:28</sys_created_on>
         <sys_id>dea06b5987e0155425a20edc0ebb35a9</sys_id>
-        <sys_mod_count>156</sys_mod_count>
+        <sys_mod_count>157</sys_mod_count>
         <sys_name>Update_Endpoints</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_ui_page_dea06b5987e0155425a20edc0ebb35a9</sys_update_name>
         <sys_updated_by>AD13765</sys_updated_by>
-        <sys_updated_on>2022-09-30 13:27:51</sys_updated_on>
+        <sys_updated_on>2022-10-10 13:18:30</sys_updated_on>
     </sys_ui_page>
 </record_update>
