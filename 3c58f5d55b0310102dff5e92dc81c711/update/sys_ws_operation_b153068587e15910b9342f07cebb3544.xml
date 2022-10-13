@@ -13,23 +13,32 @@
     gs.info("******* first query" + externalID);
     var order = '';
     var orderlineSysId = '';
-    var prdOrderGr = new GlideRecord('sn_ind_tmt_orm_order_line_item');
-    prdOrderGr.addEncodedQuery('external_id=' + externalID);
-    prdOrderGr.query();
-    gs.info("******* no of count" + prdOrderGr.getRowCount());
-    if (prdOrderGr.next()) {
-        prdOrderObj.setValue('orderlineSysID', prdOrderGr.getValue('sys_id'));
-        prdOrderObj.setValue('orderlineNumber', prdOrderGr.getDisplayValue('order_line_id'));
-        order = prdOrderGr.order;
-        orderlineSysId = prdOrderGr.sys_id;
-        var orderLineItemList = getProductOrderLineItem(orderlineSysId);
-        gs.info("******* orderline " + orderLineItemList);
-        if (orderLineItemList.length > 0)
-            prdOrderObj.setValue('productOrders', orderLineItemList);
+    var orderGR = new GlideRecord('sn_ind_tmt_orm_order');
+    orderGR.addQuery('external_id', externalID);
+    orderGR.query();
+    if (orderGR.next()) {
+        var prdOrderGr = new GlideRecord('sn_ind_tmt_orm_order_line_item');
+        prdOrderGr.addEncodedQuery('order=' + orderGR.sys_id);
+        prdOrderGr.query();
+        gs.info("******* no of count" + prdOrderGr.getRowCount());
+        while (prdOrderGr.next()) {
+            prdOrderObj.setValue('orderlineSysID', prdOrderGr.getValue('sys_id'));
+            prdOrderObj.setValue('orderlineNumber', prdOrderGr.getDisplayValue('order_line_id'));
+            order = prdOrderGr.order;
+            orderlineSysId = prdOrderGr.sys_id;
+            var orderLineItemList = getProductOrderLineItem(orderlineSysId);
+            gs.info("******* orderline " + orderLineItemList);
+            if (orderLineItemList.length > 0)
+                prdOrderObj.setValue('productOrders', orderLineItemList);
+        }
+		var tmfProductOrderGetAPIUtil = new TMFCommonOrderAPIUtil1();
+		var relatedParty = tmfProductOrderGetAPIUtil.getRelatedParty(orderGR);
+		if (relatedParty.length > 0)
+			prdOrderObj.setValue('relatedParty',relatedParty);
+        gs.info("*******JSON stringfy" + JSON.stringify(prdOrderObj));
+        response.setBody(prdOrderObj);
+        //return prdOrderObj;
     }
-    gs.info("*******JSON stringfy" + JSON.stringify(prdOrderObj));
-    response.setBody(prdOrderObj);
-    //return prdOrderObj;
 
     function getProductOrderLineItem(orderlineSysId) {
         var orderLineItemList = [];
@@ -197,14 +206,14 @@
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-08-24 17:39:43</sys_created_on>
         <sys_id>b153068587e15910b9342f07cebb3544</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>Get Product Characteristics</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_ws_operation_b153068587e15910b9342f07cebb3544</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-08-25 16:36:39</sys_updated_on>
+        <sys_updated_on>2022-09-22 15:17:32</sys_updated_on>
         <web_service_definition display_value="Product Order Open API">0249bdaa53b820102f18ddeeff7b12b3</web_service_definition>
         <web_service_version/>
     </sys_ws_operation>

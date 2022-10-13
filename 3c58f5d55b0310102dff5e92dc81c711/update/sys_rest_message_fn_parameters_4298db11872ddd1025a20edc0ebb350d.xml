@@ -13,7 +13,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_rest_message_fn_parameters_4298db11872ddd1025a20edc0ebb350d</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-09-01 16:28:26</sys_updated_on>
+        <sys_updated_on>2022-09-21 05:05:54</sys_updated_on>
         <type>string</type>
         <value>MEDR-1122</value>
     </sys_rest_message_fn_parameters>
