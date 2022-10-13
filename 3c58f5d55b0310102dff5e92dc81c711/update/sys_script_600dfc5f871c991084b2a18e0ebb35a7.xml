@@ -6,7 +6,7 @@
         <action_insert>false</action_insert>
         <action_query>false</action_query>
         <action_update>true</action_update>
-        <active>true</active>
+        <active>false</active>
         <add_message>false</add_message>
         <advanced>true</advanced>
         <change_fields>false</change_fields>
@@ -55,7 +55,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>600dfc5f871c991084b2a18e0ebb35a7</sys_id>
-        <sys_mod_count>23</sys_mod_count>
+        <sys_mod_count>24</sys_mod_count>
         <sys_name>IBM- Check characteristics</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
@@ -63,7 +63,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_600dfc5f871c991084b2a18e0ebb35a7</sys_update_name>
         <sys_updated_by>AD13765</sys_updated_by>
-        <sys_updated_on>2022-07-19 14:49:03</sys_updated_on>
+        <sys_updated_on>2022-08-31 16:47:13</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
