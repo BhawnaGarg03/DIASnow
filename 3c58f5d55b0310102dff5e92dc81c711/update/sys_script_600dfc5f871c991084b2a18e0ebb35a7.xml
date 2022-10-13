@@ -15,9 +15,8 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="sn_ind_tmt_orm_order_task">stateCHANGESTO5^short_description=MEDR Technical Data Gathering^order_line_item.product_offering=2646ca0487fbc15025a20edc0ebb3540^order_line_item.product_specification=5f2ef44787e7015084b2a18e0ebb35c8^EQ<item display_value="Closed Complete" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="5"/>
+        <filter_condition table="sn_ind_tmt_orm_order_task">stateCHANGESTO5^short_description=MEDR Technical Data Gathering^order_line_item.product_specification=5f2ef44787e7015084b2a18e0ebb35c8^EQ<item display_value="Closed Complete" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="5"/>
             <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="false" value="MEDR Technical Data Gathering"/>
-            <item display_table="sn_prd_pm_product_offering" display_value="Managed Endpoint Detection &amp; Response Offering" endquery="false" field="order_line_item.product_offering" goto="false" newquery="false" operator="=" or="false" value="2646ca0487fbc15025a20edc0ebb3540"/>
             <item display_table="sn_prd_pm_product_specification" display_value="Managed Endpoint Detection and Response" endquery="false" field="order_line_item.product_specification" goto="false" newquery="false" operator="=" or="false" value="5f2ef44787e7015084b2a18e0ebb35c8"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
@@ -49,10 +48,10 @@
             msg += characteristicName + ',';
             flag = true;
         }
-        if (characteristicName == 'Customer Domain Name' && characteristicValue != '') {
+        if (characteristicName == '' && characteristicValue != '') {
             other_security_prod = characteristicValue.indexOf('.com');
             if (other_security_prod < 0) {
-                other_security_prod_msg = 'Incorrect value in the Customer Domain Name characteristic. Please include .com in it';
+                other_security_prod_msg = '';
             }
         }
 
@@ -73,15 +72,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>600dfc5f871c991084b2a18e0ebb35a7</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_name>IBM-MEDR Make TDG Details Mandatory</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_600dfc5f871c991084b2a18e0ebb35a7</sys_update_name>
-        <sys_updated_by>AD20957</sys_updated_by>
-        <sys_updated_on>2022-09-12 20:23:20</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-09-29 17:30:29</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
