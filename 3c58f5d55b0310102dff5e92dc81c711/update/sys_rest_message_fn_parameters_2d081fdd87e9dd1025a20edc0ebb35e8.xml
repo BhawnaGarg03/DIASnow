@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
+    <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
+        <name>org_key</name>
+        <rest_message_function display_value="POSTDetails">709b8b54872dd910e10064ed0ebb3599</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-25 18:25:09</sys_created_on>
+        <sys_id>2d081fdd87e9dd1025a20edc0ebb35e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>org_key</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_rest_message_fn_parameters_2d081fdd87e9dd1025a20edc0ebb35e8</sys_update_name>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-25 18:25:09</sys_updated_on>
+        <type>string</type>
+        <value>7V6FQZ4V</value>
+    </sys_rest_message_fn_parameters>
+</record_update>

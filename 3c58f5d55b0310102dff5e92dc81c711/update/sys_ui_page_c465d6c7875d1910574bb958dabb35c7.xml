@@ -2,16 +2,23 @@
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
         <client_script><![CDATA[function sendDetails() {
-    alert("The provided information will be sending to SOAR, Thank you!");
+    var gdw = GlideDialogWindow.get();
+    var orderLine = gdw.getPreference("orderLine");
+	var orderTaskSysID = gdw.getPreference("orderTaskSysID");
+    var orgKey = gel('org_key').value;
+    var orgID = gel('org_id').value;
+    var apiKey = gel('api_key').value;
+    var apiID = gel('api_id').value;
+    var soarData = orderLine + ',' + orgKey + ',' + orgID + "," + apiKey + ',' + apiID+','+orderTaskSysID;
     var getAPIGEEToken = new GlideAjax('sn_ind_tmt_orm.SOARAPI');
-	getAPIGEEToken.addParam('sysparm_name', 'getAPIGEEToken'); //Method
-	//getAPIGEEToken.addParam('userId',user); //Parameters
-	getAPIGEEToken.getXMLAnswer(getResponse);
-	
-	function getResponse(response){
-		var parseResponse = JSON.parse(response);
-		alert(parseResponse.access_token);
-	}
+    getAPIGEEToken.addParam('sysparm_name', 'configTenant'); //Method
+    getAPIGEEToken.addParam('sysparm_soarData', soarData);
+    getAPIGEEToken.getXMLAnswer(getResponse);
+
+    function getResponse(response) {
+        //  var parseResponse = JSON.parse(response);
+        alert(response);
+    }
     GlideDialogWindow.get().destroy();
 }
 
@@ -62,27 +69,22 @@ padding:0px;
 	</style>
 	<g:evaluate var="jvar_totalCount">
 		   var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + '';
-
-				var grCharacteristic = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
-               grCharacteristic.addQuery('order_line_item', orderLineItem);
-		       grCharacteristic.addQuery('characteristic', 'afbfca4e8730555099d253d73cbb3567');
-               grCharacteristic.orderBy('sys_created_on');
-               grCharacteristic.query();
-			   
+		var grCharacteristic = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+        grCharacteristic.addQuery('order_line_item', orderLineItem);
+		grCharacteristic.addQuery('characteristic', 'afbfca4e8730555099d253d73cbb3567');
+        grCharacteristic.orderBy('sys_created_on');
+        grCharacteristic.query();
 		var totalCount =0;
 		if(grCharacteristic.next())
 		totalCount= grCharacteristic.characteristic_option_value;
 		totalCount; 
-		
-
-
        </g:evaluate>
      <g:ui_form>
 	<table width="100%">
 		<tr>
                    <td style="width:25%">
 			<g:form_label>
-			Org ID : 
+			ORG ID : 
 			</g:form_label>
                    </td>
 		    <td style="width:60%">
@@ -92,11 +94,11 @@ padding:0px;
 				<tr>
                    <td style="width:25%">
 			<g:form_label>
-			ORG key: 
+			ORG Key : 
 			</g:form_label>
                    </td>
 		    <td style="width:60%">
-            <input type="text"  aria-label="ORG Key" name="api_key" id="api_key"  value="${jvar_orgKEY}"/>
+            <input type="text"  aria-label="ORG Key" name="org_key" id="org_key"  value="${jvar_orgKEY}"/>
                     </td>
                 </tr>
 				<tr>
@@ -116,16 +118,18 @@ padding:0px;
 			</g:form_label>
                    </td>
 		    <td style="width:60%">
-            <input type="text"  aria-label="API Key" name="api_key" id="org_id"  value="${jvar_apiKEY}"/>
+            <input type="text"  aria-label="API Key" name="api_key" id="api_key"  value="${jvar_apiKEY}"/>
                     </td>
                 </tr>
-		
-		<tr>
+		<!--</table>
+		 <table width="100%" style="align:center"> -->
+		 	<tr>
+				<td width="25%"/>
                      <td>
-                       <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return sendDetails()" ok_type="button" ok_text="${gs.getMessage('Save')}" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
+                       <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return sendDetails()" ok_type="button" ok_text="Submit to SOAR" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
                     </td>
                </tr>
-	</table>
+		 </table>
 	</g:ui_form>
 </j:jelly>]]></html>
         <name>details_submit_to_soar</name>
@@ -134,13 +138,13 @@ padding:0px;
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-08-18 13:54:53</sys_created_on>
         <sys_id>c465d6c7875d1910574bb958dabb35c7</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_name>details_submit_to_soar</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_ui_page_c465d6c7875d1910574bb958dabb35c7</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-08-23 09:03:29</sys_updated_on>
+        <sys_updated_on>2022-08-26 09:57:04</sys_updated_on>
     </sys_ui_page>
 </record_update>
