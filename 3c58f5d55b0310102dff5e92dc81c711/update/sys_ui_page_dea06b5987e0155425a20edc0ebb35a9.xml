@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[/*function validateDNS(cntrl) {
+	var val= cntrl.value;
+    var dns = val.endsWith('.com') || val.endsWith('.org') || val.endsWith('.net') || val.endsWith('.gov');
+    if (dns == false) {
+		cntrl.value='';
+        alert('Incorrect format in cust domain name field');
+    }
+}
+*/
+
+function continueOK() {
+    //alert("OK clicked");
+    var gdw = GlideDialogWindow.get();
+    var orderLine = gdw.getPreference('orderLine');
+    var win_os = gel('win_os').value;
+    var mac_os = gel('mac_os').value;
+    var linux_os = gel('linux_os').value;
+    var dns_domain = gel('dns_domain').value;
+
+    var sec_prd = "";
+
+    sec_prd += document.getElementById("Avast").value == 'true' ? "Avast," : "";
+    sec_prd += document.getElementById("McAffeee").value == 'true' ? "McAfee," : "";
+    sec_prd += document.getElementById("Symantec").value == 'true' ? "Symantec," : "";
+    sec_prd += document.getElementById("AVG").value == 'true' ? "AVG," : "";
+    sec_prd += document.getElementById("Other").value == 'true' ? "Other," : "";
+
+   // alert(sec_prd);
+
+    var gr = new GlideRecord("sn_ind_tmt_orm_order_characteristic_value");
+    gr.addQuery('order_line_item', orderLine);
+    gr.query();
+    while (gr.next()) {
+        if (gr.characteristic == "28d4bb07871c5d1025a20edc0ebb35e7") {
+            gr.characteristic_option_value = win_os;
+            gr.update();
+        } else if (gr.characteristic == "a489e38f87985d1025a20edc0ebb3535") {
+            //alert('Ash: in the loop');
+            gr.characteristic_option_value = mac_os;
+            gr.update();
+        } else if (gr.characteristic == "88a7bf4b871c5d1025a20edc0ebb359a") {
+            gr.characteristic_option_value = linux_os;
+            gr.update();
+        } else if (gr.characteristic == "bf5673c7871c5d1025a20edc0ebb3516") {
+            gr.characteristic_option_value = dns_domain;
+            gr.update();
+        } else if (gr.characteristic == "58a5f747871c5d1025a20edc0ebb35cb") {
+            gr.characteristic_option_value = sec_prd;
+            gr.update();
+        }
+
+    }
+
+    GlideDialogWindow.get().destroy();
+
+
+}
+
+function continueCancel() {
+    //alert("Cancelled");
+    GlideDialogWindow.get().destroy();
+}
+
+function sumTotalNoOfEndpoints(cntrl) {
+    var windowsOS = document.getElementById('win_os').value;
+    if (windowsOS == '')
+        windowsOS = 0;
+    var macOS = document.getElementById('mac_os').value;
+    if (macOS == '')
+        macOS = 0;
+    var linuxOS = document.getElementById('linux_os').value;
+    if (linuxOS == '')
+        linuxOS = 0;
+    totalVal = parseInt(document.getElementById('total').value);
+    var total = parseInt(windowsOS) + parseInt(macOS) + parseInt(linuxOS);
+    if (total > totalVal) {
+        cntrl.value = '';
+        alert('Total Number of Endpoints should be distributed among different OS versions');
+    }
+
+
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>sn_ind_tmt_orm_Update_Endpoints.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<style>
+		* {
+		box-sizing: border-box;
+		}
+
+		.row {
+		display: flex;
+		margin-left:-5px;
+		margin-right:-5px;
+		}
+
+		.column {
+		flex: 50%;
+		padding: 5px;
+		}
+
+		table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+		border: 1px solid #ddd;
+		}
+
+		th, td {
+		text-align: left;
+		padding: 16px;
+		}
+.nopadding
+{
+padding:0px;
+
+}
+		tr:nth-child(even) {
+		background-color: #f2f2f2;
+		}
+	</style>
+	<g:evaluate var="jvar_totalCount">
+		   var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + '';
+
+				var grCharacteristic = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+               grCharacteristic.addQuery('order_line_item', orderLineItem);
+		       grCharacteristic.addQuery('characteristic', 'afbfca4e8730555099d253d73cbb3567');
+               grCharacteristic.orderBy('sys_created_on');
+               grCharacteristic.query();
+			   
+		var totalCount =0;
+		if(grCharacteristic.next())
+		totalCount= grCharacteristic.characteristic_option_value;
+		totalCount; 
+		
+
+
+       </g:evaluate>
+     <g:ui_form>
+	<table width="100%">
+		<tr>
+                   <td style="width:25%">
+			<g:form_label>
+			Total Number of Endpoints:
+			</g:form_label>
+                   </td>
+		    <td style="width:60%">
+            <input type="number"  aria-label="Total Number of Endpoints" name="total" id="total" min="1" max="99999" value="${jvar_totalCount}" readonly="readonly" style="background-color: #f2f2f2;"/>
+                    </td>
+                </tr>
+		
+		<tr>
+		<td style="width:60%">
+			
+			<g:form_label>
+			Number of MS Windows EndPoints :  <br/> (Please enter value in numbers only)
+			</g:form_label>
+                 </td>
+		<td style="width:60%"> 
+                 <input type="number" aria-label="Endpoints - MS Windows OS" name="win_os" id="win_os" maxlength="10" mandatory="true" min="1" max="99999" onchange="sumTotalNoOfEndpoints(this)"/>
+                </td>
+		</tr>
+		<tr>
+                  <td style="width:25%">
+			<g:form_label>
+			Number of MacOS EndPoints : <br/> (Please enter value in numbers only)
+		        </g:form_label>		
+                  </td>
+		  <td style="width:60%">
+		       <input type="number" aria-label="Endpoints - MAC OS" name="mac_os" id="mac_os" min="1" max="99999" onchange="sumTotalNoOfEndpoints(this)"/>
+                   </td>
+                </tr>
+		<tr>
+                   <td style="width:25%">
+			<g:form_label>
+			Number of Linux EndPoint : <br/> (Please enter value in numbers only)
+			</g:form_label>
+                   </td>
+		    <td style="width:60%">
+                 <input type="number" aria-label="Endpoints - Linux OS" name="linux_os" id="linux_os" min="1" max="99999" onchange="sumTotalNoOfEndpoints(this)"/>
+                    </td>
+                </tr>
+		<tr>
+		<td style="width:25%">
+			
+			<g:form_label>
+			Customer Domain Name : (Please include .com,.net,.gov etc at the end)<br/>
+			</g:form_label>
+                 </td>
+		<td style="width:60%"> 
+                 <input type="text" aria-label="Customer Domain Name" name="dns_domain" id="dns_domain" maxlength="25" required="true"  size="30"/>	
+                </td>
+		</tr>
+		<tr>
+		<td style="width:25%">
+			
+			<g:form_label>
+			Other Security Products: 
+			</g:form_label>
+			</td>
+			<td style="width:60%;padding-left:16px;" class="nopadding">
+			<g:ui_checkbox name="Avast"/>Avast
+			</td>
+			</tr>
+			<tr>
+			<td style="width:25%"></td>
+			<td style="width:60%;padding-left:16px;" class="nopadding">
+			<g:ui_checkbox name="McAffeee" />McAfee
+			</td>
+			</tr>
+			<tr><td style="width:25%"></td>
+			<td style="width:60%;padding-left:16px;" class="nopadding">
+			<g:ui_checkbox name="Symantec"/>Symantec
+			</td>
+		</tr><tr><td style="width:25%"></td>
+			<td style="width:60%;padding-left:16px;" class="nopadding">
+			<g:ui_checkbox name="AVG"/>AVG
+			</td>
+			</tr>
+		<tr>
+			<td style="width:25%"></td>
+			<td style="width:60%;padding-left:16px;" class="nopadding">
+			<g:ui_checkbox name="Other"/>Other
+			
+                 </td>
+
+		</tr>
+		<tr>
+                     <td>
+                       <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="button" ok_text="${gs.getMessage('Save')}" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
+                    </td>
+               </tr>
+	</table>
+	</g:ui_form>
+</j:jelly>]]></html>
+        <name>Update_Endpoints</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>AD11373</sys_created_by>
+        <sys_created_on>2022-07-07 02:01:28</sys_created_on>
+        <sys_id>dea06b5987e0155425a20edc0ebb35a9</sys_id>
+        <sys_mod_count>135</sys_mod_count>
+        <sys_name>Update_Endpoints</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_ui_page_dea06b5987e0155425a20edc0ebb35a9</sys_update_name>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-16 09:19:33</sys_updated_on>
+    </sys_ui_page>
+</record_update>
