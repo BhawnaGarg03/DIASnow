@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="INSERT_OR_UPDATE">
+        <category>general</category>
+        <client_script><![CDATA[function sendDetails() {
+    alert("The provided information will be sending to SOAR, Thank you!");
+    var getAPIGEEToken = new GlideAjax('sn_ind_tmt_orm.SOARAPI');
+	getAPIGEEToken.addParam('sysparm_name', 'getAPIGEEToken'); //Method
+	//getAPIGEEToken.addParam('userId',user); //Parameters
+	getAPIGEEToken.getXMLAnswer(getResponse);
+	
+	function getResponse(response){
+		var parseResponse = JSON.parse(response);
+		alert(parseResponse.access_token);
+	}
+    GlideDialogWindow.get().destroy();
+}
+
+function continueCancel() {
+    //alert("Cancelled");
+    GlideDialogWindow.get().destroy();
+}]]></client_script>
+        <description/>
+        <direct>false</direct>
+        <endpoint>sn_ind_tmt_orm_details_submit_to_soar.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+	<style>
+		* {
+		box-sizing: border-box;
+		}
+
+		.row {
+		display: flex;
+		margin-left:-5px;
+		margin-right:-5px;
+		}
+
+		.column {
+		flex: 50%;
+		padding: 5px;
+		}
+
+		table {
+		border-collapse: collapse;
+		border-spacing: 0;
+		width: 100%;
+		border: 1px solid #ddd;
+		}
+
+		th, td {
+		text-align: left;
+		padding: 16px;
+		}
+.nopadding
+{
+padding:0px;
+
+}
+		tr:nth-child(even) {
+		background-color: #f2f2f2;
+		}
+	</style>
+	<g:evaluate var="jvar_totalCount">
+		   var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + '';
+
+				var grCharacteristic = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+               grCharacteristic.addQuery('order_line_item', orderLineItem);
+		       grCharacteristic.addQuery('characteristic', 'afbfca4e8730555099d253d73cbb3567');
+               grCharacteristic.orderBy('sys_created_on');
+               grCharacteristic.query();
+			   
+		var totalCount =0;
+		if(grCharacteristic.next())
+		totalCount= grCharacteristic.characteristic_option_value;
+		totalCount; 
+		
+
+
+       </g:evaluate>
+     <g:ui_form>
+	<table width="100%">
+		<tr>
+                   <td style="width:25%">
+			<g:form_label>
+			Org ID : 
+			</g:form_label>
+                   </td>
+		    <td style="width:60%">
+            <input type="text"  aria-label="Org ID" name="org_id" id="org_id"  value="${jvar_orgID}"/>
+                    </td>
+                </tr>
+				<tr>
+                   <td style="width:25%">
+			<g:form_label>
+			ORG key: 
+			</g:form_label>
+                   </td>
+		    <td style="width:60%">
+            <input type="text"  aria-label="ORG Key" name="api_key" id="api_key"  value="${jvar_orgKEY}"/>
+                    </td>
+                </tr>
+				<tr>
+                   <td style="width:25%">
+			<g:form_label>
+			API ID : 
+			</g:form_label>
+                   </td>
+		    <td style="width:60%">
+            <input type="text"  aria-label="API ID" name="api_id" id="api_id"  value="${jvar_apiID}"/>
+                    </td>
+                </tr>
+						<tr>
+                   <td style="width:25%">
+			<g:form_label>
+			API Key : 
+			</g:form_label>
+                   </td>
+		    <td style="width:60%">
+            <input type="text"  aria-label="API Key" name="api_key" id="org_id"  value="${jvar_apiKEY}"/>
+                    </td>
+                </tr>
+		
+		<tr>
+                     <td>
+                       <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return sendDetails()" ok_type="button" ok_text="${gs.getMessage('Save')}" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
+                    </td>
+               </tr>
+	</table>
+	</g:ui_form>
+</j:jelly>]]></html>
+        <name>details_submit_to_soar</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-18 13:54:53</sys_created_on>
+        <sys_id>c465d6c7875d1910574bb958dabb35c7</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>details_submit_to_soar</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_ui_page_c465d6c7875d1910574bb958dabb35c7</sys_update_name>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-23 09:03:29</sys_updated_on>
+    </sys_ui_page>
+</record_update>

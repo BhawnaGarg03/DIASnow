@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>sn_ind_tmt_orm.SOARAPI</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>SOARAPI</name>
+        <script><![CDATA[var SOARAPI = Class.create();
+SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getAPIGEEToken: function() {
+        try {
+            var r = new sn_ws.RESTMessageV2('GetAPIGEEToken', 'GetToken');
+            r.setRequestHeader('Authorization', 'Basic S3VhNjhra2RzWWhzQXR4dFhnT3h4UlFJR0F6VnFTQ1Q6SkNIRjR3Wk9LTExMZzdxUQ==');
+            r.setRequestHeader('Content-Type', 'application/json');
+            r.setQueryParameter('grant_type', 'client_credentials');
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+			var SOARToken ='';
+            if (httpStatus == '200' || httpStatus == '201')
+              SOARToken=  this.getSOARToken(responseBody);
+        } catch (ex) {
+            var message = ex.message;
+        }
+         return SOARToken;
+    },
+    getSOARToken: function(APIGEEResponse) {
+        var parseResponse = JSON.parse(APIGEEResponse);
+        var APIGEEToken = parseResponse.access_token;
+        try {
+            var r = new sn_ws.RESTMessageV2('SOAREndpoint', 'GetSOARToken');
+            r.setRequestHeader('Authorization', 'Bearer ' + APIGEEToken);
+            r.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+            r.setRequestBody('username=servicenow&password=ServiceNow20220809');
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+        } catch (ex) {
+            var message = ex.message;
+        }
+        return responseBody;
+    },
+    type: 'SOARAPI'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-23 08:59:44</sys_created_on>
+        <sys_id>04030fa48729d510b9342f07cebb3574</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>SOARAPI</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_include_04030fa48729d510b9342f07cebb3574</sys_update_name>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-23 09:18:27</sys_updated_on>
+    </sys_script_include>
+</record_update>
