@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDe48a13ccd21d9d503fb1a9c069841177</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>3c58f5d55b0310102dff5e92dc81c711</scope_name>
+        <serialized_content>{"FlowDesigner:FDe48a13ccd21d9d503fb1a9c069841177":{"$COCollectionField":[{"prodorderobj_child0":{"FD687d870f9f8b8d906fc20e57144acc40":["Any"],"FD687d870f9f8b8d906fc20e57144acc40.$field_facets":{"SimpleMapFacet":"{\"sourceId\":\"356856c6-f3ad-492d-86b6-17d6f83f8228\",\"pwd2droppable\":\"true\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"orderPayload\",\"mandatory\":\"false\",\"child_name\":\"prodorderobj_child0\",\"uiUniqueId\":\"cb1d6723-e086-4d08-9b17-173164677e1a\",\"uiTypeLabel\":\"Array.Object\",\"child_label\":\"prodorderobj_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"71aafb8a-a423-4e34-b954-17dccd33b5bc\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"7c8b4ef3-bae4-413e-8fff-71b3d82d723c\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"356856c6-f3ad-492d-86b6-17d6f83f8228\",\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"orderPayload\",\"mandatory\":\"false\",\"child_name\":\"prodorderobj_child0\",\"uiUniqueId\":\"cb1d6723-e086-4d08-9b17-173164677e1a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDe48a13ccd21d9d503fb1a9c069841177\",\"child_label\":\"prodorderobj_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"71aafb8a-a423-4e34-b954-17dccd33b5bc\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"3\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"7c8b4ef3-bae4-413e-8fff-71b3d82d723c\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDe48a13ccd21d9d503fb1a9c069841177.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"356856c6-f3ad-492d-86b6-17d6f83f8228\",\"pwd2droppable\":\"true\",\"default_value\":\"\",\"label\":\"orderPayload\",\"mandatory\":\"false\",\"child_name\":\"prodorderobj_child0\",\"uiUniqueId\":\"cb1d6723-e086-4d08-9b17-173164677e1a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDe48a13ccd21d9d503fb1a9c069841177\",\"child_label\":\"prodorderobj_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"71aafb8a-a423-4e34-b954-17dccd33b5bc\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"3\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"7c8b4ef3-bae4-413e-8fff-71b3d82d723c\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-09 11:07:24</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>a88a13cc871d9d5094fa0e58cebb3577</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FDe48a13ccd21d9d503fb1a9c069841177</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_complex_object_a88a13cc871d9d5094fa0e58cebb3577</sys_update_name>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-09 11:07:24</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>
