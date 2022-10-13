@@ -64,7 +64,7 @@ function continueCancel() {
     GlideDialogWindow.get().destroy();
 }
 
-function sumTotalNoOfEndpoints(cntrl) {
+function sumDesiredNumberOfEndpoints(cntrl) {
     var windowsOS = document.getElementById('win_os').value;
     if (windowsOS == '')
         windowsOS = 0;
@@ -78,7 +78,7 @@ function sumTotalNoOfEndpoints(cntrl) {
     var total = parseInt(windowsOS) + parseInt(macOS) + parseInt(linuxOS);
     if (total > totalVal) {
         cntrl.value = '';
-        alert('Total Number of Endpoints should be distributed among different OS versions');
+        alert('Desired Number of Endpoints should be distributed among different OS versions');
     }
 
 
@@ -129,7 +129,7 @@ padding:0px;
 
 				var grCharacteristic = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
                grCharacteristic.addQuery('order_line_item', orderLineItem);
-		       grCharacteristic.addQuery('characteristic', 'afbfca4e8730555099d253d73cbb3567');
+		       grCharacteristic.addQuery('characteristic', 'fecc6fee87ab8d1084b2a18e0ebb350f');
                grCharacteristic.orderBy('sys_created_on');
                grCharacteristic.query();
 			   
@@ -150,7 +150,7 @@ padding:0px;
 			</g:form_label>
                    </td>
 		    <td style="width:60%">
-            <input type="number"  aria-label="Total Number of Endpoints" name="total" id="total" min="1" max="99999" value="${jvar_totalCount}" readonly="readonly" style="background-color: #f2f2f2;"/>
+            <input type="number"  aria-label="DesiredNumberOfEndpoints" name="total" id="total" min="1" max="99999" value="${jvar_totalCount}" readonly="readonly" style="background-color: #f2f2f2;"/>
                     </td>
                 </tr>
 		
@@ -162,7 +162,7 @@ padding:0px;
 			</g:form_label>
                  </td>
 		<td style="width:60%"> 
-                 <input type="number" aria-label="Endpoints - MS Windows OS" name="win_os" id="win_os" maxlength="10" mandatory="true" min="1" max="99999" onchange="sumTotalNoOfEndpoints(this)"/>
+                 <input type="number" aria-label="Endpoints - MS Windows OS" name="win_os" id="win_os" maxlength="10" mandatory="true" min="1" max="99999" onchange="sumDesiredNumberOfEndpoints(this)"/>
                 </td>
 		</tr>
 		<tr>
@@ -172,7 +172,7 @@ padding:0px;
 		        </g:form_label>		
                   </td>
 		  <td style="width:60%">
-		       <input type="number" aria-label="Endpoints - MAC OS" name="mac_os" id="mac_os" min="1" max="99999" onchange="sumTotalNoOfEndpoints(this)"/>
+		       <input type="number" aria-label="Endpoints - MAC OS" name="mac_os" id="mac_os" min="1" max="99999" onchange="sumDesiredNumberOfEndpoints(this)"/>
                    </td>
                 </tr>
 		<tr>
@@ -182,7 +182,7 @@ padding:0px;
 			</g:form_label>
                    </td>
 		    <td style="width:60%">
-                 <input type="number" aria-label="Endpoints - Linux OS" name="linux_os" id="linux_os" min="1" max="99999" onchange="sumTotalNoOfEndpoints(this)"/>
+                 <input type="number" aria-label="Endpoints - Linux OS" name="linux_os" id="linux_os" min="1" max="99999" onchange="sumDesiredNumberOfEndpoints(this)"/>
                     </td>
                 </tr>
 		<tr>
@@ -244,13 +244,13 @@ padding:0px;
         <sys_created_by>AD11373</sys_created_by>
         <sys_created_on>2022-07-07 02:01:28</sys_created_on>
         <sys_id>dea06b5987e0155425a20edc0ebb35a9</sys_id>
-        <sys_mod_count>135</sys_mod_count>
+        <sys_mod_count>139</sys_mod_count>
         <sys_name>Update_Endpoints</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_ui_page_dea06b5987e0155425a20edc0ebb35a9</sys_update_name>
-        <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-08-16 09:19:33</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-08-25 15:35:21</sys_updated_on>
     </sys_ui_page>
 </record_update>
