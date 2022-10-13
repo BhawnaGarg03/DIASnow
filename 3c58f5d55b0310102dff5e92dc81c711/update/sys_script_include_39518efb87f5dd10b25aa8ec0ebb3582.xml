@@ -29,6 +29,7 @@ LIAMAPI.prototype = {
                 gs.info("**********LIAM*****User doens not exist***");
                 createUser = this.createUserInLIAM(contact);
             } else {
+                createUser = "User Created SuccessFully!!";
                 gs.info("***LIAM User exists*****update called");
             }
         } catch (ex) {
@@ -37,6 +38,7 @@ LIAMAPI.prototype = {
         return createUser;
     },
     getLIAMToken: function() {
+        var azureToken = this.getAzureToken();
         var LIAMToken = '';
         try {
             var r = new sn_ws.RESTMessageV2('LIAMToken', 'GetToken');
@@ -54,6 +56,30 @@ LIAMAPI.prototype = {
             var message = ex.message;
         }
         return LIAMToken;
+    },
+    getAzureToken: function() {
+        gs.info("**********LIAM getAzureToken Called********");
+        var clientid = gs.getProperty('azure.platform.client_id');
+        var secret = gs.getProperty('azure.platform.servicenowusage');
+        var scope = 'api://' + clientid + '/.default';
+        gs.info("****LIAM Scope****" + scope);
+        // GET TOKEN
+        var r = new sn_ws.RESTMessageV2('LumenAzure', 'getToken');
+        // r.setStringParameter('clientID', clientid);
+        //r.setStringParameter('secret', secret);
+        //r.setStringParameter('scope', scope);
+        r.setStringParameterNoEscape('scope', 'api://36b95569-7884-4d1e-9329-eb9649d46cca/.default');
+        r.setStringParameterNoEscape('clientID', '36b95569-7884-4d1e-9329-eb9649d46cca');
+        r.setStringParameterNoEscape('secret', 'sSe8Q~g-XYdBp8ePcD4FOX0klT92eP1.4fDOqc43');
+		var response = r.execute();
+        gs.info("******LIAM Azure Response****" + response);
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+        gs.info("*******LIAM AZure Token REsponse**********" + httpStatus);
+        var resp = JSON.parse(responseBody);
+        var azureToken = resp.access_token;
+        gs.info("******LIAM Azure TOKEN:" + azureToken);
+        return azureToken;
     },
     createUserInLIAM: function(contact) {
         gs.info("*****LIAM createUSErCalled*******");
@@ -81,7 +107,7 @@ LIAMAPI.prototype = {
             var response = r.execute();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
-			gs.info("*************LIAM createUser Request Body********"+r.getRequestBody());
+            gs.info("*************LIAM createUser Request Body********" + r.getRequestBody());
             gs.info("********LIAM cretaeUserResponse**********" + responseBody);
             if (httpStatus == '200' || httpStatus == '201') {
                 responseCreateUser = "User Created SuccessFully!!";
@@ -99,13 +125,13 @@ LIAMAPI.prototype = {
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-09-14 16:56:22</sys_created_on>
         <sys_id>39518efb87f5dd10b25aa8ec0ebb3582</sys_id>
-        <sys_mod_count>32</sys_mod_count>
+        <sys_mod_count>42</sys_mod_count>
         <sys_name>LIAMAPI</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_39518efb87f5dd10b25aa8ec0ebb3582</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-09-16 13:39:19</sys_updated_on>
+        <sys_updated_on>2022-09-27 14:57:21</sys_updated_on>
     </sys_script_include>
 </record_update>
