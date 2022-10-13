@@ -55,7 +55,7 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     configTenant: function() {
         var soarData = this.getParameter('sysparm_soarData');
         gs.info('*****SOAR Data****' + soarData);
-
+        var sid = '';
         var soarDataAr = soarData.split(",");
         var orderLineItem = soarDataAr[0];
         var orgKey = soarDataAr[1];
@@ -64,18 +64,38 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         var apiID = soarDataAr[4];
         var orderTaskSysID = soarDataAr[5];
         var region = '';
+        var orderNum = '';
+        var grProduct = new GlideRecord("sn_ind_tmt_orm_product_order");
+        grProduct.addQuery("order_line_item", orderLineItem);
+        grProduct.query();
+        if (grProduct.next()) {
+            var product = grProduct.product_inventory;
+            var grProductInventory = new GlideRecord("sn_prd_invt_product_inventory");
+            grProductInventory.addQuery("sys_id", product);
+            grProductInventory.query();
+            if (grProductInventory.next()) {
+                sid = grProductInventory.sn_prd_invt_external_id;
+            }
+        }
+        gs.info("************SOAR SID*****************" + sid);
         var orderLineGR = new GlideRecord("sn_ind_tmt_orm_order_line_item");
         orderLineGR.addQuery("sys_id", orderLineItem);
         orderLineGR.query();
         var externalID = '';
         if (orderLineGR.next())
-            externalID = orderLineGR.external_id;
-        gs.info("**SOAR external id**" + externalID); //
+            orderNum = orderLineGR.order;
+        var grOrder = new GlideRecord("sn_ind_tmt_orm_order");
+        grOrder.addQuery("sys_id", orderNum);
+        grOrder.query();
+        if (grOrder.next()) {
+            externalID = grOrder.external_id;
+        }
+        gs.info("**SOAR external id**" + externalID);
         var grCharacteristicValue = new GlideRecord("sn_ind_tmt_orm_order_characteristic_value");
         grCharacteristicValue.addEncodedQuery("order_line_item=" + orderLineItem + "^characteristic=611f4f2987d749d025a20edc0ebb35b6^ORcharacteristic=7ace2fa287eb8d1084b2a18e0ebb358c");
         grCharacteristicValue.query();
         while (grCharacteristicValue.next()) {
-            if (grCharacteristicValue.characteristic == '7ace2fa287eb8d1084b2a18e0ebb358c') {
+            if (grCharacteristicValue.characteristic == '611f4f2987d749d025a20edc0ebb35b6') {
                 grCharacteristicValue.characteristic_option_value = orgId;
                 grCharacteristicValue.update();
                 gs.info("******SOAR Org ID gets stored in characteristic*********");
@@ -90,7 +110,7 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             r.setRequestHeader('Authorization', 'Bearer ' + APIGEEToken);
             r.setRequestHeader('X-Auth', 'Bearer ' + SOARToken);
             r.setRequestHeader('Accept', 'application/json');
-            r.setStringParameterNoEscape('sid', externalID);
+            r.setStringParameterNoEscape('sid', '1234567');
             r.setStringParameterNoEscape('org_key', orgKey);
             r.setStringParameterNoEscape('snow_id', externalID);
             r.setStringParameterNoEscape('api_id', apiID);
@@ -100,11 +120,14 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
                 r.setStringParameterNoEscape('region', region);
             r.setStringParameter('org_id', orgId);
             r.setStringParameterNoEscape('api_key', apiKey);
+            r.setStringParameterNoEscape('create_ssp', 'false');
+            r.setStringParameterNoEscape('create_confluence', 'false');
             var returnReponse = '';
             var response = r.execute();
             var soarResponseBody = response.getBody();
             var httpStatus = response.getStatusCode();
             gs.info("********SOAR Config Tenant status********" + httpStatus);
+			gs.info("***************SOAR Config Request Body*************"+r.getRequestBody());
             if (httpStatus == '200' || httpStatus == '201') {
                 returnReponse = "Details have been transferred to SOAR successfully";
                 var orderTaskGR = new GlideRecord("sn_ind_tmt_orm_order_task");
@@ -147,42 +170,24 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             r.setRequestHeader('X-Auth', 'Bearer ' + SOARToken);
             r.setRequestHeader('Accept', 'application/json');
             r.setStringParameterNoEscape('org_id', orgID);
+			r.setStringParameterNoEscape('snow_id',externalID);
             var grOrderLineContact = new GlideRecord("sn_ind_tmt_orm_order_line_item_contact");
             grOrderLineContact.addQuery("order_line_item", orderLineNum);
             grOrderLineContact.query();
             if (grOrderLineContact.next()) {
-                technicalemail = grOrderLineContact.email;
-                technicalFirstName = grOrderLineContact.first_name;
-                technicalLastName = grOrderLineContact.last_name;
+                r.setStringParameterNoEscape('technicalEmail', grOrderLineContact.email);
+                r.setStringParameterNoEscape('technicalFirstName', grOrderLineContact.first_name);
+                r.setStringParameterNoEscape('technicalLastName', grOrderLineContact.last_name);
             }
 
             var grContact = new GlideRecord("customer_contact");
             grContact.addQuery("sys_id", orderContact);
             grContact.query();
             if (grContact.next()) {
-                var contactData = {
-                    "users": [{
-
-                            "email_address": grContact.email,
-                            "first_name": grContact.first_name,
-                            "last_name": grContact.last_name,
-                            "customer_role": "Admin",
-                            "service_level": "Self-Managed"
-                        },
-                        {
-                            "email_address": technicalemail,
-                            "first_name": technicalFirstName,
-                            "last_name": technicalLastName,
-                            "customer_role": "Admin",
-                            "service_level": "Self-Managed"
-                        }
-                    ],
-                    "snow_id": externalID
-
-                };
-                userData.push(contactData);
+                r.setStringParameterNoEscape('firstName', grContact.first_name);
+                r.setStringParameterNoEscape('email', grContact.email);
+                r.setStringParameterNoEscape('lastName', grContact.last_name);
             }
-            r.setStringParameterNoEscape('userData', userData);
             var response = r.execute();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
@@ -190,7 +195,8 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             if (httpStatus == '200' || httpStatus == '201') {
                 returnReponse = "User is created successfully";
             } else
-                returnReponse = "User is nor created due to following error code" + httpStatus;
+                returnReponse = "User is not created due to following error code" + httpStatus;
+			gs.info("***************SOAR User Request Body*************"+r.getRequestBody());
         } catch (ex) {
             var message = ex.message;
         }
@@ -202,13 +208,13 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-08-23 08:59:44</sys_created_on>
         <sys_id>04030fa48729d510b9342f07cebb3574</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>37</sys_mod_count>
         <sys_name>SOARAPI</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_04030fa48729d510b9342f07cebb3574</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-09-01 14:00:07</sys_updated_on>
+        <sys_updated_on>2022-09-02 15:02:20</sys_updated_on>
     </sys_script_include>
 </record_update>
