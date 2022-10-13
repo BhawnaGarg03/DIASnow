@@ -19,7 +19,18 @@ function continueOK() {
     var mac_os = gel('mac_os').value;
     var linux_os = gel('linux_os').value;
     var dns_domain = gel('dns_domain').value;
-
+	
+	if (!win_os || !mac_os || !linux_os || !dns_domain) {
+        alert('Please fill mandatory fields.');
+        return;
+    }
+	else
+	if (!win_os < 0 || !mac_os < 0 || !linux_os < 0 ) {
+        alert('currency cannot be less than 0.');
+        return;
+    }
+      }
+	
     var sec_prd = "";
 
     sec_prd += document.getElementById("Avast").value == 'true' ? "Avast," : "";
@@ -51,20 +62,20 @@ function continueOK() {
             gr.characteristic_option_value = sec_prd;
             gr.update();
         }
-
+     
     }
 
     GlideDialogWindow.get().destroy();
 
 
-}
 
 function continueCancel() {
     //alert("Cancelled");
     GlideDialogWindow.get().destroy();
 }
 
-function sumDesiredNumberOfEndpoints(cntrl) {
+
+function sumTotalNoOfEndpoints(cntrl) {
     var windowsOS = document.getElementById('win_os').value;
     if (windowsOS == '')
         windowsOS = 0;
@@ -76,12 +87,16 @@ function sumDesiredNumberOfEndpoints(cntrl) {
         linuxOS = 0;
     totalVal = parseInt(document.getElementById('total').value);
     var total = parseInt(windowsOS) + parseInt(macOS) + parseInt(linuxOS);
-    if (total > totalVal) {
+	
+    if (total > totalVal);
+	else
+		if (total < totalVal);
+	{
         cntrl.value = '';
-        alert('Desired Number of Endpoints should be distributed among different OS versions');
+        alert('Total Number of Endpoints should be distributed among different OS versions');
     }
 
-
+          
 }]]></client_script>
         <description/>
         <direct>false</direct>
@@ -129,7 +144,7 @@ padding:0px;
 
 				var grCharacteristic = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
                grCharacteristic.addQuery('order_line_item', orderLineItem);
-		       grCharacteristic.addQuery('characteristic', 'fecc6fee87ab8d1084b2a18e0ebb350f');
+		       grCharacteristic.addQuery('characteristic', 'afbfca4e8730555099d253d73cbb3567');
                grCharacteristic.orderBy('sys_created_on');
                grCharacteristic.query();
 			   
@@ -150,7 +165,7 @@ padding:0px;
 			</g:form_label>
                    </td>
 		    <td style="width:60%">
-            <input type="number"  aria-label="DesiredNumberOfEndpoints" name="total" id="total" min="1" max="99999" value="${jvar_totalCount}" readonly="readonly" style="background-color: #f2f2f2;"/>
+            <input type="number"  aria-label="Total Number of Endpoints" name="total" id="total" min="1" max="99999" value="${jvar_totalCount}" readonly="readonly" style="background-color: #f2f2f2;"/>
                     </td>
                 </tr>
 		
@@ -162,7 +177,7 @@ padding:0px;
 			</g:form_label>
                  </td>
 		<td style="width:60%"> 
-                 <input type="number" aria-label="Endpoints - MS Windows OS" name="win_os" id="win_os" maxlength="10" mandatory="true" min="1" max="99999" onchange="sumDesiredNumberOfEndpoints(this)"/>
+                 <input type="number" aria-label="Endpoints - MS Windows OS" name="win_os" id="win_os" maxlength="10" mandatory="true" min="1" max="99999" onchange="sumTotalNoOfEndpoints(this)"/>
                 </td>
 		</tr>
 		<tr>
@@ -172,7 +187,7 @@ padding:0px;
 		        </g:form_label>		
                   </td>
 		  <td style="width:60%">
-		       <input type="number" aria-label="Endpoints - MAC OS" name="mac_os" id="mac_os" min="1" max="99999" onchange="sumDesiredNumberOfEndpoints(this)"/>
+		       <input type="number" aria-label="Endpoints - MAC OS" name="mac_os" id="mac_os" min="1" max="99999" onchange="sumTotalNoOfEndpoints(this)"/>
                    </td>
                 </tr>
 		<tr>
@@ -182,7 +197,7 @@ padding:0px;
 			</g:form_label>
                    </td>
 		    <td style="width:60%">
-                 <input type="number" aria-label="Endpoints - Linux OS" name="linux_os" id="linux_os" min="1" max="99999" onchange="sumDesiredNumberOfEndpoints(this)"/>
+                 <input type="number" aria-label="Endpoints - Linux OS" name="linux_os" id="linux_os" min="1" max="99999" onchange="sumTotalNoOfEndpoints(this)"/>
                     </td>
                 </tr>
 		<tr>
@@ -244,13 +259,13 @@ padding:0px;
         <sys_created_by>AD11373</sys_created_by>
         <sys_created_on>2022-07-07 02:01:28</sys_created_on>
         <sys_id>dea06b5987e0155425a20edc0ebb35a9</sys_id>
-        <sys_mod_count>138</sys_mod_count>
+        <sys_mod_count>156</sys_mod_count>
         <sys_name>Update_Endpoints</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_ui_page_dea06b5987e0155425a20edc0ebb35a9</sys_update_name>
         <sys_updated_by>AD13765</sys_updated_by>
-        <sys_updated_on>2022-08-26 10:09:09</sys_updated_on>
+        <sys_updated_on>2022-09-30 13:27:51</sys_updated_on>
     </sys_ui_page>
 </record_update>
