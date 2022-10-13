@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD4b60350d4ba59d1041bca75d5dcdcac7</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>3c58f5d55b0310102dff5e92dc81c711</scope_name>
+        <serialized_content>{"FlowDesigner:FD4b60350d4ba59d1041bca75d5dcdcac7":{"$COCollectionField":[{"capture_customer_medr_tenant_id_requestjson_child0":{"FD67d32c4170619d1019eec62af9e32992":["Any"],"FD67d32c4170619d1019eec62af9e32992.$field_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Capture Customer MEDR Tenant ID - RequestJson\",\"mandatory\":\"false\",\"child_name\":\"capture_customer_medr_tenant_id_requestjson_child0\",\"uiUniqueId\":\"4c453e7a-0a1a-4d79-ac15-19f644053c85\",\"uiTypeLabel\":\"Array.Object\",\"child_label\":\"Capture Customer MEDR Tenant ID - RequestJson_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"01757d28-6f04-4847-b2ce-b431376c7f7d\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Capture Customer MEDR Tenant ID - RequestJson\",\"mandatory\":\"false\",\"child_name\":\"capture_customer_medr_tenant_id_requestjson_child0\",\"uiUniqueId\":\"4c453e7a-0a1a-4d79-ac15-19f644053c85\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD4b60350d4ba59d1041bca75d5dcdcac7\",\"child_label\":\"Capture Customer MEDR Tenant ID - RequestJson_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"7\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"01757d28-6f04-4847-b2ce-b431376c7f7d\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD4b60350d4ba59d1041bca75d5dcdcac7.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Capture Customer MEDR Tenant ID - RequestJson\",\"mandatory\":\"false\",\"child_name\":\"capture_customer_medr_tenant_id_requestjson_child0\",\"uiUniqueId\":\"4c453e7a-0a1a-4d79-ac15-19f644053c85\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD4b60350d4ba59d1041bca75d5dcdcac7\",\"child_label\":\"Capture Customer MEDR Tenant ID - RequestJson_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"7\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"01757d28-6f04-4847-b2ce-b431376c7f7d\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>AD13765</sys_created_by>
+        <sys_created_on>2022-08-24 16:13:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>0f60350d87a59d10e10064ed0ebb35c7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>FD4b60350d4ba59d1041bca75d5dcdcac7</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_complex_object_0f60350d87a59d10e10064ed0ebb35c7</sys_update_name>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-08-24 16:17:37</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

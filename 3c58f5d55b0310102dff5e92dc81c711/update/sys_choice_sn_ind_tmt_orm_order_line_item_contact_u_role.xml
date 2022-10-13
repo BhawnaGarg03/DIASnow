@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_choice action="INSERT_OR_UPDATE" field="u_role" table="sn_ind_tmt_orm_order_line_item_contact" version="3">
+        <sys_choice_set action="INSERT_OR_UPDATE">
+            <element>u_role</element>
+            <name>sn_ind_tmt_orm_order_line_item_contact</name>
+            <sys_class_name>sys_choice_set</sys_class_name>
+            <sys_created_by>AD13765</sys_created_by>
+            <sys_created_on>2022-08-26 09:50:25</sys_created_on>
+            <sys_id>3aeb62ed87a59150e10064ed0ebb3572</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>u_role</sys_name>
+            <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+            <sys_update_name>sys_choice_sn_ind_tmt_orm_order_line_item_contact_u_role</sys_update_name>
+            <sys_updated_by>AD13765</sys_updated_by>
+            <sys_updated_on>2022-08-26 09:50:25</sys_updated_on>
+        </sys_choice_set>
+        <sys_choice action="INSERT_OR_UPDATE">
+            <dependent_value/>
+            <element>u_role</element>
+            <hint/>
+            <inactive>false</inactive>
+            <label>admin</label>
+            <language>en</language>
+            <name>sn_ind_tmt_orm_order_line_item_contact</name>
+            <sequence/>
+            <synonyms/>
+            <sys_created_by>AD13765</sys_created_by>
+            <sys_created_on>2022-08-26 09:50:25</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>3cebea6d87a59150e10064ed0ebb356d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_updated_by>AD13765</sys_updated_by>
+            <sys_updated_on>2022-08-26 09:50:25</sys_updated_on>
+            <value>admin</value>
+        </sys_choice>
+    </sys_choice>
+</record_update>

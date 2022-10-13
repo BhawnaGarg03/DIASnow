@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FDfe998b5d9b29515034262504b2ab6acd</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>3c58f5d55b0310102dff5e92dc81c711</scope_name>
+        <serialized_content>{"FlowDesigner:FDfe998b5d9b29515034262504b2ab6acd":{"$COCollectionField":[{"json_output_child0":{"FD1d79c35d43295150ccfe80a8ab215ae7":["Any"],"FD1d79c35d43295150ccfe80a8ab215ae7.$field_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"JSON request\",\"mandatory\":\"false\",\"child_name\":\"json_output_child0\",\"uiUniqueId\":\"6ed1722e-8b04-4179-a7e5-4a171f9a23d4\",\"uiTypeLabel\":\"Array.Object\",\"child_label\":\"JSON Output_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"569a54f5-36e4-4546-8691-0b29d24eef15\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"JSON request\",\"mandatory\":\"false\",\"child_name\":\"json_output_child0\",\"uiUniqueId\":\"6ed1722e-8b04-4179-a7e5-4a171f9a23d4\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDfe998b5d9b29515034262504b2ab6acd\",\"child_label\":\"JSON Output_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"569a54f5-36e4-4546-8691-0b29d24eef15\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDfe998b5d9b29515034262504b2ab6acd.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"JSON request\",\"mandatory\":\"false\",\"child_name\":\"json_output_child0\",\"uiUniqueId\":\"6ed1722e-8b04-4179-a7e5-4a171f9a23d4\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDfe998b5d9b29515034262504b2ab6acd\",\"child_label\":\"JSON Output_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"569a54f5-36e4-4546-8691-0b29d24eef15\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>AD13765</sys_created_by>
+        <sys_created_on>2022-08-25 17:21:38</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>b2998b5d87295150e10064ed0ebb35ce</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>FDfe998b5d9b29515034262504b2ab6acd</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_complex_object_b2998b5d87295150e10064ed0ebb35ce</sys_update_name>
+        <sys_updated_by>AD12227</sys_updated_by>
+        <sys_updated_on>2022-08-30 11:05:32</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>
