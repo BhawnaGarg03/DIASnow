@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_sfp_receiver" label="SFP Receiver" language="en" table="cmdb_ci_ni_telco_equipment">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_sfp_receiver</element>
+            <help/>
+            <hint/>
+            <label>SFP Receiver</label>
+            <language>en</language>
+            <name>cmdb_ci_ni_telco_equipment</name>
+            <plural>SFP Receivers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-09-23 12:10:29</sys_created_on>
+            <sys_id>e3789f6e8702d110521a873e0ebb354f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>SFP Receiver</sys_name>
+            <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+            <sys_update_name>sys_documentation_cmdb_ci_ni_telco_equipment_u_sfp_receiver_en</sys_update_name>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-09-23 12:10:29</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>
