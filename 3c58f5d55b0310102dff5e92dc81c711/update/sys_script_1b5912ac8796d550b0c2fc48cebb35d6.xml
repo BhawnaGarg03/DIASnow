@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_ind_tmt_orm_order_task</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="sn_ind_tmt_orm_order_task">short_description=Cyber Threat Solutions Engineer Assignment^assignment_group=eebfb1f787281910842a53d73cbb3591^EQ<item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="false" value="Cyber Threat Solutions Engineer Assignment"/>
+            <item display_table="sys_user_group" display_value="Cyber threat solutions" endquery="false" field="assignment_group" goto="false" newquery="false" operator="=" or="false" value="eebfb1f787281910842a53d73cbb3591"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>IBM - MEDR Get Address from Salesforce</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    gs.info('Retrieving email from Salesforce', 'ac');
+    var digesttime = new Date().getTime();
+    var digest = 'AK110965420170';
+
+    //Getting APIGEE Token
+    var APIGEEToken = new SOARAPI().getAPIGEEToken(current.order_line_item.order.contact, current.order_line_item.order.contact.email);
+    var legalAddress = '';
+    gs.info('got APIGEE Token' + APIGEEToken, 'ac');
+
+    //Passing Salesforce endpoint
+    var r = new sn_ws.RESTMessageV2('SalesforceEndpoint', 'POSTDetails');
+
+    //Passing token to Endpoint
+    r.setRequestHeader('x-level3-application-key', AIPGEEToken);
+    r.setRequestHeader('x-level3-digest', digest);
+    r.setRequestHeader('x-level3-digest-time', digesttime);
+    var response = r.execute();
+    var responseBody = response.getBody();
+    var httpStatus = response.getStatusCode();
+    gs.info('Response' + httpStatus);
+    if (httpStatus == '200' || httpStatus == '201') {
+        returnResponse = 'Email retrieved successfully';
+    } else {
+        returnResponse = 'Email not retrieved due to error: ' + httpStatus;
+    }
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>AD20957</sys_created_by>
+        <sys_created_on>2022-09-29 12:43:31</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>1b5912ac8796d550b0c2fc48cebb35d6</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>IBM - MEDR Get Address from Salesforce</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_1b5912ac8796d550b0c2fc48cebb35d6</sys_update_name>
+        <sys_updated_by>AD20957</sys_updated_by>
+        <sys_updated_on>2022-09-29 12:55:30</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=1b5912ac8796d550b0c2fc48cebb35d6"/>
+</record_update>
