@@ -11,6 +11,7 @@
 LIAMAPI.prototype = {
     getUserLIAM: function(contact, userName) {
         var createUser = '';
+        var updateUser = '';
         gs.info("**********LIAM username*******" + userName);
         var LIAMToken = this.getLIAMToken();
         try {
@@ -22,15 +23,17 @@ LIAMAPI.prototype = {
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
             var parseJSONResponse = JSON.parse(responseBody + '');
-            gs.info("*******LIAM parseResponseBody*****" + parseJSONResponse);
+            //gs.info("*******LIAM parseResponseBody*****" + parseJSONResponse);
             var userDetails = parseJSONResponse.data.getUsers[0];
+            var liamID = '';
             gs.info("****LIAM userDetails*******" + userDetails);
             if (userDetails == undefined) {
                 gs.info("**********LIAM*****User doens not exist***");
                 createUser = this.createUserInLIAM(contact);
             } else {
-                createUser = "User Created SuccessFully!!";
-                gs.info("***LIAM User exists*****update called");
+               // gs.info("***LIAM User exists*****update called " + parseJSONResponse.data.getUsers[0].liamId);
+                updateUser = this.updateUserInLIAM(contact, parseJSONResponse.data.getUsers[0].liamId + '');
+
             }
         } catch (ex) {
             var message = ex.message;
@@ -71,7 +74,7 @@ LIAMAPI.prototype = {
         r.setStringParameterNoEscape('scope', 'api://36b95569-7884-4d1e-9329-eb9649d46cca/.default');
         r.setStringParameterNoEscape('clientID', '36b95569-7884-4d1e-9329-eb9649d46cca');
         r.setStringParameterNoEscape('secret', 'sSe8Q~g-XYdBp8ePcD4FOX0klT92eP1.4fDOqc43');
-		var response = r.execute();
+        var response = r.execute();
         gs.info("******LIAM Azure Response****" + response);
         var responseBody = response.getBody();
         var httpStatus = response.getStatusCode();
@@ -119,19 +122,60 @@ LIAMAPI.prototype = {
         }
         return responseCreateUser;
     },
+    updateUserInLIAM: function(contact, liamID) {
+        gs.info("*****LIAM updateUserInLIAM*******");
+        var responseUpdateUser = '';
+        var LIAMToken = this.getLIAMToken();
+        try {
+            //gs.info("*****LIAM ID is ******" + liamID);
+
+            var r = new sn_ws.RESTMessageV2('LIAMToken', 'updateUser');
+            r.setRequestHeader('Authorization', 'Bearer ' + LIAMToken);
+            r.setRequestHeader('Accept', 'application/json');
+            var gr = new GlideRecord("customer_contact");
+            gr.addQuery("sys_id", contact);
+            gr.query();
+            if (gr.next()) {
+                r.setStringParameterNoEscape('company', gr.getDisplayValue('company'));
+                r.setStringParameterNoEscape('displayName', gr.getDisplayValue('first_name'));
+                r.setStringParameterNoEscape('userName', gr.getDisplayValue('email'));
+                r.setStringParameterNoEscape('primaryPhone', gr.getDisplayValue('mobile_phone'));
+                r.setStringParameterNoEscape('countryCode', "1");
+                r.setStringParameterNoEscape('lastName', gr.getDisplayValue('last_name'));
+                r.setStringParameterNoEscape('firstName', gr.getDisplayValue('first_name'));
+                r.setStringParameterNoEscape('email', gr.getDisplayValue('email'));
+                r.setStringParameterNoEscape('liamId', liamID);
+            }
+            var response = r.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+            gs.info("*************LIAM updateUserInLIAM Request Body********" + r.getRequestBody());
+            gs.info("********LIAM updateUserInLIAM Response**********" + responseBody);
+            if (httpStatus == '200' || httpStatus == '201') {
+                responseUpdateUser = "User Updated SuccessFully!!";
+                var resp = JSON.parse(responseBody);
+
+            } else {
+                responseUpdateUser = "User does not Update SuccessFully!!";
+            }
+        } catch (ex) {
+            var message = ex.message;
+        }
+        return responseUpdateUser;
+    },
     type: 'LIAMAPI'
 };]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-09-14 16:56:22</sys_created_on>
         <sys_id>39518efb87f5dd10b25aa8ec0ebb3582</sys_id>
-        <sys_mod_count>42</sys_mod_count>
+        <sys_mod_count>47</sys_mod_count>
         <sys_name>LIAMAPI</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_39518efb87f5dd10b25aa8ec0ebb3582</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-09-27 14:57:21</sys_updated_on>
+        <sys_updated_on>2022-10-18 07:51:56</sys_updated_on>
     </sys_script_include>
 </record_update>
