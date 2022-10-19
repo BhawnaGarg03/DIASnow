@@ -146,6 +146,8 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
                     returnReponse = "There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.";
                     if (orderTaskGR.next())
                         gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', orderTaskGR, 'dl-soar@lumen.com', soarResponseBody, '');
+                    orderTaskGR.work_notes = 'There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.';
+                    orderTaskGR.update();
                 } else {
                     var parseResponse = JSON.parse(soarResponseBody);
                     errorCode = parseResponse.detail.status_code;
@@ -162,6 +164,8 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
                         returnReponse = "There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.";
                     if (orderTaskGR.next())
                         gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', orderTaskGR, 'dl-soar@lumen.com', errorDetails, '');
+                    orderTaskGR.work_notes = 'There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.';
+                    orderTaskGR.update();
                 }
             } else {
                 returnReponse = "It looks like you have not entered correct details, Please provide the correct details and check the values in Org ID, Org Key, API ID, API Key, Region etc";
@@ -247,7 +251,7 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             if (httpStatus == '200' || httpStatus == '201' || sspStatusCode == '1027' || sspStatusCode == '403' || statusCode == '1801') {
                 returnReponse = "User is created successfully";
             } else {
-                    returnReponse = "User is not created due to following error code" + httpStatus;
+                returnReponse = "User is not created due to following error code" + httpStatus;
                 // gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', current, '', '', '');
             }
         } catch (ex) {
@@ -261,13 +265,13 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-08-23 08:59:44</sys_created_on>
         <sys_id>04030fa48729d510b9342f07cebb3574</sys_id>
-        <sys_mod_count>61</sys_mod_count>
+        <sys_mod_count>62</sys_mod_count>
         <sys_name>SOARAPI</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_04030fa48729d510b9342f07cebb3574</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-10-18 08:21:13</sys_updated_on>
+        <sys_updated_on>2022-10-18 11:00:09</sys_updated_on>
     </sys_script_include>
 </record_update>
