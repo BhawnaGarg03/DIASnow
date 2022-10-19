@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json</consumes>
+        <consumes_customized>true</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>e9e88b94c3712010df4773ce3640dd0e</enforce_acl>
+        <http_method>POST</http_method>
+        <name>Create Order</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    var tsmOpenAPIUtil = new sn_ind_tsm_core.TSMOpenAPIUtil();
+    response.setContentType(TMFOrderAPIConstants.CONTENT_TYPE);
+    try {
+        var tmfProductOrderAPIUtil = new TMFProductOrderAPIUtil1();
+        var apiResponse = tmfProductOrderAPIUtil.processCreateOrder(request.body.data);
+        response.setStatus(apiResponse.status);
+        return tsmOpenAPIUtil.responseBuilder(response, apiResponse.details);
+    } catch (ex) {
+        response.setStatus(sn_ind_tsm_core.Constants.STATUS_CODES.ERROR);
+        var apiCoreUtil = new sn_ind_tsm_core.APICoreUtil();
+        var errorObj = apiCoreUtil.getErrorObj(sn_ind_tsm_core.Constants.ERROR_CODES.INTERNAL_ERROR, TMFOrderAPIConstants.MESSAGES.CREATE_ERROR, TMFOrderAPIConstants.MESSAGES.CREATE_ERROR);
+        var details = [];
+        details.push(apiCoreUtil.getErrorDetailsObj(ex.message + '', ''));
+        errorObj.details = details;
+        return tsmOpenAPIUtil.responseBuilder(response, errorObj);
+    }
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/sn_ind_tmt_orm/productorder</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>true</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>false</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2020-12-03 13:26:17</sys_created_on>
+        <sys_id>2879b1ea53b820102f18ddeeff7b1244</sys_id>
+        <sys_mod_count>58</sys_mod_count>
+        <sys_name>Create Order</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_ws_operation_2879b1ea53b820102f18ddeeff7b1244</sys_update_name>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-10-19 16:11:10</sys_updated_on>
+        <web_service_definition display_value="Product Order Open API">0249bdaa53b820102f18ddeeff7b12b3</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+</record_update>
