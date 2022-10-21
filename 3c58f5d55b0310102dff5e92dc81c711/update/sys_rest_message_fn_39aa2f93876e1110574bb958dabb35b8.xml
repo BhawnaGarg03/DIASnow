@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>no_authentication</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content/>
+        <function_name>GetTokenSalesforce</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>GetAPIGEEToken [ GetTokenSalesforce ]</qualified_name>
+        <rest_endpoint>https://api-test2.lumen.com/oauth/token</rest_endpoint>
+        <rest_message display_value="GetAPIGEEToken">63670790872dd910e10064ed0ebb35c7</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>AD20957</sys_created_by>
+        <sys_created_on>2022-10-20 17:57:31</sys_created_on>
+        <sys_id>39aa2f93876e1110574bb958dabb35b8</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>GetTokenSalesforce</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_rest_message_fn_39aa2f93876e1110574bb958dabb35b8</sys_update_name>
+        <sys_updated_by>AD20957</sys_updated_by>
+        <sys_updated_on>2022-10-21 15:14:28</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>
