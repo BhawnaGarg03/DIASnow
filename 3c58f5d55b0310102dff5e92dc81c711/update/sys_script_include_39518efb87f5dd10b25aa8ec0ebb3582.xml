@@ -45,9 +45,9 @@ LIAMAPI.prototype = {
         var LIAMToken = '';
         try {
             var r = new sn_ws.RESTMessageV2('LIAMToken', 'GetToken');
-           r.setRequestHeader('Authorization', 'Basic S3VhNjhra2RzWWhzQXR4dFhnT3h4UlFJR0F6VnFTQ1Q6c2Vad3JCNzY1Z1hRdzB3bQ==');
-           r.setRequestHeader('Content-Type', 'application/json');
-          r.setQueryParameter('grant_type', 'client_credentials');
+          // r.setRequestHeader('Authorization', 'Basic S3VhNjhra2RzWWhzQXR4dFhnT3h4UlFJR0F6VnFTQ1Q6c2Vad3JCNzY1Z1hRdzB3bQ==');
+           //r.setRequestHeader('Content-Type', 'application/json');
+          //r.setQueryParameter('grant_type', 'client_credentials');
             var response = r.execute();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
@@ -170,13 +170,13 @@ LIAMAPI.prototype = {
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-09-14 16:56:22</sys_created_on>
         <sys_id>39518efb87f5dd10b25aa8ec0ebb3582</sys_id>
-        <sys_mod_count>48</sys_mod_count>
+        <sys_mod_count>49</sys_mod_count>
         <sys_name>LIAMAPI</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_39518efb87f5dd10b25aa8ec0ebb3582</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-10-27 12:49:39</sys_updated_on>
+        <sys_updated_on>2022-10-27 14:16:23</sys_updated_on>
     </sys_script_include>
 </record_update>
