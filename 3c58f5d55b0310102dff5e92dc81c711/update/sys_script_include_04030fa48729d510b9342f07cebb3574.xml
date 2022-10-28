@@ -128,10 +128,6 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             var response = r.execute();
             var soarResponseBody = response.getBody();
             var httpStatus = response.getStatusCode();
-            var parseResponse = JSON.parse(soarResponseBody);
-            errorCode = parseResponse.detail.status_code + '';
-            errorDetails = parseResponse.detail.status_message + '';
-            gs.info("*****SOAR Config Error details*******" + errorCode);
             var orderTaskGR = new GlideRecord("sn_ind_tmt_orm_order_task");
             orderTaskGR.addQuery("sys_id", orderTaskSysID);
             orderTaskGR.query();
@@ -145,29 +141,35 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
                     orderTaskGR.update();
                 }
 
-            } else if (errorCode == '1027') {
-                returnReponse = "MEDR Configuration forwarded details already exists.";
-                if (orderTaskGR.next()) {
-                    orderTaskGR.u_soar_response = true;
-                    orderTaskGR.update();
-                }
-            } else if (errorCode == '1902' || errorCode == '1800') {
-                returnReponse = "The Carbon Black tenant was configured successfully, Please allow some time to complete other configurations.";
-                if (orderTaskGR.next()) {
-                    orderTaskGR.u_soar_response = true;
-                    orderTaskGR.update();
-                }
-            } else if (httpStatus == '500') {
-                returnReponse = "There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.";
-                if (orderTaskGR.next()) {
-                    gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', orderTaskGR, 'dl-soar@lumen.com', soarResponseBody, '');
-                    orderTaskGR.work_notes = 'There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.';
-                    orderTaskGR.update();
-                }
             } else {
-                returnReponse = "It looks like you have not entered correct details, Please provide the correct details and check the values in Org ID, Org Key, API ID, API Key, Region etc";
-                if (orderTaskGR.next())
-                    gs.eventQueue('sn_ind_tmt_orm.user.unsucessful', orderTaskGR, '', '', '');
+                var parseResponse = JSON.parse(soarResponseBody);
+                errorCode = parseResponse.detail.status_code + '';
+                errorDetails = parseResponse.detail.status_message + '';
+                gs.info("*****SOAR Config Error details*******" + errorCode);
+                if (errorCode == '1027') {
+                    returnReponse = "MEDR Configuration forwarded details already exists.";
+                    if (orderTaskGR.next()) {
+                        orderTaskGR.u_soar_response = true;
+                        orderTaskGR.update();
+                    }
+                } else if (errorCode == '1902' || errorCode == '1800') {
+                    returnReponse = "The Carbon Black tenant was configured successfully, Please allow some time to complete other configurations.";
+                    if (orderTaskGR.next()) {
+                        orderTaskGR.u_soar_response = true;
+                        orderTaskGR.update();
+                    }
+                } else if (httpStatus == '500') {
+                    returnReponse = "There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.";
+                    if (orderTaskGR.next()) {
+                        gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', orderTaskGR, 'dl-soar@lumen.com', soarResponseBody, '');
+                        orderTaskGR.work_notes = 'There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.';
+                        orderTaskGR.update();
+                    }
+                } else {
+                    returnReponse = "It looks like you have not entered correct details, Please provide the correct details and check the values in Org ID, Org Key, API ID, API Key, Region etc";
+                    if (orderTaskGR.next())
+                        gs.eventQueue('sn_ind_tmt_orm.user.unsucessful', orderTaskGR, '', '', '');
+                }
             }
         } catch (ex) {
             var message = ex.message;
@@ -262,13 +264,13 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-08-23 08:59:44</sys_created_on>
         <sys_id>04030fa48729d510b9342f07cebb3574</sys_id>
-        <sys_mod_count>68</sys_mod_count>
+        <sys_mod_count>69</sys_mod_count>
         <sys_name>SOARAPI</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_04030fa48729d510b9342f07cebb3574</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-10-27 13:42:51</sys_updated_on>
+        <sys_updated_on>2022-10-28 18:53:38</sys_updated_on>
     </sys_script_include>
 </record_update>
