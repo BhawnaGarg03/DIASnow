@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content/>
+        <function_name>getDetails</function_name>
+        <http_method>get</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>SOARGetDetails [ getDetails ]</qualified_name>
+        <rest_endpoint>https://api-test.lumen.com/Security/v1/MEDR/endpointcount/${org_id}</rest_endpoint>
+        <rest_message display_value="SOARGetDetails">946b22df872611501aa9337d0ebb35ad</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-10-20 13:20:35</sys_created_on>
+        <sys_id>bd7b621b876611501aa9337d0ebb3541</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>getDetails</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_rest_message_fn_bd7b621b876611501aa9337d0ebb3541</sys_update_name>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-10-28 18:48:50</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>
