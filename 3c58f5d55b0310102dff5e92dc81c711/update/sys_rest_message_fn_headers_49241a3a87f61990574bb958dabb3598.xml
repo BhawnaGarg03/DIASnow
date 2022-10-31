@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers">
+    <sys_rest_message_fn_headers action="INSERT_OR_UPDATE">
+        <name>X-Auth</name>
+        <rest_message_function display_value="getDetails">bd7b621b876611501aa9337d0ebb3541</rest_message_function>
+        <sys_class_name>sys_rest_message_fn_headers</sys_class_name>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-10-31 08:39:55</sys_created_on>
+        <sys_id>49241a3a87f61990574bb958dabb3598</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>X-Auth</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_rest_message_fn_headers_49241a3a87f61990574bb958dabb3598</sys_update_name>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-10-31 09:33:49</sys_updated_on>
+        <value>eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJzZXJ2aWNlbm93IiwiZXhwIjoxNjY3MjEyNDEwfQ.yvEouCVYxvFtiJA9jRfr2EZrYWfHw59bfhwV_dm66xc</value>
+    </sys_rest_message_fn_headers>
+</record_update>
