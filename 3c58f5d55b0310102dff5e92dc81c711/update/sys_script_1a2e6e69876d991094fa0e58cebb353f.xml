@@ -33,7 +33,7 @@
 
     // Add your code here
     var createUserInLIAM = new LIAMAPI().getUserLIAM(current.order_line_item.order.contact, current.order_line_item.order.contact.email) + '';
-    //gs.info("**********LIAM createUserInLIAM**********" + createUserInLIAM);
+    gs.info("**********LIAM createUserInLIAM**********" + createUserInLIAM);
     if (createUserInLIAM == 'User Created SuccessFully!!' || createUserInLIAM=='User Updated SuccessFully!!') {
 
         var externalID = current.order_line_item.order.external_id;
@@ -41,13 +41,13 @@
         var orderLineNum = current.order_line_item;
         //gs.info("****SOAR Order number*****" + orderContact + "\n SOAR ORDER LIne Num" + orderLineNum + "******ExternalID****" + externalID);
         var createUser = new SOARAPI().createUserInSOAR(current, externalID, orderContact, orderLineNum) + '';
-        gs.info("******SOAR Response : " + createUser);
+        gs.info("******SOAR User Response : " + createUser);
         if (createUser == 'User is created successfully') {
-			current.work_notes='All the configurations have been configured successfully.'
-            current.state = 5;
-            gs.eventQueue('sn_ind_tmt_orm.soar.sucessful', current, '', '', current.assignment_group);
+			gs.eventQueue('sn_ind_tmt_orm.soar.sucessful', current, current.assignment_group, '', '');
             gs.setRedirect('/sn_ind_tmt_orm_order_task.do?sys_id='+current.sys_id);
-			current.update();
+			current.work_notes='All the configurations have been configured successfully.';
+            current.state = 5;
+            current.update();
         } else {
 			gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', current, 'dl-soar@lumen.com', '', '');
             gs.setRedirect('/sn_ind_tmt_orm_order_task.do?sys_id='+current.sys_id);
@@ -64,7 +64,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1a2e6e69876d991094fa0e58cebb353f</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_name>IBM - Call SOAR Create User</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
@@ -72,7 +72,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_1a2e6e69876d991094fa0e58cebb353f</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-10-18 07:53:50</sys_updated_on>
+        <sys_updated_on>2022-11-01 05:56:07</sys_updated_on>
         <template/>
         <when>async_always</when>
     </sys_script>

@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_parameters">
     <sys_rest_message_fn_parameters action="INSERT_OR_UPDATE">
-        <name>technicalFirstName</name>
+        <name>technicalemail</name>
         <rest_message_function display_value="createUser">98be66a9876d991094fa0e58cebb3572</rest_message_function>
         <sys_class_name>sys_rest_message_fn_parameters</sys_class_name>
         <sys_created_by>AD13956</sys_created_by>
-        <sys_created_on>2022-10-31 12:09:08</sys_created_on>
-        <sys_id>92944f7287325990574bb958dabb3568</sys_id>
+        <sys_created_on>2022-11-01 05:35:10</sys_created_on>
+        <sys_id>0504b2c387fa5950e10064ed0ebb357e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name>technicalFirstName</sys_name>
+        <sys_name>technicalemail</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name>sys_rest_message_fn_parameters_92944f7287325990574bb958dabb3568</sys_update_name>
+        <sys_update_name>sys_rest_message_fn_parameters_0504b2c387fa5950e10064ed0ebb357e</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-10-31 12:09:08</sys_updated_on>
+        <sys_updated_on>2022-11-01 05:35:10</sys_updated_on>
         <type>string</type>
         <value>jyoti.chauhan@lumen.com</value>
     </sys_rest_message_fn_parameters>

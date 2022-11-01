@@ -179,7 +179,7 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
 
 
     createUserInSOAR: function(current, externalID, orderContact, orderLineNum) {
-        gs.info("*******SOAR User create Called***************" + orderContact);
+        // gs.info("*******SOAR User create Called***************"+orderContact);
         var returnReponse = '';
         var APIGEEToken = this.getAPIGEEToken();
         var SOARToken = this.getSOARToken(APIGEEToken);
@@ -193,7 +193,7 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         grCharacteristicValue.query();
         if (grCharacteristicValue.next()) {
             orgID = grCharacteristicValue.characteristic_option_value;
-            gs.info("*******SOAR User ORGID**********" + orgID);
+            //  gs.info("*******SOAR User ORGID**********" + orgID);
         }
         try {
             var r = new sn_ws.RESTMessageV2('SOAREndpoint', 'createUser');
@@ -205,53 +205,67 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
             grOrderLineContact.addQuery("order_line_item", orderLineNum);
             grOrderLineContact.query();
             if (grOrderLineContact.next()) {
-
-                r.setStringParameterNoEscape('technicalFirstName', grOrderLineContact.first_name);
-                r.setStringParameterNoEscape('technicalemail', grOrderLineContact.email);
-                r.setStringParameterNoEscape('technicalLastName', grOrderLineContact.last_name);
-				r.setStringParameterNoEscape("technical_customer_role","Admin")
-				r.setStringParameterNoEscape("technical_service_level","Self-Managed")
-				
-            } else {
-                r.setStringParameterNoEscape('technicalFirstName', "NA");
-                r.setStringParameterNoEscape('technicalemail', "NA");
-                r.setStringParameterNoEscape('technicalLastName', "NA");
-				r.setStringParameterNoEscape("technical_customer_role","Admin")
-				r.setStringParameterNoEscape("technical_service_level","Self-Managed")
-				
+                technicalemail = grOrderLineContact.email;
+                technicalFirstName = grOrderLineContact.first_name;
+                technicalLastName = grOrderLineContact.last_name;
             }
 
             var grContact = new GlideRecord("customer_contact");
             grContact.addQuery("sys_id", orderContact);
             grContact.query();
             if (grContact.next()) {
-                r.setStringParameterNoEscape('lastName', grContact.last_name);
-                r.setStringParameterNoEscape('emailAddress', grContact.email);
-				r.setStringParameterNoEscape("Customer_role","Admin");
-				r.setStringParameterNoEscape("service_level","Self-Managed");
-				r.setStringParameterNoEscape('snow_id', orgID);
-                r.setStringParameterNoEscape('firstName', grContact.first_name);
-                //r.setStringParameterNoEscape('userData', userData);
-                //gs.info("*******SOAR USer Data *****" + userData);
-                var response = r.execute();
-                var statusCode = '';
-                var sspStatusCode = '';
-                var responseBody = response.getBody();
-                var httpStatus = response.getStatusCode();
-                if (httpStatus == '200') {
-                    var parseResponse = JSON.parse(responseBody);
-                    statusCode = parseResponse.detail.status_code;
-                    sspStatusCode = parseResponse.detail.ssp_status_code;
-                }
-                gs.info("****SOAR User response******" + httpStatus);
-                gs.info("*******SOAR User Request Body*******" + r.getRequestBody());
-                gs.info("******SOAR USer Response Body*****" + responseBody);
-                if (httpStatus == '200' || httpStatus == '201' || sspStatusCode == '1027' || sspStatusCode == '403' || statusCode == '1801') {
-                    returnReponse = "User is created successfully";
-                } else {
-                    returnReponse = "User is not created due to following error code" + httpStatus;
-                    // gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', current, '', '', '');
-                }
+                var contactData = {
+                    "users": [{
+
+                            /* "email_address": grContact.email+'',
+                             "first_name": grContact.first_name+'',
+                             "last_name": grContact.last_name+'', */
+                            "email_address": 'jyoti.chauhan@lumen.com',
+                            "first_name": 'Jyoti',
+                            "last_name": 'Chauhan',
+                            "customer_role": "Admin",
+                            "service_level": "Self-Managed"
+                        },
+
+                        {
+                            "email_address": technicalemail,
+                            "first_name": technicalFirstName,
+                            "last_name": technicalLastName,
+                            "customer_role": "Admin",
+                            "service_level": "Self-Managed"
+                        }
+                    ],
+                    "snow_id": externalID
+
+                };
+                userData.push(contactData);
+            }
+            // r.setStringParameterNoEscape('userData', userData);
+            r.setStringParameterNoEscape('technicalemail', technicalemail);
+            r.setStringParameterNoEscape('lastName', grContact.last_name);
+            r.setStringParameterNoEscape('email_address', grContact.email);
+            r.setStringParameterNoEscape('technicalLastName', technicalLastName);
+            r.setStringParameterNoEscape('snow_id', externalID);
+            r.setStringParameterNoEscape('firstName', grContact.first_name);
+            r.setStringParameterNoEscape('technicalFirstName', technicalFirstName);
+            var response = r.execute();
+            var statusCode = '';
+            var sspStatusCode = '';
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+            if (httpStatus != '200') {
+                var parseResponse = JSON.parse(responseBody);
+                statusCode = parseResponse.detail.status_code;
+                sspStatusCode = parseResponse.detail.ssp_status_code;
+            }
+            gs.info("****SOAR User statusCode response******" + statusCode);
+            gs.info("*******SOAR User Request Body*******" + r.getRequestBody());
+            gs.info("******SOAR USer Response Body*****" + responseBody);
+            if (httpStatus == '200' || httpStatus == '201' || sspStatusCode == '1027' || sspStatusCode == '403' || statusCode == '1801') {
+                returnReponse = "User is created successfully";
+            } else {
+                returnReponse = "User is not created due to following error code" + httpStatus;
+                // gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', current, '', '', '');
             }
         } catch (ex) {
             var message = ex.message;
@@ -264,13 +278,13 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-08-23 08:59:44</sys_created_on>
         <sys_id>04030fa48729d510b9342f07cebb3574</sys_id>
-        <sys_mod_count>80</sys_mod_count>
+        <sys_mod_count>88</sys_mod_count>
         <sys_name>SOARAPI</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_04030fa48729d510b9342f07cebb3574</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-10-31 12:29:36</sys_updated_on>
+        <sys_updated_on>2022-11-01 05:44:03</sys_updated_on>
     </sys_script_include>
 </record_update>
