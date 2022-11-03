@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD776e87f7447e5190b2af20ed5f71fccb</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>3c58f5d55b0310102dff5e92dc81c711</scope_name>
+        <serialized_content>{"FlowDesigner:FD776e87f7447e5190b2af20ed5f71fccb":{"$COCollectionField":[{"prodorderobj_child0":{"FD22accf77c37e5190567a861874df5de0":["Any"],"FD22accf77c37e5190567a861874df5de0.$field_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"prodorderobj\",\"mandatory\":\"false\",\"child_name\":\"prodorderobj_child0\",\"uiUniqueId\":\"3065b139-664c-4f8e-aa61-5a2546b45cc1\",\"uiTypeLabel\":\"Array.Object\",\"child_label\":\"prodorderobj_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"317ad4fb-754d-4956-a979-912e02895674\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"prodorderobj\",\"mandatory\":\"false\",\"child_name\":\"prodorderobj_child0\",\"uiUniqueId\":\"3065b139-664c-4f8e-aa61-5a2546b45cc1\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD776e87f7447e5190b2af20ed5f71fccb\",\"child_label\":\"prodorderobj_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"317ad4fb-754d-4956-a979-912e02895674\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD776e87f7447e5190b2af20ed5f71fccb.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"prodorderobj\",\"mandatory\":\"false\",\"child_name\":\"prodorderobj_child0\",\"uiUniqueId\":\"3065b139-664c-4f8e-aa61-5a2546b45cc1\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD776e87f7447e5190b2af20ed5f71fccb\",\"child_label\":\"prodorderobj_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"317ad4fb-754d-4956-a979-912e02895674\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>AD11754</sys_created_by>
+        <sys_created_on>2022-11-03 15:26:02</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3b6e87f7877e51901aa9337d0ebb35cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD776e87f7447e5190b2af20ed5f71fccb</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_complex_object_3b6e87f7877e51901aa9337d0ebb35cb</sys_update_name>
+        <sys_updated_by>AD11754</sys_updated_by>
+        <sys_updated_on>2022-11-03 15:26:02</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD3e0fef7b10fe5190698560d4152b99ed</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>3c58f5d55b0310102dff5e92dc81c711</scope_name>
+        <serialized_content>{"FlowDesigner:FD3e0fef7b10fe5190698560d4152b99ed":{"$COCollectionField":[{"design_sase_configuration_requestjson_child0":{"FD92441e0cb27c191001904d321ef9fa2c":["Any"],"FD92441e0cb27c191001904d321ef9fa2c.$field_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"Design SASE Configuration  - RequestJson\",\"mandatory\":\"false\",\"child_name\":\"design_sase_configuration_requestjson_child0\",\"uiUniqueId\":\"f7ec7bae-7559-4688-b76b-05f923da7969\",\"uiTypeLabel\":\"Array.Object\",\"child_label\":\"Design SASE Configuration  - RequestJson_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"1\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"431535d1-6c68-42f6-a035-a26b64d90a86\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Design SASE Configuration  - RequestJson\",\"mandatory\":\"false\",\"child_name\":\"design_sase_configuration_requestjson_child0\",\"uiUniqueId\":\"f7ec7bae-7559-4688-b76b-05f923da7969\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD3e0fef7b10fe5190698560d4152b99ed\",\"child_label\":\"Design SASE Configuration  - RequestJson_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"5\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"431535d1-6c68-42f6-a035-a26b64d90a86\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD3e0fef7b10fe5190698560d4152b99ed.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Design SASE Configuration  - RequestJson\",\"mandatory\":\"false\",\"child_name\":\"design_sase_configuration_requestjson_child0\",\"uiUniqueId\":\"f7ec7bae-7559-4688-b76b-05f923da7969\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD3e0fef7b10fe5190698560d4152b99ed\",\"child_label\":\"Design SASE Configuration  - RequestJson_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"5\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"431535d1-6c68-42f6-a035-a26b64d90a86\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>AD11754</sys_created_by>
+        <sys_created_on>2022-11-03 17:48:30</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>fe0fef7b87fe51901aa9337d0ebb35ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD3e0fef7b10fe5190698560d4152b99ed</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_complex_object_fe0fef7b87fe51901aa9337d0ebb35ed</sys_update_name>
+        <sys_updated_by>AD11754</sys_updated_by>
+        <sys_updated_on>2022-11-03 17:48:30</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+</record_update>
