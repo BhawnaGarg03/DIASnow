@@ -4,13 +4,13 @@
             <element>u_billing_account_number</element>
             <position>0</position>
             <sys_created_by>AD13956</sys_created_by>
-            <sys_created_on>2022-11-03 09:16:40</sys_created_on>
-            <sys_id>d9e97d77877a51901aa9337d0ebb3588</sys_id>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>fd980f0c87c315d0574bb958dabb3575</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
             <sys_updated_by>AD13956</sys_updated_by>
-            <sys_updated_on>2022-11-03 09:16:40</sys_updated_on>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -18,13 +18,13 @@
             <element>u_vendor_org_id</element>
             <position>1</position>
             <sys_created_by>AD13956</sys_created_by>
-            <sys_created_on>2022-11-03 09:16:40</sys_created_on>
-            <sys_id>d1e97d77877a51901aa9337d0ebb3589</sys_id>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f1980f0c87c315d0574bb958dabb3576</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
             <sys_updated_by>AD13956</sys_updated_by>
-            <sys_updated_on>2022-11-03 09:16:40</sys_updated_on>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -32,13 +32,13 @@
             <element>u_piid</element>
             <position>2</position>
             <sys_created_by>AD13956</sys_created_by>
-            <sys_created_on>2022-11-03 09:16:40</sys_created_on>
-            <sys_id>d5e97d77877a51901aa9337d0ebb3589</sys_id>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f5980f0c87c315d0574bb958dabb3576</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
             <sys_updated_by>AD13956</sys_updated_by>
-            <sys_updated_on>2022-11-03 09:16:40</sys_updated_on>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -46,13 +46,13 @@
             <element>u_difference</element>
             <position>3</position>
             <sys_created_by>AD13956</sys_created_by>
-            <sys_created_on>2022-11-03 09:16:40</sys_created_on>
-            <sys_id>d9e97d77877a51901aa9337d0ebb3589</sys_id>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f9980f0c87c315d0574bb958dabb3576</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
             <sys_updated_by>AD13956</sys_updated_by>
-            <sys_updated_on>2022-11-03 09:16:40</sys_updated_on>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -60,13 +60,13 @@
             <element>.split</element>
             <position>4</position>
             <sys_created_by>AD13956</sys_created_by>
-            <sys_created_on>2022-11-03 09:16:40</sys_created_on>
-            <sys_id>dde97d77877a51901aa9337d0ebb3589</sys_id>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>fd980f0c87c315d0574bb958dabb3576</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
             <sys_updated_by>AD13956</sys_updated_by>
-            <sys_updated_on>2022-11-03 09:16:40</sys_updated_on>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
@@ -74,13 +74,13 @@
             <element>u_customer_order</element>
             <position>5</position>
             <sys_created_by>AD13956</sys_created_by>
-            <sys_created_on>2022-11-03 09:16:40</sys_created_on>
-            <sys_id>d1e97d77877a51901aa9337d0ebb358a</sys_id>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f1980f0c87c315d0574bb958dabb3577</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
             <sys_updated_by>AD13956</sys_updated_by>
-            <sys_updated_on>2022-11-03 09:16:40</sys_updated_on>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -88,13 +88,13 @@
             <element>u_number_of_endpoints</element>
             <position>6</position>
             <sys_created_by>AD13956</sys_created_by>
-            <sys_created_on>2022-11-03 09:16:40</sys_created_on>
-            <sys_id>d5e97d77877a51901aa9337d0ebb358a</sys_id>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f5980f0c87c315d0574bb958dabb3577</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
             <sys_updated_by>AD13956</sys_updated_by>
-            <sys_updated_on>2022-11-03 09:16:40</sys_updated_on>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -102,13 +102,13 @@
             <element>u_number_of_active_sensors</element>
             <position>7</position>
             <sys_created_by>AD13956</sys_created_by>
-            <sys_created_on>2022-11-03 09:16:40</sys_created_on>
-            <sys_id>d9e97d77877a51901aa9337d0ebb358a</sys_id>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f9980f0c87c315d0574bb958dabb3577</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
             <sys_updated_by>AD13956</sys_updated_by>
-            <sys_updated_on>2022-11-03 09:16:40</sys_updated_on>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -116,13 +116,27 @@
             <element>u_date</element>
             <position>8</position>
             <sys_created_by>AD13956</sys_created_by>
-            <sys_created_on>2022-11-03 09:16:40</sys_created_on>
-            <sys_id>dde97d77877a51901aa9337d0ebb358a</sys_id>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>fd980f0c87c315d0574bb958dabb3577</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
             <sys_updated_by>AD13956</sys_updated_by>
-            <sys_updated_on>2022-11-03 09:16:40</sys_updated_on>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_billingcycle_date</element>
+            <position>9</position>
+            <sys_created_by>AD13956</sys_created_by>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f1980f0c87c315d0574bb958dabb3578</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
+            <sys_updated_by>AD13956</sys_updated_by>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
