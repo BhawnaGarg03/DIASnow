@@ -10,12 +10,12 @@
         <copied_from_name/>
         <description>LMN_SASE_Closed_Onsite install interim task: Primary CPE Delivered Base On On-Site Indicator == "Yes"</description>
         <internal_name>lmn_sase_closed_onsite_install_interim_task_primary_cpe_delivered</internal_name>
-        <label_cache>[{"name":"bdb4260f-c426-498e-be3f-398ed71f364c.__dont_treat_as_error__","label":"5 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}},{"name":"bdb4260f-c426-498e-be3f-398ed71f364c.__action_status__","label":"5 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.__dont_treat_as_error__","label":"1 - Check Action Change Reason Char Value➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"42e447f4-035a-4586-879a-ca90a039fabb"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.__action_status__","label":"1 - Check Action Change Reason Char Value➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"23b8dadf-363e-444f-999e-1a782a367c93"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.change_reason_value","label":"1 - Check Action Change Reason Char Value➛Change Reason Value","reference_display":"Change Reason Value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4b2ef1dc-a5e3-46e9-8e0f-158ed5d74b19"}},{"name":"Updated_1.current.domain_order.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Domain Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_ind_tmt_orm_domain_order","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record","reference":"sn_ind_tmt_orm_order_characteristic_value","reference_display":"Customer Order Characteristic Value","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.domain_order.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Domain Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_ind_tmt_orm_domain_order","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item","reference":"sn_csm_om_order_line_item","reference_display":"Order Line Item","type":"reference","base_type":"reference","parent_table_name":"sn_ind_tmt_orm_order_characteristic_value","column_name":"order_line_item"},{"name":"922c1edc-7e6d-4b14-a6b7-27cd46212ebb.__dont_treat_as_error__","label":"4 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}},{"name":"922c1edc-7e6d-4b14-a6b7-27cd46212ebb.__action_status__","label":"4 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Service level upgrade to Pro-Managed","reference_display":"Service level upgrade to Pro-Managed","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"9dd7752d-3586-40aa-b151-7840c5afbdf5"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable1","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Design and Implementation Support Indic Support Upgrade","reference_display":"Design and Implementation Support Indic Support Upgrade","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"18b36712-70c1-4443-8633-b87be4942938"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.__action_status__","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"77edc657-8313-4d1e-941c-2348fe8a4c6c"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.__dont_treat_as_error__","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"99903693-6a9a-4b56-9156-6b9390b1659c"}},{"name":"Updated_1.current.order_line_item.external_system","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛External System","reference":"","reference_display":"External System","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_system"},{"name":"Updated_1.current.order_line_item.action","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Action","reference":"","reference_display":"Action","type":"choice","base_type":"choice","parent_table_name":"sn_csm_om_order_line_item","column_name":"action","choices":[{"label":"Add","used":false,"image":"","reference":false,"rawLabel":"Add","missing":false,"selected":false,"value":"add","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Keep","used":false,"image":"","reference":false,"rawLabel":"Keep","missing":false,"selected":false,"value":"keep","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Change","used":false,"image":"","reference":false,"rawLabel":"Change","missing":false,"selected":false,"value":"change","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Disconnect","used":false,"image":"","reference":false,"rawLabel":"Disconnect","missing":false,"selected":false,"value":"disconnect","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Add-Upgrade","used":false,"image":"","reference":false,"rawLabel":"Add-Upgrade","missing":false,"selected":false,"value":"add-upgrade","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Disconnect-Upgrade","used":false,"image":"","reference":false,"rawLabel":"Disconnect-Upgrade","missing":false,"selected":false,"value":"disconnect-upgrade","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Cancel","used":false,"image":"","reference":false,"rawLabel":"Cancel","missing":false,"selected":false,"value":"cancel","parameters":{"name":"sn_csm_om_order_line_item"}}]},{"name":"cce4530b-3fde-4705-8853-a3761c2bfdef.__action_status__","label":"3 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"cce4530b-3fde-4705-8853-a3761c2bfdef.__dont_treat_as_error__","label":"3 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}}]</label_cache>
+        <label_cache>[{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable127","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛SASE Onsite install Upgrade","reference_display":"SASE Onsite install Upgrade","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7985fdd5-c610-4074-a13f-f8bce6edfc80"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable1234","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛SASE Service Upgrade SWG","reference_display":"SASE Service Upgrade SWG","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"4dbbb441-0874-458b-8057-181751d22985"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable123","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛SASE Service Upgrade Firewall","reference_display":"SASE Service Upgrade Firewall","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"79ab6d58-e4d1-45f0-add5-64190fef9479"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable12","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛SASE Service Upgrade SDWAN","reference_display":"SASE Service Upgrade SDWAN","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3887b60a-52a5-4cdb-a8b5-2ae01404d9a8"}},{"name":"bdb4260f-c426-498e-be3f-398ed71f364c.__dont_treat_as_error__","label":"5 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}},{"name":"bdb4260f-c426-498e-be3f-398ed71f364c.__action_status__","label":"5 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.__dont_treat_as_error__","label":"1 - Check Action Change Reason Char Value➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"42e447f4-035a-4586-879a-ca90a039fabb"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.__action_status__","label":"1 - Check Action Change Reason Char Value➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"23b8dadf-363e-444f-999e-1a782a367c93"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.change_reason_value","label":"1 - Check Action Change Reason Char Value➛Change Reason Value","reference_display":"Change Reason Value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4b2ef1dc-a5e3-46e9-8e0f-158ed5d74b19"}},{"name":"Updated_1.current.domain_order.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Domain Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_ind_tmt_orm_domain_order","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record","reference":"sn_ind_tmt_orm_order_characteristic_value","reference_display":"Customer Order Characteristic Value","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.domain_order.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Domain Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_ind_tmt_orm_domain_order","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item","reference":"sn_csm_om_order_line_item","reference_display":"Order Line Item","type":"reference","base_type":"reference","parent_table_name":"sn_ind_tmt_orm_order_characteristic_value","column_name":"order_line_item"},{"name":"922c1edc-7e6d-4b14-a6b7-27cd46212ebb.__dont_treat_as_error__","label":"4 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}},{"name":"922c1edc-7e6d-4b14-a6b7-27cd46212ebb.__action_status__","label":"4 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Service level upgrade to Pro-Managed","reference_display":"Service level upgrade to Pro-Managed","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"9dd7752d-3586-40aa-b151-7840c5afbdf5"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable1","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Design and Implementation Support Indic Support Upgrade","reference_display":"Design and Implementation Support Indic Support Upgrade","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"18b36712-70c1-4443-8633-b87be4942938"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.__action_status__","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"77edc657-8313-4d1e-941c-2348fe8a4c6c"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.__dont_treat_as_error__","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"99903693-6a9a-4b56-9156-6b9390b1659c"}},{"name":"Updated_1.current.order_line_item.external_system","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛External System","reference":"","reference_display":"External System","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_system"},{"name":"Updated_1.current.order_line_item.action","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Action","reference":"","reference_display":"Action","type":"choice","base_type":"choice","parent_table_name":"sn_csm_om_order_line_item","column_name":"action","choices":[{"used":false,"label":"Add","image":"","missing":false,"rawLabel":"Add","reference":false,"selected":false,"value":"add","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Keep","image":"","missing":false,"rawLabel":"Keep","reference":false,"selected":false,"value":"keep","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Change","image":"","missing":false,"rawLabel":"Change","reference":false,"selected":false,"value":"change","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Disconnect","image":"","missing":false,"rawLabel":"Disconnect","reference":false,"selected":false,"value":"disconnect","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Add-Upgrade","image":"","missing":false,"rawLabel":"Add-Upgrade","reference":false,"selected":false,"value":"add-upgrade","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Disconnect-Upgrade","image":"","missing":false,"rawLabel":"Disconnect-Upgrade","reference":false,"selected":false,"value":"disconnect-upgrade","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Cancel","image":"","missing":false,"rawLabel":"Cancel","reference":false,"selected":false,"value":"cancel","parameters":{"name":"sn_csm_om_order_line_item"}}]},{"name":"cce4530b-3fde-4705-8853-a3761c2bfdef.__action_status__","label":"3 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"cce4530b-3fde-4705-8853-a3761c2bfdef.__dont_treat_as_error__","label":"3 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}}]</label_cache>
         <master_snapshot>a23b25a147555110fec76621e36d43bc</master_snapshot>
         <name>LMN_SASE_Onsite install interim Task Creation</name>
         <natlang/>
         <outputs/>
-        <remote_trigger_id>2d884c20872e155000154155dabb35cd</remote_trigger_id>
+        <remote_trigger_id>84b1786d874f19d084b2a18e0ebb3578</remote_trigger_id>
         <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
@@ -28,7 +28,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b899212147555110fec76621e36d4369</sys_id>
-        <sys_mod_count>29</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>LMN_SASE_Onsite install interim Task Creation</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
@@ -36,7 +36,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_flow_b899212147555110fec76621e36d4369</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:25</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:35</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=b899212147555110fec76621e36d4369"/>
@@ -59,42 +59,42 @@
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
         <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-10-11 12:25:24</sys_created_on>
+        <sys_created_on>2022-11-08 14:30:34</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>2d884c20872e155000154155dabb35cd</sys_id>
+        <sys_id>84b1786d874f19d084b2a18e0ebb3578</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_overrides/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:24</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:34</sys_updated_on>
         <table>sn_ind_tmt_orm_order_characteristic_value</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
-        <data>{"table":"sys_trigger_runner_mapping","id":"e5884c20872e155000154155dabb35ce","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <data>{"table":"sys_trigger_runner_mapping","id":"00b1786d874f19d084b2a18e0ebb3579","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
         <identifier>b899212147555110fec76621e36d4369</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-10-11 12:25:24</sys_created_on>
-        <sys_id>e5884c20872e155000154155dabb35ce</sys_id>
+        <sys_created_on>2022-11-08 14:30:34</sys_created_on>
+        <sys_id>00b1786d874f19d084b2a18e0ebb3579</sys_id>
         <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:24</sys_updated_on>
-        <trigger display_value="">2d884c20872e155000154155dabb35cd</trigger>
+        <sys_updated_on>2022-11-08 14:30:34</sys_updated_on>
+        <trigger display_value="">84b1786d874f19d084b2a18e0ebb3578</trigger>
     </sys_trigger_runner_mapping>
     <sys_json_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
-        <document_id>e5884c20872e155000154155dabb35ce</document_id>
+        <document_id>00b1786d874f19d084b2a18e0ebb3579</document_id>
         <field>trigger_runner</field>
         <length>144</length>
         <position>0</position>
         <source_table>sys_trigger_runner_mapping</source_table>
         <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-10-11 12:25:24</sys_created_on>
-        <sys_id>ed884c20872e155000154155dabb35ce</sys_id>
+        <sys_created_on>2022-11-08 14:30:34</sys_created_on>
+        <sys_id>08b1786d874f19d084b2a18e0ebb3579</sys_id>
     </sys_json_chunk>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=b899212147555110fec76621e36d4369^sys_idNOT INe5884c20872e155000154155dabb35ce"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=b899212147555110fec76621e36d4369^sys_idNOT IN00b1786d874f19d084b2a18e0ebb3579"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=b899212147555110fec76621e36d4369^sys_idNOT IN0d02fb5747d1d150fec76621e36d4334"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment/>
@@ -105,10 +105,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-19 15:10:20</sys_created_on>
         <sys_id>0d02fb5747d1d150fec76621e36d4334</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>48</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:25</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:34</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -151,10 +151,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-19 15:12:15</sys_created_on>
         <sys_id>09727f1b47d1d150fec76621e36d435f</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-08-19 15:12:15</sys_updated_on>
-        <value>every</value>
+        <sys_updated_on>2022-11-08 14:30:28</sys_updated_on>
+        <value>once</value>
         <variable display_value="Run Trigger">c19523d8c31932002841b63b12d3aea1</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_bb695e60c31322002841b63b12d3aea5^id=0d02fb5747d1d150fec76621e36d4334"/>
@@ -177,7 +177,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDf8884c203b2e1550c9d6a386503c5532,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDe7a1386d134f19d0a62babd842ca718e,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -235,14 +235,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-13 18:46:52</sys_created_on>
         <sys_id>1e0aad2147555110fec76621e36d438a</sys_id>
-        <sys_mod_count>52</sys_mod_count>
+        <sys_mod_count>61</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:24</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:34</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -316,14 +316,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-13 18:46:52</sys_created_on>
         <sys_id>9a0aad2147555110fec76621e36d438e</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:24</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:34</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -397,14 +397,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-13 18:46:51</sys_created_on>
         <sys_id>d60aa92147555110fec76621e36d438a</sys_id>
-        <sys_mod_count>39</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:24</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:34</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -433,10 +433,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-10-07 07:56:44</sys_created_on>
         <sys_id>4fa4620f8716191000154155dabb357e</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:25</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:34</sys_updated_on>
         <ui_id>cd444e1f-1447-4d64-880b-d0e27df2cf29</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4fa4620f8716191000154155dabb357e"/>
@@ -481,10 +481,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-10-07 07:56:45</sys_created_on>
         <sys_id>d7a4620f8716191000154155dabb35be</sys_id>
-        <sys_mod_count>44</sys_mod_count>
+        <sys_mod_count>78</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:25</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:34</sys_updated_on>
         <ui_id>cce4530b-3fde-4705-8853-a3761c2bfdef</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d7a4620f8716191000154155dabb35be"/>
@@ -525,12 +525,24 @@
         <table>var__m_sys_hub_action_input_b7cae96147555110fec76621e36d4388</table>
         <value>{{Updated_1.current.domain_order.sys_id}}</value>
     </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sase_onsite_install_upgrade_true</field>
+        <id>d7a4620f8716191000154155dabb35be</id>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-10-31 13:38:54</sys_created_on>
+        <sys_id>1d29533e873a159084b2a18e0ebb35d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-10-31 13:38:54</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b7cae96147555110fec76621e36d4388</table>
+        <value>{{cd444e1f-1447-4d64-880b-d0e27df2cf29.variable127}}</value>
+    </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=d7a4620f8716191000154155dabb35be"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=d7a4620f8716191000154155dabb35be"/>
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=b899212147555110fec76621e36d4369"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=b899212147555110fec76621e36d4369^sys_idNOT INc3a4620f8716191000154155dabb3582"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">c7a4620f8716191000154155dabb3581</block>
+        <block display_value="">d3f0e6f28772159084b2a18e0ebb3525</block>
         <comment/>
         <connected_to/>
         <decision_table/>
@@ -551,10 +563,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-10-07 07:56:44</sys_created_on>
         <sys_id>c3a4620f8716191000154155dabb3582</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>30</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:25</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:34</sys_updated_on>
         <ui_id>8dde428a-1a53-4e1a-807b-4063ed5984b1</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -568,10 +580,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-10-07 07:56:45</sys_created_on>
         <sys_id>4fa4620f8716191000154155dabb35b7</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-07 08:28:44</sys_updated_on>
-        <value>"Servicelevel upgrade to pro" OR "Support upgrade" = False</value>
+        <sys_updated_on>2022-10-31 09:36:09</sys_updated_on>
+        <value>SASE Onsite Install Upgrade == True || Order Line Item Action == Add</value>
         <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=c3a4620f8716191000154155dabb3582"/>
@@ -581,11 +593,11 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-10-07 07:56:45</sys_created_on>
         <sys_id>cba4620f8716191000154155dabb35b7</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:17</sys_updated_on>
+        <sys_updated_on>2022-10-31 09:33:34</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
-        <value>{{cd444e1f-1447-4d64-880b-d0e27df2cf29.variable}}=false^OR{{cd444e1f-1447-4d64-880b-d0e27df2cf29.variable1}}=false</value>
+        <value>{{cd444e1f-1447-4d64-880b-d0e27df2cf29.variable127}}=true^OR{{Updated_1.current.order_line_item.action}}=add</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>condition_name</field>
@@ -678,7 +690,7 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_b899212147555110fec76621e36d4369"/>
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=b899212147555110fec76621e36d4369^sys_idNOT IN3e3b65a147555110fec76621e36d4347"/>
     <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
-        <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
+        <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"3e3b65a147555110fec76621e36d4347","name":"plan","plan_signature":null}}</plan>
         <plan_id>b899212147555110fec76621e36d4369</plan_id>
         <snapshot>a23b25a147555110fec76621e36d43bc</snapshot>
@@ -687,12 +699,12 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>3e3b65a147555110fec76621e36d4347</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:24</sys_updated_on>
-        <trigger display_value="">2d884c20872e155000154155dabb35cd</trigger>
+        <sys_updated_on>2022-11-08 14:30:34</sys_updated_on>
+        <trigger display_value="">84b1786d874f19d084b2a18e0ebb3578</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=b899212147555110fec76621e36d4369"/>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
@@ -706,7 +718,7 @@
         <copied_from_name/>
         <description>LMN_SASE_Closed_Onsite install interim task: Primary CPE Delivered Base On On-Site Indicator == "Yes"</description>
         <internal_name>lmn_sase_closed_onsite_install_interim_task_primary_cpe_delivered</internal_name>
-        <label_cache>[{"name":"bdb4260f-c426-498e-be3f-398ed71f364c.__dont_treat_as_error__","label":"5 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}},{"name":"bdb4260f-c426-498e-be3f-398ed71f364c.__action_status__","label":"5 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.__dont_treat_as_error__","label":"1 - Check Action Change Reason Char Value➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"42e447f4-035a-4586-879a-ca90a039fabb"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.__action_status__","label":"1 - Check Action Change Reason Char Value➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"23b8dadf-363e-444f-999e-1a782a367c93"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.change_reason_value","label":"1 - Check Action Change Reason Char Value➛Change Reason Value","reference_display":"Change Reason Value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4b2ef1dc-a5e3-46e9-8e0f-158ed5d74b19"}},{"name":"Updated_1.current.domain_order.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Domain Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_ind_tmt_orm_domain_order","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record","reference":"sn_ind_tmt_orm_order_characteristic_value","reference_display":"Customer Order Characteristic Value","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.domain_order.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Domain Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_ind_tmt_orm_domain_order","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item","reference":"sn_csm_om_order_line_item","reference_display":"Order Line Item","type":"reference","base_type":"reference","parent_table_name":"sn_ind_tmt_orm_order_characteristic_value","column_name":"order_line_item"},{"name":"922c1edc-7e6d-4b14-a6b7-27cd46212ebb.__dont_treat_as_error__","label":"4 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}},{"name":"922c1edc-7e6d-4b14-a6b7-27cd46212ebb.__action_status__","label":"4 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Service level upgrade to Pro-Managed","reference_display":"Service level upgrade to Pro-Managed","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"9dd7752d-3586-40aa-b151-7840c5afbdf5"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable1","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Design and Implementation Support Indic Support Upgrade","reference_display":"Design and Implementation Support Indic Support Upgrade","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"18b36712-70c1-4443-8633-b87be4942938"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.__action_status__","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"77edc657-8313-4d1e-941c-2348fe8a4c6c"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.__dont_treat_as_error__","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"99903693-6a9a-4b56-9156-6b9390b1659c"}},{"name":"Updated_1.current.order_line_item.external_system","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛External System","reference":"","reference_display":"External System","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_system"},{"name":"Updated_1.current.order_line_item.action","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Action","reference":"","reference_display":"Action","type":"choice","base_type":"choice","parent_table_name":"sn_csm_om_order_line_item","column_name":"action","choices":[{"label":"Add","used":false,"image":"","reference":false,"rawLabel":"Add","missing":false,"selected":false,"value":"add","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Keep","used":false,"image":"","reference":false,"rawLabel":"Keep","missing":false,"selected":false,"value":"keep","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Change","used":false,"image":"","reference":false,"rawLabel":"Change","missing":false,"selected":false,"value":"change","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Disconnect","used":false,"image":"","reference":false,"rawLabel":"Disconnect","missing":false,"selected":false,"value":"disconnect","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Add-Upgrade","used":false,"image":"","reference":false,"rawLabel":"Add-Upgrade","missing":false,"selected":false,"value":"add-upgrade","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Disconnect-Upgrade","used":false,"image":"","reference":false,"rawLabel":"Disconnect-Upgrade","missing":false,"selected":false,"value":"disconnect-upgrade","parameters":{"name":"sn_csm_om_order_line_item"}},{"label":"Cancel","used":false,"image":"","reference":false,"rawLabel":"Cancel","missing":false,"selected":false,"value":"cancel","parameters":{"name":"sn_csm_om_order_line_item"}}]},{"name":"cce4530b-3fde-4705-8853-a3761c2bfdef.__action_status__","label":"3 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"cce4530b-3fde-4705-8853-a3761c2bfdef.__dont_treat_as_error__","label":"3 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}}]</label_cache>
+        <label_cache>[{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable127","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛SASE Onsite install Upgrade","reference_display":"SASE Onsite install Upgrade","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"7985fdd5-c610-4074-a13f-f8bce6edfc80"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable1234","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛SASE Service Upgrade SWG","reference_display":"SASE Service Upgrade SWG","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"4dbbb441-0874-458b-8057-181751d22985"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable123","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛SASE Service Upgrade Firewall","reference_display":"SASE Service Upgrade Firewall","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"79ab6d58-e4d1-45f0-add5-64190fef9479"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable12","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛SASE Service Upgrade SDWAN","reference_display":"SASE Service Upgrade SDWAN","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"3887b60a-52a5-4cdb-a8b5-2ae01404d9a8"}},{"name":"bdb4260f-c426-498e-be3f-398ed71f364c.__dont_treat_as_error__","label":"5 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}},{"name":"bdb4260f-c426-498e-be3f-398ed71f364c.__action_status__","label":"5 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.__dont_treat_as_error__","label":"1 - Check Action Change Reason Char Value➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"42e447f4-035a-4586-879a-ca90a039fabb"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.__action_status__","label":"1 - Check Action Change Reason Char Value➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"23b8dadf-363e-444f-999e-1a782a367c93"}},{"name":"00668897-f863-4837-a514-ead5a5e5aa73.change_reason_value","label":"1 - Check Action Change Reason Char Value➛Change Reason Value","reference_display":"Change Reason Value","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"4b2ef1dc-a5e3-46e9-8e0f-158ed5d74b19"}},{"name":"Updated_1.current.domain_order.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Domain Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_ind_tmt_orm_domain_order","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Updated_1.current","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record","reference":"sn_ind_tmt_orm_order_characteristic_value","reference_display":"Customer Order Characteristic Value","type":"reference","base_type":"reference","attributes":{}},{"name":"Created or Updated_1.current.domain_order.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Domain Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_ind_tmt_orm_domain_order","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Created or Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item","reference":"sn_csm_om_order_line_item","reference_display":"Order Line Item","type":"reference","base_type":"reference","parent_table_name":"sn_ind_tmt_orm_order_characteristic_value","column_name":"order_line_item"},{"name":"922c1edc-7e6d-4b14-a6b7-27cd46212ebb.__dont_treat_as_error__","label":"4 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}},{"name":"922c1edc-7e6d-4b14-a6b7-27cd46212ebb.__action_status__","label":"4 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Service level upgrade to Pro-Managed","reference_display":"Service level upgrade to Pro-Managed","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"9dd7752d-3586-40aa-b151-7840c5afbdf5"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.variable1","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Design and Implementation Support Indic Support Upgrade","reference_display":"Design and Implementation Support Indic Support Upgrade","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"18b36712-70c1-4443-8633-b87be4942938"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.__action_status__","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDACTIONSTATUS","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"77edc657-8313-4d1e-941c-2348fe8a4c6c"}},{"name":"cd444e1f-1447-4d64-880b-d0e27df2cf29.__dont_treat_as_error__","label":"1 - LMN_SASE_Check Servicelevel Upgrade➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"99903693-6a9a-4b56-9156-6b9390b1659c"}},{"name":"Updated_1.current.order_line_item.external_system","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛External System","reference":"","reference_display":"External System","type":"string","base_type":"string","parent_table_name":"sn_csm_om_order_line_item","column_name":"external_system"},{"name":"Updated_1.current.order_line_item.action","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Action","reference":"","reference_display":"Action","type":"choice","base_type":"choice","parent_table_name":"sn_csm_om_order_line_item","column_name":"action","choices":[{"used":false,"label":"Add","image":"","missing":false,"rawLabel":"Add","reference":false,"selected":false,"value":"add","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Keep","image":"","missing":false,"rawLabel":"Keep","reference":false,"selected":false,"value":"keep","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Change","image":"","missing":false,"rawLabel":"Change","reference":false,"selected":false,"value":"change","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Disconnect","image":"","missing":false,"rawLabel":"Disconnect","reference":false,"selected":false,"value":"disconnect","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Add-Upgrade","image":"","missing":false,"rawLabel":"Add-Upgrade","reference":false,"selected":false,"value":"add-upgrade","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Disconnect-Upgrade","image":"","missing":false,"rawLabel":"Disconnect-Upgrade","reference":false,"selected":false,"value":"disconnect-upgrade","parameters":{"name":"sn_csm_om_order_line_item"}},{"used":false,"label":"Cancel","image":"","missing":false,"rawLabel":"Cancel","reference":false,"selected":false,"value":"cancel","parameters":{"name":"sn_csm_om_order_line_item"}}]},{"name":"cce4530b-3fde-4705-8853-a3761c2bfdef.__action_status__","label":"3 - LMN_SASE_Onsite install interim Task Creation➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD04dae96141555110dc6838f6f4c666ad","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"dc52087a-51c0-4ec9-8239-8f34c902e994"}},{"name":"cce4530b-3fde-4705-8853-a3761c2bfdef.__dont_treat_as_error__","label":"3 - LMN_SASE_Onsite install interim Task Creation➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"7ead3a03-e22e-4a35-a08c-0bd9698e62d4"}}]</label_cache>
         <master>true</master>
         <name>LMN_SASE_Onsite install interim Task Creation</name>
         <natlang/>
@@ -723,7 +735,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a23b25a147555110fec76621e36d43bc</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -731,7 +743,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:22</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:32</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=a23b25a147555110fec76621e36d43bc"/>
@@ -746,10 +758,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-13 18:52:05</sys_created_on>
         <sys_id>e23b65a147555110fec76621e36d4327</sys_id>
-        <sys_mod_count>61</sys_mod_count>
+        <sys_mod_count>70</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:24</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:34</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -820,10 +832,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-13 18:55:19</sys_created_on>
         <sys_id>cafba5e147555110fec76621e36d4354</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-08-19 15:12:18</sys_updated_on>
-        <value>every</value>
+        <sys_updated_on>2022-11-08 14:30:31</sys_updated_on>
+        <value>once</value>
         <variable display_value="Run Trigger">c19523d8c31932002841b63b12d3aea1</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -860,7 +872,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDf8884c203b2e1550c9d6a386503c5532,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDe7a1386d134f19d0a62babd842ca718e,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -918,14 +930,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-13 18:52:04</sys_created_on>
         <sys_id>623b25a147555110fec76621e36d43d9</sys_id>
-        <sys_mod_count>19</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:21</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:32</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -999,14 +1011,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-13 18:52:04</sys_created_on>
         <sys_id>6a3b25a147555110fec76621e36d43e1</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:21</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:32</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1080,14 +1092,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-13 18:52:04</sys_created_on>
         <sys_id>a23b25a147555110fec76621e36d43c1</sys_id>
-        <sys_mod_count>37</sys_mod_count>
+        <sys_mod_count>43</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:21</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:32</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1116,10 +1128,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-10-07 07:57:03</sys_created_on>
         <sys_id>37b4a60f8716191000154155dabb356d</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:22</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:32</sys_updated_on>
         <ui_id>cce4530b-3fde-4705-8853-a3761c2bfdef</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=37b4a60f8716191000154155dabb356d"/>
@@ -1160,6 +1172,18 @@
         <table>var__m_sys_hub_action_input_b7cae96147555110fec76621e36d4388</table>
         <value>{{Updated_1.current.domain_order.sys_id}}</value>
     </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sase_onsite_install_upgrade_true</field>
+        <id>37b4a60f8716191000154155dabb356d</id>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-10-31 13:39:05</sys_created_on>
+        <sys_id>b329173e873a159084b2a18e0ebb35e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-10-31 13:39:05</sys_updated_on>
+        <table>var__m_sys_hub_action_input_b7cae96147555110fec76621e36d4388</table>
+        <value>{{cd444e1f-1447-4d64-880b-d0e27df2cf29.variable127}}</value>
+    </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=37b4a60f8716191000154155dabb356d"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=37b4a60f8716191000154155dabb356d"/>
     <sys_hub_action_instance action="INSERT_OR_UPDATE">
@@ -1176,10 +1200,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-10-07 07:57:03</sys_created_on>
         <sys_id>6fb4a60f8716191000154155dabb3563</sys_id>
-        <sys_mod_count>28</sys_mod_count>
+        <sys_mod_count>40</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:21</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:32</sys_updated_on>
         <ui_id>cd444e1f-1447-4d64-880b-d0e27df2cf29</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6fb4a60f8716191000154155dabb3563"/>
@@ -1213,7 +1237,7 @@
     <sys_hub_sub_flow_instance action="delete_multiple" query="flow=a23b25a147555110fec76621e36d43bc"/>
     <sys_hub_flow_logic action="delete_multiple" query="flow=a23b25a147555110fec76621e36d43bc^sys_idNOT IN3fb4a60f8716191000154155dabb356f"/>
     <sys_hub_flow_logic action="INSERT_OR_UPDATE">
-        <block display_value="">c7a4620f8716191000154155dabb3581</block>
+        <block display_value="">d3f0e6f28772159084b2a18e0ebb3525</block>
         <comment/>
         <connected_to/>
         <decision_table/>
@@ -1234,10 +1258,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-10-07 07:57:03</sys_created_on>
         <sys_id>3fb4a60f8716191000154155dabb356f</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>22</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:22</sys_updated_on>
+        <sys_updated_on>2022-11-08 14:30:32</sys_updated_on>
         <ui_id>8dde428a-1a53-4e1a-807b-4063ed5984b1</ui_id>
         <workflow_inputs/>
         <workflow_reference/>
@@ -1251,10 +1275,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-10-07 07:57:04</sys_created_on>
         <sys_id>7bb4a60f8716191000154155dabb3573</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-07 08:28:47</sys_updated_on>
-        <value>"Servicelevel upgrade to pro" OR "Support upgrade" = False</value>
+        <sys_updated_on>2022-10-31 09:36:42</sys_updated_on>
+        <value>SASE Onsite Install Upgrade == True || Order Line Item Action == Add</value>
         <variable display_value="Condition Label">f0af19c1c32632002841b63b12d3aea3</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=3fb4a60f8716191000154155dabb356f"/>
@@ -1264,11 +1288,11 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-10-07 07:57:04</sys_created_on>
         <sys_id>f7b4a60f8716191000154155dabb3573</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-11 12:25:21</sys_updated_on>
+        <sys_updated_on>2022-10-31 09:36:42</sys_updated_on>
         <table>var__m_sys_hub_flow_logic_input_af4e1945c3e232002841b63b12d3ae3e</table>
-        <value>{{cd444e1f-1447-4d64-880b-d0e27df2cf29.variable}}=false^OR{{cd444e1f-1447-4d64-880b-d0e27df2cf29.variable1}}=false</value>
+        <value>{{cd444e1f-1447-4d64-880b-d0e27df2cf29.variable127}}=true^OR{{Updated_1.current.order_line_item.action}}=add</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>condition_name</field>
@@ -1362,6 +1386,6 @@
     <sys_hub_flow action="UPDATE">
         <sys_id>b899212147555110fec76621e36d4369</sys_id>
         <latest_snapshot>a23b25a147555110fec76621e36d43bc</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch4a-06-21-2022_07-12-2022_1907.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch7-08-17-2022_08-23-2022_1902.zip</compiler_build>
     </sys_hub_flow>
 </record_update>
