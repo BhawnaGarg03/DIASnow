@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>sn_ind_tmt_orm.TMF622GetOrderDetailsAPIUtil</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>TMF622GetOrderDetailsAPIUtil</name>
+        <script><![CDATA[var TMF622GetOrderDetailsAPIUtil = Class.create();
+TMF622GetOrderDetailsAPIUtil.prototype = Object.extendsObject(sn_prd_pm_adv.BaseAPIUtil, {
+	initialize: function() {
+		sn_prd_pm_adv.BaseAPIUtil.prototype.initialize.call(this, TMFOrderAPIConstants.LEVEL_OF_LOGGING);
+
+		this.tmfCommonOrderAPIUtil1 = new TMFCommonOrderAPIUtil1();
+		this.tsmOpenAPIUtil = new sn_ind_tsm_core.TSMOpenAPIUtil();
+		this.apiCoreUtil = new sn_ind_tsm_core.APICoreUtil();
+		this.productOrderProcessor = new ProductOrderProcessor();
+	},
+	/*
+	* processGetOrder : GET Product Order API
+	* Retrieve Only the Product Order and supports filtering by fields and query Conditions
+	*
+	*/
+	processGetOrder:function(id, myQueryParam, queryParams) {
+		try {
+			// Customized validation 'isValidProductOrderId', defaults to true.
+			if (!this.isValidProductOrderId(id) || !this.productOrderProcessor.validateGetRequest(id, this.response))
+				return this.response;
+
+			var productOrderTransformMap = new CustomerOrderTransformMap(queryParams, Constants.TABLE_PRODUCT_ORDER);
+			var filters = productOrderTransformMap.transformQueryParams();
+
+			var productOrderGr = OrderDAO.queryRecordByID(id, Constants.ORDER_CATE_PRODUCT, filters);
+			if (!productOrderGr.hasNext())
+				return this.response = this.returnErrorMessage(sn_prd_pm_adv.Constants.MESSAGES.INVALID_FILTER_CONDITION);
+
+			var prdOrderObj = this.prepareGetOrderResponse(productOrderGr);
+
+
+			gs.info("Checking my query in script include "+myQueryParam);
+			var OLI_EXT_ID = myQueryParam;
+			if(OLI_EXT_ID == "" || OLI_EXT_ID ==  undefined || OLI_EXT_ID ==  null){
+
+				//SASE Profile - ItemPrice Amount Passing null 
+				for (var a = 0; a < prdOrderObj['productOrderItem'].length; a++) {
+					if((prdOrderObj.productOrderItem[a].product.productSpecification.name == "SASE Profile") == true || (prdOrderObj.productOrderItem[a].product.productSpecification.name == "SASE Node") == true){
+						for(var b = 0; b < prdOrderObj.productOrderItem[a].itemPrice.length; b++){
+							prdOrderObj.productOrderItem[a].itemPrice.splice(b);
+						}
+					}
+					if((prdOrderObj.productOrderItem[a].product.productSpecification.name == "SASE Support") == true || (prdOrderObj.productOrderItem[a].product.productSpecification.name == "On Site Installation") == true || (prdOrderObj.productOrderItem[a].product.productSpecification.name == "Technical Services") == true){
+						for(var c = 0; c < prdOrderObj.productOrderItem[a].itemPrice.length; c++){
+							prdOrderObj.productOrderItem[a].itemPrice.splice(c, 1);
+						}
+					}
+				}
+				//SASE Profile - ItemPrice Amount Passing null - END
+
+				//prdOrderObj = JSON.parse(JSON.stringify(prdOrderObj).replace(/null/gi, "\"\""));
+				prdOrderObj = JSON.parse(JSON.stringify(prdOrderObj));
+
+			}else{
+				for (var i = 0; i < prdOrderObj['productOrderItem'].length; i++) {
+					if(prdOrderObj['productOrderItem'][i]["id"] != OLI_EXT_ID){
+						delete prdOrderObj['productOrderItem'][i];
+					}
+				}
+				//Checking if object is blank or null if yes so I am removing
+				var prdOrderObjAJ = prdOrderObj;
+				for (var j = prdOrderObjAJ['productOrderItem'].length - 1; j >= 0; j--) {
+					if (prdOrderObjAJ['productOrderItem'][j] === "" || prdOrderObjAJ['productOrderItem'][j] == null) {
+						prdOrderObjAJ['productOrderItem'].splice(j, 1); 
+					}
+				}
+
+				//SASE Profile - ItemPrice Amount Passing null 
+				for (var a = 0; a < prdOrderObj['productOrderItem'].length; a++) {
+					if((prdOrderObj.productOrderItem[a].product.productSpecification.name == "SASE Profile") == true || (prdOrderObj.productOrderItem[a].product.productSpecification.name == "SASE Node") == true){
+						for(var b = 0; b < prdOrderObj.productOrderItem[a].itemPrice.length; b++){
+							prdOrderObj.productOrderItem[a].itemPrice.splice(b);
+						}
+					}
+					if((prdOrderObj.productOrderItem[a].product.productSpecification.name == "SASE Support") == true || (prdOrderObj.productOrderItem[a].product.productSpecification.name == "On Site Installation") == true || (prdOrderObj.productOrderItem[a].product.productSpecification.name == "Technical Services") == true){
+						for(var c = 0; c < prdOrderObj.productOrderItem[a].itemPrice.length; c++){
+							prdOrderObj.productOrderItem[a].itemPrice.splice(c, 1);
+						}
+					}
+				}
+				//SASE Profile - ItemPrice Amount Passing null - END
+				//prdOrderObj = JSON.parse(JSON.stringify(prdOrderObj).replace(/null/gi, "\"\""));
+				prdOrderObj = JSON.parse(JSON.stringify(prdOrderObj));
+
+			}
+
+
+			var filterAPI = new sn_prd_pm_adv.FilterAPI();
+			var fields = productOrderTransformMap.getFields();
+			var filteredRes = filterAPI.filterObject(fields, prdOrderObj);
+			this.response.setValue('details', filteredRes);
+			this.response.setValue('status', sn_ind_tsm_core.Constants.STATUS_CODES.OK);
+		} catch (ex) {
+			var details =  [];
+			details.push(this.apiCoreUtil.getErrorDetailsObj(ex.message + '', ''));
+			var errorObj = this.apiCoreUtil.getErrorObj(sn_ind_tsm_core.Constants.ERROR_CODES.INTERNAL_ERROR, sn_prd_pm_adv.Constants.MESSAGES.GET_ERROR, sn_prd_pm_adv.Constants.MESSAGES.GET_ERROR);
+			errorObj.details = details;
+			this.response.setValue('details', errorObj);
+		}
+		return this.response;
+	},
+
+	prepareGetOrderResponse: function(prdOrderGr, isGetAPI) {
+		var prdOrderObj = new sn_prd_pm_adv.BaseObject();
+		if (gs.nil(isGetAPI))
+			prdOrderGr.next();
+		prdOrderObj.setValue('id', prdOrderGr.getValue('sys_id'));
+		prdOrderObj.setValue('externalId', prdOrderGr.getValue('external_id'));
+		prdOrderObj.setValue('orderID', prdOrderGr.getValue('order_id'));
+		prdOrderObj.setValue('approvedBy', prdOrderGr.getValue('u_approved_by'));
+		prdOrderObj.setValue('ponr', prdOrderGr.getDisplayValue('ponr'));
+		prdOrderObj.setValue('createdBy', prdOrderGr.getDisplayValue('sys_created_by'));
+		prdOrderObj.setValue('lastModifyDate', this.tsmOpenAPIUtil.transformToISODate(prdOrderGr.getDisplayValue('sys_updated_on')));
+		if (!gs.nil(prdOrderGr.getValue("actual_end_date")))
+			prdOrderObj.setValue('completionDate', this.tsmOpenAPIUtil.transformToISODate(prdOrderGr.getDisplayValue('actual_end_date')));
+		if (!gs.nil(prdOrderGr.getValue("expected_end_date")))
+			prdOrderObj.setValue('expectedCompletionDate', this.tsmOpenAPIUtil.transformToISODate(prdOrderGr.getDisplayValue('expected_end_date')));
+		if (!gs.nil(prdOrderGr.getValue("order_date")))
+			prdOrderObj.setValue('orderDate', this.tsmOpenAPIUtil.transformToISODate(prdOrderGr.getDisplayValue('order_date')));
+		if (!gs.nil(prdOrderGr.getValue("expected_end_date")))
+			prdOrderObj.setValue('requestedCompletionDate', this.tsmOpenAPIUtil.transformToISODate(prdOrderGr.getDisplayValue('expected_end_date')));
+		if (!gs.nil(prdOrderGr.getValue("expected_start_date")))
+			prdOrderObj.setValue('requestedStartDate', this.tsmOpenAPIUtil.transformToISODate(prdOrderGr.getDisplayValue('expected_start_date')));
+		if (!gs.nil(prdOrderGr.getDisplayValue("channel")))
+			prdOrderObj.setValue('channel',this.getChannel(prdOrderGr));
+		if (!gs.nil(prdOrderGr.comments.getJournalEntry(-1)))
+			prdOrderObj.setValue('note',this.tmfCommonOrderAPIUtil1.getNotes(prdOrderGr));
+		var orderLineItemList = this.getProductOrderLineItem(prdOrderGr);
+		if (orderLineItemList.length > 0)
+			prdOrderObj.setValue('productOrderItem',orderLineItemList);
+		var relatedParty = this.tmfCommonOrderAPIUtil1.getRelatedParty(prdOrderGr);
+		if (relatedParty.length > 0)
+			prdOrderObj.setValue('relatedParty',relatedParty);
+		prdOrderObj.setValue('state', prdOrderGr.getValue('state'));
+		prdOrderObj.setValue('version', prdOrderGr.getValue('version'));
+		prdOrderObj.setValue('@type', TMFOrderAPIConstants.TYPE_PRODUCT_ORDER);
+		prdOrderObj = this.productOrderProcessor.transformGetOrderResponse(prdOrderObj, prdOrderGr); // Customize Order object as per requirement.
+		return prdOrderObj;
+	},
+
+	prepareListProductOrder: function(productOrderGr) {
+		var productOrderList = [];
+		while (productOrderGr.next()) {
+			var productOrderObj = this.prepareGetOrderResponse(productOrderGr, false);
+			productOrderList.push(productOrderObj);
+		}
+		return productOrderList;
+	},
+
+	/*
+	* processGetOrder : LIST Product Order API
+	* Retrieves the product order and supports 
+	* 1) Filtering by fields and 
+	* 2) Fitlering by query Conditions and
+	* 3) Pagination
+	*
+	*/
+	processListProductOrder: function(queryParams, requestURL) {
+		try {
+			var productOrderTransformMap = new CustomerOrderTransformMap(queryParams, Constants.TABLE_PRODUCT_ORDER);
+			var filters = productOrderTransformMap.transformQueryParams();
+
+			//Invalid Offset
+			if (productOrderTransformMap.isInvalidOffset())
+				return this.response = this.returnErrorMessage(sn_prd_pm_adv.Constants.MESSAGES.INVALID_OFFSET_MESSAGE, sn_ind_tsm_core.Constants.ERROR_CODES.INTERNAL_ERROR, sn_prd_pm_adv.Constants.MESSAGES.OFFSET_INVALID_REASON);
+
+			//Invalid Limit
+			if (productOrderTransformMap.isInvalidLimit())
+				return this.response = this.returnErrorMessage(sn_prd_pm_adv.Constants.MESSAGES.INVALID_LIMIT_MESSAGE, sn_ind_tsm_core.Constants.ERROR_CODES.INTERNAL_ERROR, sn_prd_pm_adv.Constants.MESSAGES.LIMIT_INVALID_REASON);
+
+			var offset = gs.nil(productOrderTransformMap.getOffset()) ? 0 : productOrderTransformMap.getOffset();
+			var limit = productOrderTransformMap.getLimit();
+
+			//Checking the Limit exceeds Maximum Limit
+			if (!gs.nil(limit)) {
+				if (limit > sn_prd_pm_adv.FilterConstants.PAGINATION.MAX_LIMIT)
+					return this.response = this.returnErrorMessage(sn_prd_pm_adv.Constants.MESSAGES.INVALID_PAGE_LIMIT, sn_ind_tsm_core.Constants.ERROR_CODES.INTERNAL_ERROR, sn_prd_pm_adv.Constants.MESSAGES.LIMIT_INVALID);
+			}
+
+			var productOrderGr = OrderDAO.queryAllRecords(filters, Constants.ORDER_CATE_PRODUCT, offset, limit);
+			if (!productOrderGr.hasNext())
+				return this.response = this.returnErrorMessage(sn_prd_pm_adv.Constants.MESSAGES.INVALID_FILTER_CONDITION);
+
+			var totalCount = this.getTotalRecordCount(productOrderGr);
+			this.request.setValues({
+				'url': requestURL,
+				'recordCount': totalCount,
+				'queryParams': productOrderTransformMap.getQueryStringforPagination(),
+
+			});
+
+			var productOrderObjs = this.prepareListProductOrder(productOrderGr);
+			productOrderObjs = JSON.parse(JSON.stringify(productOrderObjs).replace(/null/gi, "\"\""));
+			var filterAPI = new sn_prd_pm_adv.FilterAPI();
+			var fields = productOrderTransformMap.getFields();
+			var filteredRes = filterAPI.filterObjects(fields, productOrderObjs);
+
+			this.response.setValue('details', filteredRes);
+			if (!gs.nil(totalCount)) {
+				this.response.setValues({
+					'totalCount': totalCount,
+					'contentRange': this.getContentRange(offset, limit),
+					'status': this.getStatus(limit),
+					'links': this.getLinks(offset, limit)
+				});
+			}
+
+		} catch (ex) {
+
+			var details = [];
+			details.push(this.getErrorDetailsObj(ex.message + '', ''));
+			var errorObj = this.retrieveErrorObject(sn_ind_tsm_core.Constants.ERROR_CODES.INTERNAL_ERROR, sn_prd_pm_adv.Constants.MESSAGES.GET_ERROR, sn_prd_pm_adv.Constants.MESSAGES.GET_ERROR, details);
+			this.response.setValue('details', errorObj);
+		}
+		return this.response;
+	},
+
+	getProductOrderLineItem: function(customerOrder) {
+		var orderLineItemList = [];
+		var orderLineItemGr = OrderLineItemDAO.queryOrderLineItems(customerOrder);
+		while (orderLineItemGr.next()) {
+			var orderLineItemObj = new sn_prd_pm_adv.BaseObject();
+			var orderLineID = gs.nil(orderLineItemGr.getValue(Constants.EXTERNAL_ID)) ? orderLineItemGr.getValue("sys_id") : orderLineItemGr.getValue(Constants.EXTERNAL_ID);
+			orderLineItemObj.setValue('id', orderLineID);
+			orderLineItemObj.setValue('orderLineID', orderLineItemGr.getDisplayValue('order_line_id'));
+			orderLineItemObj.setValue('ponr', orderLineItemGr.getDisplayValue('ponr'));
+			orderLineItemObj.setValue('createDate', this.tsmOpenAPIUtil.transformToISODate(orderLineItemGr.getDisplayValue('sys_created_on')));
+			orderLineItemObj.setValue('createdBy', orderLineItemGr.getDisplayValue('sys_created_by'));
+			orderLineItemObj.setValue('lastModifyDate', this.tsmOpenAPIUtil.transformToISODate(orderLineItemGr.getDisplayValue('sys_updated_on')));
+			orderLineItemObj.setValue('approvedBy', orderLineItemGr.getDisplayValue('u_approved_by'));
+			if (!gs.nil(orderLineItemGr.getValue("quantity")))
+				orderLineItemObj.setValue('quantity', parseInt(orderLineItemGr.getValue("quantity")));
+			if (!gs.nil(orderLineItemGr.getValue("action")))
+				orderLineItemObj.setValue('action', orderLineItemGr.getValue("action"));
+			if (!gs.nil(orderLineItemGr.getValue("u_action_change_reason")))
+				orderLineItemObj.setValue('actionReasonCode', orderLineItemGr.getValue("u_action_change_reason"));
+			if (!gs.nil(orderLineItemGr.getValue("u_state_change_reason")))
+				orderLineItemObj.setValue('stateChangeReasonCode', orderLineItemGr.getValue("u_state_change_reason"));
+			if (!gs.nil(orderLineItemGr.getValue("u_approved_by")))
+				orderLineItemObj.setValue('approvedBy', orderLineItemGr.getValue("u_approved_by"));	
+			var itemPrice = this.getItemPrice(orderLineItemGr);
+			if (itemPrice.length > 0)
+				orderLineItemObj.setValue('itemPrice', itemPrice);
+			var productObj = this.getProductCharacteristicsSpecificationLoactionAndRelatedContacts(orderLineItemGr);
+			productObj = this.productOrderProcessor.transformProductObj(productObj, orderLineItemGr); // Customize product object as per requirement.
+			if (!global.JSUtil.isEmpty(productObj))
+				orderLineItemObj.setValue('product', productObj);
+			var prdOffering = this.getProductOffering(orderLineItemGr);
+			if (!global.JSUtil.isEmpty(prdOffering))
+				orderLineItemObj.setValue('productOffering', prdOffering);
+			var orderItemRelationship = this.tmfCommonOrderAPIUtil1.getOrderItemRelationship(orderLineItemGr);
+			orderItemRelationship = this.productOrderProcessor.transformOrderItemRelationship(orderItemRelationship, orderLineItemGr); //Customize order line item relationship as per requirement.
+			if (orderItemRelationship.length > 0)
+				orderLineItemObj.setValue('productOrderItemRelationship', orderItemRelationship);
+			orderLineItemObj.setValue('state', orderLineItemGr.getValue('state'));
+			orderLineItemObj.setValue('version', orderLineItemGr.getValue('version'));
+			orderLineItemObj.setValue('@type', TMFOrderAPIConstants.TYPE_PRODUCT_ORDER_ITEM);
+			orderLineItemObj = this.productOrderProcessor.transformGetOrdLineItmResponse(orderLineItemObj, orderLineItemGr); // Customize order line item object as per requirement.
+			orderLineItemList.push(orderLineItemObj);
+		}
+		return orderLineItemList;
+	},
+
+	getChannel: function(prdOrder) {
+		var channel = [];
+		var channelObj = new sn_prd_pm_adv.BaseObject();
+		var chnl = new GlideRecordSecure(Constants.TABLE_DISTRIBUTION_CHANNEL);
+		chnl.addQuery('name', prdOrder.getDisplayValue("channel"));
+		chnl.query();
+		var id = '';
+		if (chnl.next())
+			id = gs.nil(chnl.getValue('external_id')) ? chnl.getValue('sys_id') : chnl.getValue('external_id');
+		channelObj.setValue('id', id);
+		channelObj.setValue('name', prdOrder.getDisplayValue("channel"));
+		channel.push(channelObj);
+		return channel;
+	},
+
+	getItemPrice: function(orderLineItemGr) {
+		var monthlyRecurringChargesValue = parseFloat(orderLineItemGr.mrc.getCurrencyValue());
+		var monthlyRecurringChargesValueCode = orderLineItemGr.mrc.getCurrencyCode();
+		var nonRecurringChargesValue = parseFloat(orderLineItemGr.nrc.getCurrencyValue());
+		var nonRecurringChargesCode = orderLineItemGr.nrc.getCurrencyCode();
+		var itemPrice = [];
+		this.getCharges(itemPrice, 'recurring', monthlyRecurringChargesValue, monthlyRecurringChargesValueCode);
+		this.getCharges(itemPrice, 'nonRecurring', nonRecurringChargesValue, nonRecurringChargesCode);
+		return itemPrice;
+	},
+
+	getCharges: function(itemPrice, priceType, chargesValue, chargesValueCode) {
+		var itemPriceObj = new sn_prd_pm_adv.BaseObject();
+		itemPriceObj.setValue('priceType', priceType);
+		var price = new sn_prd_pm_adv.BaseObject();
+		var Amount = new sn_prd_pm_adv.BaseObject();
+		Amount.setValue('unit', chargesValueCode);
+		Amount.setValue('value', chargesValue);
+		price.setValue('Amount', Amount);
+		itemPriceObj.setValue('price', price);
+		itemPrice.push(itemPriceObj);
+	},
+
+	getProductCharacteristicsSpecificationLoactionAndRelatedContacts: function(orderLineItemGr) {
+		var product = new sn_prd_pm_adv.BaseObject();
+		product.setValue('@type', 'Product');
+		var characteristicArray = this.getProductCharacteristics(orderLineItemGr);
+		characteristicArray = this.productOrderProcessor.transformProductCharacteristics(characteristicArray, orderLineItemGr); // Customize order characteristic as per requirement.
+		if (characteristicArray.length > 0)
+			product.setValue('productCharacteristic', characteristicArray);
+		var productSpecificationObj = this.getProductSpecification(orderLineItemGr);
+		productSpecificationObj = this.productOrderProcessor.transformProductSpecification(productSpecificationObj, orderLineItemGr); // Customize product spec as per requirement.
+		product.setValue('productSpecification', productSpecificationObj);
+		if (!gs.nil(orderLineItemGr.getValue('location')))
+			product.setValue('place', this.tmfCommonOrderAPIUtil1.getLocation(orderLineItemGr));
+		if (!gs.nil(orderLineItemGr.getValue('shipping_city')))
+			product.setValue('shippingInfo', this.tmfCommonOrderAPIUtil1.getshippingLocation(orderLineItemGr));
+		var tieringInfo = this.tmfCommonOrderAPIUtil1.getTieringInfo(orderLineItemGr);
+		if (tieringInfo.length > 0)
+			product.setValue('discountTiers',tieringInfo);
+		product = this.productOrderProcessor.transformGetOrderResponse(product, orderLineItemGr); // Customize Order object as per requirement.
+
+		var relatedPartyCustomerLineItem = this.tmfCommonOrderAPIUtil1.getRelatedPartyCustomerLineItem(orderLineItemGr);
+		relatedPartyCustomerLineItem = this.productOrderProcessor.transformRelatedPartyCustomerLineItem(relatedPartyCustomerLineItem, orderLineItemGr); // Customize order line item contact as per requirement.
+		if (relatedPartyCustomerLineItem.length > 0)
+			product.setValue('relatedParty', relatedPartyCustomerLineItem);
+		return product;
+	},
+
+	getProductCharacteristics: function(orderLineItemGr) {
+		var characteristicArray = [];
+		var characteristics = OrderCharacteristicValueDAO.queryAllBySpecification(orderLineItemGr, false);
+		while (characteristics.next()) {
+			var prdOfferingChar = sn_prd_pm_adv.ProductOfferingCharacteristicDAO.queryAllByPOandChar(characteristics, orderLineItemGr);
+			if (prdOfferingChar.next()) {
+				var isPreviousValueDiff = true;
+				if (orderLineItemGr.getValue('action') == TMFOrderAPIConstants.LINE_ITEM_ACTION.CHANGE)
+					if (characteristics.getValue("previous_characteristic_option_value") == charcteristics.getValue('characteristic_option_value'))
+						isPreviousValueDiff = false;
+
+				if (isPreviousValueDiff) {
+					var characteristicObj = this.tmfCommonOrderAPIUtil1.getCharacteristicArray(characteristics);
+					characteristicArray.push(characteristicObj);
+				}
+			}
+		}
+		return characteristicArray;
+	},
+
+	getProductSpecification: function(orderLineItemGr) {
+		var productSpecificationObj = new sn_prd_pm_adv.BaseObject();
+		if (!gs.nil(orderLineItemGr.getValue('product_specification'))) {
+			var prodSpecID = gs.nil(orderLineItemGr.product_specification.external_id) ? orderLineItemGr.getValue('product_specification') : orderLineItemGr.product_specification.external_id + '';
+			productSpecificationObj.setValue('id', prodSpecID);
+			productSpecificationObj.setValue('name', orderLineItemGr.product_specification.name + '');
+			productSpecificationObj.setValue('version', orderLineItemGr.product_specification.version + '');
+			productSpecificationObj.setValue('@type', TMFOrderAPIConstants.TYPE_PRODUCT_SPECIFICATION);
+		}
+		return productSpecificationObj;
+	},
+
+	getProductOffering: function(orderLineItemGr) {
+		var productOfferingObj = new sn_prd_pm_adv.BaseObject();
+		if (!gs.nil(orderLineItemGr.getValue('product_offering'))) {
+			var productOfferingID = gs.nil(orderLineItemGr.product_offering.external_id) ? orderLineItemGr.getValue('product_offering') : orderLineItemGr.product_offering.external_id + '';
+			productOfferingObj.setValue('id', productOfferingID);
+			productOfferingObj.setValue('name', orderLineItemGr.product_offering.name + '');
+		}
+		return productOfferingObj;
+	},
+
+	isValidProductOrderId: function(id) {
+		var productOrderGr = OrderDAO.queryRecordByID(id, Constants.ORDER_CATE_PRODUCT);
+		if (!productOrderGr.hasNext()) {
+			var details = [];
+			details.push(this.getErrorDetailsObj(TMFOrderAPIConstants.MESSAGES.ORDER_NOT_FOUND, ''));
+			var errorObj = this.retrieveErrorObject(sn_ind_tsm_core.Constants.ERROR_CODES.RESOURCE_NOT_FOUND, sn_prd_pm_adv.Constants.MESSAGES.RESOURCE_NOT_FOUND, sn_prd_pm_adv.Constants.MESSAGES.RESOURCE_NOT_FOUND, details);
+			this.response.setValue('details', errorObj);
+			this.response.setValue('status', sn_ind_tsm_core.Constants.STATUS_CODES.NOT_FOUND);
+			return false;
+		}
+		return true;
+	},
+
+	type: 'TMF622GetOrderDetailsAPIUtil'
+});]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>Tejasree.Karnati</sys_created_by>
+        <sys_created_on>2022-04-07 18:14:44</sys_created_on>
+        <sys_id>0be6525c87bac5109e3131dd0ebb35fc</sys_id>
+        <sys_mod_count>88</sys_mod_count>
+        <sys_name>TMF622GetOrderDetailsAPIUtil</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_include_0be6525c87bac5109e3131dd0ebb35fc</sys_update_name>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-11-08 18:42:45</sys_updated_on>
+    </sys_script_include>
+</record_update>

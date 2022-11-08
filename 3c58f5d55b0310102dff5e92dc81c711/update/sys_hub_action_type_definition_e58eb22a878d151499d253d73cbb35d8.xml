@@ -25,15 +25,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e58eb22a878d151499d253d73cbb35d8</sys_id>
-        <sys_mod_count>64</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name>LMN_Onsite_PO - Revenue Task</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_e58eb22a878d151499d253d73cbb35d8</sys_update_name>
-        <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 18:31:20</sys_updated_on>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-11-08 19:40:32</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -86,10 +86,10 @@
         <sys_created_by>AD11754</sys_created_by>
         <sys_created_on>2022-08-04 17:19:31</sys_created_on>
         <sys_id>03bf7e6a878d151499d253d73cbb35c0</sys_id>
-        <sys_mod_count>24</sys_mod_count>
+        <sys_mod_count>25</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 18:31:11</sys_updated_on>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-11-08 19:40:29</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=03bf7e6a878d151499d253d73cbb35c0"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -100,9 +100,9 @@
         <sys_created_by>AD11754</sys_created_by>
         <sys_created_on>2022-08-04 17:19:32</sys_created_on>
         <sys_id>53bf7e6a878d151499d253d73cbb35d6</sys_id>
-        <sys_mod_count>23</sys_mod_count>
-        <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 18:31:11</sys_updated_on>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-11-08 19:40:29</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   // ... code ...
@@ -132,7 +132,7 @@
         task.account = inputs.accountID;
         task.parent = productOrderID;
         task.short_description = "Onsite Revenue Realize Task";
-        task.state = 5;    
+        task.state = 2;    
         task.insert();
       }   
     }
@@ -254,12 +254,12 @@
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>script</field>
         <id>03bf7e6a878d151499d253d73cbb35c0</id>
-        <sys_created_by>AD11754</sys_created_by>
-        <sys_created_on>2022-08-17 19:16:11</sys_created_on>
-        <sys_id>a61712fe8751191004d253d73cbb353c</sys_id>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-11-08 19:40:29</sys_created_on>
+        <sys_id>bf98bd2d874f59d084b2a18e0ebb35ac</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>AD11754</sys_updated_by>
-        <sys_updated_on>2022-08-17 19:16:11</sys_updated_on>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-11-08 19:40:29</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
@@ -1161,10 +1161,10 @@
         <sys_created_by>AD11754</sys_created_by>
         <sys_created_on>2022-08-04 17:19:34</sys_created_on>
         <sys_id>33bfbe6a878d151499d253d73cbb352c</sys_id>
-        <sys_mod_count>22</sys_mod_count>
+        <sys_mod_count>23</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 18:31:20</sys_updated_on>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-11-08 19:40:32</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=33bfbe6a878d151499d253d73cbb352c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1175,9 +1175,9 @@
         <sys_created_by>AD11754</sys_created_by>
         <sys_created_on>2022-08-04 17:19:34</sys_created_on>
         <sys_id>7bbfbe6a878d151499d253d73cbb353f</sys_id>
-        <sys_mod_count>21</sys_mod_count>
-        <sys_updated_by>AD12076</sys_updated_by>
-        <sys_updated_on>2022-08-25 18:31:20</sys_updated_on>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-11-08 19:40:32</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   // ... code ...
@@ -1207,7 +1207,7 @@
         task.account = inputs.accountID;
         task.parent = productOrderID;
         task.short_description = "Onsite Revenue Realize Task";
-        task.state = 5;    
+        task.state = 2;    
         task.insert();
       }   
     }
@@ -1329,12 +1329,12 @@
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>script</field>
         <id>33bfbe6a878d151499d253d73cbb352c</id>
-        <sys_created_by>AD11754</sys_created_by>
-        <sys_created_on>2022-08-17 19:16:22</sys_created_on>
-        <sys_id>e92752fe8751191004d253d73cbb3578</sys_id>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-11-08 19:40:32</sys_created_on>
+        <sys_id>aca8fd2d874f59d084b2a18e0ebb3523</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>AD11754</sys_updated_by>
-        <sys_updated_on>2022-08-17 19:16:22</sys_updated_on>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-11-08 19:40:32</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
         <value/>
     </sys_element_mapping>
@@ -2138,6 +2138,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>e58eb22a878d151499d253d73cbb35d8</sys_id>
         <latest_snapshot>e3bfbe6a878d151499d253d73cbb3518</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch4a-06-21-2022_07-12-2022_1907.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch7-08-17-2022_08-23-2022_1902.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>
