@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_ind_tmt_orm_order_task</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="sn_ind_tmt_orm_order_task">stateCHANGESTO5^short_description=MEDR Technical Data Gathering^EQ<item display_value="Closed Complete" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="5"/>
+            <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="false" value="MEDR Technical Data Gathering"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>IBM - Call LIAM Create User</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
+
+    // Add your code here
+    gs.info("*******LIAM userCalled******");
+    var createUserInLIAM = new LIAMAPI().getUserLIAM(current.order_line_item.order.contact, current.order_line_item.order.contact.email) + '';
+    gs.info("**********LIAM createUserInLIAM**********" + createUserInLIAM);
+	if(createUserInLIAM=='User Created SuccessFully!!')
+		{
+			current.work_notes="User is successfully Created.";
+		}
+	else if(createUserInLIAM=='User Updated SuccessFully!!')
+		{
+			current.work_notes="User details are successfully updated.";
+		}
+	else
+		{
+			current.work_notes="There is some issue occured while creating user in Control Center, Here is the error details:"+createUserInLIAM;
+		}
+	current.update();
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-11-08 16:37:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>89be8921878b559025a20edc0ebb35c1</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>IBM - Call LIAM Create User</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_89be8921878b559025a20edc0ebb35c1</sys_update_name>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-11-09 15:17:00</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=89be8921878b559025a20edc0ebb35c1"/>
+</record_update>
