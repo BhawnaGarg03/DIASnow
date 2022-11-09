@@ -12,17 +12,19 @@ LIAMAPI.prototype = {
     getUserLIAM: function(contact, userName) {
         var createUser = '';
         var updateUser = '';
-        gs.info("**********LIAM username*******" + userName);
+        //gs.info("**********LIAM username*******" + userName);
         var LIAMToken = this.getLIAMToken();
         try {
             var r = new sn_ws.RESTMessageV2('LIAMToken', 'getUserDetails');
             r.setRequestHeader('Authorization', 'Bearer ' + LIAMToken);
-            r.setRequestHeader('Accept', 'application/json');
-            r.setStringParameterNoEscape('userName', userName);
+            r.setRequestHeader('Content-Type', 'application/json');
+            r.setStringParameterNoEscape('userName', userName+'');
             var response = r.execute();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
-            var parseJSONResponse = JSON.parse(responseBody + '');
+            gs.info("****LIAM responseBody*****" + responseBody);
+			if(httpStatus=='200' || httpStatus=='201'){
+            var parseJSONResponse = JSON.parse(responseBody);
             //gs.info("*******LIAM parseResponseBody*****" + parseJSONResponse);
             var userDetails = parseJSONResponse.data.getUsers[0];
             var liamID = '';
@@ -33,31 +35,33 @@ LIAMAPI.prototype = {
             } else {
                 gs.info("***LIAM User exists*****update called " + parseJSONResponse.data.getUsers[0].liamId);
                 updateUser = this.updateUserInLIAM(contact, parseJSONResponse.data.getUsers[0].liamId + '');
-
+			}
             }
         } catch (ex) {
             var message = ex.message;
         }
-		if(createUser!='')
-        return createUser;
+        if (createUser != '')
+            return createUser;
+        else if(updateUser!='')
+            return updateUser;
 		else
-			return updateUser;
+			return responseBody;
     },
     getLIAMToken: function() {
-       // var azureToken = this.getAzureToken();
+        // var azureToken = this.getAzureToken();
         var LIAMToken = '';
         try {
             var r = new sn_ws.RESTMessageV2('LIAMToken', 'GetToken');
-          // r.setRequestHeader('Authorization', 'Basic S3VhNjhra2RzWWhzQXR4dFhnT3h4UlFJR0F6VnFTQ1Q6c2Vad3JCNzY1Z1hRdzB3bQ==');
-           //r.setRequestHeader('Content-Type', 'application/json');
-          //r.setQueryParameter('grant_type', 'client_credentials');
+            // r.setRequestHeader('Authorization', 'Basic S3VhNjhra2RzWWhzQXR4dFhnT3h4UlFJR0F6VnFTQ1Q6c2Vad3JCNzY1Z1hRdzB3bQ==');
+            //r.setRequestHeader('Content-Type', 'application/json');
+            //r.setQueryParameter('grant_type', 'client_credentials');
             var response = r.execute();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
             if (httpStatus == '200' || httpStatus == '201') {
                 var parseResponse = JSON.parse(responseBody);
                 LIAMToken = parseResponse.access_token;
-				gs.info("****LIAM access token****"+LIAMToken);
+                gs.info("****LIAM access token****" + LIAMToken);
             }
         } catch (ex) {
             var message = ex.message;
@@ -105,7 +109,18 @@ LIAMAPI.prototype = {
                 r.setStringParameterNoEscape('company', gr.getDisplayValue('company'));
                 r.setStringParameterNoEscape('displayName', gr.getDisplayValue('first_name'));
                 r.setStringParameterNoEscape('userName', gr.getDisplayValue('email'));
-                r.setStringParameterNoEscape('primaryPhone', gr.getDisplayValue('mobile_phone'));
+                if (gr.getDisplayValue('mobile_phone') == '')
+                    r.setStringParameterNoEscape('primaryPhone', 'NA');
+                else
+                    r.setStringParameterNoEscape('primaryPhone', gr.getDisplayValue('mobile_phone'));
+                if (gr.getDisplayValue('title') == '')
+                    r.setStringParameterNoEscape("jobTitle", "NA");
+                else
+                    r.setStringParameterNoEscape("jobTitle", gr.getDisplayValue('title'));
+                if (gr.getDisplayValue('u_employee_type') == '')
+                    r.setStringParameterNoEscape('userType', 'NA');
+                else
+                    r.setStringParameterNoEscape('userType', gr.getDisplayValue('u_employee_type'));
                 r.setStringParameterNoEscape('countryCode', "1");
                 r.setStringParameterNoEscape('lastName', gr.getDisplayValue('last_name'));
                 r.setStringParameterNoEscape('firstName', gr.getDisplayValue('first_name'));
@@ -119,7 +134,7 @@ LIAMAPI.prototype = {
             if (httpStatus == '200' || httpStatus == '201') {
                 responseCreateUser = "User Created SuccessFully!!";
             } else {
-                responseCreateUser = "User does not Create SuccessFully!!";
+                responseCreateUser = responseBody;
             }
         } catch (ex) {
             var message = ex.message;
@@ -157,10 +172,8 @@ LIAMAPI.prototype = {
             gs.info("********LIAM updateUserInLIAM Response**********" + responseBody);
             if (httpStatus == '200' || httpStatus == '201') {
                 responseUpdateUser = "User Updated SuccessFully!!";
-                var resp = JSON.parse(responseBody);
-
             } else {
-                responseUpdateUser = "User does not Update SuccessFully!!";
+                responseUpdateUser = responseBody;
             }
         } catch (ex) {
             var message = ex.message;
@@ -173,13 +186,13 @@ LIAMAPI.prototype = {
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-09-14 16:56:22</sys_created_on>
         <sys_id>39518efb87f5dd10b25aa8ec0ebb3582</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>57</sys_mod_count>
         <sys_name>LIAMAPI</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_39518efb87f5dd10b25aa8ec0ebb3582</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-11-01 04:45:10</sys_updated_on>
+        <sys_updated_on>2022-11-09 17:35:21</sys_updated_on>
     </sys_script_include>
 </record_update>
