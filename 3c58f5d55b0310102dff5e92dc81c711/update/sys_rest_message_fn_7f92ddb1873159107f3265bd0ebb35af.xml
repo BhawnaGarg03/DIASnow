@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn">
+    <sys_rest_message_fn action="INSERT_OR_UPDATE">
+        <authentication_type>inherit_from_parent</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <content>{&#13;
+    "operationName": "createUser",&#13;
+    "variables": {&#13;
+        "user": {&#13;
+            "username": "${userName}",&#13;
+&#13;
+            "firstName": "${firstName}",&#13;
+&#13;
+            "lastName": "${lastName}",&#13;
+&#13;
+            "displayName": "${displayName}",&#13;
+&#13;
+            "primaryPhone": "${primaryPhone}",&#13;
+&#13;
+            "primaryCountryCode": "1",&#13;
+&#13;
+            "emailAddress": "${email}",&#13;
+&#13;
+            "timeZone": null,&#13;
+&#13;
+            "userType": "${userType}",&#13;
+&#13;
+            "jobTitle": "${jobTitle}",&#13;
+&#13;
+            "companyName": "${company}",&#13;
+&#13;
+            "sendEmail": true&#13;
+&#13;
+        },&#13;
+&#13;
+        "enterpriseId": 11084867      &#13;
+&#13;
+    },&#13;
+&#13;
+    "query": "mutation createUser($enterpriseId: Long, $user: LiamUserCreateInput!) {\n  createUser(enterpriseId: $enterpriseId, user: $user) {\n    liamId\n    username\n    idmgrId\n    __typename\n  }\n}\n"&#13;
+&#13;
+}</content>
+        <function_name>createUser</function_name>
+        <http_method>post</http_method>
+        <lock>false</lock>
+        <oauth2_profile/>
+        <protocol_name/>
+        <qualified_name>LIAMToken [ createUser ]</qualified_name>
+        <rest_endpoint>https://api-test.lumen.com/Enterprise/v2/IAM/user</rest_endpoint>
+        <rest_message display_value="LIAMToken">a796493187fd19107f3265bd0ebb35e9</rest_message>
+        <sys_class_name>sys_rest_message_fn</sys_class_name>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-09-08 08:18:34</sys_created_on>
+        <sys_id>7f92ddb1873159107f3265bd0ebb35af</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>createUser</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_rest_message_fn_7f92ddb1873159107f3265bd0ebb35af</sys_update_name>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-11-09 15:39:49</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mid_server/>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message_fn>
+</record_update>
