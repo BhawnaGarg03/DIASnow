@@ -25,15 +25,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>14ee48e3874cd15025a20edc0ebb35d6</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>15</sys_mod_count>
         <sys_name>LMN_SASE_SASE_PROFILE_PO - Design and Configuration Task - From Characteristics Updates</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_14ee48e3874cd15025a20edc0ebb35d6</sys_update_name>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 15:30:12</sys_updated_on>
+        <sys_updated_by>AD13659</sys_updated_by>
+        <sys_updated_on>2022-11-10 10:27:55</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -61,10 +61,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 13:58:00</sys_created_on>
         <sys_id>f0ee88e3874cd15025a20edc0ebb350f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-06-18 14:07:06</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDacee48e3264cd1504bf9866aff7bdcfc":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDacee48e3264cd1504bf9866aff7bdcfc.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"3f4948d7-193d-4f5e-bc1d-a271f868bb6f\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDacee48e3264cd1504bf9866aff7bdcfc\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>AD13659</sys_updated_by>
+        <sys_updated_on>2022-11-10 10:27:42</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDacee48e3264cd1504bf9866aff7bdcfc":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDacee48e3264cd1504bf9866aff7bdcfc.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"3f4948d7-193d-4f5e-bc1d-a271f868bb6f\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDacee48e3264cd1504bf9866aff7bdcfc\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">a8ee48e3874cd15025a20edc0ebb35ff</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_14ee48e3874cd15025a20edc0ebb35d6^id=14ee48e3874cd15025a20edc0ebb35d6"/>
@@ -86,10 +86,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 13:57:59</sys_created_on>
         <sys_id>6cee48e3874cd15025a20edc0ebb35e7</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 15:29:55</sys_updated_on>
+        <sys_updated_by>AD13659</sys_updated_by>
+        <sys_updated_on>2022-11-10 10:27:42</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6cee48e3874cd15025a20edc0ebb35e7"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -100,9 +100,9 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 13:57:59</sys_created_on>
         <sys_id>24ee48e3874cd15025a20edc0ebb35f9</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 15:29:55</sys_updated_on>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_updated_by>AD13659</sys_updated_by>
+        <sys_updated_on>2022-11-10 10:27:42</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   var orderLineID = inputs.orderLineID;
@@ -116,7 +116,7 @@
     productOrderID = ""+gr.sys_id;
   }
   var tskExists = new GlideRecord("sn_ind_tmt_orm_order_task");
-  tskExists.addEncodedQuery("order_line_item="+orderLineID+"^short_description=Design SASE Configuration")
+  tskExists.addEncodedQuery("order_line_item="+orderLineID+"^short_descriptionLIKEDesign SASE Configuration")
   tskExists.query();
   var ckhCount = tskExists.getRowCount();
   if(ckhCount == 0){
@@ -799,17 +799,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="LMN_SASE_SASE_PROFILE_PO - Design and Configuration Task - From Characteristics Updates">14ee48e3874cd15025a20edc0ebb35d6</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"35419ca7874cd15025a20edc0ebb353a","name":"plan","plan_signature":null}}</plan>
-        <snapshot>b4d8b41387fad59084b2a18e0ebb3556</snapshot>
+        <snapshot>d93cb8df87fad59084b2a18e0ebb3589</snapshot>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 14:08:26</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>35419ca7874cd15025a20edc0ebb353a</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 15:15:27</sys_updated_on>
+        <sys_updated_on>2022-11-01 15:30:14</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -857,10 +857,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 14:08:25</sys_created_on>
         <sys_id>15415ca7874cd15025a20edc0ebb35d6</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-06-18 14:08:25</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FD99415ca7a84cd1502ca9db0fa6afdab7":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD99415ca7a84cd1502ca9db0fa6afdab7.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"3f4948d7-193d-4f5e-bc1d-a271f868bb6f\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD99415ca7a84cd1502ca9db0fa6afdab7\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>AD13659</sys_updated_by>
+        <sys_updated_on>2022-11-10 10:27:54</sys_updated_on>
+        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FD99415ca7a84cd1502ca9db0fa6afdab7":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD99415ca7a84cd1502ca9db0fa6afdab7.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"3f4948d7-193d-4f5e-bc1d-a271f868bb6f\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD99415ca7a84cd1502ca9db0fa6afdab7\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">19415ca7874cd15025a20edc0ebb35ba</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -896,10 +896,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 14:08:23</sys_created_on>
         <sys_id>05415ca7874cd15025a20edc0ebb3596</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 15:30:11</sys_updated_on>
+        <sys_updated_by>AD13659</sys_updated_by>
+        <sys_updated_on>2022-11-10 10:27:54</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=05415ca7874cd15025a20edc0ebb3596"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -924,9 +924,9 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 14:08:24</sys_created_on>
         <sys_id>cd415ca7874cd15025a20edc0ebb35b3</sys_id>
-        <sys_mod_count>4</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 15:30:11</sys_updated_on>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_updated_by>AD13659</sys_updated_by>
+        <sys_updated_on>2022-11-10 10:27:54</sys_updated_on>
         <value>(function execute(inputs, outputs) {
   
   var orderLineID = inputs.orderLineID;
@@ -940,7 +940,7 @@
     productOrderID = ""+gr.sys_id;
   }
   var tskExists = new GlideRecord("sn_ind_tmt_orm_order_task");
-  tskExists.addEncodedQuery("order_line_item="+orderLineID+"^short_description=Design SASE Configuration")
+  tskExists.addEncodedQuery("order_line_item="+orderLineID+"^short_descriptionLIKEDesign SASE Configuration")
   tskExists.query();
   var ckhCount = tskExists.getRowCount();
   if(ckhCount == 0){
