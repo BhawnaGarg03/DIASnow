@@ -12,40 +12,53 @@ LIAMAPI.prototype = {
     getUserLIAM: function(contact, userName) {
         var createUser = '';
         var updateUser = '';
+        var getUSerDetailsResponse = '';
         //gs.info("**********LIAM username*******" + userName);
         var LIAMToken = this.getLIAMToken();
         try {
             var r = new sn_ws.RESTMessageV2('LIAMToken', 'getUserDetails');
             r.setRequestHeader('Authorization', 'Bearer ' + LIAMToken);
             r.setRequestHeader('Content-Type', 'application/json');
-            r.setStringParameterNoEscape('userName', userName+'');
+            r.setStringParameterNoEscape('userName', userName + '');
             var response = r.execute();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
             gs.info("****LIAM responseBody*****" + responseBody);
-			if(httpStatus=='200' || httpStatus=='201'){
-            var parseJSONResponse = JSON.parse(responseBody);
-            //gs.info("*******LIAM parseResponseBody*****" + parseJSONResponse);
-            var userDetails = parseJSONResponse.data.getUsers[0];
-            var liamID = '';
-            gs.info("****LIAM userDetails*******" + userDetails);
-            if (userDetails == undefined) {
-                gs.info("**********LIAM*****User doens not exist***");
-                createUser = this.createUserInLIAM(contact);
-            } else {
-                gs.info("***LIAM User exists*****update called " + parseJSONResponse.data.getUsers[0].liamId);
-                updateUser = this.updateUserInLIAM(contact, parseJSONResponse.data.getUsers[0].liamId + '');
-			}
-            }
+            if (httpStatus == '200' || httpStatus == '201') {
+                var parseJSONResponse = JSON.parse(responseBody);
+                //gs.info("*******LIAM parseResponseBody*****" + parseJSONResponse);
+                var userDetails = parseJSONResponse.data.getUsers[0];
+                var liamID = '';
+                gs.info("****LIAM userDetails*******" + userDetails);
+                if (userDetails == undefined) {
+                    gs.info("**********LIAM User doens not exist***");
+                    getUSerDetailsResponse = "USer does not exist in Carbon Black.";
+                    //  createUser = this.createUserInLIAM(contact);
+                } else {
+                    var flag = false;
+                    var roleAssignments = parseJSONResponse.data.getUsers[0].roleAssignments+'';
+                    gs.info("***LIAM User exists*****" + roleAssignments);
+                    var roleAr = roleAssignments.split(",");
+                    for (var i = 0; i < roleAr.length; i++) {
+                        if (roleAr[i] == 'MEDR Security Role') {
+                            flag = true;
+							gs.info("******LIAM roleAssigment****"+roleAr[i]);
+                            break;
+                        }
+                    }
+                    if (flag == true)
+                        getUSerDetailsResponse = "User has MEDR Security Role";
+                    else
+                        getUSerDetailsResponse = "User does not have MEDR Security Role";
+
+                    //  updateUser = this.updateUserInLIAM(contact, parseJSONResponse.data.getUsers[0].liamId + '');
+                }
+            } else
+                getUSerDetailsResponse = responseBody;
         } catch (ex) {
             var message = ex.message;
         }
-        if (createUser != '')
-            return createUser;
-        else if(updateUser!='')
-            return updateUser;
-		else
-			return responseBody;
+        return getUSerDetailsResponse;
     },
     getLIAMToken: function() {
         // var azureToken = this.getAzureToken();
@@ -186,13 +199,13 @@ LIAMAPI.prototype = {
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-09-14 16:56:22</sys_created_on>
         <sys_id>39518efb87f5dd10b25aa8ec0ebb3582</sys_id>
-        <sys_mod_count>57</sys_mod_count>
+        <sys_mod_count>60</sys_mod_count>
         <sys_name>LIAMAPI</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_39518efb87f5dd10b25aa8ec0ebb3582</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-11-09 17:35:21</sys_updated_on>
+        <sys_updated_on>2022-11-11 16:06:33</sys_updated_on>
     </sys_script_include>
 </record_update>

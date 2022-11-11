@@ -32,10 +32,9 @@
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
     // Add your code here
-  /*  var createUserInLIAM = new LIAMAPI().getUserLIAM(current.order_line_item.order.contact, current.order_line_item.order.contact.email) + '';
+ var createUserInLIAM = new LIAMAPI().getUserLIAM(current.order_line_item.order.contact, current.order_line_item.order.contact.email) + '';
     gs.info("**********LIAM createUserInLIAM**********" + createUserInLIAM);
-    if (createUserInLIAM == 'User Created SuccessFully!!' || createUserInLIAM=='User Updated SuccessFully!!') {
-*/
+    if (createUserInLIAM == 'User has MEDR Security Role') {
         var externalID = current.order_line_item.order.external_id;
         var orderContact = current.order_line_item.order.contact;
         var orderLineNum = current.order_line_item;
@@ -55,7 +54,12 @@
             current.update();
         }
 
-    //}
+    }
+	else
+		{
+			current.work_notes=createUserInLIAM;
+            current.update();
+		}
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -64,7 +68,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1a2e6e69876d991094fa0e58cebb353f</sys_id>
-        <sys_mod_count>33</sys_mod_count>
+        <sys_mod_count>34</sys_mod_count>
         <sys_name>IBM - Call SOAR Create User</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
@@ -72,7 +76,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_1a2e6e69876d991094fa0e58cebb353f</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-11-08 16:09:36</sys_updated_on>
+        <sys_updated_on>2022-11-11 15:47:19</sys_updated_on>
         <template/>
         <when>async_always</when>
     </sys_script>
