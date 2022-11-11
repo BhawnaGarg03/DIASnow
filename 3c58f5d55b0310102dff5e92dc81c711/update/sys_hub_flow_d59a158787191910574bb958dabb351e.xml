@@ -15,7 +15,7 @@
         <name>MEDR-LMN-OrderTask-Create-For-FD-Kafka</name>
         <natlang/>
         <outputs/>
-        <remote_trigger_id>37c3800e1b7dd51047ff2f43604bcbf1</remote_trigger_id>
+        <remote_trigger_id>d5dea31e8747d99025a20edc0ebb3567</remote_trigger_id>
         <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
@@ -28,32 +28,32 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d59a158787191910574bb958dabb351e</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>MEDR-LMN-OrderTask-Create-For-FD-Kafka</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_flow_d59a158787191910574bb958dabb351e</sys_update_name>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:36</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:24</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=d59a158787191910574bb958dabb351e"/>
     <sys_variable_value action="delete_multiple" query="document_key=d59a158787191910574bb958dabb351e"/>
     <sys_flow_record_trigger action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition table="sn_ind_tmt_orm_order_task">short_description=MEDR Technical Data Gathering^ORshort_description=Cyber Threat Solutions Engineer Assignment^ORshort_description=Customer Setup in Cloud Partner Portal^ORshort_description=Assign API keys for Customer in Carbon Black console^ORshort_description=Capture Customer MEDR Tenant ID^ORshort_description=Create Company Account in SSP^ORshort_description=Activate MEDR Service^ORshort_description=Schedule coordinated Activation^ORshort_description=MEDR Activation^ORshort_description=MEDR Policies Tuning^ORshort_description=Finalize MEDR Policies Setup^order_line_item.product_specification=5f2ef44787e7015084b2a18e0ebb35c8<item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="false" value="MEDR Technical Data Gathering"/>
+        <condition table="sn_ind_tmt_orm_order_task">short_description=MEDR Technical Data Gathering^ORshort_description=Cyber Threat Solutions Engineer Assignment^ORshort_description=Customer Setup in Cloud Partner Portal^ORshort_description=Assign API keys for Customer in Carbon Black console^ORshort_description=Capture Customer MEDR Tenant ID^ORshort_description=Activate MEDR Service^ORshort_description=Schedule coordinated Activation^ORshort_description=MEDR Activation^ORshort_description=MEDR Policies Tuning^ORshort_description=Finalize MEDR Policies Setup^ORshort_description=Disconnect Task^order_line_item.product_specification=5f2ef44787e7015084b2a18e0ebb35c8<item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="false" value="MEDR Technical Data Gathering"/>
             <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="true" value="Cyber Threat Solutions Engineer Assignment"/>
             <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="true" value="Customer Setup in Cloud Partner Portal"/>
             <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="true" value="Assign API keys for Customer in Carbon Black console"/>
             <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="true" value="Capture Customer MEDR Tenant ID"/>
-            <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="true" value="Create Company Account in SSP"/>
             <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="true" value="Activate MEDR Service"/>
             <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="true" value="Schedule coordinated Activation"/>
             <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="true" value="MEDR Activation"/>
             <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="true" value="MEDR Policies Tuning"/>
             <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="true" value="Finalize MEDR Policies Setup"/>
+            <item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="true" value="Disconnect Task"/>
             <item display_table="sn_prd_pm_product_specification" display_value="Managed Endpoint Detection and Response" endquery="false" field="order_line_item.product_specification" goto="false" newquery="false" operator="=" or="false" value="5f2ef44787e7015084b2a18e0ebb35c8"/>
         </condition>
         <name/>
@@ -66,43 +66,43 @@
         <run_when_user_list/>
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
-        <sys_created_by>AD11373</sys_created_by>
-        <sys_created_on>2022-09-08 21:08:35</sys_created_on>
+        <sys_created_by>AD13765</sys_created_by>
+        <sys_created_on>2022-11-11 12:12:23</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>37c3800e1b7dd51047ff2f43604bcbf1</sys_id>
+        <sys_id>d5dea31e8747d99025a20edc0ebb3567</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_overrides/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:35</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:23</sys_updated_on>
         <table>sn_ind_tmt_orm_order_task</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
-        <data>{"table":"sys_trigger_runner_mapping","id":"33c3800e1b7dd51047ff2f43604bcbf2","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <data>{"table":"sys_trigger_runner_mapping","id":"d1dea31e8747d99025a20edc0ebb3568","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
         <identifier>d59a158787191910574bb958dabb351e</identifier>
         <runner>FDTriggerRunner</runner>
-        <sys_created_by>AD11373</sys_created_by>
-        <sys_created_on>2022-09-08 21:08:35</sys_created_on>
-        <sys_id>33c3800e1b7dd51047ff2f43604bcbf2</sys_id>
+        <sys_created_by>AD13765</sys_created_by>
+        <sys_created_on>2022-11-11 12:12:23</sys_created_on>
+        <sys_id>d1dea31e8747d99025a20edc0ebb3568</sys_id>
         <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:35</sys_updated_on>
-        <trigger display_value="">37c3800e1b7dd51047ff2f43604bcbf1</trigger>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:23</sys_updated_on>
+        <trigger display_value="">d5dea31e8747d99025a20edc0ebb3567</trigger>
     </sys_trigger_runner_mapping>
     <sys_json_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
-        <document_id>33c3800e1b7dd51047ff2f43604bcbf2</document_id>
+        <document_id>d1dea31e8747d99025a20edc0ebb3568</document_id>
         <field>trigger_runner</field>
         <length>144</length>
         <position>0</position>
         <source_table>sys_trigger_runner_mapping</source_table>
-        <sys_created_by>AD11373</sys_created_by>
-        <sys_created_on>2022-09-08 21:08:35</sys_created_on>
-        <sys_id>7bc3800e1b7dd51047ff2f43604bcbf2</sys_id>
+        <sys_created_by>AD13765</sys_created_by>
+        <sys_created_on>2022-11-11 12:12:23</sys_created_on>
+        <sys_id>1ddea31e8747d99025a20edc0ebb3568</sys_id>
     </sys_json_chunk>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=d59a158787191910574bb958dabb351e^sys_idNOT IN33c3800e1b7dd51047ff2f43604bcbf2"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=d59a158787191910574bb958dabb351e^sys_idNOT INd1dea31e8747d99025a20edc0ebb3568"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=d59a158787191910574bb958dabb351e^sys_idNOT INe93c954b87191910574bb958dabb35b6"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment/>
@@ -113,10 +113,10 @@
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-18 09:37:22</sys_created_on>
         <sys_id>e93c954b87191910574bb958dabb35b6</sys_id>
-        <sys_mod_count>35</sys_mod_count>
+        <sys_mod_count>44</sys_mod_count>
         <sys_scope/>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:36</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:24</sys_updated_on>
         <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -131,10 +131,10 @@
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-18 09:37:22</sys_created_on>
         <sys_id>213c954b87191910574bb958dabb35b8</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:22</sys_updated_on>
-        <value>short_description=MEDR Technical Data Gathering^ORshort_description=Cyber Threat Solutions Engineer Assignment^ORshort_description=Customer Setup in Cloud Partner Portal^ORshort_description=Assign API keys for Customer in Carbon Black console^ORshort_description=Capture Customer MEDR Tenant ID^ORshort_description=Create Company Account in SSP^ORshort_description=Activate MEDR Service^ORshort_description=Schedule coordinated Activation^ORshort_description=MEDR Activation^ORshort_description=MEDR Policies Tuning^ORshort_description=Finalize MEDR Policies Setup^order_line_item.product_specification=5f2ef44787e7015084b2a18e0ebb35c8</value>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:05</sys_updated_on>
+        <value>short_description=MEDR Technical Data Gathering^ORshort_description=Cyber Threat Solutions Engineer Assignment^ORshort_description=Customer Setup in Cloud Partner Portal^ORshort_description=Assign API keys for Customer in Carbon Black console^ORshort_description=Capture Customer MEDR Tenant ID^ORshort_description=Activate MEDR Service^ORshort_description=Schedule coordinated Activation^ORshort_description=MEDR Activation^ORshort_description=MEDR Policies Tuning^ORshort_description=Finalize MEDR Policies Setup^ORshort_description=Disconnect Task^order_line_item.product_specification=5f2ef44787e7015084b2a18e0ebb35c8</value>
         <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -228,14 +228,14 @@
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-18 09:37:21</sys_created_on>
         <sys_id>2d3c954b87191910574bb958dabb35b1</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:36</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:23</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -309,14 +309,14 @@
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-18 09:37:21</sys_created_on>
         <sys_id>a53c954b87191910574bb958dabb35ac</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:36</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:23</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -345,10 +345,10 @@
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-25 09:34:51</sys_created_on>
         <sys_id>11ce9d9587691150e10064ed0ebb35df</sys_id>
-        <sys_mod_count>82</sys_mod_count>
+        <sys_mod_count>108</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:36</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:24</sys_updated_on>
         <ui_id>662c9335-51b0-4281-ba1e-24adca9888cf</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=11ce9d9587691150e10064ed0ebb35df"/>
@@ -634,10 +634,10 @@
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-25 09:41:24</sys_created_on>
         <sys_id>1540699987691150e10064ed0ebb35d1</sys_id>
-        <sys_mod_count>80</sys_mod_count>
+        <sys_mod_count>106</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:36</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:24</sys_updated_on>
         <ui_id>3589c4e0-c900-4eb3-995d-14d62d888e5c</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=1540699987691150e10064ed0ebb35d1"/>
@@ -702,9 +702,9 @@
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-25 09:41:24</sys_created_on>
         <sys_id>dd40699987691150e10064ed0ebb35d3</sys_id>
-        <sys_mod_count>13</sys_mod_count>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:22</sys_updated_on>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:05</sys_updated_on>
         <table>var__m_sys_hub_action_input_e2c15a55876c995099d253d73cbb35f2</table>
         <value>{"version":"1.0","complexObject":{"name$":"FDaec15a555a6c99501904ca8019f03cf5","$COCollectionField":[{"value":{"$cv":{"$c":"java.lang.String","$v":""}},"key":{"$cv":{"$c":"java.lang.String","$v":""}}}]},"complexObjectSchema":{"FlowDesigner:FDaec15a555a6c99501904ca8019f03cf5":{"$COCollectionField":[{"Messages_child0":{"value":"String","value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].value\\\":\\\"{{662c9335-51b0-4281-ba1e-24adca9888cf.variable}}\\\"}\",\"default_value\":\"\",\"label\":\"Value\",\"mandatory\":\"true\",\"order\":\"2\",\"max_length\":\"0\"}"},"key":"String","key.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].key\\\":\\\"{{Created_1.current.order_line_item.order.order_id}}\\\"}\",\"default_value\":\"\",\"label\":\"Key\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Messages\",\"mandatory\":\"false\",\"child_name\":\"Messages_child0\",\"uiUniqueId\":\"165ec4bb-c28f-4295-9fe4-08df2917300d\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDaec15a555a6c99501904ca8019f03cf5\",\"child_label\":\"Messages_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"d90b3ece-696b-41e7-bc4b-e692de81d76e\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDaec15a555a6c99501904ca8019f03cf5.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Messages\",\"mandatory\":\"false\",\"child_name\":\"Messages_child0\",\"uiUniqueId\":\"165ec4bb-c28f-4295-9fe4-08df2917300d\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDaec15a555a6c99501904ca8019f03cf5\",\"child_label\":\"Messages_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"d90b3ece-696b-41e7-bc4b-e692de81d76e\"}"}},"serializationFormat":"JSON"}</value>
     </sys_element_mapping>
@@ -736,10 +736,10 @@
         <sys_created_by>AD11373</sys_created_by>
         <sys_created_on>2022-08-31 14:19:25</sys_created_on>
         <sys_id>4879d55787e5955025a20edc0ebb3516</sys_id>
-        <sys_mod_count>40</sys_mod_count>
+        <sys_mod_count>66</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:36</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:24</sys_updated_on>
         <ui_id>311b9dfe-d5d2-4c84-bb17-ca6a26a2e353</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4879d55787e5955025a20edc0ebb3516"/>
@@ -863,12 +863,12 @@ Kafka Response: {{3589c4e0-c900-4eb3-995d-14d62d888e5c.response}}</value>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fbdcfe258721115084b2a18e0ebb357b</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:36</sys_updated_on>
-        <trigger display_value="">37c3800e1b7dd51047ff2f43604bcbf1</trigger>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:23</sys_updated_on>
+        <trigger display_value="">d5dea31e8747d99025a20edc0ebb3567</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=d59a158787191910574bb958dabb351e"/>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
@@ -899,15 +899,15 @@ Kafka Response: {{3589c4e0-c900-4eb3-995d-14d62d888e5c.response}}</value>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f6dc7e258721115084b2a18e0ebb3562</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:33</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:20</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=f6dc7e258721115084b2a18e0ebb3562"/>
@@ -922,10 +922,10 @@ Kafka Response: {{3589c4e0-c900-4eb3-995d-14d62d888e5c.response}}</value>
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-26 11:04:26</sys_created_on>
         <sys_id>97dcbe258721115084b2a18e0ebb3523</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>29</sys_mod_count>
         <sys_scope/>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:36</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:23</sys_updated_on>
         <trigger_definition display_value="Created">798916a0c31322002841b63b12d3ae7c</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -954,10 +954,10 @@ Kafka Response: {{3589c4e0-c900-4eb3-995d-14d62d888e5c.response}}</value>
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-26 11:04:26</sys_created_on>
         <sys_id>9fdcbe258721115084b2a18e0ebb3524</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:32</sys_updated_on>
-        <value>short_description=MEDR Technical Data Gathering^ORshort_description=Cyber Threat Solutions Engineer Assignment^ORshort_description=Customer Setup in Cloud Partner Portal^ORshort_description=Assign API keys for Customer in Carbon Black console^ORshort_description=Capture Customer MEDR Tenant ID^ORshort_description=Create Company Account in SSP^ORshort_description=Activate MEDR Service^ORshort_description=Schedule coordinated Activation^ORshort_description=MEDR Activation^ORshort_description=MEDR Policies Tuning^ORshort_description=Finalize MEDR Policies Setup^order_line_item.product_specification=5f2ef44787e7015084b2a18e0ebb35c8</value>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:19</sys_updated_on>
+        <value>short_description=MEDR Technical Data Gathering^ORshort_description=Cyber Threat Solutions Engineer Assignment^ORshort_description=Customer Setup in Cloud Partner Portal^ORshort_description=Assign API keys for Customer in Carbon Black console^ORshort_description=Capture Customer MEDR Tenant ID^ORshort_description=Activate MEDR Service^ORshort_description=Schedule coordinated Activation^ORshort_description=MEDR Activation^ORshort_description=MEDR Policies Tuning^ORshort_description=Finalize MEDR Policies Setup^ORshort_description=Disconnect Task^order_line_item.product_specification=5f2ef44787e7015084b2a18e0ebb35c8</value>
         <variable display_value="Condition">66aadea0c31322002841b63b12d3aebf</variable>
     </sys_variable_value>
     <sys_hub_flow_stage action="delete_multiple" query="flow=f6dc7e258721115084b2a18e0ebb3562"/>
@@ -1037,14 +1037,14 @@ Kafka Response: {{3589c4e0-c900-4eb3-995d-14d62d888e5c.response}}</value>
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-26 11:04:24</sys_created_on>
         <sys_id>3edc7e258721115084b2a18e0ebb3565</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:32</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:19</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1118,14 +1118,14 @@ Kafka Response: {{3589c4e0-c900-4eb3-995d-14d62d888e5c.response}}</value>
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-26 11:04:24</sys_created_on>
         <sys_id>f6dc7e258721115084b2a18e0ebb3585</sys_id>
-        <sys_mod_count>11</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:32</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:19</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -1154,10 +1154,10 @@ Kafka Response: {{3589c4e0-c900-4eb3-995d-14d62d888e5c.response}}</value>
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-26 11:04:26</sys_created_on>
         <sys_id>4bdcbe258721115084b2a18e0ebb350a</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:33</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:20</sys_updated_on>
         <ui_id>3589c4e0-c900-4eb3-995d-14d62d888e5c</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=4bdcbe258721115084b2a18e0ebb350a"/>
@@ -1208,9 +1208,9 @@ Kafka Response: {{3589c4e0-c900-4eb3-995d-14d62d888e5c.response}}</value>
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-26 11:04:26</sys_created_on>
         <sys_id>47dcbe258721115084b2a18e0ebb350c</sys_id>
-        <sys_mod_count>5</sys_mod_count>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 14:23:41</sys_updated_on>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:19</sys_updated_on>
         <table>var__m_sys_hub_action_input_e2c15a55876c995099d253d73cbb35f2</table>
         <value>{"version":"1.0","complexObject":{"name$":"FDaec15a555a6c99501904ca8019f03cf5","$COCollectionField":[{"value":{"$cv":{"$c":"java.lang.String","$v":""}},"key":{"$cv":{"$c":"java.lang.String","$v":""}}}]},"complexObjectSchema":{"FlowDesigner:FDaec15a555a6c99501904ca8019f03cf5":{"$COCollectionField":[{"Messages_child0":{"value":"String","value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].value\\\":\\\"{{662c9335-51b0-4281-ba1e-24adca9888cf.variable}}\\\"}\",\"default_value\":\"\",\"label\":\"Value\",\"mandatory\":\"true\",\"order\":\"2\",\"max_length\":\"0\"}"},"key":"String","key.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].key\\\":\\\"{{Created_1.current.order_line_item.order.order_id}}\\\"}\",\"default_value\":\"\",\"label\":\"Key\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Messages\",\"mandatory\":\"false\",\"child_name\":\"Messages_child0\",\"uiUniqueId\":\"165ec4bb-c28f-4295-9fe4-08df2917300d\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDaec15a555a6c99501904ca8019f03cf5\",\"child_label\":\"Messages_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"d90b3ece-696b-41e7-bc4b-e692de81d76e\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDaec15a555a6c99501904ca8019f03cf5.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Messages\",\"mandatory\":\"false\",\"child_name\":\"Messages_child0\",\"uiUniqueId\":\"165ec4bb-c28f-4295-9fe4-08df2917300d\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDaec15a555a6c99501904ca8019f03cf5\",\"child_label\":\"Messages_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"d90b3ece-696b-41e7-bc4b-e692de81d76e\"}"}},"serializationFormat":"JSON"}</value>
     </sys_element_mapping>
@@ -1242,10 +1242,10 @@ Kafka Response: {{3589c4e0-c900-4eb3-995d-14d62d888e5c.response}}</value>
         <sys_created_by>AD11373</sys_created_by>
         <sys_created_on>2022-08-31 14:53:25</sys_created_on>
         <sys_id>7d3161178729955025a20edc0ebb35c0</sys_id>
-        <sys_mod_count>20</sys_mod_count>
+        <sys_mod_count>32</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:33</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:20</sys_updated_on>
         <ui_id>311b9dfe-d5d2-4c84-bb17-ca6a26a2e353</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7d3161178729955025a20edc0ebb35c0"/>
@@ -1318,10 +1318,10 @@ Kafka Response: {{3589c4e0-c900-4eb3-995d-14d62d888e5c.response}}</value>
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-08-26 11:04:25</sys_created_on>
         <sys_id>cbdc7e258721115084b2a18e0ebb35c5</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>38</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD11373</sys_updated_by>
-        <sys_updated_on>2022-09-08 21:08:33</sys_updated_on>
+        <sys_updated_by>AD13765</sys_updated_by>
+        <sys_updated_on>2022-11-11 12:12:20</sys_updated_on>
         <ui_id>662c9335-51b0-4281-ba1e-24adca9888cf</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=cbdc7e258721115084b2a18e0ebb35c5"/>
@@ -1650,6 +1650,6 @@ Kafka Response: {{3589c4e0-c900-4eb3-995d-14d62d888e5c.response}}</value>
     <sys_hub_flow action="UPDATE">
         <sys_id>d59a158787191910574bb958dabb351e</sys_id>
         <latest_snapshot>f6dc7e258721115084b2a18e0ebb3562</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch4b-07-19-2022_08-09-2022_1837.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch7-08-17-2022_08-23-2022_1902.zip</compiler_build>
     </sys_hub_flow>
 </record_update>
