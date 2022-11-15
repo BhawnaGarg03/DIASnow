@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>acbde412870cd91084b2a18e0ebb359f</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>LMN_SASE_NODE_SWG_SO - SASE Activation</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_acbde412870cd91084b2a18e0ebb359f</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-14 13:30:40</sys_updated_on>
+        <sys_updated_on>2022-11-15 17:14:00</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -86,10 +86,10 @@
         <sys_created_by>Anoop.jain</sys_created_by>
         <sys_created_on>2022-06-14 19:00:12</sys_created_on>
         <sys_id>b0bde412870cd91084b2a18e0ebb35b1</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-14 13:30:29</sys_updated_on>
+        <sys_updated_on>2022-11-15 17:13:49</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=b0bde412870cd91084b2a18e0ebb35b1"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -114,9 +114,9 @@
         <sys_created_by>Anoop.jain</sys_created_by>
         <sys_created_on>2022-06-14 19:00:13</sys_created_on>
         <sys_id>b8bde412870cd91084b2a18e0ebb35c2</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-14 13:30:29</sys_updated_on>
+        <sys_updated_on>2022-11-15 17:13:49</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
   var accountSysID = inputs.accountSysID;
@@ -151,8 +151,7 @@
       serviceLevel = ""+gr1.characteristic_option_value;
     }
   }
-  //gs.info("AJKS- DesignAndImplementationSupportIndic "+DesignAndImplementationSupportIndic)
-  //gs.info("AJKS- serviceLevel "+serviceLevel)
+
 
   var so_query = new GlideRecord('sn_ind_tmt_orm_service_order');
   so_query.addEncodedQuery("order_line_item="+orderLineID+"^short_description=Service Order for SWG Function");
@@ -1030,17 +1029,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="LMN_SASE_NODE_SWG_SO - SASE Activation">acbde412870cd91084b2a18e0ebb359f</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"9e7e6c52870cd91084b2a18e0ebb351f","name":"plan","plan_signature":null}}</plan>
-        <snapshot>3030597f87ec9510950253d73cbb352f</snapshot>
+        <snapshot>be34fbd987a2955084b2a18e0ebb3562</snapshot>
         <sys_created_by>Anoop.jain</sys_created_by>
         <sys_created_on>2022-06-14 19:03:35</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>9e7e6c52870cd91084b2a18e0ebb351f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-07-14 09:53:16</sys_updated_on>
+        <sys_updated_on>2022-10-14 13:30:42</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1127,10 +1126,10 @@
         <sys_created_by>Anoop.jain</sys_created_by>
         <sys_created_on>2022-06-14 19:03:33</sys_created_on>
         <sys_id>a17e2c52870cd91084b2a18e0ebb356b</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-14 13:30:40</sys_updated_on>
+        <sys_updated_on>2022-11-15 17:13:59</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=a17e2c52870cd91084b2a18e0ebb356b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1141,9 +1140,9 @@
         <sys_created_by>Anoop.jain</sys_created_by>
         <sys_created_on>2022-06-14 19:03:33</sys_created_on>
         <sys_id>b17e2c52870cd91084b2a18e0ebb358b</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-14 13:30:40</sys_updated_on>
+        <sys_updated_on>2022-11-15 17:13:59</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
   var accountSysID = inputs.accountSysID;
@@ -1178,8 +1177,7 @@
       serviceLevel = ""+gr1.characteristic_option_value;
     }
   }
-  //gs.info("AJKS- DesignAndImplementationSupportIndic "+DesignAndImplementationSupportIndic)
-  //gs.info("AJKS- serviceLevel "+serviceLevel)
+
 
   var so_query = new GlideRecord('sn_ind_tmt_orm_service_order');
   so_query.addEncodedQuery("order_line_item="+orderLineID+"^short_description=Service Order for SWG Function");
@@ -2070,6 +2068,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>acbde412870cd91084b2a18e0ebb359f</sys_id>
         <latest_snapshot>a57e2c52870cd91084b2a18e0ebb3557</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch4b-07-19-2022_08-09-2022_1837.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch7a-09-20-2022_10-04-2022_1309.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>

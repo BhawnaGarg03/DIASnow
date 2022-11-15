@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>30f2a3178748d15025a20edc0ebb35e5</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name>LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_30f2a3178748d15025a20edc0ebb35e5</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-14 13:28:04</sys_updated_on>
+        <sys_updated_on>2022-11-15 17:19:08</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -86,10 +86,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 10:46:02</sys_created_on>
         <sys_id>49f2e3178748d15025a20edc0ebb3501</sys_id>
-        <sys_mod_count>26</sys_mod_count>
+        <sys_mod_count>27</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-14 13:27:54</sys_updated_on>
+        <sys_updated_on>2022-11-15 17:18:50</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=49f2e3178748d15025a20edc0ebb3501"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -100,9 +100,9 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 10:46:03</sys_created_on>
         <sys_id>0df2e3178748d15025a20edc0ebb352a</sys_id>
-        <sys_mod_count>25</sys_mod_count>
+        <sys_mod_count>26</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-14 13:27:54</sys_updated_on>
+        <sys_updated_on>2022-11-15 17:18:51</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
   var accountSysID = inputs.accountSysID;
@@ -168,8 +168,7 @@
       } 
     }
     if(so_query.short_description == "Service Order for SWG Function" &amp;&amp; shippingLocation != null  &amp;&amp; Chk_SASE_PROFILE_SERVICES_Closed_chkTaskAnswer == "yes"){
-      //swgSO = ""+so_query.sys_id
-      //swgSO_shortDescription = ""+so_query.short_description
+    
       var chkTaskAnswer = "no";
       var chkTask = new GlideRecord("sn_ind_tmt_orm_order_task");
       chkTask.addEncodedQuery("order_line_item.order="+orderID+"^short_descriptionSTARTSWITHSASE Activation SWG")
@@ -1278,17 +1277,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update">30f2a3178748d15025a20edc0ebb35e5</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"d925339387c8d15025a20edc0ebb352d","name":"plan","plan_signature":null}}</plan>
-        <snapshot>21c1ac6187f5d5107f3265bd0ebb35ba</snapshot>
+        <snapshot>f8a3f79987a2955084b2a18e0ebb35f5</snapshot>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 12:05:31</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>d925339387c8d15025a20edc0ebb352d</sys_id>
-        <sys_mod_count>13</sys_mod_count>
+        <sys_mod_count>14</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 10:02:35</sys_updated_on>
+        <sys_updated_on>2022-10-14 13:28:07</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -1375,10 +1374,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 12:05:29</sys_created_on>
         <sys_id>e025ff5387c8d15025a20edc0ebb3546</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>19</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-14 13:28:04</sys_updated_on>
+        <sys_updated_on>2022-11-15 17:19:07</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e025ff5387c8d15025a20edc0ebb3546"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1389,9 +1388,9 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 12:05:29</sys_created_on>
         <sys_id>2025ff5387c8d15025a20edc0ebb3573</sys_id>
-        <sys_mod_count>17</sys_mod_count>
+        <sys_mod_count>18</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-10-14 13:28:04</sys_updated_on>
+        <sys_updated_on>2022-11-15 17:19:07</sys_updated_on>
         <value>(function execute(inputs, outputs) {
 
   var accountSysID = inputs.accountSysID;
@@ -1457,8 +1456,7 @@
       } 
     }
     if(so_query.short_description == "Service Order for SWG Function" &amp;&amp; shippingLocation != null  &amp;&amp; Chk_SASE_PROFILE_SERVICES_Closed_chkTaskAnswer == "yes"){
-      //swgSO = ""+so_query.sys_id
-      //swgSO_shortDescription = ""+so_query.short_description
+    
       var chkTaskAnswer = "no";
       var chkTask = new GlideRecord("sn_ind_tmt_orm_order_task");
       chkTask.addEncodedQuery("order_line_item.order="+orderID+"^short_descriptionSTARTSWITHSASE Activation SWG")
@@ -2554,6 +2552,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>30f2a3178748d15025a20edc0ebb35e5</sys_id>
         <latest_snapshot>1025ff5387c8d15025a20edc0ebb3527</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch4b-07-19-2022_08-09-2022_1837.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch7a-09-20-2022_10-04-2022_1309.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>
