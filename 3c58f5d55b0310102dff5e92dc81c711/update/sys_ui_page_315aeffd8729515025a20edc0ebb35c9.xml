@@ -1,74 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
-        <client_script><![CDATA[//function myfunc(LabelList){
-ga = new GlideAjax('sn_ind_tmt_orm.TDGShowHideFields');
-ga.addParam('sysparm_name', "getCharName");
-ga.getXML(getFieldsCallback);
-function getFieldsCallback(response) { 
-	var answer = response.responseXML.documentElement.getAttribute('answer');
-//	console.log(answer);
-	var attributes = JSON.parse(answer.toString());
-//	g_form.addInfoMessage(attributes);
-//	console.log(attributes);
-	var LableList = [];
-	attributes.forEach(function(list) {
-	if (list.routingProtocol == "true") {
-	LableList.push(list.Label);
-//		console.log(LableList);
-	g_form.addInfoMessage(LableList);
-	} else if (list.routingProtocol == "false") {
-		LableList.push(list.Label);
-		g_form.addInfoMessage(LableList);
+        <client_script><![CDATA[	var elems = document.getElementsByName("ord_characteristics");
+	for (var i = 0; i < elems.length; i++) {
+	    showField(elems[i].parentElement.getAttribute("name"), elems[i].id);
 	}
-	}); 
-}
-/*	for (var list in attributes) {
-//		if (attributes[list].ApplicableRule.routingProtocol == true) {
-//		LableList.push(attributes[list].Label);
-			LableList.push(list.Label);
-//		LableList.push(attributes[list].ApplicableRule.routingProtocol);
-		consloe.log(LableList);
-		g_form.addInfoMessage(LableList);
-		}
-		}
-} */
 
-function continueOK() {
-    //alert("OK clicked");
-    var gdw = GlideDialogWindow.get();
-	var orderLine = gdw.getPreference('orderLine');
-//	var chrname = gel('chr_name').value;
-	var chrs = document.getElementsByName('ord_characteristics');
-//	var Ichr = gel('iterated_char').value;
-	var val = '';
-	for(var i = 0; i < chrs.length; i++) {
-val += chrs[i].value;
+	function showField(field, id) {
+	    console.log("Calling func - " + field + ":" + id);
+	    ga = new GlideAjax('sn_ind_tmt_orm.TDGShowHideFields');
+	    ga.addParam('sysparm_name', "getCharName");
+	    ga.getXML(getFieldsCallback);
 
-//	alert(val+"-----");
+	    function getFieldsCallback(response) {
+	        var answer = response.responseXML.documentElement.getAttribute('answer');
+	        console.log(answer);
+	        var attributes = JSON.parse(answer.toString());
+	        //	g_form.addInfoMessage(attributes);
+	        console.log(attributes);
+	        var LableList = [];
+	        attributes.forEach(function(list) {
+	            console.log(field + "::" + list.Label + "::" + list.routingProtocol + "::" + (list.Label == field));
+	            if (list.Label == field) {
+	                console.log("found" + "::" + (list.routingProtocol == "true" ? "block" : "none"));
+	                if (list.routingProtocol == "false") {
+	                    document.getElementById(id).parentElement.parentElement.style.display = "none";
+	                }
+	            }
+	        });
+	    }
+	}
 
-    var gr = new GlideRecord("sn_ind_tmt_orm_order_characteristic_value");
-    gr.addQuery('order_line_item', orderLine);
-	gr.addQuery('characteristic', chrs[i].id);
-    gr.query();
-		console.log(gr.getEncodedQuery());
-    while (gr.next()) {
-            gr.characteristic_option_value = chrs[i].value;
-            gr.update();
-		}
-     
-    } 
+	function continueOK() {
+	    //alert("OK clicked");
+	    var gdw = GlideDialogWindow.get();
+	    var orderLine = gdw.getPreference('orderLine');
+	    //	var chrname = gel('chr_name').value;
+	    var chrs = document.getElementsByName('ord_characteristics');
+	    //	var Ichr = gel('iterated_char').value;
+	    var val = '';
+	    for (var i = 0; i < chrs.length; i++) {
+	        val += chrs[i].value;
 
-    GlideDialogWindow.get().destroy();
-}
+	        //	alert(val+"-----");
+
+	        var gr = new GlideRecord("sn_ind_tmt_orm_order_characteristic_value");
+	        gr.addQuery('order_line_item', orderLine);
+	        gr.addQuery('characteristic', chrs[i].id);
+	        gr.query();
+	        console.log(gr.getEncodedQuery());
+	        while (gr.next()) {
+	            gr.characteristic_option_value = chrs[i].value;
+	            gr.update();
+	        }
+
+	    }
+
+	    GlideDialogWindow.get().destroy();
+	}
 
 
 
-function continueCancel() {
-    //alert("Cancelled");
-    GlideDialogWindow.get().destroy();
-}
-]]></client_script>
+	function continueCancel() {
+	    //alert("Cancelled");
+	    GlideDialogWindow.get().destroy();
+	}]]></client_script>
         <description/>
         <direct>false</direct>
         <endpoint>sn_ind_tmt_orm_DIA_TDG_Test_EndPoint.do</endpoint>
@@ -83,6 +79,7 @@ function continueCancel() {
         td { text-align: left; padding: 16px; }
         .nopadding { padding: 0px; }
         tr:nth-child(even) { background-color: #f2f2f2;}
+		#sn_ind_tmt_orm_DIA_TDG_Test_EndPoint { height: 100px; overflow: auto;}
 		
     </style>
 	<g:evaluate var="jvar_custord">
@@ -96,13 +93,13 @@ function continueCancel() {
 	</g:evaluate>	
 	
     <g:ui_form>
-        <table width="100%">
+        <table id="charTable" width="100%">
             <tr>
                 <td style="width:25%">
                     <g:form_label>Customer Order</g:form_label>
                 </td>
                 <td style="width:60%">
-                   	<input type="number"  value="${jvar_custord}"   name="cust_ord" id="cust_ord"    readonly="readonly" maxlength="40"/>
+                   	<input type="number"  value="${jvar_custord}"   name="cust_ord" id="cust_ord" readonly="readonly" maxlength="40"/>
                 </td>
             </tr>
 			
@@ -158,22 +155,22 @@ function continueCancel() {
 						<g:form_label>${jvar_charItem.name} -- ${jvar_charItem.type} </g:form_label>
 					</td>  
 						<j:if test="${jvar_charItem.type == 'single_line_text'}"> 
-						<td style="width:60%"> 
+						<td style="width:60%" name="${jvar_charItem.name}"> 
 							<input type="text" name="ord_characteristics" id="${jvar_charItem.sys_id}" value="${jvar_charItem.optvalue}" />
 						</td>
 					</j:if>
 					<j:if test="${jvar_charItem.type == 'choice'}"> 
-						<td style="width:60%">
-							<select name="ord_characteristics" id="${jvar_charItem.sys_id}" visibility="return myfunc(LabelList)">
+						<td style="width:60%" name="${jvar_charItem.name}">
+							<select name="ord_characteristics" id="${jvar_charItem.sys_id}">
 								<option value = ""> ---Select--- </option>
 								<j:forEach var="jvar_charItem1" items="${jvar_charItem.optnlist}">
-							   <option value="${jvar_charItem1}">${jvar_charItem1}</option>
+							   <option value="${jvar_charItem1.optvalue}">${jvar_charItem1}</option>
 								</j:forEach>
 							 </select>
 						</td>
 					</j:if>
 					<j:if test="${jvar_charItem.type == 'yes_no'}"> 
-						<td style="width:60%">
+						<td style="width:60%" name="${jvar_charItem.name}">
 							<select name="ord_characteristics" id="${jvar_charItem.sys_id}">
 								<option value = ""> ---Choose--- </option>
 								<j:forEach var="jvar_charItem1" items="${jvar_charItem.optnlist}">
@@ -202,13 +199,13 @@ function continueCancel() {
         <sys_created_by>AD11761</sys_created_by>
         <sys_created_on>2022-08-27 09:25:20</sys_created_on>
         <sys_id>315aeffd8729515025a20edc0ebb35c9</sys_id>
-        <sys_mod_count>478</sys_mod_count>
+        <sys_mod_count>501</sys_mod_count>
         <sys_name>DIA_TDG_Test_EndPoint</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_ui_page_315aeffd8729515025a20edc0ebb35c9</sys_update_name>
-        <sys_updated_by>AD11761</sys_updated_by>
-        <sys_updated_on>2022-11-15 10:20:28</sys_updated_on>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-11-18 10:10:56</sys_updated_on>
     </sys_ui_page>
 </record_update>
