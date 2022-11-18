@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>55aa090b878159d0950253d73cbb35fb</sys_id>
-        <sys_mod_count>27</sys_mod_count>
+        <sys_mod_count>35</sys_mod_count>
         <sys_name>LMN_Vendor_Edge Creations On Location Update</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
@@ -33,7 +33,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_55aa090b878159d0950253d73cbb35fb</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-15 09:56:30</sys_updated_on>
+        <sys_updated_on>2022-11-18 17:56:50</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -850,10 +850,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-05 22:05:00</sys_created_on>
         <sys_id>e6aa890b878159d0950253d73cbb3560</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-15 09:56:22</sys_updated_on>
+        <sys_updated_on>2022-11-18 17:56:43</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=e6aa890b878159d0950253d73cbb3560"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1013,9 +1013,9 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-05 22:05:00</sys_created_on>
         <sys_id>a6aa890b878159d0950253d73cbb359f</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-15 09:56:23</sys_updated_on>
+        <sys_updated_on>2022-11-18 17:56:43</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value>{
   "kind": "edge",
@@ -1072,6 +1072,10 @@
         "description" : "Device Activated",
         "startDate" : 0,
         "endDate" : 0     
+     },
+      "connected" : {
+        "description" : "Device Connected",
+        "startDate" : 0
      }
    }
 }</value>
@@ -5856,17 +5860,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="LMN_Vendor_Edge Creations On Location Update">55aa090b878159d0950253d73cbb35fb</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"898d4d8f878159d0950253d73cbb35c8","name":"plan","plan_signature":null}}</plan>
-        <snapshot>acbfe3e387479510574bb958dabb3565</snapshot>
+        <snapshot>89596870875b1d10574bb958dabb3530</snapshot>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-05 22:17:27</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>898d4d8f878159d0950253d73cbb35c8</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>12</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-15 09:28:39</sys_updated_on>
+        <sys_updated_on>2022-11-18 16:14:23</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
@@ -9647,10 +9651,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-05 22:17:20</sys_created_on>
         <sys_id>df7d0d8f878159d0950253d73cbb353c</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-15 09:56:29</sys_updated_on>
+        <sys_updated_on>2022-11-18 17:56:50</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=df7d0d8f878159d0950253d73cbb353c"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -9810,9 +9814,9 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-08-05 22:17:20</sys_created_on>
         <sys_id>9b7d0d8f878159d0950253d73cbb3549</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-15 09:56:29</sys_updated_on>
+        <sys_updated_on>2022-11-18 17:56:50</sys_updated_on>
         <table>var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129</table>
         <value>{
   "kind": "edge",
@@ -9869,6 +9873,10 @@
         "description" : "Device Activated",
         "startDate" : 0,
         "endDate" : 0     
+     },
+      "connected" : {
+        "description" : "Device Connected",
+        "startDate" : 0
      }
    }
 }</value>
