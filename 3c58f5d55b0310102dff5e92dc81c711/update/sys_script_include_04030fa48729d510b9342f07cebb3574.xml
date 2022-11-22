@@ -158,7 +158,16 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
                     orderTaskGR.work_notes = 'There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.';
                     orderTaskGR.update();
                 }
-            } else {
+            }
+			else if (httpStatus == '500') {
+                    returnReponse = "There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.";
+                    if (orderTaskGR.next()) {
+                        gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', orderTaskGR, 'dl-soar@lumen.com', soarResponseBody, '');
+                        orderTaskGR.work_notes = 'There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.';
+                        orderTaskGR.update();
+                    }
+                }
+			else {
                 var parseResponse = JSON.parse(soarResponseBody);
                 errorCode = parseResponse.detail.status_code + '';
                 errorDetails = parseResponse.detail.status_message + '';
@@ -175,14 +184,7 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
                         orderTaskGR.u_soar_response = true;
                         orderTaskGR.update();
                     }
-                } else if (httpStatus == '500') {
-                    returnReponse = "There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.";
-                    if (orderTaskGR.next()) {
-                        gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', orderTaskGR, 'dl-soar@lumen.com', soarResponseBody, '');
-                        orderTaskGR.work_notes = 'There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.';
-                        orderTaskGR.update();
-                    }
-                } else {
+                }  else {
                     returnReponse = "It looks like you have not entered correct details, Please provide the correct details and check the values in Org ID, Org Key, API ID, API Key, Region etc";
                     if (orderTaskGR.next())
                         gs.eventQueue('sn_ind_tmt_orm.user.unsucessful', orderTaskGR, '', '', '');
@@ -306,13 +308,13 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-08-23 08:59:44</sys_created_on>
         <sys_id>04030fa48729d510b9342f07cebb3574</sys_id>
-        <sys_mod_count>99</sys_mod_count>
+        <sys_mod_count>100</sys_mod_count>
         <sys_name>SOARAPI</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_04030fa48729d510b9342f07cebb3574</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-11-22 17:27:40</sys_updated_on>
+        <sys_updated_on>2022-11-22 18:58:06</sys_updated_on>
     </sys_script_include>
 </record_update>
