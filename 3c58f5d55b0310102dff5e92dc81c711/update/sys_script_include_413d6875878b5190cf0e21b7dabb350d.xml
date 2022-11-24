@@ -9,26 +9,90 @@
         <name>TDGShowHideFields</name>
         <script><![CDATA[var TDGShowHideFields = Class.create();
 TDGShowHideFields.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
-	getCharName: function(){
-//var props = gs.getProperty('sn_ind_tmt_orm.DIATDGcondition');
-var props = gs.getProperty('sn_ind_tmt_orm.TDGTestDIA');
-return props;
-	
-},
+    getCharName: function() {
+        //var props = gs.getProperty('sn_ind_tmt_orm.DIATDGcondition');
+        var props = gs.getProperty('sn_ind_tmt_orm.TDGTestDIA');
+        return props;
 
-   type: 'TDGShowHideFields'
+    },
+
+    getCharacteristicsFromSO: function() {
+        var serviceOrder = this.getParameter("sysparm_serviceOrder");
+
+        var grOpt = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+        grOpt.addQuery("domain_order", serviceOrder);
+        grOpt.query();
+        var characteristicsList = [];
+        while (grOpt.next()) {
+            // Fetch input type from  sn_prd_pm_characteristic table
+            var grc = new GlideRecord('sn_prd_pm_characteristic');
+            grc.addQuery("sys_id", grOpt.characteristic);
+            grc.query();
+            var reqs = [];
+            if (grc.next()) {
+                if (grc.input_type == "choice" || grc.input_type == "yes_no") {
+                    // Fetch metadata for dropdown values. No records if it is not a multiple choice. 
+                    var grOptn = new GlideRecord('sn_prd_pm_characteristic_option');
+                    grOptn.addQuery("characteristic", grc.sys_id);
+                    grOptn.query();
+                    var optnlist = '';
+
+                    while (grOptn.next()) {
+                        optnlist = grOptn.option.toString();
+                        reqs.push(optnlist);
+                    }
+                }
+                characteristicsList.push({
+                    'name': grc.name.toString(),
+                    'type': grc.input_type.toString(),
+                    'sys_id': grc.sys_id.toString(),
+                    'optvalue': grOpt.characteristic_option_value.toString(),
+                    'optnlist': reqs
+                });
+            }
+        }
+        return JSON.stringify(characteristicsList);
+
+    },
+
+    updateCharValues: function() {
+        var serviceOrder = this.getParameter("sysparm_serviceOrder");
+        var chars = this.getParameter("sysparm_chars");
+
+        charJson = JSON.parse(chars);
+
+        for (var i = 0; i < charJson.length; i++) {
+            var gr = new GlideRecord("sn_ind_tmt_orm_order_characteristic_value");
+            gr.addQuery('domain_order', serviceOrder);
+            gr.addQuery('characteristic', charJson[i].id);
+            gr.query();
+
+            while (gr.next()) {
+                if (gr.characteristic.input_type == "choice" || gr.characteristic.input_type == "yes_no") {
+                    gr.characteristic_option.setDisplayValue(charJson[i].val);
+                }
+
+                gr.characteristic_option_value = charJson[i].val;
+                gr.update();
+            }
+        }
+
+        return true;
+    },
+
+    type: 'TDGShowHideFields'
 });]]></script>
         <sys_class_name>sys_script_include</sys_class_name>
         <sys_created_by>AD11761</sys_created_by>
         <sys_created_on>2022-11-09 08:50:04</sys_created_on>
         <sys_id>413d6875878b5190cf0e21b7dabb350d</sys_id>
-        <sys_mod_count>30</sys_mod_count>
+        <sys_mod_count>45</sys_mod_count>
         <sys_name>TDGShowHideFields</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_413d6875878b5190cf0e21b7dabb350d</sys_update_name>
-        <sys_updated_by>AD11761</sys_updated_by>
-        <sys_updated_on>2022-11-15 08:09:50</sys_updated_on>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-11-24 09:29:47</sys_updated_on>
     </sys_script_include>
 </record_update>
