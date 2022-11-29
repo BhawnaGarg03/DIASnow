@@ -10,12 +10,13 @@
         <copied_from_name>LMN_Vendor_API_Claim License Act</copied_from_name>
         <description>LMN_Vendor_API_Claim License Activate - TASK</description>
         <internal_name>lmn_vendor_api_nodechange_reason_is_not_blank__make_it_blank</internal_name>
-        <label_cache>[{"name":"bf25cc12-015d-4ff5-a904-50d21c62833b.__dont_treat_as_error__","label":"1 - LMN_Vendor_API_Node.Change Reason is NOT BLANK - Make it Blank➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bf25cc12-015d-4ff5-a904-50d21c62833b.__action_status__","label":"1 - LMN_Vendor_API_Node.Change Reason is NOT BLANK - Make it Blank➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FD571fe9db66ba1990957ca3255f0e5c5b","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.order_line_item.parent_line_item.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Parent Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.product_specification.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Product specification➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_prd_pm_product_specification","column_name":"sys_id"},{"name":"Created or Updated_1.current.account.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Created or Updated_1.current.parent.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Parent➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"task","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"},{"name":"58d868d9-49db-43c9-8804-b50340b53d4d.__dont_treat_as_error__","label":"1 - LMN_Vendor_API_Claim License Activate and Obtain License Resource - TASK➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"d7bf85c3-68ef-46d1-864b-d2fb848ff452"}},{"name":"58d868d9-49db-43c9-8804-b50340b53d4d.__action_status__","label":"1 - LMN_Vendor_API_Claim License Activate and Obtain License Resource - TASK➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD86d9179b6f1cdd105aac835eb0803d3c","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"5345ffc1-30a7-438d-91a4-765dffad8c03"}}]</label_cache>
+        <label_cache>[{"name":"58d868d9-49db-43c9-8804-b50340b53d4d.__action_status__","label":"1 - LMN_Vendor_API_Claim License Activate and Obtain License Resource - TASK➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD86d9179b6f1cdd105aac835eb0803d3c","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"5345ffc1-30a7-438d-91a4-765dffad8c03"}},{"name":"58d868d9-49db-43c9-8804-b50340b53d4d.__dont_treat_as_error__","label":"1 - LMN_Vendor_API_Claim License Activate and Obtain License Resource - TASK➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"d7bf85c3-68ef-46d1-864b-d2fb848ff452"}},{"name":"Created or Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created or Updated_1.current.parent.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Parent➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"task","column_name":"sys_id"},{"name":"Created or Updated_1.current.account.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.product_specification.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Product specification➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_prd_pm_product_specification","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.parent_line_item.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Parent Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"bf25cc12-015d-4ff5-a904-50d21c62833b.__action_status__","label":"1 - LMN_Vendor_API_Node.Change Reason is NOT BLANK - Make it Blank➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD571fe9db66ba1990957ca3255f0e5c5b","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f21bbda4-3f10-4ef7-991c-5d2fabcb0e5c"}},{"name":"bf25cc12-015d-4ff5-a904-50d21c62833b.__dont_treat_as_error__","label":"1 - LMN_Vendor_API_Node.Change Reason is NOT BLANK - Make it Blank➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"f8d68a2d-0dd2-410f-81ca-3cada97cd7e3"}}]</label_cache>
         <master_snapshot>4a20b11387fa199084b2a18e0ebb35a2</master_snapshot>
         <name>LMN_Vendor_API_Node.Change Reason is NOT BLANK - Make it Blank</name>
         <natlang/>
         <outputs/>
-        <remote_trigger_id>a620f11387fa199084b2a18e0ebb357c</remote_trigger_id>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>37716b481bef99903eeccbb8624bcb93</remote_trigger_id>
         <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
@@ -28,23 +29,25 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>f25e2d1b87ba199084b2a18e0ebb35ff</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name>LMN_Vendor_API_Node.Change Reason is NOT BLANK - Make it Blank</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_flow_f25e2d1b87ba199084b2a18e0ebb35ff</sys_update_name>
-        <sys_updated_by>AD12588</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:55:16</sys_updated_on>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-11-29 07:59:12</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=f25e2d1b87ba199084b2a18e0ebb35ff"/>
     <sys_variable_value action="delete_multiple" query="document_key=f25e2d1b87ba199084b2a18e0ebb35ff"/>
     <sys_flow_record_trigger action="INSERT_OR_UPDATE">
         <active>true</active>
-        <condition table="sn_ind_tmt_orm_order_task">short_descriptionLIKEObtain License Resource information task^stateCHANGESTO5<item endquery="false" field="short_description" goto="false" newquery="false" operator="LIKE" or="false" value="Obtain License Resource information task"/>
-            <item display_value="Closed Complete" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="5"/>
+        <condition table="sn_ind_tmt_orm_order_task">short_descriptionLIKEObtain License Resource information task^ORshort_descriptionSTARTSWITHReactivate License Task^state=5^ORstateCHANGESTO5<item endquery="false" field="short_description" goto="false" newquery="false" operator="LIKE" or="false" value="Obtain License Resource information task"/>
+            <item endquery="false" field="short_description" goto="false" newquery="false" operator="STARTSWITH" or="true" value="Reactivate License Task"/>
+            <item display_value="Closed Complete" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="5"/>
+            <item display_value="Closed Complete" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="true" value="5"/>
         </condition>
         <name/>
         <on_delete>false</on_delete>
@@ -57,42 +60,31 @@
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
         <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-11-01 19:17:12</sys_created_on>
+        <sys_created_on>2022-11-29 07:59:12</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>a620f11387fa199084b2a18e0ebb357c</sys_id>
+        <sys_id>37716b481bef99903eeccbb8624bcb93</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_overrides/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:12</sys_updated_on>
+        <sys_updated_on>2022-11-29 07:59:12</sys_updated_on>
         <table>sn_ind_tmt_orm_order_task</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
-        <data>{"table":"sys_trigger_runner_mapping","id":"e620f11387fa199084b2a18e0ebb3589","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
         <identifier>f25e2d1b87ba199084b2a18e0ebb35ff</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-11-01 19:17:12</sys_created_on>
-        <sys_id>e620f11387fa199084b2a18e0ebb3589</sys_id>
-        <sys_mod_count>3</sys_mod_count>
-        <sys_updated_by>AD12588</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:55:16</sys_updated_on>
-        <trigger display_value="">a620f11387fa199084b2a18e0ebb357c</trigger>
+        <sys_created_on>2022-11-29 07:59:12</sys_created_on>
+        <sys_id>ff716b481bef99903eeccbb8624bcb93</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-11-29 07:59:12</sys_updated_on>
+        <trigger display_value="">37716b481bef99903eeccbb8624bcb93</trigger>
     </sys_trigger_runner_mapping>
-    <sys_json_chunk action="INSERT_OR_UPDATE">
-        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
-        <document_id>e620f11387fa199084b2a18e0ebb3589</document_id>
-        <field>trigger_runner</field>
-        <length>144</length>
-        <position>0</position>
-        <source_table>sys_trigger_runner_mapping</source_table>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-11-01 19:17:12</sys_created_on>
-        <sys_id>ee20f11387fa199084b2a18e0ebb3589</sys_id>
-    </sys_json_chunk>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=f25e2d1b87ba199084b2a18e0ebb35ff^sys_idNOT INe620f11387fa199084b2a18e0ebb3589"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=f25e2d1b87ba199084b2a18e0ebb35ff^sys_idNOT INff716b481bef99903eeccbb8624bcb93"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=f25e2d1b87ba199084b2a18e0ebb35ff^sys_idNOT IN9b5e6d1b87ba199084b2a18e0ebb356d"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment/>
@@ -103,10 +95,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:09:20</sys_created_on>
         <sys_id>9b5e6d1b87ba199084b2a18e0ebb356d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:13</sys_updated_on>
+        <sys_updated_on>2022-11-29 07:59:12</sys_updated_on>
         <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -149,10 +141,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:09:20</sys_created_on>
         <sys_id>5b5e6d1b87ba199084b2a18e0ebb357b</sys_id>
-        <sys_mod_count>1</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:14:08</sys_updated_on>
-        <value>short_descriptionLIKEObtain License Resource information task^stateCHANGESTO5</value>
+        <sys_updated_on>2022-11-29 07:59:08</sys_updated_on>
+        <value>short_descriptionLIKEObtain License Resource information task^ORshort_descriptionSTARTSWITHReactivate License Task^state=5^ORstateCHANGESTO5</value>
         <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=9b5e6d1b87ba199084b2a18e0ebb356d"/>
@@ -202,6 +194,7 @@
         <element>current</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -233,14 +226,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:09:19</sys_created_on>
         <sys_id>435e6d1b87ba199084b2a18e0ebb351f</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:12</sys_updated_on>
+        <sys_updated_on>2022-11-29 07:59:12</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -248,6 +241,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -256,7 +250,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD6620f113fefa1990d5521066b28ea98f,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -283,6 +277,7 @@
         <element>changed_fields</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -314,14 +309,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:09:19</sys_created_on>
         <sys_id>8b5e6d1b87ba199084b2a18e0ebb3522</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:13</sys_updated_on>
+        <sys_updated_on>2022-11-29 07:59:08</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -329,6 +324,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -364,6 +360,7 @@
         <element>table_name</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -395,14 +392,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:09:19</sys_created_on>
         <sys_id>cf5e6d1b87ba199084b2a18e0ebb3517</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>4</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:12</sys_updated_on>
+        <sys_updated_on>2022-11-29 07:59:12</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -410,6 +407,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -431,10 +429,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:14:08</sys_created_on>
         <sys_id>ed7f295f87ba199084b2a18e0ebb35d5</sys_id>
-        <sys_mod_count>8</sys_mod_count>
+        <sys_mod_count>16</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:58</sys_updated_on>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-11-29 07:59:12</sys_updated_on>
         <ui_id>bf25cc12-015d-4ff5-a904-50d21c62833b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ed7f295f87ba199084b2a18e0ebb35d5"/>
@@ -535,18 +533,18 @@
         <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"aa20f11387fa199084b2a18e0ebb358a","name":"plan","plan_signature":null}}</plan>
         <plan_id>f25e2d1b87ba199084b2a18e0ebb35ff</plan_id>
-        <snapshot>7950bd1387fa199084b2a18e0ebb358d</snapshot>
+        <snapshot>4a20b11387fa199084b2a18e0ebb35a2</snapshot>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:17:12</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>aa20f11387fa199084b2a18e0ebb358a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:12</sys_updated_on>
-        <trigger display_value="">a620f11387fa199084b2a18e0ebb357c</trigger>
+        <sys_updated_on>2022-11-29 07:59:12</sys_updated_on>
+        <trigger display_value="">37716b481bef99903eeccbb8624bcb93</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=f25e2d1b87ba199084b2a18e0ebb35ff"/>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
@@ -560,7 +558,7 @@
         <copied_from_name/>
         <description>LMN_Vendor_API_Claim License Activate - TASK</description>
         <internal_name>lmn_vendor_api_nodechange_reason_is_not_blank__make_it_blank</internal_name>
-        <label_cache>[{"name":"bf25cc12-015d-4ff5-a904-50d21c62833b.__dont_treat_as_error__","label":"1 - LMN_Vendor_API_Node.Change Reason is NOT BLANK - Make it Blank➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiType":"boolean","visible_in_ui":"false","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"bf25cc12-015d-4ff5-a904-50d21c62833b.__action_status__","label":"1 - LMN_Vendor_API_Node.Change Reason is NOT BLANK - Make it Blank➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiType":"object","co_type_name":"FD571fe9db66ba1990957ca3255f0e5c5b","action_error_output":"true","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"Created or Updated_1.current.order_line_item.parent_line_item.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Parent Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.product_specification.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Product specification➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_prd_pm_product_specification","column_name":"sys_id"},{"name":"Created or Updated_1.current.account.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Created or Updated_1.current.parent.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Parent➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"task","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"},{"name":"58d868d9-49db-43c9-8804-b50340b53d4d.__dont_treat_as_error__","label":"1 - LMN_Vendor_API_Claim License Activate and Obtain License Resource - TASK➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"d7bf85c3-68ef-46d1-864b-d2fb848ff452"}},{"name":"58d868d9-49db-43c9-8804-b50340b53d4d.__action_status__","label":"1 - LMN_Vendor_API_Claim License Activate and Obtain License Resource - TASK➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD86d9179b6f1cdd105aac835eb0803d3c","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"5345ffc1-30a7-438d-91a4-765dffad8c03"}}]</label_cache>
+        <label_cache>[{"name":"58d868d9-49db-43c9-8804-b50340b53d4d.__action_status__","label":"1 - LMN_Vendor_API_Claim License Activate and Obtain License Resource - TASK➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD86d9179b6f1cdd105aac835eb0803d3c","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"5345ffc1-30a7-438d-91a4-765dffad8c03"}},{"name":"58d868d9-49db-43c9-8804-b50340b53d4d.__dont_treat_as_error__","label":"1 - LMN_Vendor_API_Claim License Activate and Obtain License Resource - TASK➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"d7bf85c3-68ef-46d1-864b-d2fb848ff452"}},{"name":"Created or Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created or Updated_1.current.parent.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Parent➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"task","column_name":"sys_id"},{"name":"Created or Updated_1.current.account.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.product_specification.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Product specification➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_prd_pm_product_specification","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.parent_line_item.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Parent Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"bf25cc12-015d-4ff5-a904-50d21c62833b.__action_status__","label":"1 - LMN_Vendor_API_Node.Change Reason is NOT BLANK - Make it Blank➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD571fe9db66ba1990957ca3255f0e5c5b","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"f21bbda4-3f10-4ef7-991c-5d2fabcb0e5c"}},{"name":"bf25cc12-015d-4ff5-a904-50d21c62833b.__dont_treat_as_error__","label":"1 - LMN_Vendor_API_Node.Change Reason is NOT BLANK - Make it Blank➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"f8d68a2d-0dd2-410f-81ca-3cada97cd7e3"}}]</label_cache>
         <master>true</master>
         <name>LMN_Vendor_API_Node.Change Reason is NOT BLANK - Make it Blank</name>
         <natlang/>
@@ -577,7 +575,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4a20b11387fa199084b2a18e0ebb35a2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -585,7 +583,7 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:10</sys_updated_on>
+        <sys_updated_on>2022-11-29 07:59:11</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=4a20b11387fa199084b2a18e0ebb35a2"/>
@@ -600,10 +598,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:17:11</sys_created_on>
         <sys_id>1220b11387fa199084b2a18e0ebb35ed</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:12</sys_updated_on>
+        <sys_updated_on>2022-11-29 07:59:12</sys_updated_on>
         <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -632,10 +630,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:17:11</sys_created_on>
         <sys_id>5220b11387fa199084b2a18e0ebb35ef</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:11</sys_updated_on>
-        <value>short_descriptionLIKEObtain License Resource information task^stateCHANGESTO5</value>
+        <sys_updated_on>2022-11-29 07:59:10</sys_updated_on>
+        <value>short_descriptionLIKEObtain License Resource information task^ORshort_descriptionSTARTSWITHReactivate License Task^state=5^ORstateCHANGESTO5</value>
         <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -672,7 +670,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -699,6 +697,7 @@
         <element>current</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -730,14 +729,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:17:10</sys_created_on>
         <sys_id>4a20b11387fa199084b2a18e0ebb35a7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:10</sys_updated_on>
+        <sys_updated_on>2022-11-29 07:59:10</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -745,6 +744,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -753,7 +753,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD0620b11348fa19907f8f46bbb17d63a5,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -780,6 +780,7 @@
         <element>changed_fields</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -811,14 +812,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:17:11</sys_created_on>
         <sys_id>ce20b11387fa199084b2a18e0ebb35c2</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:11</sys_updated_on>
+        <sys_updated_on>2022-11-29 07:59:10</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -826,6 +827,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -834,7 +836,7 @@
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -861,6 +863,7 @@
         <element>table_name</element>
         <element_reference>false</element_reference>
         <foreign_database/>
+        <formula/>
         <function_definition/>
         <function_field>false</function_field>
         <help/>
@@ -892,14 +895,14 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:17:11</sys_created_on>
         <sys_id>d620b11387fa199084b2a18e0ebb35cb</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:11</sys_updated_on>
+        <sys_updated_on>2022-11-29 07:59:10</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -907,6 +910,7 @@
         <use_dynamic_default>false</use_dynamic_default>
         <use_reference_qualifier>simple</use_reference_qualifier>
         <virtual>false</virtual>
+        <virtual_type/>
         <widget/>
         <write_roles/>
         <xml_view>false</xml_view>
@@ -928,10 +932,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-01 19:17:11</sys_created_on>
         <sys_id>de20b11387fa199084b2a18e0ebb35ea</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>6</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-01 19:17:11</sys_updated_on>
+        <sys_updated_on>2022-11-29 07:59:11</sys_updated_on>
         <ui_id>bf25cc12-015d-4ff5-a904-50d21c62833b</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=de20b11387fa199084b2a18e0ebb35ea"/>
@@ -1030,6 +1034,6 @@
     <sys_hub_flow action="UPDATE">
         <sys_id>f25e2d1b87ba199084b2a18e0ebb35ff</sys_id>
         <latest_snapshot>4a20b11387fa199084b2a18e0ebb35a2</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch7-08-17-2022_08-23-2022_1902.zip</compiler_build>
+        <compiler_build>glide-tokyo-07-08-2022__patch2-hotfix1-10-14-2022_11-03-2022_1039.zip</compiler_build>
     </sys_hub_flow>
 </record_update>
