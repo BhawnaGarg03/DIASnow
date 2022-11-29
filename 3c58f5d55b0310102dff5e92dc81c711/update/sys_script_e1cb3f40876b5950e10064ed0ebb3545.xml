@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="7a8f93141b0b20102885a932604bcb70" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>true</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>true</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_ind_tmt_orm_service_order</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Set Characteristic Values</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	var chars = new GlideRecord("sn_ind_tmt_orm_order_characteristic_value");
+	chars.addEncodedQuery("domain_order=" + current.sys_id);
+	chars.query();
+	while(chars.next()) {
+		if(chars.characteristic.name == "pcatproductid") {
+			chars.characteristic_option_value = chars.order_line_item.product_specification_code;
+		}
+		
+		if(chars.characteristic.name == "Phone Number") {
+			chars.characteristic_option_value = current.contact.mobile_phone;
+		}
+		
+		if(chars.characteristic.name == "User") {
+			chars.characteristic_option_value = current.contact.name;
+		}
+		
+		if(chars.characteristic.name == "Customer Number") {
+			chars.characteristic_option_value = chars.order_line_item.account.name;
+		}
+	}
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-11-29 09:54:00</sys_created_on>
+        <sys_domain>7a8f93141b0b20102885a932604bcb70</sys_domain>
+        <sys_domain_path>!!!/!!&amp;/</sys_domain_path>
+        <sys_id>e1cb3f40876b5950e10064ed0ebb3545</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_name>Set Characteristic Values</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_e1cb3f40876b5950e10064ed0ebb3545</sys_update_name>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-11-29 12:49:44</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=e1cb3f40876b5950e10064ed0ebb3545"/>
+</record_update>
