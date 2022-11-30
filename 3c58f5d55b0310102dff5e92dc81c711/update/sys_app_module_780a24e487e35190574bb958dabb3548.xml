@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_app_module">
+    <sys_app_module action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <application display_value="Customer Order Management">ae844438c3971010912d89bc2840dddd</application>
+        <assessment/>
+        <device_type/>
+        <filter table="sn_ind_tmt_orm_order">state=new^channel=Digital Quote Platform^EQ<item display_value="New" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="new"/>
+            <item display_value="Digital Quote Platform" endquery="false" field="channel" goto="false" newquery="false" operator="=" or="false" value="Digital Quote Platform"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter>
+        <hint/>
+        <homepage/>
+        <image/>
+        <link_type>LIST</link_type>
+        <map_page/>
+        <mobile_title>SM Orders Pending OE Approval</mobile_title>
+        <mobile_view_name>Mobile</mobile_view_name>
+        <name>sn_ind_tmt_orm_order</name>
+        <order>105</order>
+        <override_menu_roles>false</override_menu_roles>
+        <query/>
+        <report/>
+        <roles>sn_ind_tmt_orm.order_approver,sn_ind_tmt_orm.order_fulfilment_agent,sn_ind_tmt_orm.tiering_user,sn_ind_tmt_orm.order_creator</roles>
+        <sys_class_name>sys_app_module</sys_class_name>
+        <sys_created_by>AD12588</sys_created_by>
+        <sys_created_on>2022-11-30 08:01:36</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>780a24e487e35190574bb958dabb3548</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SM Orders Pending OE Approval</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_app_module_780a24e487e35190574bb958dabb3548</sys_update_name>
+        <sys_updated_by>AD12588</sys_updated_by>
+        <sys_updated_on>2022-11-30 08:01:36</sys_updated_on>
+        <timeline_page/>
+        <title>SM Orders Pending OE Approval</title>
+        <uncancelable>false</uncancelable>
+        <view_name/>
+        <window_name/>
+    </sys_app_module>
+</record_update>
