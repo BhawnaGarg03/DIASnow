@@ -1,0 +1,3807 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>som_swift_transformer</internal_name>
+        <label_cache>[{"name":"{{action.pspid}}","label":"action➛pspId","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.transactionid}}","label":"action➛transactionId","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[a162cd63-b3df-4798-a881-dca04eb86414].response_body}}","label":"step➛Swift API➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[2eafab3f-3737-4ca1-85be-d38d9a15dc68].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[8043eebf-e95e-41d1-99bf-cb6819245edc].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[8043eebf-e95e-41d1-99bf-cb6819245edc].payload}}","label":"step➛Script step➛payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceUiUniqueId":"","sourceType":"","sourceId":""}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>SOM_Swift_Transformer</name>
+        <natlang/>
+        <outputs/>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:34:46</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7523ad32871bd15084b2a18e0ebb352d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>SOM_Swift_Transformer</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_7523ad32871bd15084b2a18e0ebb352d</sys_update_name>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:48:16</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=7523ad32871bd15084b2a18e0ebb352d"/>
+    <sys_variable_value action="delete_multiple" query="document_key=7523ad32871bd15084b2a18e0ebb352d"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>7523ad32871bd15084b2a18e0ebb352d</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:48:16</sys_created_on>
+        <sys_id>a3362536871bd15084b2a18e0ebb350c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:48:16</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FD1336e1363d1bd150f083fb8da20b9ad5":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FD1336e1363d1bd150f083fb8da20b9ad5.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":null,\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"00124c15-9119-49f9-b11b-2064a74db62e\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD1336e1363d1bd150f083fb8da20b9ad5\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"-1\"}"}}}</value>
+        <variable display_value="Action Status">5736e136871bd15084b2a18e0ebb35d7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>7523ad32871bd15084b2a18e0ebb352d</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:48:16</sys_created_on>
+        <sys_id>ef362536871bd15084b2a18e0ebb350b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:48:16</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">9336e136871bd15084b2a18e0ebb35dd</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_7523ad32871bd15084b2a18e0ebb352d^id=7523ad32871bd15084b2a18e0ebb352d"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6faefee0000001</claim_timestamp>
+        <metadata_update_name>sys_hub_action_type_definition_7523ad32871bd15084b2a18e0ebb352d</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:35</sys_created_on>
+        <sys_id>a4d64ca28727151094fa0e58cebb3582</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:35</sys_updated_on>
+    </sys_claim>
+    <sys_hub_step_instance action="delete_multiple" query="action=7523ad32871bd15084b2a18e0ebb352d^sys_idNOT IN11266136871bd15084b2a18e0ebb35dc,41266136871bd15084b2a18e0ebb3587,89266136871bd15084b2a18e0ebb35ca"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="SOM_Swift_Transformer">7523ad32871bd15084b2a18e0ebb352d</action>
+        <cid>8043eebf-e95e-41d1-99bf-cb6819245edc</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>3</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>11266136871bd15084b2a18e0ebb35dc</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=11266136871bd15084b2a18e0ebb35dc"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>11266136871bd15084b2a18e0ebb35dc</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:52</sys_created_on>
+        <sys_id>2d26a136871bd15084b2a18e0ebb3503</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+        <value>3745c40873e91101aa9337d0ebb350e</value>
+        <variable display_value="">d1266136871bd15084b2a18e0ebb35e7</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>11266136871bd15084b2a18e0ebb35dc</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:52</sys_created_on>
+        <sys_id>5526a136871bd15084b2a18e0ebb3502</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+
+var swiftpackage = inputs.swiftresponse.root_array;
+
+var tmfpayload = {};
+var productItems = [], relatedParty = [], party = {}, customers = [];
+
+for (var p = 0; p &lt; swiftpackage.length;  p++) {
+  
+var swiftinput = swiftpackage[p].products;
+  
+tmfpayload.id = swiftpackage[p].transactionId;
+tmfpayload.ponr = false;
+tmfpayload.requestedCompletionDate = swiftpackage[p].negotiatedDueDate;
+tmfpayload.requestedStartDate = swiftpackage[p].committedDueDate;  
+tmfpayload.orderType =  swiftpackage[p].action;    
+tmfpayload.state =  swiftpackage[p].status;    
+var channel = {}, channels = [];
+channel.id = 1;
+channel.name = swiftpackage[p].orderingSystem; 
+channels.push(channel);  
+tmfpayload.channel = channels;    
+  
+  for (var i = 0; i &lt; swiftinput.length;  i++) {
+    var productItem = {};  productOrderItemRelationships = [];
+    productItem.id = swiftinput[i].productInstanceId;
+    productItem.quantity = 1;
+    productItem.action = "Add";
+    var relatedParties = [], relatedParty = {}, product = {}, place = {}, productSpecification = {}, productOffering = {};
+    product.isBundle = false;
+	var attrList = swiftinput[i].productAttributes;
+    var placeId = "";
+      for (var l = 0; l &lt; attrList.length; l++)  { 
+        if (attrList[l].attributeName === "Address1") {
+          placeId = attrList[l].attributeValue;
+          break;
+        }  
+      }
+    
+	place.id = placeId;
+  	place["@type"] = "Place";
+    
+	relatedParty.id = inputs.swiftresponse.customerId;
+	relatedParty.name = inputs.customername;
+	relatedParty.referredType = "OrderLineItemContact";
+	relatedParties.push(relatedParty);
+    product.relatedParty = relatedParties;
+    product.place = place;
+    productSpecification.version =  1;
+    productSpecification.id =  swiftinput[i].pCatProductId;
+    productSpecification.name =  swiftinput[i].productName;
+    product.productSpecification = productSpecification;
+    product.productCharacteristic = getProductCharacteristcs(swiftinput[i].productAttributes,swiftpackage[p].productPackageId, swiftpackage[p].businessOrderId);
+
+    productItem.itemPrice = getProductPricing(swiftinput[i].priceInfo);
+    
+    productItem.product = product;
+
+    productOffering.id = "21cae96e1b54785020339cef034bcb6a";
+    productOffering.name = "Dedicated Internet Offer";
+    productItem.productOffering = productOffering;
+    
+    if (swiftinput[i].isParentProduct === false || swiftinput[i].isParentProduct === "false") {
+			var  cproductOrderItemRelationship = {};          
+    		cproductOrderItemRelationship.id = swiftinput[i].parentProductInstanceId;
+    		cproductOrderItemRelationship.relationshipType = "HasParent";
+          	productOrderItemRelationships.push(cproductOrderItemRelationship);
+    } else if (swiftinput[i].isParentProduct) {
+      	var relatedIds = [];
+        relatedIds = getChildren(swiftinput[i].productInstanceId , swiftinput);
+        for (var j = 0; j &lt; relatedIds.length;  j++) {
+			var  productOrderItemRelationship = {};          
+    		productOrderItemRelationship.id = relatedIds[j];
+    		productOrderItemRelationship.relationshipType = "HasChild";
+          	productOrderItemRelationships.push(productOrderItemRelationship);
+        }
+    }
+    productItem.productOrderItemRelationship = productOrderItemRelationships;
+    productItems.push(productItem)
+  }
+}
+  tmfpayload.productOrderItem = productItems;  
+  party.id = inputs.customerid;
+  party.name = inputs.customername;
+  party["@referredType"] = "Customer";
+  customers.push(party);
+  tmfpayload.relatedParty = customers; 
+  
+outputs.payload = JSON.stringify(tmfpayload);
+
+function getProductCharacteristcs(list,productPackageId,businessOrderId) {
+  var attrList = [];
+  
+  for (var k = 0; k &lt; list.length; k++)  { 
+    	var charObj = {};
+    	charObj.name = list[k].attributeName;
+    	charObj.valueType = "Single Line Text";
+    	charObj.value = list[k].attributeValue;
+
+      attrList.push(charObj);
+  }
+  
+    	var pspAttribute = {};
+    	pspAttribute.name = "GPID";
+    	pspAttribute.valueType = "Single Line Text";
+    	pspAttribute.value = productPackageId;
+      attrList.push(pspAttribute);
+
+    	var boidAttribute = {};
+    	boidAttribute.name = "BusinessOrderId";
+    	boidAttribute.valueType = "Single Line Text";
+    	boidAttribute.value = businessOrderId;
+      attrList.push(boidAttribute);
+  
+  return attrList;
+} 
+
+function getProductPricing(priceInfo) {
+  var priceList = [];
+
+    //if (priceInfo.mrcApplicable === true) {
+  		var itemPrice = {}, price = {}, taxIncludedAmount = {};
+  		itemPrice.priceType =  "recurring";
+        taxIncludedAmount.unit = priceInfo.currencyCode;
+        taxIncludedAmount.value = priceInfo.mrcAdjusted;
+  		price.taxIncludedAmount =  taxIncludedAmount;
+      	itemPrice.price = price;
+      priceList.push(itemPrice);
+    //} 
+  
+  //if (priceInfo.nrcApplicable === true) {
+  		itemPrice = {}, price = {}, taxIncludedAmount = {};
+  		itemPrice.priceType =  "nonRecurring";
+        taxIncludedAmount.unit = priceInfo.currencyCode;
+        taxIncludedAmount.value = priceInfo.nrcAdjusted;
+  		price.taxIncludedAmount =  taxIncludedAmount;
+      	itemPrice.price = price;
+      priceList.push(itemPrice);
+    //}   
+  
+  return priceList;
+} 
+  
+function getChildren(parentId, list) {
+  var children = [];
+  
+  for (var k = 0; k &lt; list.length; k++)  {  
+    if (parentId == list[k].parentProductInstanceId &amp;&amp; parentId !== list[k].productInstanceId) {
+      children.push(list[k].productInstanceId);
+    }
+  }
+  
+  return children;
+} 
+ 
+
+}
+)
+(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>11266136871bd15084b2a18e0ebb35dc</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:52</sys_created_on>
+        <sys_id>6926a136871bd15084b2a18e0ebb3503</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+        <value>351DIA</value>
+        <variable display_value="">91266136871bd15084b2a18e0ebb35ea</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>11266136871bd15084b2a18e0ebb35dc</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:52</sys_created_on>
+        <sys_id>9126a136871bd15084b2a18e0ebb3502</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=11266136871bd15084b2a18e0ebb35dc"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>11266136871bd15084b2a18e0ebb35dc</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:52</sys_created_on>
+        <sys_id>5d26a136871bd15084b2a18e0ebb3501</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>customename</field>
+        <id>11266136871bd15084b2a18e0ebb35dc</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:52</sys_created_on>
+        <sys_id>2526a136871bd15084b2a18e0ebb3503</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_11266136871bd15084b2a18e0ebb35dc</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>customerid</field>
+        <id>11266136871bd15084b2a18e0ebb35dc</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:52</sys_created_on>
+        <sys_id>6126a136871bd15084b2a18e0ebb3503</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_11266136871bd15084b2a18e0ebb35dc</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>11266136871bd15084b2a18e0ebb35dc</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:52</sys_created_on>
+        <sys_id>1126a136871bd15084b2a18e0ebb3502</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>swiftresponse</field>
+        <id>11266136871bd15084b2a18e0ebb35dc</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:52</sys_created_on>
+        <sys_id>e526a136871bd15084b2a18e0ebb3503</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_11266136871bd15084b2a18e0ebb35dc</table>
+        <value>{{step[2eafab3f-3737-4ca1-85be-d38d9a15dc68].root}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_11266136871bd15084b2a18e0ebb35dc^id=11266136871bd15084b2a18e0ebb35dc"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=11266136871bd15084b2a18e0ebb35dc"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=11266136871bd15084b2a18e0ebb35dc^sys_idNOT IN91266136871bd15084b2a18e0ebb35ea,d1266136871bd15084b2a18e0ebb35e3,d1266136871bd15084b2a18e0ebb35e7"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>customename</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">11266136871bd15084b2a18e0ebb35dc</model>
+        <model_id>11266136871bd15084b2a18e0ebb35dc</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_11266136871bd15084b2a18e0ebb35dc</name>
+        <next_element/>
+        <order>200</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>91266136871bd15084b2a18e0ebb35ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>swiftresponse</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">11266136871bd15084b2a18e0ebb35dc</model>
+        <model_id>11266136871bd15084b2a18e0ebb35dc</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_11266136871bd15084b2a18e0ebb35dc</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>d1266136871bd15084b2a18e0ebb35e3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:48:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>customerid</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">11266136871bd15084b2a18e0ebb35dc</model>
+        <model_id>11266136871bd15084b2a18e0ebb35dc</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_11266136871bd15084b2a18e0ebb35dc</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>d1266136871bd15084b2a18e0ebb35e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=11266136871bd15084b2a18e0ebb35dc^sys_idNOT IN59266136871bd15084b2a18e0ebb35ed"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=790ac0cf-0cd4-4c3c-927f-5015ed4d7815</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>payload</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>payload</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">11266136871bd15084b2a18e0ebb35dc</model>
+        <model_id>11266136871bd15084b2a18e0ebb35dc</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_11266136871bd15084b2a18e0ebb35dc</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>59266136871bd15084b2a18e0ebb35ed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=11266136871bd15084b2a18e0ebb35dc"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_11266136871bd15084b2a18e0ebb35dc^sys_idNOT INd1266136871bd15084b2a18e0ebb35f1"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>payload</element>
+        <help/>
+        <hint/>
+        <label>payload</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_11266136871bd15084b2a18e0ebb35dc</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:52</sys_created_on>
+        <sys_id>d1266136871bd15084b2a18e0ebb35f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="SOM_Swift_Transformer">7523ad32871bd15084b2a18e0ebb352d</action>
+        <cid>a162cd63-b3df-4798-a881-dca04eb86414</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Swift API</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:50</sys_created_on>
+        <sys_id>41266136871bd15084b2a18e0ebb3587</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:48:15</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=41266136871bd15084b2a18e0ebb3587"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>41266136871bd15084b2a18e0ebb3587</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:50</sys_created_on>
+        <sys_id>01266136871bd15084b2a18e0ebb35c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:50</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Honor Duplicate Query Params">58715a1c53f22010d3a8ddeeff7b1248</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>41266136871bd15084b2a18e0ebb3587</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>01266136871bd15084b2a18e0ebb35c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <value/>
+        <variable display_value="Connection Timeout">7a59009bc7522010820469467ec260c0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>41266136871bd15084b2a18e0ebb3587</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>05266136871bd15084b2a18e0ebb35c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Use MID">e532afc12f101300a09a839fb18c95b9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>41266136871bd15084b2a18e0ebb3587</document_key>
+        <order>30</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>41266136871bd15084b2a18e0ebb35c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[{"attributes":{"mandatory":false,"omit_if_empty":false},"name":"Accept","value":"application/json"}]}</value>
+        <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>41266136871bd15084b2a18e0ebb3587</document_key>
+        <order>12</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>4d266136871bd15084b2a18e0ebb35c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>41266136871bd15084b2a18e0ebb3587</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>89266136871bd15084b2a18e0ebb35c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <value>http://swiftservices:9000/</value>
+        <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>41266136871bd15084b2a18e0ebb3587</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:50</sys_created_on>
+        <sys_id>8d266136871bd15084b2a18e0ebb35c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:50</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="Connection">91e207d03b50030057a4a2e334efc4a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>41266136871bd15084b2a18e0ebb3587</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:48:15</sys_created_on>
+        <sys_id>9f36e136871bd15084b2a18e0ebb35b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:48:15</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="Query Parameters">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>41266136871bd15084b2a18e0ebb3587</document_key>
+        <order>13</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>c5266136871bd15084b2a18e0ebb35c6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <value>18409d8007482000dada43c0d1021e8f</value>
+        <variable display_value="Capabilities">c30a451d2f201300a09a839fb18c95b4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>41266136871bd15084b2a18e0ebb3587</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:50</sys_created_on>
+        <sys_id>c9266136871bd15084b2a18e0ebb35c5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:50</sys_updated_on>
+        <value>Customer/v3/Ordering/transaction/552860049/productPackage</value>
+        <variable display_value="Resource Path">3d090af03b23320057a4a2e334efc455</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129^id=41266136871bd15084b2a18e0ebb3587"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=41266136871bd15084b2a18e0ebb3587"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=41266136871bd15084b2a18e0ebb3587"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=41266136871bd15084b2a18e0ebb3587"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_41266136871bd15084b2a18e0ebb3587"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="SOM_Swift_Transformer">7523ad32871bd15084b2a18e0ebb352d</action>
+        <cid>2eafab3f-3737-4ca1-85be-d38d9a15dc68</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>JSON Parser step</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="JSON Parser">502328c387523300f917e55936cb0bf0</step_type>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>89266136871bd15084b2a18e0ebb35ca</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=89266136871bd15084b2a18e0ebb35ca"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>89266136871bd15084b2a18e0ebb35ca</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>5d266136871bd15084b2a18e0ebb35d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <value>[&#13;
+  {&#13;
+    "productPackageId": 444547011,&#13;
+    "transactionId": 552860049,&#13;
+    "businessOrderId": 2516944,&#13;
+    "customerId": 1022251,&#13;
+    "turnUpProcessor": "SwiftInventory",&#13;
+    "status": "Closed",&#13;
+    "action": "Add",&#13;
+    "negotiatedDueDate": "2022-11-30T07:00:00Z",&#13;
+    "committedDueDate": "2022-11-30T07:00:00Z",&#13;
+    "isDueDateCommitted": false,&#13;
+    "actionChangeReasonId": null,&#13;
+    "actionChangeInitiatorId": null,&#13;
+    "isOrdered": false,&#13;
+    "isOriginal": false,&#13;
+    "isAcceptanceRequiredForBilling": false,&#13;
+    "transactionType": "New",&#13;
+    "productPackageProperties": [&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "Design_Layout_Record",&#13;
+        "propertyValue": null&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "Is_Coordinated",&#13;
+        "propertyValue": "No"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "Express",&#13;
+        "propertyValue": null&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "NG911",&#13;
+        "propertyValue": "No"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "CapEx",&#13;
+        "propertyValue": "0"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "Customer_Id",&#13;
+        "propertyValue": "1022251"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "Delivery_Region_Code",&#13;
+        "propertyValue": "NA"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "Irr",&#13;
+        "propertyValue": "5.706"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "IsLocked",&#13;
+        "propertyValue": "True"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "IsReprocessedAsMisc",&#13;
+        "propertyValue": "False"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "NetExSharedMrc",&#13;
+        "propertyValue": "0"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "NetExSharedNrc",&#13;
+        "propertyValue": "0"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "OpExMrc",&#13;
+        "propertyValue": "0"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "OpExNrc",&#13;
+        "propertyValue": "0"&#13;
+      },&#13;
+      {&#13;
+        "action": "Add",&#13;
+        "propertyName": "Payback",&#13;
+        "propertyValue": "5.962"&#13;
+      }&#13;
+    ],&#13;
+    "products": [&#13;
+      {&#13;
+        "productInstanceId": 343815703,&#13;
+        "transactionId": 552860049,&#13;
+        "productPackageId": 444547011,&#13;
+        "productName": "Dedicated Internet Access",&#13;
+        "pCatProductId": 351,&#13;
+        "pCatVersion": "19-JUL-22",&#13;
+        "isParentProduct": true,&#13;
+        "accountNumber": 715875,&#13;
+        "action": "Add",&#13;
+        "requestedDueDate": null,&#13;
+        "requestedDueDateTimeZone": null,&#13;
+        "marketId": 0,&#13;
+        "promotionCode": null,&#13;
+        "isExistingProduct": false,&#13;
+        "originalTransactionId": 552860049,&#13;
+        "currencyCode": "USD",&#13;
+        "priceInfo": {&#13;
+          "actionType": "Add",&#13;
+          "quantity": 1,&#13;
+          "mrcStandard": 0,&#13;
+          "nrcStandard": 0,&#13;
+          "mrcAdjusted": 0,&#13;
+          "nrcAdjusted": 0,&#13;
+          "mrcDiscount": "0.00",&#13;
+          "nrcDiscount": "0.00",&#13;
+          "requiresICB": false,&#13;
+          "prepaidMinutes": 0,&#13;
+          "isTieredPricing": false,&#13;
+          "currencyCode": "USD",&#13;
+          "mrcApplicable": true,&#13;
+          "nrcApplicable": true,&#13;
+          "priceDetails": [&#13;
+            {&#13;
+              "productInstanceId": 343815703,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 0,&#13;
+              "description": "Circuit Type = GigE - Ethernet Switched Access (50-1,000)",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815703,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 1,&#13;
+              "description": "CDR in MBPS=200",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815703,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 2,&#13;
+              "description": "Contract Type = Lease",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815703,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 3,&#13;
+              "description": "Specific Vendor Required=No",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815703,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 4,&#13;
+              "description": "Specific Vendor Excluded=No",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815703,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 5,&#13;
+              "description": "Route Diversity=No",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815703,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 6,&#13;
+              "description": "Building Entrance Facility Diversity=No",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815703,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 7,&#13;
+              "description": "Vendor Equipment Diversity=No",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815703,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 8,&#13;
+              "description": "No Capital Approval Request needed for this product configuration.",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815703,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 9,&#13;
+              "description": "Budgetary Pricing = No",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815703,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 10,&#13;
+              "description": "Standard Delivery - To the MPoE (Customer Provided)",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            }&#13;
+          ],&#13;
+          "usageDetails": []&#13;
+        },&#13;
+        "productCharges": [&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "name": "Mrc",&#13;
+            "action": "Add",&#13;
+            "amountStandard": 0,&#13;
+            "amountDiscount": 0,&#13;
+            "amountAdjusted": 0,&#13;
+            "allowOveride": true,&#13;
+            "overrideAttribute": "OverrideMrc",&#13;
+            "superUserOverride": true,&#13;
+            "toolTip": null,&#13;
+            "frequency": "MRC",&#13;
+            "amortizedAmount": 0,&#13;
+            "amortizedTerm": 0,&#13;
+            "percentAmortized": 0,&#13;
+            "productFloor": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "name": "Nrc",&#13;
+            "action": "Add",&#13;
+            "amountStandard": 0,&#13;
+            "amountDiscount": 0,&#13;
+            "amountAdjusted": 0,&#13;
+            "allowOveride": true,&#13;
+            "overrideAttribute": "OverrideNrc",&#13;
+            "superUserOverride": true,&#13;
+            "toolTip": null,&#13;
+            "frequency": "NRC",&#13;
+            "amortizedAmount": 0,&#13;
+            "amortizedTerm": 0,&#13;
+            "percentAmortized": 0,&#13;
+            "productFloor": 0&#13;
+          }&#13;
+        ],&#13;
+        "gpId": "343815703",&#13;
+        "productAttributes": [&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "3rd Party Cross Connect",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Access Quantity",&#13;
+            "attributeDisplayValue": "1",&#13;
+            "attributeValue": "1",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Access Sub Bandwidth",&#13;
+            "attributeDisplayValue": "200 Mbps",&#13;
+            "attributeValue": "200 Mbps",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Access Type",&#13;
+            "attributeDisplayValue": "ESA",&#13;
+            "attributeValue": "ESA",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Account Number",&#13;
+            "attributeDisplayValue": "2-HMJYDG",&#13;
+            "attributeValue": "2-HMJYDG",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Modify",&#13;
+            "attributeName": "Address1",&#13;
+            "attributeDisplayValue": "17222 VON KARMAN AVE IRVINE CALIFORNIA 92614 6202 UNITED STATES, Floor 1 Room SERVER",&#13;
+            "attributeValue": "SL0000676046",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Address2",&#13;
+            "attributeDisplayValue": "SL0000343663",&#13;
+            "attributeValue": "SL0000343663",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Audience",&#13;
+            "attributeDisplayValue": "API",&#13;
+            "attributeValue": "API",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "CDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "CPT",&#13;
+            "attributeDisplayValue": "CSP3",&#13;
+            "attributeValue": "CSP3",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Circuit Type",&#13;
+            "attributeDisplayValue": "GIG-E",&#13;
+            "attributeValue": "GIG-E",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Contract Type",&#13;
+            "attributeDisplayValue": "Lease",&#13;
+            "attributeValue": "Lease",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Customer Number",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "ECN Enabled",&#13;
+            "attributeDisplayValue": "false",&#13;
+            "attributeValue": "false",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "ERate",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "EoGHN Enabled",&#13;
+            "attributeDisplayValue": "false",&#13;
+            "attributeValue": "false",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Inside Wiring",&#13;
+            "attributeDisplayValue": "Standard Delivery - To the MPoE (Customer Provided)",&#13;
+            "attributeValue": "Standard Delivery - To the MPoE (Customer Provided)",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Inside Wiring Applicable",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "MaxPDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Multiple Logicals",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "NCD Check Id",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "NCD Error Msg",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Network Status",&#13;
+            "attributeDisplayValue": "On Net",&#13;
+            "attributeValue": "On Net",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "On Net Protection",&#13;
+            "attributeDisplayValue": "Protected",&#13;
+            "attributeValue": "Protected",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Opportunity Type",&#13;
+            "attributeDisplayValue": "New",&#13;
+            "attributeValue": "New",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "PDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "ParentID",&#13;
+            "attributeDisplayValue": "351",&#13;
+            "attributeValue": "351",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Passed Cap Check",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Port Type",&#13;
+            "attributeDisplayValue": "Flat Rate",&#13;
+            "attributeValue": "Flat Rate",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Product",&#13;
+            "attributeDisplayValue": "Dedicated Internet Access",&#13;
+            "attributeValue": "351",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "ROC Needed",&#13;
+            "attributeDisplayValue": "False",&#13;
+            "attributeValue": "False",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "RouterPOP",&#13;
+            "attributeDisplayValue": "SL0000343663",&#13;
+            "attributeValue": "SL0000343663",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "SD WAN Type",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Set Solution ID",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "SourceSystemID",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Term",&#13;
+            "attributeDisplayValue": "36",&#13;
+            "attributeValue": "36",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "USF Treatment",&#13;
+            "attributeDisplayValue": "U.S. Interstate",&#13;
+            "attributeValue": "U.S. Interstate",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815703,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "User",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          }&#13;
+        ],&#13;
+        "productProperties": [&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Account_Number",&#13;
+            "propertyValue": "715875"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Clone_Max_Quantity",&#13;
+            "propertyValue": "1"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Clone_Min_Quantity",&#13;
+            "propertyValue": "0"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Invoice_Display_BAN",&#13;
+            "propertyValue": "5-LDCQYPCH"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "IsMrcChangeAllowed",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "IsNrcChangeAllowed",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Is_Mandatory",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Kenan_BAN",&#13;
+            "propertyValue": "5-LDCQYPCH"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Lexm_BAN",&#13;
+            "propertyValue": null&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "MAC_Action",&#13;
+            "propertyValue": null&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Product_Description",&#13;
+            "propertyValue": "Dedicated Internet Access-200 Mbps"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Product_Name",&#13;
+            "propertyValue": "Dedicated Internet Access"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Promotion_Code",&#13;
+            "propertyValue": null&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180492,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Service_Alias",&#13;
+            "propertyValue": "444547011"&#13;
+          }&#13;
+        ],&#13;
+        "relatedNumbers": [],&#13;
+        "parentProductInstanceId": 343815703,&#13;
+        "rootProductInstanceId": 343815703,&#13;
+        "effectiveBillDate": "0001-01-01T00:00:00"&#13;
+      },&#13;
+      {&#13;
+        "productInstanceId": 343815706,&#13;
+        "transactionId": 552860049,&#13;
+        "productPackageId": 444547011,&#13;
+        "productName": "IP Port/Logical",&#13;
+        "pCatProductId": 355,&#13;
+        "pCatVersion": "19-JUL-22",&#13;
+        "isParentProduct": false,&#13;
+        "accountNumber": 715875,&#13;
+        "action": "Add",&#13;
+        "requestedDueDate": null,&#13;
+        "requestedDueDateTimeZone": null,&#13;
+        "marketId": 0,&#13;
+        "promotionCode": null,&#13;
+        "isExistingProduct": false,&#13;
+        "originalTransactionId": 552860049,&#13;
+        "currencyCode": "USD",&#13;
+        "priceInfo": {&#13;
+          "actionType": "Add",&#13;
+          "quantity": 1,&#13;
+          "mrcStandard": 0,&#13;
+          "nrcStandard": 0,&#13;
+          "mrcAdjusted": 0,&#13;
+          "nrcAdjusted": 0,&#13;
+          "mrcDiscount": "0.00",&#13;
+          "nrcDiscount": "0.00",&#13;
+          "requiresICB": false,&#13;
+          "prepaidMinutes": 0,&#13;
+          "isTieredPricing": false,&#13;
+          "currencyCode": "USD",&#13;
+          "mrcApplicable": true,&#13;
+          "nrcApplicable": true,&#13;
+          "priceDetails": [&#13;
+            {&#13;
+              "productInstanceId": 343815706,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 0,&#13;
+              "description": "RequiresIcb=false",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815706,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 1,&#13;
+              "description": "Pre-Negotiated Discount list price modifications applied (60.00% MRC, 100.00% NRC).",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815706,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 2,&#13;
+              "description": "Original Mrc=$0,Original Nrc=$700",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815706,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 3,&#13;
+              "description": "PND Mrc Amt=[DiscountedMrc] ; PND Nrc Amt=700",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            }&#13;
+          ],&#13;
+          "usageDetails": []&#13;
+        },&#13;
+        "productCharges": [&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "name": "Mrc",&#13;
+            "action": "Add",&#13;
+            "amountStandard": 0,&#13;
+            "amountDiscount": 0,&#13;
+            "amountAdjusted": 0,&#13;
+            "allowOveride": true,&#13;
+            "overrideAttribute": "OverrideMrc",&#13;
+            "superUserOverride": true,&#13;
+            "toolTip": null,&#13;
+            "frequency": "MRC",&#13;
+            "amortizedAmount": 0,&#13;
+            "amortizedTerm": 0,&#13;
+            "percentAmortized": 0,&#13;
+            "productFloor": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "name": "Nrc",&#13;
+            "action": "Add",&#13;
+            "amountStandard": 0,&#13;
+            "amountDiscount": 0,&#13;
+            "amountAdjusted": 0,&#13;
+            "allowOveride": true,&#13;
+            "overrideAttribute": "OverrideNrc",&#13;
+            "superUserOverride": true,&#13;
+            "toolTip": null,&#13;
+            "frequency": "NRC",&#13;
+            "amortizedAmount": 0,&#13;
+            "amortizedTerm": 0,&#13;
+            "percentAmortized": 0,&#13;
+            "productFloor": 0&#13;
+          }&#13;
+        ],&#13;
+        "gpId": "343815706",&#13;
+        "productAttributes": [&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Access Quantity",&#13;
+            "attributeDisplayValue": "1",&#13;
+            "attributeValue": "1",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Access Sub Bandwidth",&#13;
+            "attributeDisplayValue": "200 Mbps",&#13;
+            "attributeValue": "200 Mbps",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Account Number",&#13;
+            "attributeDisplayValue": "2-HMJYDG",&#13;
+            "attributeValue": "2-HMJYDG",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Modify",&#13;
+            "attributeName": "Address1",&#13;
+            "attributeDisplayValue": "17222 VON KARMAN AVE IRVINE CALIFORNIA 92614 6202 UNITED STATES, Floor 1 Room SERVER",&#13;
+            "attributeValue": "SL0000676046",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Audience",&#13;
+            "attributeDisplayValue": "API",&#13;
+            "attributeValue": "API",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "CDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "CPT",&#13;
+            "attributeDisplayValue": "CSP3",&#13;
+            "attributeValue": "CSP3",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Circuit ID",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Circuit Type",&#13;
+            "attributeDisplayValue": "GIG-E",&#13;
+            "attributeValue": "GIG-E",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Correlation ID",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "MaxPDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Multiple Logicals",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Network Status",&#13;
+            "attributeDisplayValue": "On Net",&#13;
+            "attributeValue": "On Net",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "OverrideMrc",&#13;
+            "attributeDisplayValue": "0",&#13;
+            "attributeValue": "0",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "OverrideNrc",&#13;
+            "attributeDisplayValue": "-1",&#13;
+            "attributeValue": "-1",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Petra Pricing",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Product",&#13;
+            "attributeDisplayValue": "IP Port/Logical",&#13;
+            "attributeValue": "355",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "SourceSystemID",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Term",&#13;
+            "attributeDisplayValue": "36",&#13;
+            "attributeValue": "36",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815706,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "User",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          }&#13;
+        ],&#13;
+        "productProperties": [&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Account_Number",&#13;
+            "propertyValue": "715875"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Clone_Max_Quantity",&#13;
+            "propertyValue": "1"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Clone_Min_Quantity",&#13;
+            "propertyValue": "0"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Invoice_Display_BAN",&#13;
+            "propertyValue": "5-LDCQYPCH"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "IsMrcChangeAllowed",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "IsNrcChangeAllowed",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Is_Mandatory",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Kenan_BAN",&#13;
+            "propertyValue": "5-LDCQYPCH"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Lexm_BAN",&#13;
+            "propertyValue": null&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "MAC_Action",&#13;
+            "propertyValue": null&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Product_Description",&#13;
+            "propertyValue": "IP Port"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Product_Name",&#13;
+            "propertyValue": "IP Port/Logical"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180495,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Promotion_Code",&#13;
+            "propertyValue": null&#13;
+          }&#13;
+        ],&#13;
+        "relatedNumbers": [],&#13;
+        "parentProductInstanceId": 343815703,&#13;
+        "rootProductInstanceId": 343815703,&#13;
+        "effectiveBillDate": "0001-01-01T00:00:00"&#13;
+      },&#13;
+      {&#13;
+        "productInstanceId": 343815705,&#13;
+        "transactionId": 552860049,&#13;
+        "productPackageId": 444547011,&#13;
+        "productName": "IP Enhanced Services",&#13;
+        "pCatProductId": 354,&#13;
+        "pCatVersion": "19-JUL-22",&#13;
+        "isParentProduct": false,&#13;
+        "accountNumber": 715875,&#13;
+        "action": "Add",&#13;
+        "requestedDueDate": null,&#13;
+        "requestedDueDateTimeZone": null,&#13;
+        "marketId": 0,&#13;
+        "promotionCode": null,&#13;
+        "isExistingProduct": false,&#13;
+        "originalTransactionId": 552860049,&#13;
+        "currencyCode": "USD",&#13;
+        "priceInfo": {&#13;
+          "actionType": "Add",&#13;
+          "quantity": 1,&#13;
+          "mrcStandard": 294.39,&#13;
+          "nrcStandard": 0,&#13;
+          "mrcAdjusted": 294.39,&#13;
+          "nrcAdjusted": 0,&#13;
+          "mrcDiscount": "0.00",&#13;
+          "nrcDiscount": "0.00",&#13;
+          "requiresICB": false,&#13;
+          "prepaidMinutes": 0,&#13;
+          "isTieredPricing": false,&#13;
+          "currencyCode": "USD",&#13;
+          "mrcApplicable": true,&#13;
+          "nrcApplicable": true,&#13;
+          "priceDetails": [&#13;
+            {&#13;
+              "productInstanceId": 343815705,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 0,&#13;
+              "description": "Support Request Required:  Discount is greater than policy allows",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815705,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 1,&#13;
+              "description": "Billing Method=Flat Rate",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815705,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 2,&#13;
+              "description": "Peak Data Rate = 200 Mbps",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815705,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 3,&#13;
+              "description": "Pre-Negotiated Discount list price modifications applied (60.00% MRC, 100.00% NRC), Usage.",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815705,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 4,&#13;
+              "description": "Original Mrc=735.984; Original Nrc=0",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815705,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 5,&#13;
+              "description": "PND Mrc Amt=294.39360000000005 ; PND Nrc Amt=0",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            }&#13;
+          ],&#13;
+          "usageDetails": []&#13;
+        },&#13;
+        "productCharges": [&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "name": "Mrc",&#13;
+            "action": "Add",&#13;
+            "amountStandard": 294.39,&#13;
+            "amountDiscount": 0,&#13;
+            "amountAdjusted": 294.39,&#13;
+            "allowOveride": true,&#13;
+            "overrideAttribute": "OverrideMrc",&#13;
+            "superUserOverride": true,&#13;
+            "toolTip": null,&#13;
+            "frequency": "MRC",&#13;
+            "amortizedAmount": 0,&#13;
+            "amortizedTerm": 0,&#13;
+            "percentAmortized": 0,&#13;
+            "productFloor": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "name": "Nrc",&#13;
+            "action": "Add",&#13;
+            "amountStandard": 0,&#13;
+            "amountDiscount": 0,&#13;
+            "amountAdjusted": 0,&#13;
+            "allowOveride": true,&#13;
+            "overrideAttribute": "OverrideNrc",&#13;
+            "superUserOverride": true,&#13;
+            "toolTip": null,&#13;
+            "frequency": "NRC",&#13;
+            "amortizedAmount": 0,&#13;
+            "amortizedTerm": 0,&#13;
+            "percentAmortized": 0,&#13;
+            "productFloor": 0&#13;
+          }&#13;
+        ],&#13;
+        "gpId": "343815705",&#13;
+        "productAttributes": [&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Access Quantity",&#13;
+            "attributeDisplayValue": "1",&#13;
+            "attributeValue": "1",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Access Sub Bandwidth",&#13;
+            "attributeDisplayValue": "200 Mbps",&#13;
+            "attributeValue": "200 Mbps",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Account Number",&#13;
+            "attributeDisplayValue": "2-HMJYDG",&#13;
+            "attributeValue": "2-HMJYDG",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Modify",&#13;
+            "attributeName": "Address1",&#13;
+            "attributeDisplayValue": "17222 VON KARMAN AVE IRVINE CALIFORNIA 92614 6202 UNITED STATES, Floor 1 Room SERVER",&#13;
+            "attributeValue": "SL0000676046",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Audience",&#13;
+            "attributeDisplayValue": "API",&#13;
+            "attributeValue": "API",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Billing Percentile",&#13;
+            "attributeDisplayValue": "95",&#13;
+            "attributeValue": "95",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "CDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "CPT",&#13;
+            "attributeDisplayValue": "CSP3",&#13;
+            "attributeValue": "CSP3",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Circuit ID",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Circuit Type",&#13;
+            "attributeDisplayValue": "GIG-E",&#13;
+            "attributeValue": "GIG-E",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Correlation ID",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "ERate",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "FinalBurstRate",&#13;
+            "attributeDisplayValue": "1.76636",&#13;
+            "attributeValue": "1.76636",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "FinalCDRRate",&#13;
+            "attributeDisplayValue": "1.4719600000000002",&#13;
+            "attributeValue": "1.4719600000000002",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "IP CDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "IP PDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "IP Port Type",&#13;
+            "attributeDisplayValue": "Flat Rate",&#13;
+            "attributeValue": "Flat Rate",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "MaxPDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Multiple Logicals",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Network Status",&#13;
+            "attributeDisplayValue": "On Net",&#13;
+            "attributeValue": "On Net",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "OverrideBurstRatePerUnit",&#13;
+            "attributeDisplayValue": "-1",&#13;
+            "attributeValue": "-1",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "OverrideCDRRate",&#13;
+            "attributeDisplayValue": "-1",&#13;
+            "attributeValue": "-1",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "OverrideMrc",&#13;
+            "attributeDisplayValue": "294.39",&#13;
+            "attributeValue": "294.39",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "OverrideNrc",&#13;
+            "attributeDisplayValue": "-1",&#13;
+            "attributeValue": "-1",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "PDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "ParentPromo",&#13;
+            "attributeDisplayValue": "NONE",&#13;
+            "attributeValue": "NONE",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Petra Pricing",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Port Type",&#13;
+            "attributeDisplayValue": "Flat Rate",&#13;
+            "attributeValue": "Flat Rate",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Product",&#13;
+            "attributeDisplayValue": "IP Enhanced Services",&#13;
+            "attributeValue": "354",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "SourceSystemID",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Term",&#13;
+            "attributeDisplayValue": "36",&#13;
+            "attributeValue": "36",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815705,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "User",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          }&#13;
+        ],&#13;
+        "productProperties": [&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Account_Number",&#13;
+            "propertyValue": "715875"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Clone_Max_Quantity",&#13;
+            "propertyValue": "1"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Clone_Min_Quantity",&#13;
+            "propertyValue": "0"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Invoice_Display_BAN",&#13;
+            "propertyValue": "5-LDCQYPCH"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "IsMrcChangeAllowed",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "IsNrcChangeAllowed",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Is_Mandatory",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Kenan_BAN",&#13;
+            "propertyValue": "5-LDCQYPCH"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Lexm_BAN",&#13;
+            "propertyValue": null&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "MAC_Action",&#13;
+            "propertyValue": null&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Product_Description",&#13;
+            "propertyValue": "IP Logical"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Product_Name",&#13;
+            "propertyValue": "IP Enhanced Services"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180494,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Promotion_Code",&#13;
+            "propertyValue": null&#13;
+          }&#13;
+        ],&#13;
+        "relatedNumbers": [],&#13;
+        "parentProductInstanceId": 343815703,&#13;
+        "rootProductInstanceId": 343815703,&#13;
+        "effectiveBillDate": "0001-01-01T00:00:00"&#13;
+      },&#13;
+      {&#13;
+        "productInstanceId": 343815704,&#13;
+        "transactionId": 552860049,&#13;
+        "productPackageId": 444547011,&#13;
+        "productName": "Access - On Net",&#13;
+        "pCatProductId": 352,&#13;
+        "pCatVersion": "19-JUL-22",&#13;
+        "isParentProduct": false,&#13;
+        "accountNumber": 715875,&#13;
+        "action": "Add",&#13;
+        "requestedDueDate": null,&#13;
+        "requestedDueDateTimeZone": null,&#13;
+        "marketId": 0,&#13;
+        "promotionCode": null,&#13;
+        "isExistingProduct": false,&#13;
+        "originalTransactionId": 552860049,&#13;
+        "currencyCode": "USD",&#13;
+        "priceInfo": {&#13;
+          "actionType": "Add",&#13;
+          "quantity": 1,&#13;
+          "mrcStandard": 131.92,&#13;
+          "nrcStandard": 0,&#13;
+          "mrcAdjusted": 131.92,&#13;
+          "nrcAdjusted": 0,&#13;
+          "mrcDiscount": "0.00",&#13;
+          "nrcDiscount": "0.00",&#13;
+          "requiresICB": false,&#13;
+          "prepaidMinutes": 0,&#13;
+          "isTieredPricing": false,&#13;
+          "currencyCode": "USD",&#13;
+          "mrcApplicable": true,&#13;
+          "nrcApplicable": true,&#13;
+          "priceDetails": [&#13;
+            {&#13;
+              "productInstanceId": 343815704,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 0,&#13;
+              "description": "Support Request required:  Discount Amount requires CSG Approval",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815704,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 1,&#13;
+              "description": "Bandwidth = GigE - Ethernet Switched Access (50-1,000)",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815704,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 2,&#13;
+              "description": "Access Sub Bandwidth=200 Mbps",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815704,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 3,&#13;
+              "description": "RouterPOP=SL0000343663",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815704,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 4,&#13;
+              "description": "Pre-Negotiated Discount list price modifications applied (60.00% MRC, 100.00% NRC).",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815704,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 5,&#13;
+              "description": "Original Mrc=$329.8 , USD; Original Nrc=$500 , USD",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815704,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 6,&#13;
+              "description": "PND Mrc Amt=$131.92000000000002, USD; PND Nrc Amt=$0, USD",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815704,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 7,&#13;
+              "description": "Access Quantity=1",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            },&#13;
+            {&#13;
+              "productInstanceId": 343815704,&#13;
+              "transactionId": 552860049,&#13;
+              "itemNumber": 8,&#13;
+              "description": "ROC Comments = N/A",&#13;
+              "quantity": null,&#13;
+              "unitMrc": null,&#13;
+              "unitNrc": null&#13;
+            }&#13;
+          ],&#13;
+          "usageDetails": []&#13;
+        },&#13;
+        "productCharges": [&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "name": "Mrc",&#13;
+            "action": "Add",&#13;
+            "amountStandard": 131.92,&#13;
+            "amountDiscount": 0,&#13;
+            "amountAdjusted": 131.92,&#13;
+            "allowOveride": true,&#13;
+            "overrideAttribute": "OverrideMrc",&#13;
+            "superUserOverride": true,&#13;
+            "toolTip": null,&#13;
+            "frequency": "MRC",&#13;
+            "amortizedAmount": 0,&#13;
+            "amortizedTerm": 0,&#13;
+            "percentAmortized": 0,&#13;
+            "productFloor": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "name": "Nrc",&#13;
+            "action": "Add",&#13;
+            "amountStandard": 0,&#13;
+            "amountDiscount": 0,&#13;
+            "amountAdjusted": 0,&#13;
+            "allowOveride": true,&#13;
+            "overrideAttribute": "OverrideNrc",&#13;
+            "superUserOverride": true,&#13;
+            "toolTip": null,&#13;
+            "frequency": "NRC",&#13;
+            "amortizedAmount": 0,&#13;
+            "amortizedTerm": 0,&#13;
+            "percentAmortized": 0,&#13;
+            "productFloor": 0&#13;
+          }&#13;
+        ],&#13;
+        "gpId": "343815704",&#13;
+        "productAttributes": [&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "3rd Party Cross Connect",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Access Quantity",&#13;
+            "attributeDisplayValue": "1",&#13;
+            "attributeValue": "1",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Access Sub Bandwidth",&#13;
+            "attributeDisplayValue": "200 Mbps",&#13;
+            "attributeValue": "200 Mbps",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Access Type",&#13;
+            "attributeDisplayValue": "ESA",&#13;
+            "attributeValue": "ESA",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Account Number",&#13;
+            "attributeDisplayValue": "2-HMJYDG",&#13;
+            "attributeValue": "2-HMJYDG",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Modify",&#13;
+            "attributeName": "Address1",&#13;
+            "attributeDisplayValue": "17222 VON KARMAN AVE IRVINE CALIFORNIA 92614 6202 UNITED STATES, Floor 1 Room SERVER",&#13;
+            "attributeValue": "SL0000676046",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Address2",&#13;
+            "attributeDisplayValue": "SL0000343663",&#13;
+            "attributeValue": "SL0000343663",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Audience",&#13;
+            "attributeDisplayValue": "API",&#13;
+            "attributeValue": "API",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "CDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "CPT",&#13;
+            "attributeDisplayValue": "CSP3",&#13;
+            "attributeValue": "CSP3",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Circuit Type",&#13;
+            "attributeDisplayValue": "GIG-E",&#13;
+            "attributeValue": "GIG-E",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "ERate",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Inside Wiring",&#13;
+            "attributeDisplayValue": "Standard Delivery - To the MPoE (Customer Provided)",&#13;
+            "attributeValue": "Standard Delivery - To the MPoE (Customer Provided)",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Inside Wiring Applicable",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Multiple Logicals",&#13;
+            "attributeDisplayValue": "No",&#13;
+            "attributeValue": "No",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Network Status",&#13;
+            "attributeDisplayValue": "On Net",&#13;
+            "attributeValue": "On Net",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "On Net Protection",&#13;
+            "attributeDisplayValue": "Protected",&#13;
+            "attributeValue": "Protected",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Opportunity Type",&#13;
+            "attributeDisplayValue": "New",&#13;
+            "attributeValue": "New",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "OverrideMrc",&#13;
+            "attributeDisplayValue": "131.92",&#13;
+            "attributeValue": "131.92",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "OverrideNrc",&#13;
+            "attributeDisplayValue": "-1",&#13;
+            "attributeValue": "-1",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "PDR",&#13;
+            "attributeDisplayValue": "200",&#13;
+            "attributeValue": "200",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Product",&#13;
+            "attributeDisplayValue": "Access - On Net",&#13;
+            "attributeValue": "352",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "RouterPOP",&#13;
+            "attributeDisplayValue": "SL0000343663",&#13;
+            "attributeValue": "SL0000343663",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "SourceSystemID",&#13;
+            "attributeDisplayValue": "Unknown",&#13;
+            "attributeValue": "Unknown",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "Term",&#13;
+            "attributeDisplayValue": "36",&#13;
+            "attributeValue": "36",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "USF Treatment",&#13;
+            "attributeDisplayValue": "U.S. Interstate",&#13;
+            "attributeValue": "U.S. Interstate",&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          },&#13;
+          {&#13;
+            "productInstanceId": 343815704,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "attributeName": "User",&#13;
+            "attributeDisplayValue": null,&#13;
+            "attributeValue": null,&#13;
+            "attributeId": null,&#13;
+            "attributeNumericEquivalent": 0&#13;
+          }&#13;
+        ],&#13;
+        "productProperties": [&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Account_Number",&#13;
+            "propertyValue": "715875"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Clone_Max_Quantity",&#13;
+            "propertyValue": "1"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Clone_Min_Quantity",&#13;
+            "propertyValue": "0"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Invoice_Display_BAN",&#13;
+            "propertyValue": "5-LDCQYPCH"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "IsMrcChangeAllowed",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "IsNrcChangeAllowed",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Is_Mandatory",&#13;
+            "propertyValue": "True"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Kenan_BAN",&#13;
+            "propertyValue": "5-LDCQYPCH"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Lexm_BAN",&#13;
+            "propertyValue": null&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "MAC_Action",&#13;
+            "propertyValue": null&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Product_Description",&#13;
+            "propertyValue": "Access - On Net"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Product_Name",&#13;
+            "propertyValue": "Access - On Net"&#13;
+          },&#13;
+          {&#13;
+            "productKeyId": 44180493,&#13;
+            "productInstanceId": 0,&#13;
+            "transactionId": 552860049,&#13;
+            "action": "Add",&#13;
+            "propertyName": "Promotion_Code",&#13;
+            "propertyValue": null&#13;
+          }&#13;
+        ],&#13;
+        "relatedNumbers": [],&#13;
+        "parentProductInstanceId": 343815703,&#13;
+        "rootProductInstanceId": 343815703,&#13;
+        "effectiveBillDate": "0001-01-01T00:00:00"&#13;
+      }&#13;
+    ],&#13;
+    "charges": [],&#13;
+    "customerRequestedDate": "2022-11-04T06:00:00Z",&#13;
+    "currencyCode": "USD",&#13;
+    "createdDate": null,&#13;
+    "createdBy": null,&#13;
+    "modifiedDate": null,&#13;
+    "modifiedBy": null,&#13;
+    "orderingSystem": "SwIFT",&#13;
+    "gpId": "444547011",&#13;
+    "requestedEffectiveBillDate": null,&#13;
+    "isExpedited": false,&#13;
+    "dueDateChangeInitiator": null,&#13;
+    "dueDateChangeReason": null,&#13;
+    "routingGroupName": "BPMS",&#13;
+    "hasHotCutAttribute": false,&#13;
+    "existingServiceId": null,&#13;
+    "hasOverlappingService": false,&#13;
+    "pspSecondaryOrderTypeId": null,&#13;
+    "relatedProducts": [],&#13;
+    "relatedNumbers": [],&#13;
+    "salesTeamMembers": [],&#13;
+    "productServiceAddressRels": [&#13;
+      {&#13;
+        "productPackageId": 444547011,&#13;
+        "transactionId": 552860049,&#13;
+        "relationshipName": "Address1",&#13;
+        "action": "Add",&#13;
+        "installIntervalId": null,&#13;
+        "intervalDate": null,&#13;
+        "status": null,&#13;
+        "glmMasterLocationId": "PL0000009572",&#13;
+        "glmLocationId": "SL0000676046"&#13;
+      },&#13;
+      {&#13;
+        "productPackageId": 444547011,&#13;
+        "transactionId": 552860049,&#13;
+        "relationshipName": "Address2",&#13;
+        "action": "Add",&#13;
+        "installIntervalId": null,&#13;
+        "intervalDate": null,&#13;
+        "status": null,&#13;
+        "glmMasterLocationId": "PL0000054047",&#13;
+        "glmLocationId": "SL0000343663"&#13;
+      }&#13;
+    ],&#13;
+    "orchestrationIds": [&#13;
+      {&#13;
+        "productInstanceId": 343815703,&#13;
+        "orchestrationId": 2452361&#13;
+      },&#13;
+      {&#13;
+        "productInstanceId": 343815706,&#13;
+        "orchestrationId": 2452364&#13;
+      },&#13;
+      {&#13;
+        "productInstanceId": 343815704,&#13;
+        "orchestrationId": 2452362&#13;
+      },&#13;
+      {&#13;
+        "productInstanceId": 343815705,&#13;
+        "orchestrationId": 2452363&#13;
+      }&#13;
+    ],&#13;
+    "hierarchyAltered": "2022-10-03T12:02:33.577",&#13;
+    "isThereLiveTraffic": false&#13;
+  }&#13;
+]</value>
+        <variable display_value="Sample payload">d335ac0787523300f917e55936cb0b1d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>89266136871bd15084b2a18e0ebb35ca</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>99266136871bd15084b2a18e0ebb35d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <value>{"name":"root","children":[{"name":"root_array","children":[{"name":"root_array_object","children":[{"name":"productPackageId","children":[],"type":"string","jpath":"$.root_array[*].productPackageId","previewValue":"444547011"},{"name":"transactionId","children":[],"type":"string","jpath":"$.root_array[*].transactionId","previewValue":"552860049"},{"name":"businessOrderId","children":[],"type":"string","jpath":"$.root_array[*].businessOrderId","previewValue":"2516944"},{"name":"customerId","children":[],"type":"string","jpath":"$.root_array[*].customerId","previewValue":"1022251"},{"name":"turnUpProcessor","children":[],"type":"string","jpath":"$.root_array[*].turnUpProcessor","previewValue":"SwiftInventory"},{"name":"status","children":[],"type":"string","jpath":"$.root_array[*].status","previewValue":"Closed"},{"name":"action","children":[],"type":"string","jpath":"$.root_array[*].action","previewValue":"Add"},{"name":"negotiatedDueDate","children":[],"type":"string","jpath":"$.root_array[*].negotiatedDueDate","previewValue":"2022-11-30T07:00:00Z"},{"name":"committedDueDate","children":[],"type":"string","jpath":"$.root_array[*].committedDueDate","previewValue":"2022-11-30T07:00:00Z"},{"name":"isDueDateCommitted","children":[],"type":"string","jpath":"$.root_array[*].isDueDateCommitted","previewValue":"false"},{"name":"actionChangeReasonId","children":[],"type":"string","jpath":"$.root_array[*].actionChangeReasonId","previewValue":""},{"name":"actionChangeInitiatorId","children":[],"type":"string","jpath":"$.root_array[*].actionChangeInitiatorId","previewValue":""},{"name":"isOrdered","children":[],"type":"string","jpath":"$.root_array[*].isOrdered","previewValue":"false"},{"name":"isOriginal","children":[],"type":"string","jpath":"$.root_array[*].isOriginal","previewValue":"false"},{"name":"isAcceptanceRequiredForBilling","children":[],"type":"string","jpath":"$.root_array[*].isAcceptanceRequiredForBilling","previewValue":"false"},{"name":"transactionType","children":[],"type":"string","jpath":"$.root_array[*].transactionType","previewValue":"New"},{"name":"productPackageProperties","children":[{"name":"productPackageProperties_object","children":[{"name":"action","children":[],"type":"string","jpath":"$.root_array[*].productPackageProperties[*].action","previewValue":"Add"},{"name":"propertyName","children":[],"type":"string","jpath":"$.root_array[*].productPackageProperties[*].propertyName","previewValue":"Design_Layout_Record"},{"name":"propertyValue","children":[],"type":"string","jpath":"$.root_array[*].productPackageProperties[*].propertyValue","previewValue":""}],"type":"object","jpath":"$.root_array[*].productPackageProperties[*]","previewValue":""}],"type":"array.object","jpath":"$.root_array[*].productPackageProperties[*]","previewValue":""},{"name":"products","children":[{"name":"products_object","children":[{"name":"productInstanceId","children":[],"type":"string","jpath":"$.root_array[*].products[*].productInstanceId","previewValue":"343815703"},{"name":"transactionId","children":[],"type":"string","jpath":"$.root_array[*].products[*].transactionId","previewValue":"552860049"},{"name":"productPackageId","children":[],"type":"string","jpath":"$.root_array[*].products[*].productPackageId","previewValue":"444547011"},{"name":"productName","children":[],"type":"string","jpath":"$.root_array[*].products[*].productName","previewValue":"Dedicated Internet Access"},{"name":"pCatProductId","children":[],"type":"string","jpath":"$.root_array[*].products[*].pCatProductId","previewValue":"351"},{"name":"pCatVersion","children":[],"type":"string","jpath":"$.root_array[*].products[*].pCatVersion","previewValue":"19-JUL-22"},{"name":"isParentProduct","children":[],"type":"string","jpath":"$.root_array[*].products[*].isParentProduct","previewValue":"true"},{"name":"accountNumber","children":[],"type":"string","jpath":"$.root_array[*].products[*].accountNumber","previewValue":"715875"},{"name":"action","children":[],"type":"string","jpath":"$.root_array[*].products[*].action","previewValue":"Add"},{"name":"requestedDueDate","children":[],"type":"string","jpath":"$.root_array[*].products[*].requestedDueDate","previewValue":""},{"name":"requestedDueDateTimeZone","children":[],"type":"string","jpath":"$.root_array[*].products[*].requestedDueDateTimeZone","previewValue":""},{"name":"marketId","children":[],"type":"string","jpath":"$.root_array[*].products[*].marketId","previewValue":"0"},{"name":"promotionCode","children":[],"type":"string","jpath":"$.root_array[*].products[*].promotionCode","previewValue":""},{"name":"isExistingProduct","children":[],"type":"string","jpath":"$.root_array[*].products[*].isExistingProduct","previewValue":"false"},{"name":"originalTransactionId","children":[],"type":"string","jpath":"$.root_array[*].products[*].originalTransactionId","previewValue":"552860049"},{"name":"currencyCode","children":[],"type":"string","jpath":"$.root_array[*].products[*].currencyCode","previewValue":"USD"},{"name":"priceInfo","children":[{"name":"actionType","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.actionType","previewValue":"Add"},{"name":"quantity","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.quantity","previewValue":"1"},{"name":"mrcStandard","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.mrcStandard","previewValue":"0"},{"name":"nrcStandard","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.nrcStandard","previewValue":"0"},{"name":"mrcAdjusted","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.mrcAdjusted","previewValue":"0"},{"name":"nrcAdjusted","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.nrcAdjusted","previewValue":"0"},{"name":"mrcDiscount","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.mrcDiscount","previewValue":"0.00"},{"name":"nrcDiscount","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.nrcDiscount","previewValue":"0.00"},{"name":"requiresICB","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.requiresICB","previewValue":"false"},{"name":"prepaidMinutes","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.prepaidMinutes","previewValue":"0"},{"name":"isTieredPricing","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.isTieredPricing","previewValue":"false"},{"name":"currencyCode","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.currencyCode","previewValue":"USD"},{"name":"mrcApplicable","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.mrcApplicable","previewValue":"true"},{"name":"nrcApplicable","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.nrcApplicable","previewValue":"true"},{"name":"priceDetails","children":[{"name":"priceDetails_object","children":[{"name":"productInstanceId","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.priceDetails[*].productInstanceId","previewValue":"343815703"},{"name":"transactionId","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.priceDetails[*].transactionId","previewValue":"552860049"},{"name":"itemNumber","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.priceDetails[*].itemNumber","previewValue":"0"},{"name":"description","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.priceDetails[*].description","previewValue":"Circuit Type = GigE - Ethernet Switched Access (50-1,000)"},{"name":"quantity","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.priceDetails[*].quantity","previewValue":""},{"name":"unitMrc","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.priceDetails[*].unitMrc","previewValue":""},{"name":"unitNrc","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.priceDetails[*].unitNrc","previewValue":""}],"type":"object","jpath":"$.root_array[*].products[*].priceInfo.priceDetails[*]","previewValue":""}],"type":"array.object","jpath":"$.root_array[*].products[*].priceInfo.priceDetails[*]","previewValue":""},{"name":"usageDetails","children":[{"name":"usageDetails_string","children":[],"type":"string","jpath":"$.root_array[*].products[*].priceInfo.usageDetails[*]","previewValue":""}],"type":"array.string","jpath":"$.root_array[*].products[*].priceInfo.usageDetails[*]","previewValue":""}],"type":"object","jpath":"$.root_array[*].products[*].priceInfo","previewValue":""},{"name":"productCharges","children":[{"name":"productCharges_object","children":[{"name":"productInstanceId","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].productInstanceId","previewValue":"343815703"},{"name":"transactionId","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].transactionId","previewValue":"552860049"},{"name":"name","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].name","previewValue":"Mrc"},{"name":"action","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].action","previewValue":"Add"},{"name":"amountStandard","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].amountStandard","previewValue":"0"},{"name":"amountDiscount","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].amountDiscount","previewValue":"0"},{"name":"amountAdjusted","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].amountAdjusted","previewValue":"0"},{"name":"allowOveride","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].allowOveride","previewValue":"true"},{"name":"overrideAttribute","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].overrideAttribute","previewValue":"OverrideMrc"},{"name":"superUserOverride","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].superUserOverride","previewValue":"true"},{"name":"toolTip","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].toolTip","previewValue":""},{"name":"frequency","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].frequency","previewValue":"MRC"},{"name":"amortizedAmount","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].amortizedAmount","previewValue":"0"},{"name":"amortizedTerm","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].amortizedTerm","previewValue":"0"},{"name":"percentAmortized","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].percentAmortized","previewValue":"0"},{"name":"productFloor","children":[],"type":"string","jpath":"$.root_array[*].products[*].productCharges[*].productFloor","previewValue":"0"}],"type":"object","jpath":"$.root_array[*].products[*].productCharges[*]","previewValue":""}],"type":"array.object","jpath":"$.root_array[*].products[*].productCharges[*]","previewValue":""},{"name":"gpId","children":[],"type":"string","jpath":"$.root_array[*].products[*].gpId","previewValue":"343815703"},{"name":"productAttributes","children":[{"name":"productAttributes_object","children":[{"name":"productInstanceId","children":[],"type":"string","jpath":"$.root_array[*].products[*].productAttributes[*].productInstanceId","previewValue":"343815703"},{"name":"transactionId","children":[],"type":"string","jpath":"$.root_array[*].products[*].productAttributes[*].transactionId","previewValue":"552860049"},{"name":"action","children":[],"type":"string","jpath":"$.root_array[*].products[*].productAttributes[*].action","previewValue":"Add"},{"name":"attributeName","children":[],"type":"string","jpath":"$.root_array[*].products[*].productAttributes[*].attributeName","previewValue":"3rd Party Cross Connect"},{"name":"attributeDisplayValue","children":[],"type":"string","jpath":"$.root_array[*].products[*].productAttributes[*].attributeDisplayValue","previewValue":"No"},{"name":"attributeValue","children":[],"type":"string","jpath":"$.root_array[*].products[*].productAttributes[*].attributeValue","previewValue":"No"},{"name":"attributeId","children":[],"type":"string","jpath":"$.root_array[*].products[*].productAttributes[*].attributeId","previewValue":""},{"name":"attributeNumericEquivalent","children":[],"type":"string","jpath":"$.root_array[*].products[*].productAttributes[*].attributeNumericEquivalent","previewValue":"0"}],"type":"object","jpath":"$.root_array[*].products[*].productAttributes[*]","previewValue":""}],"type":"array.object","jpath":"$.root_array[*].products[*].productAttributes[*]","previewValue":""},{"name":"productProperties","children":[{"name":"productProperties_object","children":[{"name":"productKeyId","children":[],"type":"string","jpath":"$.root_array[*].products[*].productProperties[*].productKeyId","previewValue":"44180492"},{"name":"productInstanceId","children":[],"type":"string","jpath":"$.root_array[*].products[*].productProperties[*].productInstanceId","previewValue":"0"},{"name":"transactionId","children":[],"type":"string","jpath":"$.root_array[*].products[*].productProperties[*].transactionId","previewValue":"552860049"},{"name":"action","children":[],"type":"string","jpath":"$.root_array[*].products[*].productProperties[*].action","previewValue":"Add"},{"name":"propertyName","children":[],"type":"string","jpath":"$.root_array[*].products[*].productProperties[*].propertyName","previewValue":"Account_Number"},{"name":"propertyValue","children":[],"type":"string","jpath":"$.root_array[*].products[*].productProperties[*].propertyValue","previewValue":"715875"}],"type":"object","jpath":"$.root_array[*].products[*].productProperties[*]","previewValue":""}],"type":"array.object","jpath":"$.root_array[*].products[*].productProperties[*]","previewValue":""},{"name":"relatedNumbers","children":[{"name":"relatedNumbers_string","children":[],"type":"string","jpath":"$.root_array[*].products[*].relatedNumbers[*]","previewValue":""}],"type":"array.string","jpath":"$.root_array[*].products[*].relatedNumbers[*]","previewValue":""},{"name":"parentProductInstanceId","children":[],"type":"string","jpath":"$.root_array[*].products[*].parentProductInstanceId","previewValue":"343815703"},{"name":"rootProductInstanceId","children":[],"type":"string","jpath":"$.root_array[*].products[*].rootProductInstanceId","previewValue":"343815703"},{"name":"effectiveBillDate","children":[],"type":"string","jpath":"$.root_array[*].products[*].effectiveBillDate","previewValue":"0001-01-01T00:00:00"}],"type":"object","jpath":"$.root_array[*].products[*]","previewValue":""}],"type":"array.object","jpath":"$.root_array[*].products[*]","previewValue":""},{"name":"charges","children":[{"name":"charges_string","children":[],"type":"string","jpath":"$.root_array[*].charges[*]","previewValue":""}],"type":"array.string","jpath":"$.root_array[*].charges[*]","previewValue":""},{"name":"customerRequestedDate","children":[],"type":"string","jpath":"$.root_array[*].customerRequestedDate","previewValue":"2022-11-04T06:00:00Z"},{"name":"currencyCode","children":[],"type":"string","jpath":"$.root_array[*].currencyCode","previewValue":"USD"},{"name":"createdDate","children":[],"type":"string","jpath":"$.root_array[*].createdDate","previewValue":""},{"name":"createdBy","children":[],"type":"string","jpath":"$.root_array[*].createdBy","previewValue":""},{"name":"modifiedDate","children":[],"type":"string","jpath":"$.root_array[*].modifiedDate","previewValue":""},{"name":"modifiedBy","children":[],"type":"string","jpath":"$.root_array[*].modifiedBy","previewValue":""},{"name":"orderingSystem","children":[],"type":"string","jpath":"$.root_array[*].orderingSystem","previewValue":"SwIFT"},{"name":"gpId","children":[],"type":"string","jpath":"$.root_array[*].gpId","previewValue":"444547011"},{"name":"requestedEffectiveBillDate","children":[],"type":"string","jpath":"$.root_array[*].requestedEffectiveBillDate","previewValue":""},{"name":"isExpedited","children":[],"type":"string","jpath":"$.root_array[*].isExpedited","previewValue":"false"},{"name":"dueDateChangeInitiator","children":[],"type":"string","jpath":"$.root_array[*].dueDateChangeInitiator","previewValue":""},{"name":"dueDateChangeReason","children":[],"type":"string","jpath":"$.root_array[*].dueDateChangeReason","previewValue":""},{"name":"routingGroupName","children":[],"type":"string","jpath":"$.root_array[*].routingGroupName","previewValue":"BPMS"},{"name":"hasHotCutAttribute","children":[],"type":"string","jpath":"$.root_array[*].hasHotCutAttribute","previewValue":"false"},{"name":"existingServiceId","children":[],"type":"string","jpath":"$.root_array[*].existingServiceId","previewValue":""},{"name":"hasOverlappingService","children":[],"type":"string","jpath":"$.root_array[*].hasOverlappingService","previewValue":"false"},{"name":"pspSecondaryOrderTypeId","children":[],"type":"string","jpath":"$.root_array[*].pspSecondaryOrderTypeId","previewValue":""},{"name":"relatedProducts","children":[{"name":"relatedProducts_string","children":[],"type":"string","jpath":"$.root_array[*].relatedProducts[*]","previewValue":""}],"type":"array.string","jpath":"$.root_array[*].relatedProducts[*]","previewValue":""},{"name":"relatedNumbers","children":[{"name":"relatedNumbers_string","children":[],"type":"string","jpath":"$.root_array[*].relatedNumbers[*]","previewValue":""}],"type":"array.string","jpath":"$.root_array[*].relatedNumbers[*]","previewValue":""},{"name":"salesTeamMembers","children":[{"name":"salesTeamMembers_string","children":[],"type":"string","jpath":"$.root_array[*].salesTeamMembers[*]","previewValue":""}],"type":"array.string","jpath":"$.root_array[*].salesTeamMembers[*]","previewValue":""},{"name":"productServiceAddressRels","children":[{"name":"productServiceAddressRels_object","children":[{"name":"productPackageId","children":[],"type":"string","jpath":"$.root_array[*].productServiceAddressRels[*].productPackageId","previewValue":"444547011"},{"name":"transactionId","children":[],"type":"string","jpath":"$.root_array[*].productServiceAddressRels[*].transactionId","previewValue":"552860049"},{"name":"relationshipName","children":[],"type":"string","jpath":"$.root_array[*].productServiceAddressRels[*].relationshipName","previewValue":"Address1"},{"name":"action","children":[],"type":"string","jpath":"$.root_array[*].productServiceAddressRels[*].action","previewValue":"Add"},{"name":"installIntervalId","children":[],"type":"string","jpath":"$.root_array[*].productServiceAddressRels[*].installIntervalId","previewValue":""},{"name":"intervalDate","children":[],"type":"string","jpath":"$.root_array[*].productServiceAddressRels[*].intervalDate","previewValue":""},{"name":"status","children":[],"type":"string","jpath":"$.root_array[*].productServiceAddressRels[*].status","previewValue":""},{"name":"glmMasterLocationId","children":[],"type":"string","jpath":"$.root_array[*].productServiceAddressRels[*].glmMasterLocationId","previewValue":"PL0000009572"},{"name":"glmLocationId","children":[],"type":"string","jpath":"$.root_array[*].productServiceAddressRels[*].glmLocationId","previewValue":"SL0000676046"}],"type":"object","jpath":"$.root_array[*].productServiceAddressRels[*]","previewValue":""}],"type":"array.object","jpath":"$.root_array[*].productServiceAddressRels[*]","previewValue":""},{"name":"orchestrationIds","children":[{"name":"orchestrationIds_object","children":[{"name":"productInstanceId","children":[],"type":"string","jpath":"$.root_array[*].orchestrationIds[*].productInstanceId","previewValue":"343815703"},{"name":"orchestrationId","children":[],"type":"string","jpath":"$.root_array[*].orchestrationIds[*].orchestrationId","previewValue":"2452361"}],"type":"object","jpath":"$.root_array[*].orchestrationIds[*]","previewValue":""}],"type":"array.object","jpath":"$.root_array[*].orchestrationIds[*]","previewValue":""},{"name":"hierarchyAltered","children":[],"type":"string","jpath":"$.root_array[*].hierarchyAltered","previewValue":"2022-10-03T12:02:33.577"},{"name":"isThereLiveTraffic","children":[],"type":"string","jpath":"$.root_array[*].isThereLiveTraffic","previewValue":"false"}],"type":"object","jpath":"$.root_array[*]","previewValue":""}],"type":"array.object","jpath":"$.root_array[*]","previewValue":""}],"type":"object","jpath":"$","previewValue":""}</value>
+        <variable display_value="Target">4674240787523300f917e55936cb0b0e</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_89266136871bd15084b2a18e0ebb35ca^id=89266136871bd15084b2a18e0ebb35ca"/>
+    <sys_element_mapping action="delete_multiple" query="id=89266136871bd15084b2a18e0ebb35ca"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sample_payload</field>
+        <id>89266136871bd15084b2a18e0ebb35ca</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>19266136871bd15084b2a18e0ebb35d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>source_data</field>
+        <id>89266136871bd15084b2a18e0ebb35ca</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>91266136871bd15084b2a18e0ebb35d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
+        <value>{{step[a162cd63-b3df-4798-a881-dca04eb86414].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>target_schema</field>
+        <id>89266136871bd15084b2a18e0ebb35ca</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>55266136871bd15084b2a18e0ebb35d9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=89266136871bd15084b2a18e0ebb35ca"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=89266136871bd15084b2a18e0ebb35ca^sys_idNOT INdd266136871bd15084b2a18e0ebb35d1"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>co_type_name=FDd5266136a41bd150bba7e9376e3ac6ce,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=5c48ca10-59b0-4323-8c8a-0eb035afa97d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>root</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>root</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="JSON Parser step">89266136871bd15084b2a18e0ebb35ca</model>
+        <model_id>89266136871bd15084b2a18e0ebb35ca</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_89266136871bd15084b2a18e0ebb35ca</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>dd266136871bd15084b2a18e0ebb35d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=89266136871bd15084b2a18e0ebb35ca"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_89266136871bd15084b2a18e0ebb35ca^sys_idNOT IN55266136871bd15084b2a18e0ebb35d6"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>root</element>
+        <help/>
+        <hint/>
+        <label>root</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_89266136871bd15084b2a18e0ebb35ca</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:51</sys_created_on>
+        <sys_id>55266136871bd15084b2a18e0ebb35d6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:51</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=7523ad32871bd15084b2a18e0ebb352d^sys_idNOT INc1266136871bd15084b2a18e0ebb3581"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=86c63ab7-19ed-4a83-88dc-08277cb93e8f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>transactionid</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>transactionId</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="SOM_Swift_Transformer">7523ad32871bd15084b2a18e0ebb352d</model>
+        <model_id>7523ad32871bd15084b2a18e0ebb352d</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_7523ad32871bd15084b2a18e0ebb352d</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:50</sys_created_on>
+        <sys_id>c1266136871bd15084b2a18e0ebb3581</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:48:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c1266136871bd15084b2a18e0ebb3581"/>
+    <sys_hub_action_output action="delete_multiple" query="model=7523ad32871bd15084b2a18e0ebb352d^sys_idNOT IN5736e136871bd15084b2a18e0ebb35d7,9336e136871bd15084b2a18e0ebb35dd"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FD1336e1363d1bd150f083fb8da20b9ad5,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=00124c15-9119-49f9-b11b-2064a74db62e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="SOM_Swift_Transformer">7523ad32871bd15084b2a18e0ebb352d</model>
+        <model_id>7523ad32871bd15084b2a18e0ebb352d</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_7523ad32871bd15084b2a18e0ebb352d</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:48:16</sys_created_on>
+        <sys_id>5736e136871bd15084b2a18e0ebb35d7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:48:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=5736e136871bd15084b2a18e0ebb35d7"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5736e136871bd15084b2a18e0ebb35d7"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=bd8acfb1-8630-4c10-870c-e23d9a1e4de5,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="SOM_Swift_Transformer">7523ad32871bd15084b2a18e0ebb352d</model>
+        <model_id>7523ad32871bd15084b2a18e0ebb352d</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_7523ad32871bd15084b2a18e0ebb352d</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:48:16</sys_created_on>
+        <sys_id>9336e136871bd15084b2a18e0ebb35dd</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:48:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9336e136871bd15084b2a18e0ebb35dd"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9336e136871bd15084b2a18e0ebb35dd"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=7523ad32871bd15084b2a18e0ebb352d"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=7523ad32871bd15084b2a18e0ebb352d^sys_idNOT INad26a136871bd15084b2a18e0ebb3508"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="SOM_Swift_Transformer">7523ad32871bd15084b2a18e0ebb352d</action_type_id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:52</sys_created_on>
+        <sys_id>ad26a136871bd15084b2a18e0ebb3508</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:52</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=ad26a136871bd15084b2a18e0ebb3508"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_7523ad32871bd15084b2a18e0ebb352d^sys_idNOT IN4d266136871bd15084b2a18e0ebb3584"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>transactionid</element>
+        <help/>
+        <hint/>
+        <label>transactionId</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_7523ad32871bd15084b2a18e0ebb352d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:47:50</sys_created_on>
+        <sys_id>4d266136871bd15084b2a18e0ebb3584</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:47:50</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_7523ad32871bd15084b2a18e0ebb352d"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_7523ad32871bd15084b2a18e0ebb352d^sys_idNOT IN9b36e136871bd15084b2a18e0ebb35e3,d336e136871bd15084b2a18e0ebb35dc"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_7523ad32871bd15084b2a18e0ebb352d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:48:16</sys_created_on>
+        <sys_id>9b36e136871bd15084b2a18e0ebb35e3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:48:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_7523ad32871bd15084b2a18e0ebb352d</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-25 01:48:16</sys_created_on>
+        <sys_id>d336e136871bd15084b2a18e0ebb35dc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-25 01:48:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_7523ad32871bd15084b2a18e0ebb352d"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=7523ad32871bd15084b2a18e0ebb352d"/>
+</record_update>

@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>LMN_Vendor_API_Obtain License Resource information - TASK</description>
+        <internal_name>lmn_vendor_api_obtain_license_resource_information__task</internal_name>
+        <label_cache>[{"name":"87d6437f-0d81-4871-9417-352157bf0c68.__action_status__","label":"1 - LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD21e7fab0872c591464431a084625ce3f","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3f4948d7-193d-4f5e-bc1d-a271f868bb6f"}},{"name":"87d6437f-0d81-4871-9417-352157bf0c68.__dont_treat_as_error__","label":"1 - LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"b0ce4bb4-4324-4326-b7cd-9b69d44ff1a5"}},{"name":"81c6ed7b-407c-41fa-a2ec-74ac1c8e1752.__action_status__","label":"1 - LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD21e7fab0872c591464431a084625ce3f","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3f4948d7-193d-4f5e-bc1d-a271f868bb6f"}},{"name":"81c6ed7b-407c-41fa-a2ec-74ac1c8e1752.__dont_treat_as_error__","label":"1 - LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"b0ce4bb4-4324-4326-b7cd-9b69d44ff1a5"}},{"name":"Created or Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created or Updated_1.current.account.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"}]</label_cache>
+        <master_snapshot>2816f77087201d1425a20edc0ebb3555</master_snapshot>
+        <name>LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)</name>
+        <natlang/>
+        <outputs/>
+        <remote_trigger_id>d113897a47959910fec76621e36d43d8</remote_trigger_id>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>AD12588</sys_created_by>
+        <sys_created_on>2022-06-30 19:19:04</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>8d7b4bd387d8dd1025a20edc0ebb355a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_hub_flow_8d7b4bd387d8dd1025a20edc0ebb355a</sys_update_name>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 09:44:01</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_variable_value action="delete_multiple" query="document_key=8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4707e500000001</claim_timestamp>
+        <metadata_update_name>sys_hub_flow_8d7b4bd387d8dd1025a20edc0ebb355a</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:29</sys_created_on>
+        <sys_id>ed3429931b251d500f4ccbb8624bcb69</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:29</sys_updated_on>
+    </sys_claim>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="sn_ind_tmt_orm_order_task">short_descriptionLIKESASE Claim License^stateCHANGESTO5<item endquery="false" field="short_description" goto="false" newquery="false" operator="LIKE" or="false" value="SASE Claim License"/>
+            <item display_value="Closed Complete" endquery="false" field="state" goto="false" newquery="false" operator="CHANGESTO" or="false" value="5"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-08-17 13:09:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d113897a47959910fec76621e36d43d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:05</sys_updated_on>
+        <table>sn_ind_tmt_orm_order_task</table>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"table":"sys_trigger_runner_mapping","id":"5d13897a47959910fec76621e36d43d8","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <identifier>8d7b4bd387d8dd1025a20edc0ebb355a</identifier>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-08-17 13:09:05</sys_created_on>
+        <sys_id>5d13897a47959910fec76621e36d43d8</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:05</sys_updated_on>
+        <trigger display_value="">d113897a47959910fec76621e36d43d8</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_json_chunk action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
+        <document_id>5d13897a47959910fec76621e36d43d8</document_id>
+        <field>trigger_runner</field>
+        <length>144</length>
+        <position>0</position>
+        <source_table>sys_trigger_runner_mapping</source_table>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-08-17 13:09:05</sys_created_on>
+        <sys_id>5513897a47959910fec76621e36d43d9</sys_id>
+    </sys_json_chunk>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=8d7b4bd387d8dd1025a20edc0ebb355a^sys_idNOT IN5d13897a47959910fec76621e36d43d8"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=8d7b4bd387d8dd1025a20edc0ebb355a^sys_idNOT IN8016b77087201d1425a20edc0ebb35c3"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">8d7b4bd387d8dd1025a20edc0ebb355a</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:08</sys_created_on>
+        <sys_id>8016b77087201d1425a20edc0ebb35c3</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:05</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=8016b77087201d1425a20edc0ebb35c3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8016b77087201d1425a20edc0ebb35c3</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-08-17 13:09:01</sys_created_on>
+        <sys_id>5c13497a47959910fec76621e36d4373</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:01</sys_updated_on>
+        <value>every</value>
+        <variable display_value="Run Trigger">2b9def50c31132002841b63b12d3ae5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8016b77087201d1425a20edc0ebb35c3</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:08</sys_created_on>
+        <sys_id>c016b77087201d1425a20edc0ebb35c4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:01</sys_updated_on>
+        <value>short_descriptionLIKESASE Claim License^stateCHANGESTO5</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>8016b77087201d1425a20edc0ebb35c3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:08</sys_created_on>
+        <sys_id>d816b77087201d1425a20edc0ebb35c4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:08</sys_updated_on>
+        <value>sn_ind_tmt_orm_order_task</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=8016b77087201d1425a20edc0ebb35c3"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=8d7b4bd387d8dd1025a20edc0ebb355a^sys_idNOT INc57b4bd387d8dd1025a20edc0ebb355b"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>8d7b4bd387d8dd1025a20edc0ebb355a</id>
+        <name>LMN_Vendor_API_Obtain License Resource information - TASK</name>
+        <sys_created_by>AD12588</sys_created_by>
+        <sys_created_on>2022-06-30 19:19:04</sys_created_on>
+        <sys_id>c57b4bd387d8dd1025a20edc0ebb355b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>AD12588</sys_updated_by>
+        <sys_updated_on>2022-06-30 19:19:04</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=c57b4bd387d8dd1025a20edc0ebb355b"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=8d7b4bd387d8dd1025a20edc0ebb355a^sys_idNOT IN8016b77087201d1425a20edc0ebb35ad,8416b77087201d1425a20edc0ebb35a8,c416b77087201d1425a20edc0ebb35bd"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDb013897ac5959910cf4e8a8c3b8d6779,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">8d7b4bd387d8dd1025a20edc0ebb355a</model>
+        <model_id>8d7b4bd387d8dd1025a20edc0ebb355a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8d7b4bd387d8dd1025a20edc0ebb355a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:08</sys_created_on>
+        <sys_id>8016b77087201d1425a20edc0ebb35ad</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">8d7b4bd387d8dd1025a20edc0ebb355a</model>
+        <model_id>8d7b4bd387d8dd1025a20edc0ebb355a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8d7b4bd387d8dd1025a20edc0ebb355a</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:08</sys_created_on>
+        <sys_id>8416b77087201d1425a20edc0ebb35a8</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">8d7b4bd387d8dd1025a20edc0ebb355a</model>
+        <model_id>8d7b4bd387d8dd1025a20edc0ebb355a</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_8d7b4bd387d8dd1025a20edc0ebb355a</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:08</sys_created_on>
+        <sys_id>c416b77087201d1425a20edc0ebb35bd</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=8d7b4bd387d8dd1025a20edc0ebb355a^sys_idNOT IN9c16f77087201d1425a20edc0ebb3516"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">d9e7bab0872c591425a20edc0ebb3540</action_type>
+        <action_type_parent/>
+        <comment/>
+        <display_text/>
+        <flow display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">8d7b4bd387d8dd1025a20edc0ebb355a</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:08</sys_created_on>
+        <sys_id>9c16f77087201d1425a20edc0ebb3516</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-08-25 17:45:34</sys_updated_on>
+        <ui_id>81c6ed7b-407c-41fa-a2ec-74ac1c8e1752</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=9c16f77087201d1425a20edc0ebb3516"/>
+    <sys_element_mapping action="delete_multiple" query="id=9c16f77087201d1425a20edc0ebb3516"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>accountsysid</field>
+        <id>9c16f77087201d1425a20edc0ebb3516</id>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:09</sys_created_on>
+        <sys_id>d016f77087201d1425a20edc0ebb3519</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:09</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d9e7bab0872c591425a20edc0ebb3540</table>
+        <value>{{Created or Updated_1.current.account.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>orderlineid</field>
+        <id>9c16f77087201d1425a20edc0ebb3516</id>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:09</sys_created_on>
+        <sys_id>9816f77087201d1425a20edc0ebb3519</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:09</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d9e7bab0872c591425a20edc0ebb3540</table>
+        <value>{{Created or Updated_1.current.order_line_item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>order_sys_id</field>
+        <id>9c16f77087201d1425a20edc0ebb3516</id>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:09</sys_created_on>
+        <sys_id>5c16f77087201d1425a20edc0ebb3519</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:09</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d9e7bab0872c591425a20edc0ebb3540</table>
+        <value>{{Created or Updated_1.current.order_line_item.order.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=9c16f77087201d1425a20edc0ebb3516"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=9c16f77087201d1425a20edc0ebb3516"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_8d7b4bd387d8dd1025a20edc0ebb355a^sys_idNOT IN4016b77087201d1425a20edc0ebb35b0,4016b77087201d1425a20edc0ebb35c0,c016b77087201d1425a20edc0ebb35ac"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8d7b4bd387d8dd1025a20edc0ebb355a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:08</sys_created_on>
+        <sys_id>4016b77087201d1425a20edc0ebb35b0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Changed Fields</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8d7b4bd387d8dd1025a20edc0ebb355a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:08</sys_created_on>
+        <sys_id>4016b77087201d1425a20edc0ebb35c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_8d7b4bd387d8dd1025a20edc0ebb355a</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:08</sys_created_on>
+        <sys_id>c016b77087201d1425a20edc0ebb35ac</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:08</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=8d7b4bd387d8dd1025a20edc0ebb355a^sys_idNOT IN85163b7087201d1425a20edc0ebb350d"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"85163b7087201d1425a20edc0ebb350d","name":"plan","plan_signature":null}}</plan>
+        <plan_id>8d7b4bd387d8dd1025a20edc0ebb355a</plan_id>
+        <snapshot>5d1f43591bed5150b12697d7b04bcbfc</snapshot>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:11</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>85163b7087201d1425a20edc0ebb350d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:05</sys_updated_on>
+        <trigger display_value="">d113897a47959910fec76621e36d43d8</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=8d7b4bd387d8dd1025a20edc0ebb355a"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description>LMN_Vendor_API_Obtain License Resource information - TASK</description>
+        <internal_name>lmn_sase_ra__sase_activation__vendor_claim_task_closed</internal_name>
+        <label_cache>[{"name":"87d6437f-0d81-4871-9417-352157bf0c68.__action_status__","label":"1 - LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD21e7fab0872c591464431a084625ce3f","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3f4948d7-193d-4f5e-bc1d-a271f868bb6f"}},{"name":"87d6437f-0d81-4871-9417-352157bf0c68.__dont_treat_as_error__","label":"1 - LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"b0ce4bb4-4324-4326-b7cd-9b69d44ff1a5"}},{"name":"81c6ed7b-407c-41fa-a2ec-74ac1c8e1752.__action_status__","label":"1 - LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FD21e7fab0872c591464431a084625ce3f","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3f4948d7-193d-4f5e-bc1d-a271f868bb6f"}},{"name":"81c6ed7b-407c-41fa-a2ec-74ac1c8e1752.__dont_treat_as_error__","label":"1 - LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"b0ce4bb4-4324-4326-b7cd-9b69d44ff1a5"}},{"name":"Created or Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Created or Updated_1.current.account.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Created or Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Created or Updated➛Order Task Record➛Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"}]</label_cache>
+        <master>true</master>
+        <name>LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">8d7b4bd387d8dd1025a20edc0ebb355a</parent_flow>
+        <remote_trigger_id/>
+        <run_as>system</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:10</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2816f77087201d1425a20edc0ebb3555</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:04</sys_updated_on>
+        <type>flow</type>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=2816f77087201d1425a20edc0ebb3555"/>
+    <sys_variable_value action="delete_multiple" query="document_key=2816f77087201d1425a20edc0ebb3555"/>
+    <sys_hub_trigger_instance action="delete_multiple" query="flow=2816f77087201d1425a20edc0ebb3555^sys_idNOT IN7816f77087201d1425a20edc0ebb35d1"/>
+    <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">2816f77087201d1425a20edc0ebb3555</flow>
+        <name>Created or Updated</name>
+        <remote_sys_id/>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:11</sys_created_on>
+        <sys_id>7816f77087201d1425a20edc0ebb35d1</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:05</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs/>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+    </sys_hub_trigger_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7816f77087201d1425a20edc0ebb35d1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>7816f77087201d1425a20edc0ebb35d1</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:11</sys_created_on>
+        <sys_id>7016f77087201d1425a20edc0ebb35d3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:11</sys_updated_on>
+        <value>sn_ind_tmt_orm_order_task</value>
+        <variable display_value="Table">cf1e1980c32222002841b63b12d3aea0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>7816f77087201d1425a20edc0ebb35d1</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-08-17 13:09:03</sys_created_on>
+        <sys_id>bc13897a47959910fec76621e36d4375</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:03</sys_updated_on>
+        <value>every</value>
+        <variable display_value="Run Trigger">2b9def50c31132002841b63b12d3ae5b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_trigger_instance</document>
+        <document_key>7816f77087201d1425a20edc0ebb35d1</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:11</sys_created_on>
+        <sys_id>bc16f77087201d1425a20edc0ebb35d2</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:03</sys_updated_on>
+        <value>short_descriptionLIKESASE Claim License^stateCHANGESTO5</value>
+        <variable display_value="Condition">707dd180c32222002841b63b12d3aecb</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_trigger_output_a45d9180c32222002841b63b12d3aea7^id=7816f77087201d1425a20edc0ebb35d1"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=2816f77087201d1425a20edc0ebb3555"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=2816f77087201d1425a20edc0ebb3555^sys_idNOT IN2816f77087201d1425a20edc0ebb3556"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>2816f77087201d1425a20edc0ebb3555</id>
+        <name>LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)</name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:10</sys_created_on>
+        <sys_id>2816f77087201d1425a20edc0ebb3556</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:10</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=2816f77087201d1425a20edc0ebb3556"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=2816f77087201d1425a20edc0ebb3555^sys_idNOT IN6816f77087201d1425a20edc0ebb355a,b016f77087201d1425a20edc0ebb35af,f816f77087201d1425a20edc0ebb358d"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">2816f77087201d1425a20edc0ebb3555</model>
+        <model_id>2816f77087201d1425a20edc0ebb3555</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_2816f77087201d1425a20edc0ebb3555</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:10</sys_created_on>
+        <sys_id>6816f77087201d1425a20edc0ebb355a</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">2816f77087201d1425a20edc0ebb3555</model>
+        <model_id>2816f77087201d1425a20edc0ebb3555</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_2816f77087201d1425a20edc0ebb3555</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:10</sys_created_on>
+        <sys_id>b016f77087201d1425a20edc0ebb35af</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDb013897ac5959910cf4e8a8c3b8d6779,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">2816f77087201d1425a20edc0ebb3555</model>
+        <model_id>2816f77087201d1425a20edc0ebb3555</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_2816f77087201d1425a20edc0ebb3555</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:10</sys_created_on>
+        <sys_id>f816f77087201d1425a20edc0ebb358d</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:03</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_flow_output action="delete_multiple" query="model=2816f77087201d1425a20edc0ebb3555"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2816f77087201d1425a20edc0ebb3555"/>
+    <sys_hub_action_instance action="delete_multiple" query="flow=2816f77087201d1425a20edc0ebb3555^sys_idNOT IN7c16f77087201d1425a20edc0ebb35cf"/>
+    <sys_hub_action_instance action="INSERT_OR_UPDATE">
+        <action_inputs/>
+        <action_inputs/>
+        <action_type display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">d9e7bab0872c591425a20edc0ebb3540</action_type>
+        <action_type_parent display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">5ac73afc87e8591425a20edc0ebb352f</action_type_parent>
+        <comment/>
+        <display_text/>
+        <flow display_value="LMN_SASE RA - SASE Activation - (Vendor Claim Task Closed)">2816f77087201d1425a20edc0ebb3555</flow>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:11</sys_created_on>
+        <sys_id>7c16f77087201d1425a20edc0ebb35cf</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-08-17 13:09:04</sys_updated_on>
+        <ui_id>81c6ed7b-407c-41fa-a2ec-74ac1c8e1752</ui_id>
+    </sys_hub_action_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=7c16f77087201d1425a20edc0ebb35cf"/>
+    <sys_element_mapping action="delete_multiple" query="id=7c16f77087201d1425a20edc0ebb35cf"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>accountsysid</field>
+        <id>7c16f77087201d1425a20edc0ebb35cf</id>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:11</sys_created_on>
+        <sys_id>3016f77087201d1425a20edc0ebb35d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:11</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d9e7bab0872c591425a20edc0ebb3540</table>
+        <value>{{Created or Updated_1.current.account.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>orderlineid</field>
+        <id>7c16f77087201d1425a20edc0ebb35cf</id>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:11</sys_created_on>
+        <sys_id>f016f77087201d1425a20edc0ebb35d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:11</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d9e7bab0872c591425a20edc0ebb3540</table>
+        <value>{{Created or Updated_1.current.order_line_item.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>order_sys_id</field>
+        <id>7c16f77087201d1425a20edc0ebb35cf</id>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:11</sys_created_on>
+        <sys_id>b416f77087201d1425a20edc0ebb35d1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:11</sys_updated_on>
+        <table>var__m_sys_hub_action_input_d9e7bab0872c591425a20edc0ebb3540</table>
+        <value>{{Created or Updated_1.current.order_line_item.order.sys_id}}</value>
+    </sys_element_mapping>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7c16f77087201d1425a20edc0ebb35cf"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=7c16f77087201d1425a20edc0ebb35cf"/>
+    <sys_hub_sub_flow_instance action="delete_multiple" query="flow=2816f77087201d1425a20edc0ebb3555"/>
+    <sys_hub_flow_logic action="delete_multiple" query="flow=2816f77087201d1425a20edc0ebb3555"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=2816f77087201d1425a20edc0ebb3555"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=2816f77087201d1425a20edc0ebb3555"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_input_2816f77087201d1425a20edc0ebb3555^sys_idNOT IN7816f77087201d1425a20edc0ebb35ab,b016f77087201d1425a20edc0ebb358a,bc16f77087201d1425a20edc0ebb35b3"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2816f77087201d1425a20edc0ebb3555</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:10</sys_created_on>
+        <sys_id>7816f77087201d1425a20edc0ebb35ab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Changed Fields</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:10</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2816f77087201d1425a20edc0ebb3555</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:10</sys_created_on>
+        <sys_id>b016f77087201d1425a20edc0ebb358a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:10</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2816f77087201d1425a20edc0ebb3555</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-07-05 14:16:10</sys_created_on>
+        <sys_id>bc16f77087201d1425a20edc0ebb35b3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-05 14:16:10</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_2816f77087201d1425a20edc0ebb3555"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_flow_output_2816f77087201d1425a20edc0ebb3555"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_2816f77087201d1425a20edc0ebb3555"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>8d7b4bd387d8dd1025a20edc0ebb355a</sys_id>
+        <latest_snapshot>2816f77087201d1425a20edc0ebb3555</latest_snapshot>
+        <compiler_build>glide-sandiego-12-22-2021__patch4a-06-21-2022_07-12-2022_1907.zip</compiler_build>
+    </sys_hub_flow>
+</record_update>

@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_ind_tmt_orm_product_order</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition table="sn_ind_tmt_orm_product_order">locationVALCHANGES^EQ<item endquery="false" field="location" goto="false" newquery="false" operator="VALCHANGES" or="false" value=""/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </filter_condition>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Trigger Subflow for Change billing task</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+// 	try {
+// 	var inputs = {};
+// 		inputs['product_order']= current.sys_id;
+// 	gs.log('Teja:', current.number)	;
+//     var contextId = sn_fd.FlowAPI.startSubflow('global.SASE Order task creation flow for change billing', inputs);
+// 	gs.log('Teja1:', contextId)	;
+// 		current.description = contextId;
+//     current.update();
+// } catch (ex) {
+// 		var message = ex.getMessage();
+// 		gs.error(message);
+// 	}
+	gs.info('Teja1:');
+	var gr = new GlideRecord('sn_ind_tmt_orm_order_task');
+	
+gr.initialize();
+
+gr.short_description = 'ChangeBilling';
+
+
+gr.insert(); // this will insert the record
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>AD12076</sys_created_by>
+        <sys_created_on>2022-05-23 22:01:43</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e69fb7cf876b415084b2a18e0ebb3522</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_name>Trigger Subflow for Change billing task</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_e69fb7cf876b415084b2a18e0ebb3522</sys_update_name>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-05-24 20:08:59</sys_updated_on>
+        <template/>
+        <when>before</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=e69fb7cf876b415084b2a18e0ebb3522"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4706d550000001</claim_timestamp>
+        <metadata_update_name>sys_script_e69fb7cf876b415084b2a18e0ebb3522</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:24</sys_created_on>
+        <sys_id>6c3465931b251d500f4ccbb8624bcb8d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:24</sys_updated_on>
+    </sys_claim>
+</record_update>

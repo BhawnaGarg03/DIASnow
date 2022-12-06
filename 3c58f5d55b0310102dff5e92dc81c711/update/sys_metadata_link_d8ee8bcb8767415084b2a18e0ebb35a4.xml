@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_metadata_link">
+    <sys_metadata_link action="INSERT_OR_UPDATE">
+        <directory>update</directory>
+        <documentkey>dcee8bcb8767415084b2a18e0ebb35a3</documentkey>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_question">
+    <sys_decision_question action="DELETE">
+        <active>true</active>
+        <answer>820dcf0b8767415084b2a18e0ebb3537</answer>
+        <condition table="var__m_sys_decision_input_3eaf4464c3b71010d216b5183c40ddd6">product_order.short_descriptionLIKESASE CPE^ORproduct_order.short_descriptionLIKE On Site Installation^customer_order_line_item.locationISNOTEMPTY^customer_order_line_item.state=in_progress^EQ<item endquery="false" field="product_order.short_description" goto="false" newquery="false" operator="LIKE" or="false" value="SASE CPE"/>
+            <item endquery="false" field="product_order.short_description" goto="false" newquery="false" operator="LIKE" or="true" value=" On Site Installation"/>
+            <item endquery="false" field="customer_order_line_item.location" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
+            <item display_value="in_progress" endquery="false" field="customer_order_line_item.state" goto="false" newquery="false" operator="=" or="false" value="in_progress"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <decision_table display_value="Product Order Fulfilment Policy">3eaf4464c3b71010d216b5183c40ddd6</decision_table>
+        <default_answer>false</default_answer>
+        <input_table>var__m_sys_decision_input_3eaf4464c3b71010d216b5183c40ddd6</input_table>
+        <label>SASE Order</label>
+        <order>0</order>
+        <sys_class_name>sys_decision_question</sys_class_name>
+        <sys_created_by>Tejasree.Karnati</sys_created_by>
+        <sys_created_on>2022-05-23 18:08:28</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dcee8bcb8767415084b2a18e0ebb35a3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>SASE Order</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_decision_question_dcee8bcb8767415084b2a18e0ebb35a3</sys_update_name>
+        <sys_updated_by>Tejasree.Karnati</sys_updated_by>
+        <sys_updated_on>2022-05-23 19:07:28</sys_updated_on>
+    </sys_decision_question>
+</record_update>
+]]></payload>
+        <sys_class_name>sys_metadata_link</sys_class_name>
+        <sys_created_by>Tejasree.Karnati</sys_created_by>
+        <sys_created_on>2022-05-23 18:08:28</sys_created_on>
+        <sys_id>d8ee8bcb8767415084b2a18e0ebb35a4</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>SASE Order</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_metadata_link_d8ee8bcb8767415084b2a18e0ebb35a4</sys_update_name>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-05-23 21:31:37</sys_updated_on>
+        <tablename>sys_decision_question</tablename>
+    </sys_metadata_link>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4706eca0000001</claim_timestamp>
+        <metadata_update_name>sys_metadata_link_d8ee8bcb8767415084b2a18e0ebb35a4</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:25</sys_created_on>
+        <sys_id>ac3465931b251d500f4ccbb8624bcbfb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:25</sys_updated_on>
+    </sys_claim>
+</record_update>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_customer_contact_id" label="Customer Contact ID" language="en" table="sn_ind_tmt_orm_order_line_item_contact">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_customer_contact_id</element>
+            <help/>
+            <hint/>
+            <label>Customer Contact ID</label>
+            <language>en</language>
+            <name>sn_ind_tmt_orm_order_line_item_contact</name>
+            <plural>Customer Contact IDs</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-06-19 03:21:18</sys_created_on>
+            <sys_id>c4c6c76b87c8155025a20edc0ebb3508</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Customer Contact ID</sys_name>
+            <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+            <sys_update_name>sys_documentation_sn_ind_tmt_orm_order_line_item_contact_u_customer_contact_id_en</sys_update_name>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-06-19 03:21:18</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47071280000001</claim_timestamp>
+        <metadata_update_name>sys_documentation_sn_ind_tmt_orm_order_line_item_contact_u_customer_contact_id_en</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:25</sys_created_on>
+        <sys_id>bc34a5931b251d500f4ccbb8624bcb88</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:25</sys_updated_on>
+    </sys_claim>
+</record_update>

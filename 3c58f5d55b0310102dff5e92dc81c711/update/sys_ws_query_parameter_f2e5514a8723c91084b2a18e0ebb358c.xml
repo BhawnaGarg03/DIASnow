@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_query_parameter">
+    <sys_ws_query_parameter action="INSERT_OR_UPDATE">
+        <example_value/>
+        <name>order_line_item_external_id</name>
+        <required>false</required>
+        <short_description>External ID of the Order Line Item</short_description>
+        <sys_class_name>sys_ws_query_parameter</sys_class_name>
+        <sys_created_by>Tejasree.Karnati</sys_created_by>
+        <sys_created_on>2022-05-20 06:46:52</sys_created_on>
+        <sys_id>f2e5514a8723c91084b2a18e0ebb358c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>order_line_item_external_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_ws_query_parameter_f2e5514a8723c91084b2a18e0ebb358c</sys_update_name>
+        <sys_updated_by>Tejasree.Karnati</sys_updated_by>
+        <sys_updated_on>2022-05-20 06:46:52</sys_updated_on>
+        <web_service_definition display_value="Getting Order Details">e86b33ab87260510e44997983cbb35f6</web_service_definition>
+    </sys_ws_query_parameter>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47073790000001</claim_timestamp>
+        <metadata_update_name>sys_ws_query_parameter_f2e5514a8723c91084b2a18e0ebb358c</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:26</sys_created_on>
+        <sys_id>7834a5931b251d500f4ccbb8624bcbd3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:26</sys_updated_on>
+    </sys_claim>
+</record_update>

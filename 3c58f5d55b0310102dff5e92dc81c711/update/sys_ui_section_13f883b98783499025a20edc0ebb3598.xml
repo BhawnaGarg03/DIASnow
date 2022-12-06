@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="13f883b98783499025a20edc0ebb3598" sys_domain="global" table="sn_ind_tmt_orm_tiering" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_percentage</element>
+            <position>0</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-06-15 13:45:35</sys_created_on>
+            <sys_id>314fe86e87845d1025a20edc0ebb352b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_tiering" sys_domain="global" view="Default view">13f883b98783499025a20edc0ebb3598</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-06-15 13:45:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_upper_bound</element>
+            <position>1</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-06-15 13:45:35</sys_created_on>
+            <sys_id>394fe86e87845d1025a20edc0ebb352b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_tiering" sys_domain="global" view="Default view">13f883b98783499025a20edc0ebb3598</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-06-15 13:45:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_tiering_id</element>
+            <position>2</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-06-15 13:45:35</sys_created_on>
+            <sys_id>3d4fe86e87845d1025a20edc0ebb352b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_tiering" sys_domain="global" view="Default view">13f883b98783499025a20edc0ebb3598</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-06-15 13:45:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_rate_description</element>
+            <position>3</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-06-15 13:45:35</sys_created_on>
+            <sys_id>314fe86e87845d1025a20edc0ebb352c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_tiering" sys_domain="global" view="Default view">13f883b98783499025a20edc0ebb3598</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-06-15 13:45:35</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>sn_ind_tmt_orm_tiering</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>Tejasree.Karnati</sys_created_by>
+            <sys_created_on>2022-04-24 23:58:57</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>13f883b98783499025a20edc0ebb3598</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sn_ind_tmt_orm_tiering</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+            <sys_update_name>sys_ui_section_13f883b98783499025a20edc0ebb3598</sys_update_name>
+            <sys_updated_by>Tejasree.Karnati</sys_updated_by>
+            <sys_updated_on>2022-04-24 23:58:57</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47089460000001</claim_timestamp>
+        <metadata_update_name>sys_ui_section_13f883b98783499025a20edc0ebb3598</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:32</sys_created_on>
+        <sys_id>5a3469931b251d500f4ccbb8624bcbed</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:32</sys_updated_on>
+    </sys_claim>
+</record_update>

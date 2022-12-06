@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_complex_object">
+    <sys_complex_object action="INSERT_OR_UPDATE">
+        <label/>
+        <name>FD1d70d985ac1b4114179a011490c18efb</name>
+        <namespace>FlowDesigner</namespace>
+        <scope_name>3c58f5d55b0310102dff5e92dc81c711</scope_name>
+        <serialized_content>{"FlowDesigner:FD1d70d985ac1b4114179a011490c18efb":{"$COCollectionField":[{"Object":{}}],"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FD1d70d985ac1b4114179a011490c18efb.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"356856c6-f3ad-492d-86b6-17d6f83f8228\",\"pwd2droppable\":\"true\",\"default_value\":\"\",\"child_hint\":\"\",\"child_maxsize\":\"\",\"label\":\"orderPayload\",\"mandatory\":\"false\",\"child_name\":\"prodorderobj_child0\",\"uiUniqueId\":\"cb1d6723-e086-4d08-9b17-173164677e1a\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FD1d70d985ac1b4114179a011490c18efb\",\"child_label\":\"prodorderobj_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceType\":\"step\",\"sourceUiUniqueId\":\"71aafb8a-a423-4e34-b954-17dccd33b5bc\",\"hint\":null,\"uiType\":\"array.object\",\"child_defaultValue\":\"\",\"child_type\":\"object\",\"order\":\"3\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"7c8b4ef3-bae4-413e-8fff-71b3d82d723c\"}"}}</serialized_content>
+        <sys_class_name>sys_complex_object</sys_class_name>
+        <sys_created_by>AD11373</sys_created_by>
+        <sys_created_on>2022-05-04 17:32:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>dd70d985871b411484b2a18e0ebb35fb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>FD1d70d985ac1b4114179a011490c18efb</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_complex_object_dd70d985871b411484b2a18e0ebb35fb</sys_update_name>
+        <sys_updated_by>AD11373</sys_updated_by>
+        <sys_updated_on>2022-05-04 17:32:34</sys_updated_on>
+        <type>complex_object_collection</type>
+    </sys_complex_object>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47088f10000001</claim_timestamp>
+        <metadata_update_name>sys_complex_object_dd70d985871b411484b2a18e0ebb35fb</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:32</sys_created_on>
+        <sys_id>5a3469931b251d500f4ccbb8624bcbe2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:32</sys_updated_on>
+    </sys_claim>
+</record_update>

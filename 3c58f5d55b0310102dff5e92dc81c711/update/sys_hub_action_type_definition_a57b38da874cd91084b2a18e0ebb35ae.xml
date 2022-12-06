@@ -25,15 +25,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>a57b38da874cd91084b2a18e0ebb35ae</sys_id>
-        <sys_mod_count>12</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>SASE Node (Service Order) -  "Service Ready noti" Task</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_a57b38da874cd91084b2a18e0ebb35ae</sys_update_name>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-08-24 17:34:40</sys_updated_on>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 09:41:08</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -68,6 +68,20 @@
         <variable display_value="Don't Treat as Error">c27bb8da874cd91084b2a18e0ebb356c</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_a57b38da874cd91084b2a18e0ebb35ae^id=a57b38da874cd91084b2a18e0ebb35ae"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47073b60000001</claim_timestamp>
+        <metadata_update_name>sys_hub_action_type_definition_a57b38da874cd91084b2a18e0ebb35ae</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:26</sys_created_on>
+        <sys_id>b034a5931b251d500f4ccbb8624bcbdb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:26</sys_updated_on>
+    </sys_claim>
     <sys_hub_step_instance action="delete_multiple" query="action=a57b38da874cd91084b2a18e0ebb35ae^sys_idNOT INb57b78da874cd91084b2a18e0ebb35b9"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="SASE Node (Service Order) -  &quot;Service Ready noti&quot; Task">a57b38da874cd91084b2a18e0ebb35ae</action>
@@ -292,18 +306,6 @@
         <sys_updated_on>2022-06-15 20:27:16</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_b57b78da874cd91084b2a18e0ebb35b9</table>
         <value>{{action.parent_record_short_description}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>b57b78da874cd91084b2a18e0ebb35b9</id>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-08-24 15:53:11</sys_created_on>
-        <sys_id>a5cbe10d47251590fec76621e36d438e</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-08-24 15:53:11</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=b57b78da874cd91084b2a18e0ebb35b9"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=b57b78da874cd91084b2a18e0ebb35b9^sys_idNOT IN19cbe10d47251590fec76621e36d4381,293b06ea87009d1084b2a18e0ebb35d1,693b06ea87009d1084b2a18e0ebb35cd,adcbe10d47251590fec76621e36d4385,f74bcf6f8770d950950253d73cbb35aa,f97b78da874cd91084b2a18e0ebb35f3,fd7b78da874cd91084b2a18e0ebb35bc"/>
@@ -1649,7 +1651,7 @@
         <sys_created_on>2022-06-15 20:27:15</sys_created_on>
         <sys_id>293b06ea87009d1084b2a18e0ebb35b0</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Current Short Description</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -1672,7 +1674,7 @@
         <sys_created_on>2022-06-15 20:27:15</sys_created_on>
         <sys_id>613b06ea87009d1084b2a18e0ebb35b5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Parent Record Short Description</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -1695,7 +1697,7 @@
         <sys_created_on>2022-06-14 20:00:21</sys_created_on>
         <sys_id>b17b78da874cd91084b2a18e0ebb35b7</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>orderSysID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -1718,7 +1720,7 @@
         <sys_created_on>2022-06-14 20:00:21</sys_created_on>
         <sys_id>bd7b38da874cd91084b2a18e0ebb35b9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>accountSysID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -1741,11 +1743,11 @@
         <sys_created_on>2022-08-24 15:53:11</sys_created_on>
         <sys_id>d1cbe10d47251590fec76621e36d4355</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Current Order Line ID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_a57b38da874cd91084b2a18e0ebb35ae_current_order_line_id_en</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
         <sys_updated_on>2022-08-24 15:53:11</sys_updated_on>
         <url/>
@@ -1764,11 +1766,11 @@
         <sys_created_on>2022-08-24 15:53:11</sys_created_on>
         <sys_id>d1cbe10d47251590fec76621e36d4373</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Parent ID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_a57b38da874cd91084b2a18e0ebb35ae_parent_id_en</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
         <sys_updated_on>2022-08-24 15:53:11</sys_updated_on>
         <url/>
@@ -1787,7 +1789,7 @@
         <sys_created_on>2022-07-26 10:28:18</sys_created_on>
         <sys_id>f74bcf6f8770d950950253d73cbb359d</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Parent Order Line Sys ID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -1812,7 +1814,7 @@
         <sys_created_on>2022-06-14 20:00:22</sys_created_on>
         <sys_id>067bb8da874cd91084b2a18e0ebb356b</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -1835,7 +1837,7 @@
         <sys_created_on>2022-06-14 20:00:22</sys_created_on>
         <sys_id>8a7bb8da874cd91084b2a18e0ebb35e2</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -2153,18 +2155,6 @@
         <sys_updated_on>2022-06-15 20:27:25</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_ce6cbcde874cd91084b2a18e0ebb350b</table>
         <value>{{action.parent_record_short_description}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>ce6cbcde874cd91084b2a18e0ebb350b</id>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-08-24 15:53:15</sys_created_on>
-        <sys_id>a2cb250d47251590fec76621e36d437d</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-08-24 15:53:15</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=ce6cbcde874cd91084b2a18e0ebb350b"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=ce6cbcde874cd91084b2a18e0ebb350b^sys_idNOT IN0a6cbcde874cd91084b2a18e0ebb350f,0a6cbcde874cd91084b2a18e0ebb3514,56cb250d47251590fec76621e36d4364,645b03af8770d950950253d73cbb3545,96cb250d47251590fec76621e36d4368,bb3b86ea87009d1084b2a18e0ebb351f,fb3b86ea87009d1084b2a18e0ebb3523"/>
@@ -3510,7 +3500,7 @@
         <sys_created_on>2022-06-14 20:04:28</sys_created_on>
         <sys_id>466cbcde874cd91084b2a18e0ebb3505</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>accountSysID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -3533,7 +3523,7 @@
         <sys_created_on>2022-06-14 20:04:28</sys_created_on>
         <sys_id>8e6cbcde874cd91084b2a18e0ebb3509</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>orderSysID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -3556,11 +3546,11 @@
         <sys_created_on>2022-08-24 15:53:15</sys_created_on>
         <sys_id>9ecb250d47251590fec76621e36d4342</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Current Order Line ID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_b56c7cde874cd91084b2a18e0ebb35fc_current_order_line_id_en</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
         <sys_updated_on>2022-08-24 15:53:15</sys_updated_on>
         <url/>
@@ -3579,7 +3569,7 @@
         <sys_created_on>2022-06-15 20:27:24</sys_created_on>
         <sys_id>bb3b86ea87009d1084b2a18e0ebb3512</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Current Short Description</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -3602,11 +3592,11 @@
         <sys_created_on>2022-08-24 15:53:15</sys_created_on>
         <sys_id>d6cb250d47251590fec76621e36d4347</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Parent ID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_b56c7cde874cd91084b2a18e0ebb35fc_parent_id_en</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
         <sys_updated_on>2022-08-24 15:53:15</sys_updated_on>
         <url/>
@@ -3625,7 +3615,7 @@
         <sys_created_on>2022-07-26 10:28:22</sys_created_on>
         <sys_id>e05b03af8770d950950253d73cbb3521</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Parent Order Line Sys ID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -3648,7 +3638,7 @@
         <sys_created_on>2022-06-15 20:27:24</sys_created_on>
         <sys_id>f33b86ea87009d1084b2a18e0ebb3517</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Parent Record Short Description</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -3673,7 +3663,7 @@
         <sys_created_on>2022-06-14 20:04:29</sys_created_on>
         <sys_id>1a6cbcde874cd91084b2a18e0ebb3527</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -3696,7 +3686,7 @@
         <sys_created_on>2022-06-14 20:04:29</sys_created_on>
         <sys_id>de6cbcde874cd91084b2a18e0ebb352e</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>

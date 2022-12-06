@@ -25,15 +25,15 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>53cad7e847c55d90fec76621e36d43ca</sys_id>
-        <sys_mod_count>10</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>CDW Characteristics v1</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_53cad7e847c55d90fec76621e36d43ca</sys_update_name>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-09 18:09:12</sys_updated_on>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 09:39:48</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
@@ -61,13 +61,27 @@
         <sys_created_by>AD13666</sys_created_by>
         <sys_created_on>2022-07-29 14:12:21</sys_created_on>
         <sys_id>fa5b1fac47c55d90fec76621e36d4337</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-09 17:59:34</sys_updated_on>
-        <value>{"version":"1.0","complexObject":{},"complexObjectSchema":{"FlowDesigner:FD225b1fac5bc55d90017042b56b0ee50d":{},"FlowDesigner:FD225b1fac5bc55d90017042b56b0ee50d.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"9f19a50c-73a4-49d3-89fd-7f6862dd0910\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD225b1fac5bc55d90017042b56b0ee50d\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13666</sys_updated_by>
+        <sys_updated_on>2022-07-29 14:12:21</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{},"complexObjectSchema":{"FlowDesigner:FD225b1fac5bc55d90017042b56b0ee50d":{},"FlowDesigner:FD225b1fac5bc55d90017042b56b0ee50d.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":null,\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"9f19a50c-73a4-49d3-89fd-7f6862dd0910\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FD225b1fac5bc55d90017042b56b0ee50d\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"-1\"}"}},"serializationFormat":"JSON"}</value>
         <variable display_value="Action Status">3e5b1fac47c55d90fec76621e36d430f</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_53cad7e847c55d90fec76621e36d43ca^id=53cad7e847c55d90fec76621e36d43ca"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4706fd60000001</claim_timestamp>
+        <metadata_update_name>sys_hub_action_type_definition_53cad7e847c55d90fec76621e36d43ca</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:25</sys_created_on>
+        <sys_id>6c34a5931b251d500f4ccbb8624bcb44</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:25</sys_updated_on>
+    </sys_claim>
     <sys_hub_step_instance action="delete_multiple" query="action=53cad7e847c55d90fec76621e36d43ca^sys_idNOT IN745b9bac47c55d90fec76621e36d4319"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="CDW Characteristics v1">53cad7e847c55d90fec76621e36d43ca</action>
@@ -86,10 +100,10 @@
         <sys_created_by>AD13666</sys_created_by>
         <sys_created_on>2022-07-29 14:12:13</sys_created_on>
         <sys_id>745b9bac47c55d90fec76621e36d4319</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-09 18:08:42</sys_updated_on>
+        <sys_updated_by>AD13666</sys_updated_by>
+        <sys_updated_on>2022-07-29 14:12:14</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=745b9bac47c55d90fec76621e36d4319"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -100,38 +114,56 @@
         <sys_created_by>AD13666</sys_created_by>
         <sys_created_on>2022-07-29 14:12:14</sys_created_on>
         <sys_id>815b9bac47c55d90fec76621e36d433d</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-09 18:08:43</sys_updated_on>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13666</sys_updated_by>
+        <sys_updated_on>2022-07-29 14:12:14</sys_updated_on>
         <value>(function execute(inputs, outputs) {
+  // ... code ...
 
   var orderLineId = inputs.oli_sys_id;
   var created =  inputs.created.toString();
   var updatedDate =  inputs.updatedDate.toString();
 
-  var gt = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value'); gt.addEncodedQuery("order_line_item="+orderLineId+"^characteristic="+gs.getProperty("sn_ind_tmt_orm.customer.order.char.customer_sign_date")+"^ORcharacteristic="+gs.getProperty("Characteristic - Customer Requested Date")+"^ORcharacteristic="+gs.getProperty("sn_ind_tmt_orm.Char - Customer Acceptance Date")+"^ORcharacteristic="+gs.getProperty("Characteristic - Customer Commit Date")+"^ORcharacteristic="+gs.getProperty("sn_ind_tmt_orm.Char - Customer Commit Set Date")+"^ORcharacteristic="+gs.getProperty("sn_ind_tmt_orm.Char - Customer Revised Commit Set Date")+"^ORcharacteristic="+gs.getProperty("sn_ind_tmt_orm.Char - Customer Revised Commit Date")); 
+  var gt = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value'); gt.addEncodedQuery("order_line_item="+orderLineId+"^characteristic=876a4b6587d749d025a20edc0ebb3523^ORcharacteristic=db5ac76587d749d025a20edc0ebb3561^ORcharacteristic=f43a8fa187d749d025a20edc0ebb354c^ORcharacteristic=024ac76587d749d025a20edc0ebb355f^ORcharacteristic=320b07a587d749d025a20edc0ebb35f9^ORcharacteristic=686bcf6587d749d025a20edc0ebb3575^ORcharacteristic=334b83a587d749d025a20edc0ebb35d2"); 
   gt.query();
   while(gt.next()){
     gt.characteristic_option_value = (new Date(new GlideDateTime(created).getNumericValue()).toISOString());
+    //created + " GMT";
+
+    
+    
     gt.update();
   }
+  //Update install date
+ // var gt1 = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value'); gt1.addEncodedQuery("order_line_item="+orderLineId+"^characteristic=138ac36587d749d025a20edc0ebb35a8"); 
+  //gt1.query();
+ // if(gt1.next()){
+   // gt1.characteristic_option_value = updatedDate;
+   // gt1.update();
+  //}
+
 
   //Updating contract term end date
 
-  var orderLineStartDate = "";
-  var term = "";
+  // Add your code here
+  var orderLineStartDate = [];
+  var term = [];
+
+  gs.info("Checking Term: "+term);
+  gs.info("Checking order_line_item: "+orderLineId);
+
   var startDate = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
-  startDate.addEncodedQuery("order_line_item="+orderLineId+"^specification="+gs.getProperty("productSpecification.SASE CPE")+"^characteristic="+gs.getProperty("Characteristic - Term")+"^ORcharacteristic="+gs.getProperty("Characteristic - Contract Term Start Date"));
+  startDate.addEncodedQuery("order_line_item="+orderLineId+"^characteristic=cf5d05d4873e095084b2a18e0ebb35db^ORcharacteristic=ab3bcf6587d749d025a20edc0ebb356b");
   startDate.query();
   while(startDate.next()) {
-    if (startDate.characteristic == gs.getProperty("Characteristic - Term")) { //term
-      term = ""+startDate.characteristic_option_value; //36
+    if (startDate.characteristic == "cf5d05d4873e095084b2a18e0ebb35db") { //term
+      term.push('' + startDate.characteristic_option_value); //36
     }
-    if (startDate.characteristic == gs.getProperty("Characteristic - Contract Term Start Date")) {
-      orderLineStartDate = ""+startDate.characteristic_option_value;
+    if (startDate.characteristic == "ab3bcf6587d749d025a20edc0ebb356b") {
+      orderLineStartDate.push('' + startDate.characteristic_option_value);
     }
   }
-  //gs.info("Checking orderLineStartDate: "+orderLineStartDate);
+  gs.info("Checking orderLineStartDate: "+orderLineStartDate);
 
 
   //Updating end date in chars.
@@ -139,16 +171,21 @@
   var ed = new GlideDateTime(gdt);
   ed.addMonthsUTC(term);
   var abc = ed;
+  gs.info("Checking abc: "+abc);
   var updateEndDate = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
-  updateEndDate.addEncodedQuery("order_line_item="+orderLineId+"^characteristic="+gs.getProperty("sn_ind_tmt_orm.Characteristic-Contract Term End Date"));
+ updateEndDate.addEncodedQuery("order_line_item="+orderLineId+"^characteristic=9b2b0ba587d749d025a20edc0ebb355f");
   updateEndDate.query();
   if (updateEndDate.next()) {
     updateEndDate.characteristic_option_value = 
       (new Date(new GlideDateTime(abc).getNumericValue()).toISOString());
+      
+      //abc + " GMT"; 
+    //gDate;// gDate; // + " 00:00:00";
     updateEndDate.update();
   }
 
-})(inputs, outputs);</value>
+})(inputs, outputs);
+</value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -189,18 +226,6 @@
         <sys_updated_on>2022-07-29 14:12:14</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_745b9bac47c55d90fec76621e36d4319</table>
         <value>{{action.orderlinesysid}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>745b9bac47c55d90fec76621e36d4319</id>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-09 17:59:33</sys_created_on>
-        <sys_id>24226c9e87711910b0c2fc48cebb356c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-09 17:59:33</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>updatedDate</field>
@@ -906,11 +931,11 @@
         <sys_created_on>2022-07-29 14:12:13</sys_created_on>
         <sys_id>b45b9bac47c55d90fec76621e36d4312</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Created Date</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_53cad7e847c55d90fec76621e36d43ca_created_date_en</sys_update_name>
         <sys_updated_by>AD13666</sys_updated_by>
         <sys_updated_on>2022-07-29 14:12:13</sys_updated_on>
         <url/>
@@ -929,11 +954,11 @@
         <sys_created_on>2022-07-29 14:12:13</sys_created_on>
         <sys_id>fc5b5f2c47c55d90fec76621e36d43f8</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>orderLineSysID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_53cad7e847c55d90fec76621e36d43ca_orderlinesysid_en</sys_update_name>
         <sys_updated_by>AD13666</sys_updated_by>
         <sys_updated_on>2022-07-29 14:12:13</sys_updated_on>
         <url/>
@@ -952,11 +977,11 @@
         <sys_created_on>2022-07-29 14:12:13</sys_created_on>
         <sys_id>fc5b9bac47c55d90fec76621e36d4316</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Updated Date</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_53cad7e847c55d90fec76621e36d43ca_updated_date_en</sys_update_name>
         <sys_updated_by>AD13666</sys_updated_by>
         <sys_updated_on>2022-07-29 14:12:13</sys_updated_on>
         <url/>
@@ -977,11 +1002,11 @@
         <sys_created_on>2022-07-29 14:12:20</sys_created_on>
         <sys_id>b65b1fac47c55d90fec76621e36d4314</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_53cad7e847c55d90fec76621e36d43ca___action_status___en</sys_update_name>
         <sys_updated_by>AD13666</sys_updated_by>
         <sys_updated_on>2022-07-29 14:12:20</sys_updated_on>
         <url/>
@@ -1000,33 +1025,18 @@
         <sys_created_on>2022-07-29 14:12:21</sys_created_on>
         <sys_id>fa5b1fac47c55d90fec76621e36d4334</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_53cad7e847c55d90fec76621e36d43ca___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>AD13666</sys_updated_by>
         <sys_updated_on>2022-07-29 14:12:21</sys_updated_on>
         <url/>
         <url_target/>
     </sys_documentation>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_53cad7e847c55d90fec76621e36d43ca"/>
-    <sys_hub_action_plan action="delete_multiple" query="action_id=53cad7e847c55d90fec76621e36d43ca^sys_idNOT INfa22ac9e87711910b0c2fc48cebb35de"/>
-    <sys_hub_action_plan action="INSERT_OR_UPDATE">
-        <action_id display_value="CDW Characteristics v1">53cad7e847c55d90fec76621e36d43ca</action_id>
-        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"fa22ac9e87711910b0c2fc48cebb35de","name":"plan","plan_signature":null}}</plan>
-        <snapshot>e622ac9e87711910b0c2fc48cebb3562</snapshot>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-09 17:59:43</sys_created_on>
-        <sys_domain>global</sys_domain>
-        <sys_domain_path>/</sys_domain_path>
-        <sys_id>fa22ac9e87711910b0c2fc48cebb35de</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_overrides/>
-        <sys_scope/>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-09 17:59:43</sys_updated_on>
-    </sys_hub_action_plan>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=53cad7e847c55d90fec76621e36d43ca"/>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>
@@ -1112,10 +1122,10 @@
         <sys_created_by>AD13666</sys_created_by>
         <sys_created_on>2022-07-29 14:12:21</sys_created_on>
         <sys_id>8f5b1fac47c55d90fec76621e36d439b</sys_id>
-        <sys_mod_count>3</sys_mod_count>
+        <sys_mod_count>1</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-09 18:09:12</sys_updated_on>
+        <sys_updated_by>AD13666</sys_updated_by>
+        <sys_updated_on>2022-07-29 14:12:22</sys_updated_on>
     </sys_hub_step_instance>
     <sys_variable_value action="delete_multiple" query="document_key=8f5b1fac47c55d90fec76621e36d439b"/>
     <sys_variable_value action="INSERT_OR_UPDATE">
@@ -1140,38 +1150,56 @@
         <sys_created_by>AD13666</sys_created_by>
         <sys_created_on>2022-07-29 14:12:22</sys_created_on>
         <sys_id>cb5b1fac47c55d90fec76621e36d43d4</sys_id>
-        <sys_mod_count>2</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-09 18:09:12</sys_updated_on>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13666</sys_updated_by>
+        <sys_updated_on>2022-07-29 14:12:22</sys_updated_on>
         <value>(function execute(inputs, outputs) {
+  // ... code ...
 
   var orderLineId = inputs.oli_sys_id;
   var created =  inputs.created.toString();
   var updatedDate =  inputs.updatedDate.toString();
 
-  var gt = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value'); gt.addEncodedQuery("order_line_item="+orderLineId+"^characteristic="+gs.getProperty("sn_ind_tmt_orm.customer.order.char.customer_sign_date")+"^ORcharacteristic="+gs.getProperty("Characteristic - Customer Requested Date")+"^ORcharacteristic="+gs.getProperty("sn_ind_tmt_orm.Char - Customer Acceptance Date")+"^ORcharacteristic="+gs.getProperty("Characteristic - Customer Commit Date")+"^ORcharacteristic="+gs.getProperty("sn_ind_tmt_orm.Char - Customer Commit Set Date")+"^ORcharacteristic="+gs.getProperty("sn_ind_tmt_orm.Char - Customer Revised Commit Set Date")+"^ORcharacteristic="+gs.getProperty("sn_ind_tmt_orm.Char - Customer Revised Commit Date")); 
+  var gt = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value'); gt.addEncodedQuery("order_line_item="+orderLineId+"^characteristic=876a4b6587d749d025a20edc0ebb3523^ORcharacteristic=db5ac76587d749d025a20edc0ebb3561^ORcharacteristic=f43a8fa187d749d025a20edc0ebb354c^ORcharacteristic=024ac76587d749d025a20edc0ebb355f^ORcharacteristic=320b07a587d749d025a20edc0ebb35f9^ORcharacteristic=686bcf6587d749d025a20edc0ebb3575^ORcharacteristic=334b83a587d749d025a20edc0ebb35d2"); 
   gt.query();
   while(gt.next()){
     gt.characteristic_option_value = (new Date(new GlideDateTime(created).getNumericValue()).toISOString());
+    //created + " GMT";
+
+    
+    
     gt.update();
   }
+  //Update install date
+ // var gt1 = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value'); gt1.addEncodedQuery("order_line_item="+orderLineId+"^characteristic=138ac36587d749d025a20edc0ebb35a8"); 
+  //gt1.query();
+ // if(gt1.next()){
+   // gt1.characteristic_option_value = updatedDate;
+   // gt1.update();
+  //}
+
 
   //Updating contract term end date
 
-  var orderLineStartDate = "";
-  var term = "";
+  // Add your code here
+  var orderLineStartDate = [];
+  var term = [];
+
+  gs.info("Checking Term: "+term);
+  gs.info("Checking order_line_item: "+orderLineId);
+
   var startDate = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
-  startDate.addEncodedQuery("order_line_item="+orderLineId+"^specification="+gs.getProperty("productSpecification.SASE CPE")+"^characteristic="+gs.getProperty("Characteristic - Term")+"^ORcharacteristic="+gs.getProperty("Characteristic - Contract Term Start Date"));
+  startDate.addEncodedQuery("order_line_item="+orderLineId+"^characteristic=cf5d05d4873e095084b2a18e0ebb35db^ORcharacteristic=ab3bcf6587d749d025a20edc0ebb356b");
   startDate.query();
   while(startDate.next()) {
-    if (startDate.characteristic == gs.getProperty("Characteristic - Term")) { //term
-      term = ""+startDate.characteristic_option_value; //36
+    if (startDate.characteristic == "cf5d05d4873e095084b2a18e0ebb35db") { //term
+      term.push('' + startDate.characteristic_option_value); //36
     }
-    if (startDate.characteristic == gs.getProperty("Characteristic - Contract Term Start Date")) {
-      orderLineStartDate = ""+startDate.characteristic_option_value;
+    if (startDate.characteristic == "ab3bcf6587d749d025a20edc0ebb356b") {
+      orderLineStartDate.push('' + startDate.characteristic_option_value);
     }
   }
-  //gs.info("Checking orderLineStartDate: "+orderLineStartDate);
+  gs.info("Checking orderLineStartDate: "+orderLineStartDate);
 
 
   //Updating end date in chars.
@@ -1179,16 +1207,21 @@
   var ed = new GlideDateTime(gdt);
   ed.addMonthsUTC(term);
   var abc = ed;
+  gs.info("Checking abc: "+abc);
   var updateEndDate = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
-  updateEndDate.addEncodedQuery("order_line_item="+orderLineId+"^characteristic="+gs.getProperty("sn_ind_tmt_orm.Characteristic-Contract Term End Date"));
+ updateEndDate.addEncodedQuery("order_line_item="+orderLineId+"^characteristic=9b2b0ba587d749d025a20edc0ebb355f");
   updateEndDate.query();
   if (updateEndDate.next()) {
     updateEndDate.characteristic_option_value = 
       (new Date(new GlideDateTime(abc).getNumericValue()).toISOString());
+      
+      //abc + " GMT"; 
+    //gDate;// gDate; // + " 00:00:00";
     updateEndDate.update();
   }
 
-})(inputs, outputs);</value>
+})(inputs, outputs);
+</value>
         <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=8f5b1fac47c55d90fec76621e36d439b"/>
@@ -1215,18 +1248,6 @@
         <sys_updated_on>2022-07-29 14:12:22</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_8f5b1fac47c55d90fec76621e36d439b</table>
         <value>{{action.orderlinesysid}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>8f5b1fac47c55d90fec76621e36d439b</id>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-09 17:59:41</sys_created_on>
-        <sys_id>6e22ac9e87711910b0c2fc48cebb3557</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-09 17:59:41</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>updatedDate</field>
@@ -1932,11 +1953,11 @@
         <sys_created_on>2022-07-29 14:12:21</sys_created_on>
         <sys_id>8b5b1fac47c55d90fec76621e36d4388</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Created Date</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_ba5b1fac47c55d90fec76621e36d436f_created_date_en</sys_update_name>
         <sys_updated_by>AD13666</sys_updated_by>
         <sys_updated_on>2022-07-29 14:12:21</sys_updated_on>
         <url/>
@@ -1955,11 +1976,11 @@
         <sys_created_on>2022-07-29 14:12:21</sys_created_on>
         <sys_id>8b5b1fac47c55d90fec76621e36d4399</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Updated Date</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_ba5b1fac47c55d90fec76621e36d436f_updated_date_en</sys_update_name>
         <sys_updated_by>AD13666</sys_updated_by>
         <sys_updated_on>2022-07-29 14:12:21</sys_updated_on>
         <url/>
@@ -1978,11 +1999,11 @@
         <sys_created_on>2022-07-29 14:12:21</sys_created_on>
         <sys_id>b25b1fac47c55d90fec76621e36d4384</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>orderLineSysID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_ba5b1fac47c55d90fec76621e36d436f_orderlinesysid_en</sys_update_name>
         <sys_updated_by>AD13666</sys_updated_by>
         <sys_updated_on>2022-07-29 14:12:21</sys_updated_on>
         <url/>
@@ -2003,11 +2024,11 @@
         <sys_created_on>2022-07-29 14:12:22</sys_created_on>
         <sys_id>0f5b1fac47c55d90fec76621e36d43de</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_ba5b1fac47c55d90fec76621e36d436f___action_status___en</sys_update_name>
         <sys_updated_by>AD13666</sys_updated_by>
         <sys_updated_on>2022-07-29 14:12:22</sys_updated_on>
         <url/>
@@ -2026,11 +2047,11 @@
         <sys_created_on>2022-07-29 14:12:22</sys_created_on>
         <sys_id>8b5b1fac47c55d90fec76621e36d43e5</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_ba5b1fac47c55d90fec76621e36d436f___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>AD13666</sys_updated_by>
         <sys_updated_on>2022-07-29 14:12:22</sys_updated_on>
         <url/>
@@ -2040,6 +2061,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>53cad7e847c55d90fec76621e36d43ca</sys_id>
         <latest_snapshot>ba5b1fac47c55d90fec76621e36d436f</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch4b-07-19-2022_08-09-2022_1837.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch4a-06-21-2022_07-12-2022_1907.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>

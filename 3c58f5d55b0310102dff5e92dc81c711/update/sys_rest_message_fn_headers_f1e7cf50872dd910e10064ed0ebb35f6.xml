@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message_fn_headers">
     <sys_rest_message_fn_headers action="INSERT_OR_UPDATE">
         <name>Authorization</name>
-        <rest_message_function display_value="Default GET">54d78b90872dd910e10064ed0ebb35f3</rest_message_function>
+        <rest_message_function display_value="GetToken">54d78b90872dd910e10064ed0ebb35f3</rest_message_function>
         <sys_class_name>sys_rest_message_fn_headers</sys_class_name>
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-08-22 14:41:28</sys_created_on>
@@ -16,4 +16,18 @@
         <sys_updated_on>2022-08-22 14:47:53</sys_updated_on>
         <value>Basic S3VhNjhra2RzWWhzQXR4dFhnT3h4UlFJR0F6VnFTQ1Q6SkNIRjR3Wk9LTExMZzdxUQ==</value>
     </sys_rest_message_fn_headers>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4708c3f0000001</claim_timestamp>
+        <metadata_update_name>sys_rest_message_fn_headers_f1e7cf50872dd910e10064ed0ebb35f6</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:32</sys_created_on>
+        <sys_id>5634a9931b251d500f4ccbb8624bcb56</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:32</sys_updated_on>
+    </sys_claim>
 </record_update>

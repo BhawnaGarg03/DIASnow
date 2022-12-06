@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>false</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>PUT</http_method>
+        <name>Testing PUT API</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+	// implement resource here
+	var requestJson = request.body;
+	var jsonData = requestJson.data;
+
+	gs.info("Anoop final body" + JSON.stringify(requestJson));
+	gs.info("Anoop final body2" + JSON.stringify(requestJson.data));
+
+	if (JSON.stringify(jsonData["ServiceOrders"][0]["configurationItem"]) === '{}'){
+		for(var p = 0; p < jsonData["ServiceOrders"].length; p++){
+			var so_sysID = jsonData["ServiceOrders"][p]["ServieOrderID"];
+			for(var q = 0; q < jsonData["ServiceOrders"][p]["ServiceOrderChar"]["productCharacteristic"].length; q++){
+				var JSON_Chars = jsonData["ServiceOrders"][p]["ServiceOrderChar"]["productCharacteristic"][q]["name"];
+				var JSON_Value = jsonData["ServiceOrders"][p]["ServiceOrderChar"]["productCharacteristic"][q]["value"];
+				gs.info(JSON_Chars + " - Value :" + JSON_Value);
+				var serviceOrder = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+				serviceOrder.addEncodedQuery("domain_order.sys_idSTARTSWITH"+so_sysID+"^characteristic.nameSTARTSWITH"+JSON_Chars);
+				serviceOrder.query();
+				if(serviceOrder.next()){
+					serviceOrder.characteristic_option_value = JSON_Value;
+					serviceOrder.update();
+				}
+			}
+		}
+	}else{
+		for(var z = 0; z < jsonData["ServiceOrders"].length; z++){
+			var so_sysID1 = jsonData["ServiceOrders"][z]["ServieOrderID"];
+			for(var x = 0; x < jsonData["ServiceOrders"][z]["ServiceOrderChar"]["productCharacteristic"].length; x++){
+				var JSON_Chars1 = jsonData["ServiceOrders"][z]["ServiceOrderChar"]["productCharacteristic"][x]["name"];
+				var JSON_Value1 = jsonData["ServiceOrders"][z]["ServiceOrderChar"]["productCharacteristic"][x]["value"];
+				gs.info(JSON_Chars1 + " - Value :" + JSON_Value1);
+				var serviceOrder1 = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+				serviceOrder1.addEncodedQuery("domain_order.sys_idSTARTSWITH"+so_sysID1+"^characteristic.nameSTARTSWITH"+JSON_Chars1);
+				serviceOrder1.query();
+				if(serviceOrder1.next()){
+					serviceOrder.characteristic_option_value = JSON_Value1;
+					serviceOrder.update();
+				}
+			}
+			//Creating Configuration Item
+			var CI = [];
+			var CI_Name = [];
+			for(var a = 0; a < jsonData["ServiceOrders"].length; a++){
+				for(var i = 0; i < jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"].length; i++){ 
+					var CI_Network_Port_SysID = "";   
+					//Creating initialize Network CI's 
+					var gr1 = new GlideRecord('cmdb_ci_network_port');
+					gr1.initialize();
+
+					gr1.name = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["handOffType"];
+
+					gr1.u_hand_off_type = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["handOffType"];
+					gr1.u_duplex = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["duplex"];
+					gr1.u_lan_dhcp_pool = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["lanDhcpPool"];
+					gr1.u_lan_gateway_ip_address = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["lanGatewayIpAddress"];
+					gr1.u_lan_interface_id = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["lanInterfaceId"];
+					gr1.u_lan_ip_address = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["lanIpAddress"];
+					gr1.u_lan_management_subnet = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["lanManagementSubnet"];
+					gr1.u_lan_protocol = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["lanProtocol"];
+					gr1.u_lan_subnet_mask = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["lanSubnetMask"];
+					gr1.u_lan_vlan_id = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["lanVlanId"];
+					gr1.u_multi_access_service_indic = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["multiAccessServiceIndic"];
+					gr1.u_speed = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["speed"];
+					gr1.u_type = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["type"];
+					gr1.u_cpe_port_number = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["cpePortNumber"];
+
+					CI_Network_Port_SysID = gr1.insert();
+					CI.push(CI_Network_Port_SysID);
+					CI_Name.push(jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["handOffType"]);
+					gs.info(jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["handOffType"]);
+
+					//Checking sub-port
+					for(var j = 0; j < jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"].length; j++){  
+						//Creating initialize Network Interface CI's 
+						var gr2 = new GlideRecord('cmdb_ci_ni_interface');
+						gr2.initialize();
+						gr2.name = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["accessType"];
+
+						gr2.u_staticclientipaddress = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["staticClientIpAddress"];
+						gr2.u_mgmtindic = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["mgmtIndic"];
+						gr2.u_customerprovidedaccess = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["customerProvidedAccess"];
+						gr2.u_ppoeindic = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["ppoeIndic"];
+						gr2.u_accessprovidername = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["accessProviderName"];
+						gr2.u_ipaddressingmethod = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["ipAddressingMethod"];
+						gr2.u_relatedproductnewproductinstanceid = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["relatedProductNewProductInstanceId"];
+						gr2.u_accessproviderservice_id = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["accessProviderService_id"];
+						gr2.u_ipaddresstype = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["ipAddressType"];
+						gr2.u_accessprovidercontact = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["accessProviderContact"];
+						gr2.u_relatedaccessnumber = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["relatedAccessNumber"];
+						gr2.u_staticipaddresssubnetmask = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["staticIpAddressSubnetMask"];
+						gr2.u_relatedaccessid = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["relatedAccessId"];
+						gr2.u_staticgatewaynexthopipaddress = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["staticGatewayNextHopIpAddress"];
+						gr2.u_vlanid = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["vlanId"];
+						gr2.access_type = jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["accessType"];
+
+						gr2.duplicate_of = CI_Network_Port_SysID;
+						CI.push(gr2.insert());
+						CI_Name.push(jsonData["ServiceOrders"][a]["configurationItem"]["cpePorts"][i]["subPorts"][j]["accessType"]);
+
+					}
+				}
+
+
+				//Creation SFP Ports
+				// 			for(var k = 0; k < jsonData["ServiceOrders"][a]["configurationItem"]["sfpPorts"].length; k++){  
+				// 				//Creating initialize Telco CI's 
+				// 				gs.info("Anoop SFP Port: "+JSON.stringify(jsonData["ServiceOrders"][a]["configurationItem"]["sfpPorts"][k]["name"]));  
+				// 				var gr3 = new GlideRecord('cmdb_ci_ni_telco_equipment');
+				// 				gr3.initialize();
+				// 				gr3.name =  jsonData["ServiceOrders"][a]["configurationItem"]["sfpPorts"][k]["name"];
+				// 				CI.push(gr3.insert());
+				// 				CI_Name.push(jsonData["ServiceOrders"][a]["configurationItem"]["sfpPorts"][k]["name"]);
+				// 			}
+
+
+				//Getting product invt record ID and account details
+				var productinvt = "";
+				var account = "";
+				//Query in serviceOrder
+				var serviceOrderId = jsonData["ServiceOrders"][a]["ServieOrderID"];
+				var so = new GlideRecord('sn_ind_tmt_orm_service_order');
+				so.addQuery('sys_id', serviceOrderId);
+				so.query();
+				if(so.next()){
+					productinvt = so.product_inventory;
+					account = so.account;
+				}
+				//Creating install base item
+				for (var l = 0; l < CI.length; l++) {
+					var IBI = new GlideRecord('sn_install_base_item');
+					IBI.initialize();
+					IBI.sold_product = productinvt;
+					IBI.name = CI_Name[l] ;
+					IBI.configuration_item = CI[l];
+					IBI.account = account;
+					var IBI_sysID = IBI.insert();
+					var m2m = new GlideRecord('sn_install_base_m2m_installed_product');
+					m2m.initialize();
+					m2m.install_base_item = IBI_sysID;
+					m2m.sold_product = productinvt;
+					m2m.insert();
+				}
+			}
+		}
+	}
+	var returnResponse = "201";
+	return returnResponse;
+})(request, response);]]></operation_script>
+        <operation_uri>/api/sn_ind_tmt_orm/service_order_characteristics_ci/ci</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/ci</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-06-28 19:13:23</sys_created_on>
+        <sys_id>51c6f07687d0991025a20edc0ebb35aa</sys_id>
+        <sys_mod_count>16</sys_mod_count>
+        <sys_name>Testing PUT API</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_ws_operation_51c6f07687d0991025a20edc0ebb35aa</sys_update_name>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-15 13:37:03</sys_updated_on>
+        <web_service_definition display_value="Service Order Characteristics &amp; CI's">6d45b8f287d0991025a20edc0ebb35aa</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f470809d0000001</claim_timestamp>
+        <metadata_update_name>sys_ws_operation_51c6f07687d0991025a20edc0ebb35aa</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:29</sys_created_on>
+        <sys_id>393429931b251d500f4ccbb8624bcbc0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:29</sys_updated_on>
+    </sys_claim>
+</record_update>

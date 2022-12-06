@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>GET</http_method>
+        <name>Get Characteristics</name>
+        <operation_script><![CDATA[(function process(/*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+	var prdOrderObj = new sn_prd_pm_adv.BaseObject();
+	var orderlineSysId=request.pathParams.orderLineID;
+	gs.info("Anoop firsr query"+orderlineSysId);
+	var prdOrderGr = new GlideRecord('sn_ind_tmt_orm_order_line_item');
+	prdOrderGr.addEncodedQuery('sys_id='+orderlineSysId+'^ORorder_line_idSTARTSWITH'+orderlineSysId); 
+	prdOrderGr.query();
+	gs.info("Anoop no of count"+prdOrderGr.getRowCount());
+	if(prdOrderGr.next()) {
+		prdOrderObj.setValue('orderlineSysID',prdOrderGr.getValue('sys_id'));
+		prdOrderObj.setValue('orderlineNumber', prdOrderGr.getDisplayValue('order_line_id'));
+		var orderLineItemList =getProductOrderLineItem(prdOrderGr.sys_id);
+		gs.info("Anoop orderline "+orderLineItemList);
+		if (orderLineItemList.length > 0)
+			prdOrderObj.setValue('serviceOrders',orderLineItemList);
+	}
+	gs.info("Anoop"+JSON.stringify(prdOrderObj));
+	response.setBody(prdOrderObj);
+	//return prdOrderObj;
+
+	function getProductOrderLineItem(orderlineSysId)
+	{
+		var orderLineItemList = [];
+		gs.info("Anoop inside getProductOrderLineItem"+orderlineSysId);
+		var getServiceorder = new GlideRecord('sn_ind_tmt_orm_service_order');
+		getServiceorder.addEncodedQuery('order_line_item='+orderlineSysId); 
+		getServiceorder.query();
+		gs.info("Anoop inside getProductOrderLineItem noof records"+getServiceorder.getRowCount());
+		while(getServiceorder.next())
+		{
+			var ServiceSysID=getServiceorder.sys_id;
+			var orderLineItemObj = new sn_prd_pm_adv.BaseObject();
+			orderLineItemObj.setValue('serviceOrderNo',getServiceorder.getValue('number'));
+			orderLineItemObj.setValue('serviceOrderID',getServiceorder.getValue('sys_id'));
+			orderLineItemObj.setValue('shortDesc',getServiceorder.getValue('short_description'));
+			orderLineItemObj.setValue('specification',getServiceorder.getDisplayValue('specification'));
+			var productObj = getProductCharacteristicsSpecificationLoactionAndRelatedContacts(getServiceorder);
+			var ciArr = getConfigurationsCIs(getServiceorder);
+			gs.info("Anoop CI Arr "+ciArr);
+			if (!global.JSUtil.isEmpty(productObj))
+				orderLineItemObj.setValue('serviceOrderChar', productObj);
+			//if (ciArr != ""){
+			orderLineItemObj.setValue('configurationItem', ciArr);
+			//}
+			orderLineItemList.push(orderLineItemObj);
+		}
+		//gs.info("Anoop final object 2"+orderLineItemList.length());
+		return orderLineItemList;
+	}
+
+	function getProductCharacteristicsSpecificationLoactionAndRelatedContacts (getServiceorder) {
+		gs.info("Anoop inside loop3"+getServiceorder);
+		var product = new sn_prd_pm_adv.BaseObject();
+		var characteristicArray = getProductCharacteristics(getServiceorder);
+		if (characteristicArray.length > 0)
+			product.setValue('productCharacteristic', characteristicArray);
+		return product;
+	}
+
+	function getProductCharacteristics (serviceOrderGr) {
+		gs.info("Anoop inside loop4"+serviceOrderGr.number);
+		var characteristicArray = [];
+		var charcteristics= new GlideRecord("sn_ind_tmt_orm_order_characteristic_value");
+		charcteristics.addEncodedQuery("domain_order="+serviceOrderGr.sys_id);
+		charcteristics.query();
+		gs.info("no of char"+charcteristics.getRowCount());
+		while(charcteristics.next()){
+			var characteristicObj = {};
+			characteristicObj.name = charcteristics.getDisplayValue('characteristic');
+			characteristicObj.value = charcteristics.getDisplayValue('characteristic_option_value');
+			characteristicArray.push(characteristicObj);
+		}
+		gs.info("Anoop loop4 final"+characteristicArray);
+		return characteristicArray;
+	}
+
+	function getConfigurationsCIs (serviceOrderGr) {
+
+		gs.info("Anoop checks serice order: "+serviceOrderGr.sys_id);
+		var SERVICE_ORDER_sys_id = serviceOrderGr.sys_id;
+		var result = {};
+		//Getting product inventory sys_id
+		var serviceOrderProductInvt = "";
+		var serviceOrder = new GlideRecord('sn_ind_tmt_orm_service_order');
+		serviceOrder.query("sys_id", SERVICE_ORDER_sys_id);
+		serviceOrder.query();
+		if(serviceOrder.next()){
+			serviceOrderProductInvt = serviceOrder.product_inventory;	
+			var cpeCI_JSON = [];  //CPE Port CI's
+			var sfpCI_JSON = [];  //CPE SFP Port CI's
+			//Getting sold products & Ibstall Base Items CI's
+			var installBaseItems = new GlideRecord('sn_install_base_m2m_installed_product');
+			installBaseItems.addEncodedQuery("sold_product="+serviceOrderProductInvt);
+			installBaseItems.query();
+
+			while(installBaseItems.next()){
+				var data1 = {};
+				var data3 = {};
+				if(installBaseItems.install_base_item.configuration_item.sys_class_name == "cmdb_ci_network_port"){
+
+					//Passing CPE Port Values
+
+					data1.handOffType = ""+installBaseItems.install_base_item.configuration_item.u_hand_off_type;
+					data1.speed = ""+installBaseItems.install_base_item.configuration_item.u_speed;
+					data1.duplex = ""+installBaseItems.install_base_item.configuration_item.u_duplex;
+					data1.type = ""+installBaseItems.install_base_item.configuration_item.u_type;
+					data1.multiAccessServiceIndic = ""+installBaseItems.install_base_item.configuration_item.u_multi_access_service_indic;
+					data1.lanInterfaceId = ""+installBaseItems.install_base_item.configuration_item.u_lan_interface_id;
+					data1.lanVlanId = ""+installBaseItems.install_base_item.configuration_item.u_lan_vlan_id;
+					data1.lanProtocol = ""+installBaseItems.install_base_item.configuration_item.u_lan_protocol;
+					data1.lanIpAddress = ""+installBaseItems.install_base_item.configuration_item.u_lan_ip_address;
+					data1.lanGatewayIpAddress = ""+installBaseItems.install_base_item.configuration_item.u_lan_gateway_ip_address;
+					data1.lanSubnetMask = ""+installBaseItems.install_base_item.configuration_item.u_lan_subnet_mask;
+					data1.lanManagementSubnet = ""+installBaseItems.install_base_item.configuration_item.u_lan_management_subnet;
+					data1.lanDhcpPool = ""+installBaseItems.install_base_item.configuration_item.u_lan_dhcp_pool;
+					data1.cpePortNumber = ""+installBaseItems.install_base_item.configuration_item.u_cpe_port_number;
+
+
+					var subPort = [];
+					//Getting SubPorts (And Pass CPE CI with Subport CI's)
+					var interFaceCI = new GlideRecord('cmdb_ci_ni_interface');
+					interFaceCI.addEncodedQuery("duplicate_of="+installBaseItems.install_base_item.configuration_item);
+					interFaceCI.query();
+					while(interFaceCI.next()){
+						var data2 = {};
+
+
+						data2.accessType = ""+interFaceCI.access_type;
+						data2.customerProvidedAccess = ""+interFaceCI.u_customerprovidedaccess;
+						data2.accessProviderName = ""+interFaceCI.u_accessprovidername;
+						data2.accessProviderService_id = ""+interFaceCI.u_accessproviderservice_id;
+						data2.accessProviderContact = ""+interFaceCI.u_accessprovidercontact;
+						data2.ppoeIndic = ""+interFaceCI.u_ppoeindic;
+						data2.vlanId = ""+interFaceCI.u_vlanid;
+						data2.mgmtIndic = ""+interFaceCI.u_mgmtindic;
+						data2.ipAddressingMethod = ""+interFaceCI.u_ipaddressingmethod;
+						data2.ipAddressType = ""+interFaceCI.u_ipaddresstype;
+						data2.staticClientIpAddress = ""+interFaceCI.u_staticclientipaddress;
+						data2.staticIpAddressSubnetMask = ""+interFaceCI.u_staticipaddresssubnetmask;
+						data2.staticGatewayNextHopIpAddress = ""+interFaceCI.u_staticgatewaynexthopipaddress;
+						data2.relatedAccessId = ""+interFaceCI.u_relatedaccessid;
+						data2.relatedAccessNumber = ""+interFaceCI.u_relatedaccessnumber;
+						data2.relatedProductNewProductInstanceId = ""+interFaceCI.u_relatedproductnewproductinstanceid;
+
+						subPort.push(data2);
+					}
+					data1.subPorts = subPort;
+					cpeCI_JSON.push(data1);
+				}
+				result.cpePorts = cpeCI_JSON;
+				//Passing SFP Ports CI's
+				// 				if(installBaseItems.install_base_item.configuration_item.sys_class_name == "cmdb_ci_ni_telco_equipment"){
+				// 					data3.name = ""+installBaseItems.install_base_item.configuration_item.name;
+				// 					sfpCI_JSON.push(data3);
+				// 				}
+				// 				result.sfpPorts = sfpCI_JSON;
+			}
+			if((Object.keys(result).length === 0) == false)
+			{
+				var jsonData = new global.JSON().encode(result);
+				result = (JSON.parse(jsonData));
+			}else 
+			{
+				result = {};
+			}
+		}
+		//Making Final JSON Result
+		return result;
+	}
+
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/sn_ind_tmt_orm/service_order_characteristics_ci/{orderLineID}</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/{orderLineID}</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>AD12224</sys_created_by>
+        <sys_created_on>2022-06-28 19:08:00</sys_created_on>
+        <sys_id>f855bcf287d0991025a20edc0ebb35a9</sys_id>
+        <sys_mod_count>57</sys_mod_count>
+        <sys_name>Get Characteristics</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_ws_operation_f855bcf287d0991025a20edc0ebb35a9</sys_update_name>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-15 18:58:15</sys_updated_on>
+        <web_service_definition display_value="Service Order Characteristics &amp; CI's">6d45b8f287d0991025a20edc0ebb35aa</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4706bbb0000001</claim_timestamp>
+        <metadata_update_name>sys_ws_operation_f855bcf287d0991025a20edc0ebb35a9</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:24</sys_created_on>
+        <sys_id>dc3465931b251d500f4ccbb8624bcb57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:24</sys_updated_on>
+    </sys_claim>
+</record_update>

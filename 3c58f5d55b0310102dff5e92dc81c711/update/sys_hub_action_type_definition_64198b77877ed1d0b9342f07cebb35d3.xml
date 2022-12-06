@@ -39,6 +39,20 @@
     </sys_hub_action_type_definition>
     <sys_translated_text action="delete_multiple" query="documentkey=64198b77877ed1d0b9342f07cebb35d3"/>
     <sys_variable_value action="delete_multiple" query="document_key=64198b77877ed1d0b9342f07cebb35d3"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fad7510000001</claim_timestamp>
+        <metadata_update_name>sys_hub_action_type_definition_64198b77877ed1d0b9342f07cebb35d3</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:29</sys_created_on>
+        <sys_id>c3c6c8a28727151094fa0e58cebb3533</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:29</sys_updated_on>
+    </sys_claim>
     <sys_hub_step_instance action="delete_multiple" query="action=64198b77877ed1d0b9342f07cebb35d3"/>
     <sys_hub_action_input action="delete_multiple" query="model=64198b77877ed1d0b9342f07cebb35d3"/>
     <sys_hub_action_output action="delete_multiple" query="model=64198b77877ed1d0b9342f07cebb35d3"/>
@@ -58,7 +72,22 @@
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_64198b77877ed1d0b9342f07cebb35d3"/>
     <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_64198b77877ed1d0b9342f07cebb35d3"/>
     <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_64198b77877ed1d0b9342f07cebb35d3"/>
-    <sys_hub_action_plan action="delete_multiple" query="action_id=64198b77877ed1d0b9342f07cebb35d3"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=64198b77877ed1d0b9342f07cebb35d3^sys_idNOT IN7b1903b7877ed1d0b9342f07cebb356e"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value=" Update Order Task Record for KAFKA">64198b77877ed1d0b9342f07cebb35d3</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"7b1903b7877ed1d0b9342f07cebb356e","name":"plan","plan_signature":null}}</plan>
+        <snapshot>6b1903b7877ed1d0b9342f07cebb3557</snapshot>
+        <sys_created_by>AD13659</sys_created_by>
+        <sys_created_on>2022-11-03 15:02:50</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>7b1903b7877ed1d0b9342f07cebb356e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>AD13659</sys_updated_by>
+        <sys_updated_on>2022-11-03 15:02:50</sys_updated_on>
+    </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>
         <acls/>

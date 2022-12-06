@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description>Product Order activity formatter fields</description>
+        <ignore_cache>false</ignore_cache>
+        <is_private>false</is_private>
+        <name>glide.ui.sn_ind_tmt_orm_product_order_activity.fields</name>
+        <read_roles/>
+        <suffix>sn_ind_tmt_orm</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-06-18 08:52:25</sys_created_on>
+        <sys_id>79ac93b1c3b03010abc8b5183c40ddc3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>glide.ui.sn_ind_tmt_orm_product_order_activity.fields</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_properties_79ac93b1c3b03010abc8b5183c40ddc3</sys_update_name>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-05-24 00:19:33</sys_updated_on>
+        <type>string</type>
+        <value>assigned_to,cmdb_ci,state,impact,priority,opened_by,work_notes,comments,*Attachments*,short_description,description,assignment_group,parent,order_line_item,location</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=79ac93b1c3b03010abc8b5183c40ddc3"/>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey name="glide.ui.sn_ind_tmt_orm_product_order_activity.fields" tablename="sys_properties">79ac93b1c3b03010abc8b5183c40ddc3</documentkey>
+        <fieldname>description</fieldname>
+        <language>de</language>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-03-26 10:29:55</sys_created_on>
+        <sys_id>31b93698876ac11084b2a18e0ebb358a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-03-26 10:29:55</sys_updated_on>
+        <tablename>sys_properties</tablename>
+        <value>Aktivitätsformatierer-Felder für Produktbestellung</value>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey name="glide.ui.sn_ind_tmt_orm_product_order_activity.fields" tablename="sys_properties">79ac93b1c3b03010abc8b5183c40ddc3</documentkey>
+        <fieldname>description</fieldname>
+        <language>es</language>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-03-26 03:48:59</sys_created_on>
+        <sys_id>f0fdd91087aa411084b2a18e0ebb35a4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-03-26 03:48:59</sys_updated_on>
+        <tablename>sys_properties</tablename>
+        <value>Campos de formateador de actividad de pedidos de productos</value>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey name="glide.ui.sn_ind_tmt_orm_product_order_activity.fields" tablename="sys_properties">79ac93b1c3b03010abc8b5183c40ddc3</documentkey>
+        <fieldname>description</fieldname>
+        <language>fr</language>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-03-26 08:49:35</sys_created_on>
+        <sys_id>04c266948762c11084b2a18e0ebb352d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-03-26 08:49:35</sys_updated_on>
+        <tablename>sys_properties</tablename>
+        <value>Champs du formateur d'activité de la commande de produits</value>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey name="glide.ui.sn_ind_tmt_orm_product_order_activity.fields" tablename="sys_properties">79ac93b1c3b03010abc8b5183c40ddc3</documentkey>
+        <fieldname>description</fieldname>
+        <language>it</language>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-03-26 07:05:54</sys_created_on>
+        <sys_id>d90b0a58876a811084b2a18e0ebb3568</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-03-26 07:05:54</sys_updated_on>
+        <tablename>sys_properties</tablename>
+        <value>Campi formattatore attività ordine prodotto</value>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey name="glide.ui.sn_ind_tmt_orm_product_order_activity.fields" tablename="sys_properties">79ac93b1c3b03010abc8b5183c40ddc3</documentkey>
+        <fieldname>description</fieldname>
+        <language>ja</language>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-03-26 02:12:14</sys_created_on>
+        <sys_id>abc7459c8762411084b2a18e0ebb35c2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-03-26 02:12:14</sys_updated_on>
+        <tablename>sys_properties</tablename>
+        <value>「製品オーダー」アクティビティフォーマッターフィールド</value>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey name="glide.ui.sn_ind_tmt_orm_product_order_activity.fields" tablename="sys_properties">79ac93b1c3b03010abc8b5183c40ddc3</documentkey>
+        <fieldname>description</fieldname>
+        <language>pb</language>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-03-26 00:34:53</sys_created_on>
+        <sys_id>2d8178d8876a011084b2a18e0ebb35f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-03-26 00:34:53</sys_updated_on>
+        <tablename>sys_properties</tablename>
+        <value>Campos do formatador de atividade de pedido de produto</value>
+    </sys_translated_text>
+    <sys_translated_text action="INSERT_OR_UPDATE">
+        <documentkey name="glide.ui.sn_ind_tmt_orm_product_order_activity.fields" tablename="sys_properties">79ac93b1c3b03010abc8b5183c40ddc3</documentkey>
+        <fieldname>description</fieldname>
+        <language>pt</language>
+        <sys_created_by>system</sys_created_by>
+        <sys_created_on>2022-03-26 05:26:00</sys_created_on>
+        <sys_id>3524399c8762811084b2a18e0ebb356e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-03-26 05:26:00</sys_updated_on>
+        <tablename>sys_properties</tablename>
+        <value>Campos de formatador de atividade de encomenda de produto</value>
+    </sys_translated_text>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f470802c0000001</claim_timestamp>
+        <metadata_update_name>sys_properties_79ac93b1c3b03010abc8b5183c40ddc3</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:29</sys_created_on>
+        <sys_id>613429931b251d500f4ccbb8624bcbb2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:29</sys_updated_on>
+    </sys_claim>
+</record_update>

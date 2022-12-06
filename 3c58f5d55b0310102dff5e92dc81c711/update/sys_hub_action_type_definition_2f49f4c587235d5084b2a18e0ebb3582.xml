@@ -1,0 +1,1833 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>dia_service_order_enrich</internal_name>
+        <label_cache>[{"name":"{{action.pspid}}","label":"action➛pspId","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.transactionid}}","label":"action➛transactionId","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[a162cd63-b3df-4798-a881-dca04eb86414].response_body}}","label":"step➛Swift API➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[2eafab3f-3737-4ca1-85be-d38d9a15dc68].root}}","label":"step➛JSON Parser step➛root","type":"step","ref":"","reference_display":"","base_type":"object","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[8043eebf-e95e-41d1-99bf-cb6819245edc].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[8043eebf-e95e-41d1-99bf-cb6819245edc].payload}}","label":"step➛Script step➛payload","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[98f12151-8a8c-4e2a-a6c0-15ff428e952b].response_body}}","label":"step➛Ise API➛Response Body","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"hidden_for":"DATASTREAM"}},{"name":"{{step[784ea3e7-608c-429d-9700-fdd3aebf4b9c].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[784ea3e7-608c-429d-9700-fdd3aebf4b9c].result}}","label":"step➛Script step➛result","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}},{"name":"{{step[15e57988-5075-4f04-8f39-00c3182e351c].root.designPK}}","label":"step➛JSON Parser step➛root➛designPK","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[9730223c-c818-428d-96b6-4555e473d4d3].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[9730223c-c818-428d-96b6-4555e473d4d3].quoteid}}","label":"step➛Script step➛quoteId","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>DIA_SERVICE_ORDER_ENRICH</name>
+        <natlang/>
+        <outputs/>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-01 22:18:16</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2f49f4c587235d5084b2a18e0ebb3582</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>DIA_SERVICE_ORDER_ENRICH</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_2f49f4c587235d5084b2a18e0ebb3582</sys_update_name>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-04 04:29:33</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=2f49f4c587235d5084b2a18e0ebb3582"/>
+    <sys_variable_value action="delete_multiple" query="document_key=2f49f4c587235d5084b2a18e0ebb3582"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>2f49f4c587235d5084b2a18e0ebb3582</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:59</sys_created_on>
+        <sys_id>3b34dd8187a35d5084b2a18e0ebb35cb</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:16:39</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"serializationFormat":"JSON","complexObjectSchema":{"FlowDesigner:FDf334dd81b8a35d50de0141004219e4b9":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDf334dd81b8a35d50de0141004219e4b9.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"cb1b1927-1578-43a4-acc5-943c55da4a3e\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDf334dd81b8a35d50de0141004219e4b9\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}}}</value>
+        <variable display_value="Action Status">7334dd8187a35d5084b2a18e0ebb35bc</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>2f49f4c587235d5084b2a18e0ebb3582</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:59</sys_created_on>
+        <sys_id>7734dd8187a35d5084b2a18e0ebb35cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:59</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">fb34dd8187a35d5084b2a18e0ebb35c1</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_action_output_2f49f4c587235d5084b2a18e0ebb3582^id=2f49f4c587235d5084b2a18e0ebb3582"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6facf000000001</claim_timestamp>
+        <metadata_update_name>sys_hub_action_type_definition_2f49f4c587235d5084b2a18e0ebb3582</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:27</sys_created_on>
+        <sys_id>1ac688a28727151094fa0e58cebb3570</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:27</sys_updated_on>
+    </sys_claim>
+    <sys_hub_step_instance action="delete_multiple" query="action=2f49f4c587235d5084b2a18e0ebb3582^sys_idNOT IN1f6a7c0987235d5084b2a18e0ebb3501,5f0c44bd87275110b9342f07cebb35c1,6f34dd8187a35d5084b2a18e0ebb3589,6fe6250987e35d5084b2a18e0ebb35ff,d334dd8187a35d5084b2a18e0ebb3577"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="DIA_SERVICE_ORDER_ENRICH">2f49f4c587235d5084b2a18e0ebb3582</action>
+        <cid>98f12151-8a8c-4e2a-a6c0-15ff428e952b</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Ise API</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="REST">07a762fb47222200b4fad7527c9a7129</step_type>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-01 22:23:10</sys_created_on>
+        <sys_id>1f6a7c0987235d5084b2a18e0ebb3501</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:57</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=1f6a7c0987235d5084b2a18e0ebb3501"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1f6a7c0987235d5084b2a18e0ebb3501</document_key>
+        <order>13</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-01 22:23:11</sys_created_on>
+        <sys_id>2b6a7c0987235d5084b2a18e0ebb3540</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-01 22:23:11</sys_updated_on>
+        <value>18409d8007482000dada43c0d1021e8f</value>
+        <variable display_value="Capabilities">c30a451d2f201300a09a839fb18c95b4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1f6a7c0987235d5084b2a18e0ebb3501</document_key>
+        <order>30</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:57</sys_created_on>
+        <sys_id>5334dd8187a35d5084b2a18e0ebb3573</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:57</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="Headers">371837f1c71003007b237f48cb9763b0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1f6a7c0987235d5084b2a18e0ebb3501</document_key>
+        <order>25</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:57</sys_created_on>
+        <sys_id>5b34dd8187a35d5084b2a18e0ebb3573</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:57</sys_updated_on>
+        <value>{"type":"ADV_NV","value":[]}</value>
+        <variable display_value="Query Parameters">4328e2fb47222200b4fad7527c9a7164</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1f6a7c0987235d5084b2a18e0ebb3501</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-01 22:23:11</sys_created_on>
+        <sys_id>636a7c0987235d5084b2a18e0ebb3541</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-01 22:23:11</sys_updated_on>
+        <value/>
+        <variable display_value="Connection Timeout">7a59009bc7522010820469467ec260c0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1f6a7c0987235d5084b2a18e0ebb3501</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-01 22:23:11</sys_created_on>
+        <sys_id>676a7c0987235d5084b2a18e0ebb353f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-01 22:23:11</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Honor Duplicate Query Params">58715a1c53f22010d3a8ddeeff7b1248</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1f6a7c0987235d5084b2a18e0ebb3501</document_key>
+        <order>10</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-01 22:23:11</sys_created_on>
+        <sys_id>676a7c0987235d5084b2a18e0ebb3540</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-01 22:23:11</sys_updated_on>
+        <value>1</value>
+        <variable display_value="Use MID">e532afc12f101300a09a839fb18c95b9</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1f6a7c0987235d5084b2a18e0ebb3501</document_key>
+        <order>5</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-01 22:23:11</sys_created_on>
+        <sys_id>a36a7c0987235d5084b2a18e0ebb3540</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-01 22:23:11</sys_updated_on>
+        <value>define_connection_inline</value>
+        <variable display_value="Connection">91e207d03b50030057a4a2e334efc4a0</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1f6a7c0987235d5084b2a18e0ebb3501</document_key>
+        <order>12</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-01 22:23:11</sys_created_on>
+        <sys_id>af6a7c0987235d5084b2a18e0ebb3540</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-01 22:23:11</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f11ebf865f101300a09a2abd7f466652</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1f6a7c0987235d5084b2a18e0ebb3501</document_key>
+        <order>15</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-01 22:23:11</sys_created_on>
+        <sys_id>eb6a7c0987235d5084b2a18e0ebb3540</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-01 22:23:11</sys_updated_on>
+        <value>http://ise/Application/</value>
+        <variable display_value="Base URL">a67a8ef03b23320057a4a2e334efc472</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>1f6a7c0987235d5084b2a18e0ebb3501</document_key>
+        <order>20</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-01 22:23:11</sys_created_on>
+        <sys_id>ef6a7c0987235d5084b2a18e0ebb353f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-01 22:23:11</sys_updated_on>
+        <value>v1/Set/IseExternal/design/ise-2808919</value>
+        <variable display_value="Resource Path">3d090af03b23320057a4a2e334efc455</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_07a762fb47222200b4fad7527c9a7129^id=1f6a7c0987235d5084b2a18e0ebb3501"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=1f6a7c0987235d5084b2a18e0ebb3501"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=1f6a7c0987235d5084b2a18e0ebb3501"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1f6a7c0987235d5084b2a18e0ebb3501"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_1f6a7c0987235d5084b2a18e0ebb3501"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="DIA_SERVICE_ORDER_ENRICH">2f49f4c587235d5084b2a18e0ebb3582</action>
+        <cid>462aa75a-3cf6-4c4c-bbb6-8f0d7ced4feb</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Look Up Record step</label>
+        <order>3</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Look Up Record">dc9c26043b23220057a4a2e334efc447</step_type>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-04 02:56:00</sys_created_on>
+        <sys_id>5f0c44bd87275110b9342f07cebb35c1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-04 02:56:00</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=5f0c44bd87275110b9342f07cebb35c1"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>5f0c44bd87275110b9342f07cebb35c1</document_key>
+        <order>200</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-04 02:56:00</sys_created_on>
+        <sys_id>130c44bd87275110b9342f07cebb35cb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-04 02:56:00</sys_updated_on>
+        <value>state=3</value>
+        <variable display_value="Condition">0cfca6043b23220057a4a2e334efc43b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>5f0c44bd87275110b9342f07cebb35c1</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-04 02:56:00</sys_created_on>
+        <sys_id>d70c44bd87275110b9342f07cebb35ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-04 02:56:00</sys_updated_on>
+        <value>sn_ind_tmt_orm_service_order</value>
+        <variable display_value="Table">f9cc66043b23220057a4a2e334efc42f</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_dc9c26043b23220057a4a2e334efc447^id=5f0c44bd87275110b9342f07cebb35c1"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=5f0c44bd87275110b9342f07cebb35c1"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=5f0c44bd87275110b9342f07cebb35c1"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=5f0c44bd87275110b9342f07cebb35c1"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_5f0c44bd87275110b9342f07cebb35c1"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="DIA_SERVICE_ORDER_ENRICH">2f49f4c587235d5084b2a18e0ebb3582</action>
+        <cid>784ea3e7-608c-429d-9700-fdd3aebf4b9c</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>5</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>6f34dd8187a35d5084b2a18e0ebb3589</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-04 04:29:32</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6f34dd8187a35d5084b2a18e0ebb3589"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6f34dd8187a35d5084b2a18e0ebb3589</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>3734dd8187a35d5084b2a18e0ebb35b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6f34dd8187a35d5084b2a18e0ebb3589</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>f734dd8187a35d5084b2a18e0ebb35b6</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-04 04:29:32</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+
+	var chars = new GlideRecord("sn_ind_tmt_orm_order_characteristic_value");
+    var outChars = "NA";
+	chars.addEncodedQuery("domain_order=" + "c33e257e871bd15084b2a18e0ebb3521");// ab3e657e871bd15084b2a18e0ebb3529
+	chars.query();
+	while(chars.next()) {
+        outChars = outChars + "---" + chars.characteristic.name + "=" + chars.characteristic_option_value + "---\n";
+		if(chars.characteristic.name == "CFA") {
+			chars.characteristic_option_value = "ABC";
+		}
+
+		if(chars.characteristic.name == "Network Status") {
+			chars.characteristic_option_value = "On Net";
+		}
+			chars.update();
+      
+      /*
+		if(chars.characteristic.name == "Phone Number") {
+			chars.characteristic_option_value = current.contact.mobile_phone;
+		}
+		
+		if(chars.characteristic.name == "User") {
+			chars.characteristic_option_value = current.contact.name;
+		}
+		
+		if(chars.characteristic.name == "Customer Number") {
+			chars.characteristic_option_value = chars.order_line_item.account.name;
+		}
+        */
+	}  
+  
+  //chars.update();
+  outputs.result = outChars;
+  
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=6f34dd8187a35d5084b2a18e0ebb3589"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>application</field>
+        <id>6f34dd8187a35d5084b2a18e0ebb3589</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>ff34dd8187a35d5084b2a18e0ebb35b5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>script</field>
+        <id>6f34dd8187a35d5084b2a18e0ebb3589</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>b334dd8187a35d5084b2a18e0ebb35b6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>serviceOrderId</field>
+        <id>6f34dd8187a35d5084b2a18e0ebb3589</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:16:38</sys_created_on>
+        <sys_id>116491c187a35d5084b2a18e0ebb359b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:16:38</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_6f34dd8187a35d5084b2a18e0ebb3589</table>
+        <value>{{step[15e57988-5075-4f04-8f39-00c3182e351c].root.designPK}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_6f34dd8187a35d5084b2a18e0ebb3589^id=6f34dd8187a35d5084b2a18e0ebb3589"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=6f34dd8187a35d5084b2a18e0ebb3589"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=6f34dd8187a35d5084b2a18e0ebb3589^sys_idNOT IN6334dd8187a35d5084b2a18e0ebb3591"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>serviceOrderId</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">6f34dd8187a35d5084b2a18e0ebb3589</model>
+        <model_id>6f34dd8187a35d5084b2a18e0ebb3589</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_6f34dd8187a35d5084b2a18e0ebb3589</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>6334dd8187a35d5084b2a18e0ebb3591</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=6f34dd8187a35d5084b2a18e0ebb3589^sys_idNOT INab34dd8187a35d5084b2a18e0ebb3595"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=231db0e1-a5d6-4c91-86fa-bf7b3b26b48b</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>result</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>result</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">6f34dd8187a35d5084b2a18e0ebb3589</model>
+        <model_id>6f34dd8187a35d5084b2a18e0ebb3589</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_6f34dd8187a35d5084b2a18e0ebb3589</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>ab34dd8187a35d5084b2a18e0ebb3595</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6f34dd8187a35d5084b2a18e0ebb3589"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_6f34dd8187a35d5084b2a18e0ebb3589^sys_idNOT INa334dd8187a35d5084b2a18e0ebb35b2"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>result</element>
+        <help/>
+        <hint/>
+        <label>result</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_6f34dd8187a35d5084b2a18e0ebb3589</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>a334dd8187a35d5084b2a18e0ebb35b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="DIA_SERVICE_ORDER_ENRICH">2f49f4c587235d5084b2a18e0ebb3582</action>
+        <cid>9730223c-c818-428d-96b6-4555e473d4d3</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>4</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 01:37:37</sys_created_on>
+        <sys_id>6fe6250987e35d5084b2a18e0ebb35ff</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-04 02:56:00</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=6fe6250987e35d5084b2a18e0ebb35ff"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6fe6250987e35d5084b2a18e0ebb35ff</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 01:37:37</sys_created_on>
+        <sys_id>23e6650987e35d5084b2a18e0ebb3511</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-03 18:30:27</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+	var request, response, status, quoteId="NULL";
+	designId = '2808919';
+    var mid = getMidServer();
+	request = new sn_ws.RESTMessageV2();
+	request.setEndpoint('http://ise/Application/v1/Set/IseExternal/design/ise-' + designId);
+    //request.setEndpoint('https://api.nationalize.io/?name=nathaniel');
+	request.setHttpMethod('GET');
+    request.setMIDServer(mid);
+	request.setRequestHeader("Accept","application/json");
+	request.setRequestHeader('Content-Type','application/json');
+	response = request.execute();
+	gs.info('Response body from iSE API ' + response.getBody());
+	var iseOrder = JSON.parse(response.getBody());
+	quoteId = iseOrder.quoteIds;
+  	
+  outputs.quoteid = mid + "Quote=" + iseOrder.sites[0].siteProducts[0].attributes.cdr + "-" + iseOrder.sites[0].siteProducts[0].attributes.customercablingtype + "-" + iseOrder.sites[0].siteProducts[0].attributes.customerfibermode;
+  
+  function getMidServer() {
+      var gr = new GlideRecord('ecc_agent');
+      gr.addEncodedQuery('statusSTARTSWITHup^validatedINtrue');
+      gr.setLimit(1);
+      gr.query();
+      if (gr.next()) {
+              return gr.name;
+      } else {
+              return null;
+      }
+  }
+
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>6fe6250987e35d5084b2a18e0ebb35ff</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 01:37:37</sys_created_on>
+        <sys_id>e7e6650987e35d5084b2a18e0ebb3510</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 01:37:37</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_6fe6250987e35d5084b2a18e0ebb35ff^id=6fe6250987e35d5084b2a18e0ebb35ff"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=6fe6250987e35d5084b2a18e0ebb35ff"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=6fe6250987e35d5084b2a18e0ebb35ff"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=6fe6250987e35d5084b2a18e0ebb35ff^sys_idNOT IN6fe6650987e35d5084b2a18e0ebb3507"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=e062fe63-46cb-4283-8aa2-c2abeac9f0fe</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>quoteid</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>quoteId</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">6fe6250987e35d5084b2a18e0ebb35ff</model>
+        <model_id>6fe6250987e35d5084b2a18e0ebb35ff</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_6fe6250987e35d5084b2a18e0ebb35ff</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 01:37:37</sys_created_on>
+        <sys_id>6fe6650987e35d5084b2a18e0ebb3507</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 01:37:37</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=6fe6250987e35d5084b2a18e0ebb35ff"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_6fe6250987e35d5084b2a18e0ebb35ff^sys_idNOT INe3e6650987e35d5084b2a18e0ebb350c"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>quoteid</element>
+        <help/>
+        <hint/>
+        <label>quoteId</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_6fe6250987e35d5084b2a18e0ebb35ff</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 01:37:37</sys_created_on>
+        <sys_id>e3e6650987e35d5084b2a18e0ebb350c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 01:37:37</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="DIA_SERVICE_ORDER_ENRICH">2f49f4c587235d5084b2a18e0ebb3582</action>
+        <cid>15e57988-5075-4f04-8f39-00c3182e351c</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <inputs/>
+        <label>JSON Parser step</label>
+        <order>2</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="JSON Parser">502328c387523300f917e55936cb0bf0</step_type>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:57</sys_created_on>
+        <sys_id>d334dd8187a35d5084b2a18e0ebb3577</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=d334dd8187a35d5084b2a18e0ebb3577"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>d334dd8187a35d5084b2a18e0ebb3577</document_key>
+        <order>300</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>ab34dd8187a35d5084b2a18e0ebb3587</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <value>{&#13;
+  "designPK" : 2892684,&#13;
+  "parentId" : 2808919,&#13;
+  "designName" : "BCM One - DIA Irvine CA - 200Mbps - SM10236207 - SWIFT 552860049",&#13;
+  "opportunityId" : "",&#13;
+  "opportunityName" : "",&#13;
+  "designConnections" : [ ],&#13;
+  "customerName" : "BCM One, Inc",&#13;
+  "customerNumber" : "2-HMJYDG",&#13;
+  "productName" : "",&#13;
+  "sfdcOwner" : "",&#13;
+  "stageName" : "",&#13;
+  "userName" : "ac66495",&#13;
+  "createdBy" : "AD00196",&#13;
+  "modifiedBy" : "System",&#13;
+  "lastModifiedRole" : "tde",&#13;
+  "modifiedDate" : "2022-11-14T22:28:41.237Z",&#13;
+  "designVersion" : 5,&#13;
+  "createDate" : "2022-09-26T22:23:17.723Z",&#13;
+  "quoteIds" : "SM10236207",&#13;
+  "proposalIds" : "2516944",&#13;
+  "orderIds" : "552860049",&#13;
+  "status" : "",&#13;
+  "customerStatus" : "",&#13;
+  "isOfficial" : true,&#13;
+  "officialSetBy" : "system",&#13;
+  "createdMethod" : "QUOTE",&#13;
+  "activeFlag" : true,&#13;
+  "designstatus" : "Completed",&#13;
+  "designSitesCount" : 1,&#13;
+  "designProductsCount" : 1,&#13;
+  "mnsApprovalCcEmail" : "",&#13;
+  "guid" : "3d0d0088-89ea-4d28-fd4e-eedc511193e3",&#13;
+  "lastModified" : 1668464909815,&#13;
+  "designId" : null,&#13;
+  "customerSolutionId" : null,&#13;
+  "customerSolutionName" : null,&#13;
+  "customerSolutionSetAtSolutionTab" : true,&#13;
+  "designFiles" : [ ],&#13;
+  "isProvisioned" : false,&#13;
+  "isInFlight" : false,&#13;
+  "createdAppVersion" : "v19.23.0.0",&#13;
+  "lastUpdatedAppVersion" : "v19.24.0.0",&#13;
+  "dealId" : null,&#13;
+  "opportunities" : [ {&#13;
+    "opportunityId" : "58587351",&#13;
+    "opportunityName" : "PCAT-42137886-3"&#13;
+  } ],&#13;
+  "opportunitiesjson" : "[{\"opportunityId\":\"58587351\",\"opportunityName\":\"PCAT-42137886-3\"}]",&#13;
+  "deals" : [ ],&#13;
+  "proposals" : [ {&#13;
+    "proposalNumber" : "2516944",&#13;
+    "quoteId" : "SM10236207"&#13;
+  } ],&#13;
+  "siteEstimatesCustomerOptOut" : true,&#13;
+  "solutionPlanDescription" : null,&#13;
+  "hotCuts" : null,&#13;
+  "mnsAttributes" : null,&#13;
+  "sharedConfigs" : { },&#13;
+  "designGroupings" : { },&#13;
+  "transactionId" : "17293434-426c-4912-f9e3-62",&#13;
+  "guidedMode" : false,&#13;
+  "nGuidedDesign" : null,&#13;
+  "isFederalAccount" : false,&#13;
+  "orderAttributes" : {&#13;
+    "billingaccount" : null,&#13;
+    "customerpurchaseordernumber" : "",&#13;
+    "legalentity" : "Select",&#13;
+    "ordertype" : "New",&#13;
+    "projectid" : "",&#13;
+    "tspcode" : "",&#13;
+    "orderendusername" : "",&#13;
+    "relatedquoteorordernumber" : "",&#13;
+    "contractid" : "",&#13;
+    "currencycode" : "USD",&#13;
+    "proposalsigneddate" : null,&#13;
+    "solutionsupportassociate" : null,&#13;
+    "contactsalesengineer" : "Jay Bernstein",&#13;
+    "contactaccountdirector" : "Hicks, Roshonda",&#13;
+    "contactassignedccm" : "Willie Grimes",&#13;
+    "contactassignedcsm" : null,&#13;
+    "customerexpedited" : false,&#13;
+    "hybridorder" : false,&#13;
+    "multivendor" : false&#13;
+  },&#13;
+  "links" : [ ],&#13;
+  "designNIDComponents" : [ ],&#13;
+  "designMNSComponents" : [ ],&#13;
+  "designSdwanUrlFilteringProfileComponents" : [ ],&#13;
+  "designSdwanGeoFilteringProfileComponents" : [ ],&#13;
+  "designOrderContacts" : [ {&#13;
+    "contactemail" : "",&#13;
+    "contactmobile" : "",&#13;
+    "contactphone" : "",&#13;
+    "contactfax" : "",&#13;
+    "contacttitle" : "",&#13;
+    "contactname" : "",&#13;
+    "contactrolename" : [ "Primary" ],&#13;
+    "contactlandlinephone" : "",&#13;
+    "contactcablingcompany" : "",&#13;
+    "tootherproduct" : false,&#13;
+    "uuid" : "1540287f-07f6-4354-b7b4-e968275c076c",&#13;
+    "contactid" : ""&#13;
+  }, {&#13;
+    "contactemail" : "",&#13;
+    "contactmobile" : "",&#13;
+    "contactphone" : "",&#13;
+    "contactfax" : "",&#13;
+    "contacttitle" : "",&#13;
+    "contactname" : "",&#13;
+    "contactrolename" : [ "Customer Local Site A" ],&#13;
+    "contactlandlinephone" : "",&#13;
+    "contactcablingcompany" : "",&#13;
+    "tootherproduct" : false,&#13;
+    "uuid" : "49ac8580-fbbb-474b-509e-deea3d0965af",&#13;
+    "contactid" : ""&#13;
+  }, {&#13;
+    "contactemail" : "",&#13;
+    "contactmobile" : "",&#13;
+    "contactphone" : "",&#13;
+    "contactfax" : "",&#13;
+    "contacttitle" : "",&#13;
+    "contactname" : "",&#13;
+    "contactrolename" : [ "Customer Technical" ],&#13;
+    "contactlandlinephone" : "",&#13;
+    "contactcablingcompany" : "",&#13;
+    "tootherproduct" : false,&#13;
+    "uuid" : "7f539de1-164a-4cd0-32a1-ef4cad1d82c9",&#13;
+    "contactid" : ""&#13;
+  }, {&#13;
+    "contactemail" : "willie.grimes@lumen.com",&#13;
+    "contactmobile" : "",&#13;
+    "contactphone" : "9185471251",&#13;
+    "contactfax" : "",&#13;
+    "contacttitle" : "",&#13;
+    "contactname" : "Willie Grimes",&#13;
+    "contactrolename" : [ "Customer Care Manager" ],&#13;
+    "contactlandlinephone" : "",&#13;
+    "contactcablingcompany" : "",&#13;
+    "tootherproduct" : true,&#13;
+    "uuid" : "8065f962-f59b-43b8-554b-79daa74ec86d",&#13;
+    "contactid" : ""&#13;
+  }, {&#13;
+    "contactemail" : "jay.bernstein@lumen.com",&#13;
+    "contactmobile" : "",&#13;
+    "contactphone" : "7327186963",&#13;
+    "contactfax" : "",&#13;
+    "contacttitle" : "",&#13;
+    "contactname" : "Jay Bernstein",&#13;
+    "contactrolename" : [ "Sales Engineer" ],&#13;
+    "contactlandlinephone" : "",&#13;
+    "contactcablingcompany" : "",&#13;
+    "tootherproduct" : true,&#13;
+    "uuid" : "8407a040-b57d-476c-31dd-5323beff28cf",&#13;
+    "contactid" : ""&#13;
+  }, {&#13;
+    "contactemail" : "kpitaniello@bcmone.com",&#13;
+    "contactmobile" : "",&#13;
+    "contactphone" : "+18885432000",&#13;
+    "contactfax" : "",&#13;
+    "contacttitle" : "",&#13;
+    "contactname" : "Keri-Ann Pitaniello",&#13;
+    "contactrolename" : [ "Primary", "Customer Technical", "Customer Billing" ],&#13;
+    "contactlandlinephone" : "",&#13;
+    "contactcablingcompany" : "",&#13;
+    "tootherproduct" : true,&#13;
+    "uuid" : "956a3dfc-9fad-4646-603e-918e765dd3ba",&#13;
+    "contactid" : "4141600"&#13;
+  }, {&#13;
+    "contactemail" : "colby.miyamoto@meduitrcm.com",&#13;
+    "contactmobile" : "",&#13;
+    "contactphone" : "808.778.6725",&#13;
+    "contactfax" : "",&#13;
+    "contacttitle" : "",&#13;
+    "contactname" : "Coby Miyamoto",&#13;
+    "contactrolename" : [ "Customer Local Site A" ],&#13;
+    "contactlandlinephone" : "",&#13;
+    "contactcablingcompany" : "",&#13;
+    "tootherproduct" : false,&#13;
+    "uuid" : "7687900c-ed6b-4a56-d28a-d95a1c5be2ad",&#13;
+    "contactid" : ""&#13;
+  } ],&#13;
+  "completenessLevel" : 0,&#13;
+  "userFK" : 75649,&#13;
+  "numberSites" : 1,&#13;
+  "numberProducts" : 1,&#13;
+  "iSeDesignId" : "ise-2808919",&#13;
+  "externalState" : { },&#13;
+  "sites" : [ {&#13;
+    "countryCode" : "US",&#13;
+    "cityName" : "IRVINE",&#13;
+    "guid" : "c59d6a3b-bb73-4637-fa32-011550fec797",&#13;
+    "eeid" : "PL0000009572",&#13;
+    "groupName" : "Customer Site",&#13;
+    "lattitude" : 33.69041,&#13;
+    "line1Address" : "17222 VON KARMAN AVE",&#13;
+    "longitude" : -117.840591,&#13;
+    "placeholder" : "",&#13;
+    "postalCode" : "92614",&#13;
+    "siteAttributes" : {&#13;
+      "clli" : "IRVECARQ",&#13;
+      "customerlocationname" : "",&#13;
+      "lcar" : "",&#13;
+      "demarcfloor" : "1",&#13;
+      "demarcroom" : "TELC",&#13;
+      "demarcsuite" : "",&#13;
+      "demarcbldg" : "",&#13;
+      "endusername" : "BCM One, Inc",&#13;
+      "hoursofoperartion" : "",&#13;
+      "specialbuildingaccess" : false,&#13;
+      "specialstable" : [ ],&#13;
+      "notes" : "",&#13;
+      "isPrimary" : "",&#13;
+      "stage" : "",&#13;
+      "startDate" : "",&#13;
+      "customerdemarcfloor" : "1",&#13;
+      "customerdemarcroom" : "SERVER"&#13;
+    },&#13;
+    "otherAttributes" : { },&#13;
+    "stateCode" : "CA",&#13;
+    "lastModified" : 1664230885823,&#13;
+    "clliCode" : "IRVECARQ",&#13;
+    "onnetFlag" : "Y",&#13;
+    "imported" : true,&#13;
+    "customerSolutionId" : null,&#13;
+    "siteSolutionId" : null,&#13;
+    "siteProducts" : [ {&#13;
+      "groupProductGuid" : "fc31659d-bf84-4c18-6a68-f5e91a66c21e",&#13;
+      "guid" : "70c3ff09-2a75-48c6-c305-e694842fc1b5",&#13;
+      "productId" : "1",&#13;
+      "bondedId" : null,&#13;
+      "siteEeid" : "PL0000009572",&#13;
+      "productName" : "INTERNET",&#13;
+      "circuitName" : "INTERNET 1",&#13;
+      "attributes" : {&#13;
+        "internetType" : "DIA",&#13;
+        "portspeed" : "GigE",&#13;
+        "cdr" : "200 Mbps",&#13;
+        "productportspeed" : "GigE",&#13;
+        "productcdr" : "200 Mbps",&#13;
+        "accesstype" : "Ethernet Switched Access",&#13;
+        "mnsdiatierspeed" : "100 Mbps",&#13;
+        "diabillingmethod" : "Flat Rate",&#13;
+        "accesspop" : "Nearest",&#13;
+        "voiceoverdia" : "No Voice",&#13;
+        "voicecdr" : "",&#13;
+        "productpop" : "Nearest",&#13;
+        "orderentrysystem" : "SwIFT",&#13;
+        "voiceoverip" : false,&#13;
+        "internetMspVlanAttributes" : [ ],&#13;
+        "bidirectionalforwardingdetection" : false,&#13;
+        "managedfirewall" : false,&#13;
+        "managedrouterflag" : false,&#13;
+        "multicast" : "No",&#13;
+        "managediadflag" : false,&#13;
+        "nidflag" : false,&#13;
+        "nidoptout" : false,&#13;
+        "notes" : "",&#13;
+        "primarydns" : false,&#13;
+        "managedethernetaccess" : false,&#13;
+        "managedSBC" : false,&#13;
+        "wanOptimization" : false,&#13;
+        "hotcut" : false,&#13;
+        "billingaccount" : "5-LDCQYPCH",&#13;
+        "orderexpedite" : false,&#13;
+        "term" : {&#13;
+          "termqty" : 36,&#13;
+          "termunits" : "Months"&#13;
+        },&#13;
+        "termcontracttype" : "Lease",&#13;
+        "customerfiberconnectortype" : "LC",&#13;
+        "taxid" : "",&#13;
+        "customerrequesteddate" : "2022-11-04T05:00:00.000Z",&#13;
+        "servicestatus" : "Install",&#13;
+        "provisionednetwork" : "Red",&#13;
+        "orderstatus" : "Completed",&#13;
+        "customercablingtype" : "Fiber",&#13;
+        "customerfibermode" : "2 Fiber SMF",&#13;
+        "circuitcontacts" : [ {&#13;
+          "contactemail" : "",&#13;
+          "contactmobile" : "",&#13;
+          "contactphone" : "",&#13;
+          "contactfax" : "",&#13;
+          "contacttitle" : "",&#13;
+          "contactname" : "",&#13;
+          "contactrolename" : [ "Primary" ],&#13;
+          "contactlandlinephone" : "",&#13;
+          "contactcablingcompany" : "",&#13;
+          "tootherproduct" : false,&#13;
+          "uuid" : "1540287f-07f6-4354-b7b4-e968275c076c",&#13;
+          "contactid" : ""&#13;
+        }, {&#13;
+          "contactemail" : "",&#13;
+          "contactmobile" : "",&#13;
+          "contactphone" : "",&#13;
+          "contactfax" : "",&#13;
+          "contacttitle" : "",&#13;
+          "contactname" : "",&#13;
+          "contactrolename" : [ "Customer Local Site A" ],&#13;
+          "contactlandlinephone" : "",&#13;
+          "contactcablingcompany" : "",&#13;
+          "tootherproduct" : false,&#13;
+          "uuid" : "49ac8580-fbbb-474b-509e-deea3d0965af",&#13;
+          "contactid" : ""&#13;
+        }, {&#13;
+          "contactemail" : "",&#13;
+          "contactmobile" : "",&#13;
+          "contactphone" : "",&#13;
+          "contactfax" : "",&#13;
+          "contacttitle" : "",&#13;
+          "contactname" : "",&#13;
+          "contactrolename" : [ "Customer Technical" ],&#13;
+          "contactlandlinephone" : "",&#13;
+          "contactcablingcompany" : "",&#13;
+          "tootherproduct" : false,&#13;
+          "uuid" : "7f539de1-164a-4cd0-32a1-ef4cad1d82c9",&#13;
+          "contactid" : ""&#13;
+        }, {&#13;
+          "contactemail" : "willie.grimes@lumen.com",&#13;
+          "contactmobile" : "",&#13;
+          "contactphone" : "9185471251",&#13;
+          "contactfax" : "",&#13;
+          "contacttitle" : "",&#13;
+          "contactname" : "Willie Grimes",&#13;
+          "contactrolename" : [ "Customer Care Manager" ],&#13;
+          "contactlandlinephone" : "",&#13;
+          "contactcablingcompany" : "",&#13;
+          "tootherproduct" : true,&#13;
+          "uuid" : "8065f962-f59b-43b8-554b-79daa74ec86d",&#13;
+          "contactid" : ""&#13;
+        }, {&#13;
+          "contactemail" : "jay.bernstein@lumen.com",&#13;
+          "contactmobile" : "",&#13;
+          "contactphone" : "7327186963",&#13;
+          "contactfax" : "",&#13;
+          "contacttitle" : "",&#13;
+          "contactname" : "Jay Bernstein",&#13;
+          "contactrolename" : [ "Sales Engineer" ],&#13;
+          "contactlandlinephone" : "",&#13;
+          "contactcablingcompany" : "",&#13;
+          "tootherproduct" : true,&#13;
+          "uuid" : "8407a040-b57d-476c-31dd-5323beff28cf",&#13;
+          "contactid" : ""&#13;
+        }, {&#13;
+          "contactemail" : "kpitaniello@bcmone.com",&#13;
+          "contactmobile" : "",&#13;
+          "contactphone" : "+18885432000",&#13;
+          "contactfax" : "",&#13;
+          "contacttitle" : "",&#13;
+          "contactname" : "Keri-Ann Pitaniello",&#13;
+          "contactrolename" : [ "Primary", "Customer Technical", "Customer Billing" ],&#13;
+          "contactlandlinephone" : "",&#13;
+          "contactcablingcompany" : "",&#13;
+          "tootherproduct" : true,&#13;
+          "uuid" : "956a3dfc-9fad-4646-603e-918e765dd3ba",&#13;
+          "contactid" : "4141600"&#13;
+        }, {&#13;
+          "contactemail" : "colby.miyamoto@meduitrcm.com",&#13;
+          "contactmobile" : "",&#13;
+          "contactphone" : "808.778.6725",&#13;
+          "contactfax" : "",&#13;
+          "contacttitle" : "",&#13;
+          "contactname" : "Coby Miyamoto",&#13;
+          "contactrolename" : [ "Customer Local Site A" ],&#13;
+          "contactlandlinephone" : "",&#13;
+          "contactcablingcompany" : "",&#13;
+          "tootherproduct" : false,&#13;
+          "uuid" : "7687900c-ed6b-4a56-d28a-d95a1c5be2ad",&#13;
+          "contactid" : "4458603"&#13;
+        } ],&#13;
+        "producttransport" : "EPL",&#13;
+        "pathtype" : "Standard",&#13;
+        "gctoassignwanips" : true,&#13;
+        "serviceid" : "444547011",&#13;
+        "changerequest" : false,&#13;
+        "orderId" : "552860049",&#13;
+        "expressflag" : false,&#13;
+        "offnet" : false,&#13;
+        "latency" : "None",&#13;
+        "level3providedLOACFA" : false,&#13;
+        "accessdiversity" : false,&#13;
+        "framingandlinecoding" : "Ethernet/None",&#13;
+        "thirdPartyCrossConnect" : false,&#13;
+        "extension" : false,&#13;
+        "jumboframe" : false,&#13;
+        "mtu" : null,&#13;
+        "customerlocnum" : "",&#13;
+        "productgatewaylocnum" : "",&#13;
+        "lineitemreference" : "",&#13;
+        "solutionid" : "",&#13;
+        "existingcircuitid" : "",&#13;
+        "mnsdiaencapsulation" : "Ethernet",&#13;
+        "mnsdiadlci" : "",&#13;
+        "diversity" : false,&#13;
+        "dynamiccapacity" : false,&#13;
+        "voicecompleteflag" : false,&#13;
+        "mnsec" : false,&#13;
+        "samob" : false,&#13;
+        "ddos" : false,&#13;
+        "diamsp" : false,&#13;
+        "mnsdiaipversion" : "IPv4",&#13;
+        "ipblocksize" : "/30",&#13;
+        "ipv6blocksize" : "",&#13;
+        "vrfgctoassignlanips" : true,&#13;
+        "vrflanipblocksize" : "/27",&#13;
+        "vrflanv6ipblocksize" : "",&#13;
+        "diaroutingprotocol" : "Static",&#13;
+        "routingprotocolversion" : "IPv4",&#13;
+        "lanips" : [ ],&#13;
+        "relatedservices" : [ ],&#13;
+        "productcustomernumber" : {&#13;
+          "text" : "BCM One, Inc",&#13;
+          "value" : "2-HMJYDG"&#13;
+        },&#13;
+        "tspcode" : "",&#13;
+        "customerpurchaseordernumber" : "",&#13;
+        "projectid" : "",&#13;
+        "specialstable" : [ ],&#13;
+        "defaultsacknowledged" : true,&#13;
+        "defaultconfigapplied" : false,&#13;
+        "customerreplied" : false,&#13;
+        "refreshedfromdigitaltdg" : false,&#13;
+        "connectionsegments" : [ {&#13;
+          "wavesname" : "",&#13;
+          "wavesaddress" : "",&#13;
+          "wavessiteid" : "",&#13;
+          "waveslatitude" : "",&#13;
+          "waveslongitude" : "",&#13;
+          "wavesclli" : "",&#13;
+          "wavessegmenttype" : "marker",&#13;
+          "wavesdelete" : false,&#13;
+          "suppressdisplay" : false,&#13;
+          "locationmarker" : "Standard Path not Custom",&#13;
+          "wavessegmentequipmentname" : "",&#13;
+          "wavessegmentnetworkcolor" : "",&#13;
+          "wavessource" : "",&#13;
+          "wavesdisplayAddr" : "Location Marker: Standard Path not Custom"&#13;
+        } ],&#13;
+        "billstartdate" : "2022-11-02T10:28:52Z",&#13;
+        "serviceordercompletedate" : "2022-11-02T04:36:24Z"&#13;
+      },&#13;
+      "vlanAttributes" : [ ],&#13;
+      "subiAttributes" : [ ],&#13;
+      "internetVrfAttributes" : [ ],&#13;
+      "standardVrfAttributes" : [ ],&#13;
+      "internetMspVlanAttributes" : [ ],&#13;
+      "source" : { },&#13;
+      "accessPop" : null,&#13;
+      "productPop" : null,&#13;
+      "eeid" : "SL0000343663",&#13;
+      "importedProductId" : "444547011",&#13;
+      "previousImportedProductId" : null,&#13;
+      "accesspopLat" : null,&#13;
+      "accesspopLong" : null,&#13;
+      "managednetworkattributes" : null,&#13;
+      "managednetworkvrfattributes" : { },&#13;
+      "opportunityId" : "58587351",&#13;
+      "proposalId" : "2516944",&#13;
+      "quoteId" : "SM10236207",&#13;
+      "customerNumber" : "2-HMJYDG",&#13;
+      "orderId" : "552860049",&#13;
+      "customerSolutionId" : null,&#13;
+      "siteSolutionId" : null,&#13;
+      "billingCoordination" : null,&#13;
+      "lastCalculatedCompletenessAnalysisResult" : {&#13;
+        "level" : 0,&#13;
+        "notQuoteableMessages" : [ ],&#13;
+        "incompleteMessages" : [ ],&#13;
+        "infoMessages" : [ {&#13;
+          "key" : null,&#13;
+          "message" : "Validations are not applied to product in &lt;b&gt;Completed&lt;/b&gt; status.",&#13;
+          "anchorKey" : null,&#13;
+          "roleOverrides" : [ ]&#13;
+        } ],&#13;
+        "seComplete" : true,&#13;
+        "infoOnly" : true,&#13;
+        "wasFiltered" : false&#13;
+      }&#13;
+    } ],&#13;
+    "siteContacts" : [ {&#13;
+      "contactemail" : "",&#13;
+      "contactmobile" : "",&#13;
+      "contactphone" : "",&#13;
+      "contactfax" : "",&#13;
+      "contacttitle" : "",&#13;
+      "contactname" : "",&#13;
+      "contactrolename" : [ "Primary" ],&#13;
+      "contactlandlinephone" : "",&#13;
+      "contactcablingcompany" : "",&#13;
+      "tootherproduct" : false,&#13;
+      "uuid" : "1540287f-07f6-4354-b7b4-e968275c076c",&#13;
+      "contactid" : ""&#13;
+    }, {&#13;
+      "contactemail" : "",&#13;
+      "contactmobile" : "",&#13;
+      "contactphone" : "",&#13;
+      "contactfax" : "",&#13;
+      "contacttitle" : "",&#13;
+      "contactname" : "",&#13;
+      "contactrolename" : [ "Customer Local Site A" ],&#13;
+      "contactlandlinephone" : "",&#13;
+      "contactcablingcompany" : "",&#13;
+      "tootherproduct" : false,&#13;
+      "uuid" : "49ac8580-fbbb-474b-509e-deea3d0965af",&#13;
+      "contactid" : ""&#13;
+    }, {&#13;
+      "contactemail" : "",&#13;
+      "contactmobile" : "",&#13;
+      "contactphone" : "",&#13;
+      "contactfax" : "",&#13;
+      "contacttitle" : "",&#13;
+      "contactname" : "",&#13;
+      "contactrolename" : [ "Customer Technical" ],&#13;
+      "contactlandlinephone" : "",&#13;
+      "contactcablingcompany" : "",&#13;
+      "tootherproduct" : false,&#13;
+      "uuid" : "7f539de1-164a-4cd0-32a1-ef4cad1d82c9",&#13;
+      "contactid" : ""&#13;
+    }, {&#13;
+      "contactemail" : "willie.grimes@lumen.com",&#13;
+      "contactmobile" : "",&#13;
+      "contactphone" : "9185471251",&#13;
+      "contactfax" : "",&#13;
+      "contacttitle" : "",&#13;
+      "contactname" : "Willie Grimes",&#13;
+      "contactrolename" : [ "Customer Care Manager" ],&#13;
+      "contactlandlinephone" : "",&#13;
+      "contactcablingcompany" : "",&#13;
+      "tootherproduct" : true,&#13;
+      "uuid" : "8065f962-f59b-43b8-554b-79daa74ec86d",&#13;
+      "contactid" : ""&#13;
+    }, {&#13;
+      "contactemail" : "jay.bernstein@lumen.com",&#13;
+      "contactmobile" : "",&#13;
+      "contactphone" : "7327186963",&#13;
+      "contactfax" : "",&#13;
+      "contacttitle" : "",&#13;
+      "contactname" : "Jay Bernstein",&#13;
+      "contactrolename" : [ "Sales Engineer" ],&#13;
+      "contactlandlinephone" : "",&#13;
+      "contactcablingcompany" : "",&#13;
+      "tootherproduct" : true,&#13;
+      "uuid" : "8407a040-b57d-476c-31dd-5323beff28cf",&#13;
+      "contactid" : ""&#13;
+    }, {&#13;
+      "contactemail" : "kpitaniello@bcmone.com",&#13;
+      "contactmobile" : "",&#13;
+      "contactphone" : "+18885432000",&#13;
+      "contactfax" : "",&#13;
+      "contacttitle" : "",&#13;
+      "contactname" : "Keri-Ann Pitaniello",&#13;
+      "contactrolename" : [ "Primary", "Customer Technical", "Customer Billing" ],&#13;
+      "contactlandlinephone" : "",&#13;
+      "contactcablingcompany" : "",&#13;
+      "tootherproduct" : true,&#13;
+      "uuid" : "956a3dfc-9fad-4646-603e-918e765dd3ba",&#13;
+      "contactid" : "4141600"&#13;
+    }, {&#13;
+      "contactemail" : "colby.miyamoto@meduitrcm.com",&#13;
+      "contactmobile" : "",&#13;
+      "contactphone" : "808.778.6725",&#13;
+      "contactfax" : "",&#13;
+      "contacttitle" : "",&#13;
+      "contactname" : "Coby Miyamoto",&#13;
+      "contactrolename" : [ "Customer Local Site A" ],&#13;
+      "contactlandlinephone" : "",&#13;
+      "contactcablingcompany" : "",&#13;
+      "tootherproduct" : false,&#13;
+      "uuid" : "7687900c-ed6b-4a56-d28a-d95a1c5be2ad",&#13;
+      "contactid" : "4458603"&#13;
+    }, {&#13;
+      "contactemail" : "provisioning@bcmone.com",&#13;
+      "contactmobile" : "",&#13;
+      "contactphone" : "+18885432000",&#13;
+      "contactfax" : "",&#13;
+      "contacttitle" : "",&#13;
+      "contactname" : "Keri-Ann Pitaniello",&#13;
+      "contactrolename" : [ "Primary", "Customer Technical" ],&#13;
+      "contactlandlinephone" : "",&#13;
+      "contactcablingcompany" : "",&#13;
+      "tootherproduct" : true,&#13;
+      "uuid" : "e48a0906-3bb1-4208-9f8e-941183786d6a",&#13;
+      "contactid" : "4141600"&#13;
+    } ]&#13;
+  } ]&#13;
+}</value>
+        <variable display_value="Sample payload">d335ac0787523300f917e55936cb0b1d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>d334dd8187a35d5084b2a18e0ebb3577</document_key>
+        <order>100</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>e734dd8187a35d5084b2a18e0ebb3587</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <value>{"name":"root","children":[{"name":"designPK","children":[],"type":"string","jpath":"$.designPK","previewValue":"2892684"},{"name":"parentId","children":[],"type":"string","jpath":"$.parentId","previewValue":"2808919"},{"name":"designName","children":[],"type":"string","jpath":"$.designName","previewValue":"BCM One - DIA Irvine CA - 200Mbps - SM10236207 - SWIFT 552860049"},{"name":"opportunityId","children":[],"type":"string","jpath":"$.opportunityId","previewValue":""},{"name":"opportunityName","children":[],"type":"string","jpath":"$.opportunityName","previewValue":""},{"name":"designConnections","children":[{"name":"designConnections_string","children":[],"type":"string","jpath":"$.designConnections[*]","previewValue":""}],"type":"array.string","jpath":"$.designConnections[*]","previewValue":""},{"name":"customerName","children":[],"type":"string","jpath":"$.customerName","previewValue":"BCM One, Inc"},{"name":"customerNumber","children":[],"type":"string","jpath":"$.customerNumber","previewValue":"2-HMJYDG"},{"name":"productName","children":[],"type":"string","jpath":"$.productName","previewValue":""},{"name":"sfdcOwner","children":[],"type":"string","jpath":"$.sfdcOwner","previewValue":""},{"name":"stageName","children":[],"type":"string","jpath":"$.stageName","previewValue":""},{"name":"userName","children":[],"type":"string","jpath":"$.userName","previewValue":"ac66495"},{"name":"createdBy","children":[],"type":"string","jpath":"$.createdBy","previewValue":"AD00196"},{"name":"modifiedBy","children":[],"type":"string","jpath":"$.modifiedBy","previewValue":"System"},{"name":"lastModifiedRole","children":[],"type":"string","jpath":"$.lastModifiedRole","previewValue":"tde"},{"name":"modifiedDate","children":[],"type":"string","jpath":"$.modifiedDate","previewValue":"2022-11-14T22:28:41.237Z"},{"name":"designVersion","children":[],"type":"string","jpath":"$.designVersion","previewValue":"5"},{"name":"createDate","children":[],"type":"string","jpath":"$.createDate","previewValue":"2022-09-26T22:23:17.723Z"},{"name":"quoteIds","children":[],"type":"string","jpath":"$.quoteIds","previewValue":"SM10236207"},{"name":"proposalIds","children":[],"type":"string","jpath":"$.proposalIds","previewValue":"2516944"},{"name":"orderIds","children":[],"type":"string","jpath":"$.orderIds","previewValue":"552860049"},{"name":"status","children":[],"type":"string","jpath":"$.status","previewValue":""},{"name":"customerStatus","children":[],"type":"string","jpath":"$.customerStatus","previewValue":""},{"name":"isOfficial","children":[],"type":"string","jpath":"$.isOfficial","previewValue":"true"},{"name":"officialSetBy","children":[],"type":"string","jpath":"$.officialSetBy","previewValue":"system"},{"name":"createdMethod","children":[],"type":"string","jpath":"$.createdMethod","previewValue":"QUOTE"},{"name":"activeFlag","children":[],"type":"string","jpath":"$.activeFlag","previewValue":"true"},{"name":"designstatus","children":[],"type":"string","jpath":"$.designstatus","previewValue":"Completed"},{"name":"designSitesCount","children":[],"type":"string","jpath":"$.designSitesCount","previewValue":"1"},{"name":"designProductsCount","children":[],"type":"string","jpath":"$.designProductsCount","previewValue":"1"},{"name":"mnsApprovalCcEmail","children":[],"type":"string","jpath":"$.mnsApprovalCcEmail","previewValue":""},{"name":"guid","children":[],"type":"string","jpath":"$.guid","previewValue":"3d0d0088-89ea-4d28-fd4e-eedc511193e3"},{"name":"lastModified","children":[],"type":"string","jpath":"$.lastModified","previewValue":"1668464909815"},{"name":"designId","children":[],"type":"string","jpath":"$.designId","previewValue":""},{"name":"customerSolutionId","children":[],"type":"string","jpath":"$.customerSolutionId","previewValue":""},{"name":"customerSolutionName","children":[],"type":"string","jpath":"$.customerSolutionName","previewValue":""},{"name":"customerSolutionSetAtSolutionTab","children":[],"type":"string","jpath":"$.customerSolutionSetAtSolutionTab","previewValue":"true"},{"name":"designFiles","children":[{"name":"designFiles_string","children":[],"type":"string","jpath":"$.designFiles[*]","previewValue":""}],"type":"array.string","jpath":"$.designFiles[*]","previewValue":""},{"name":"isProvisioned","children":[],"type":"string","jpath":"$.isProvisioned","previewValue":"false"},{"name":"isInFlight","children":[],"type":"string","jpath":"$.isInFlight","previewValue":"false"},{"name":"createdAppVersion","children":[],"type":"string","jpath":"$.createdAppVersion","previewValue":"v19.23.0.0"},{"name":"lastUpdatedAppVersion","children":[],"type":"string","jpath":"$.lastUpdatedAppVersion","previewValue":"v19.24.0.0"},{"name":"dealId","children":[],"type":"string","jpath":"$.dealId","previewValue":""},{"name":"opportunities","children":[{"name":"opportunities_object","children":[{"name":"opportunityId","children":[],"type":"string","jpath":"$.opportunities[*].opportunityId","previewValue":"58587351"},{"name":"opportunityName","children":[],"type":"string","jpath":"$.opportunities[*].opportunityName","previewValue":"PCAT-42137886-3"}],"type":"object","jpath":"$.opportunities[*]","previewValue":""}],"type":"array.object","jpath":"$.opportunities[*]","previewValue":""},{"name":"opportunitiesjson","children":[],"type":"string","jpath":"$.opportunitiesjson","previewValue":"[{\"opportunityId\":\"58587351\",\"opportunityName\":\"PCAT-42137886-3\"}]"},{"name":"deals","children":[{"name":"deals_string","children":[],"type":"string","jpath":"$.deals[*]","previewValue":""}],"type":"array.string","jpath":"$.deals[*]","previewValue":""},{"name":"proposals","children":[{"name":"proposals_object","children":[{"name":"proposalNumber","children":[],"type":"string","jpath":"$.proposals[*].proposalNumber","previewValue":"2516944"},{"name":"quoteId","children":[],"type":"string","jpath":"$.proposals[*].quoteId","previewValue":"SM10236207"}],"type":"object","jpath":"$.proposals[*]","previewValue":""}],"type":"array.object","jpath":"$.proposals[*]","previewValue":""},{"name":"siteEstimatesCustomerOptOut","children":[],"type":"string","jpath":"$.siteEstimatesCustomerOptOut","previewValue":"true"},{"name":"solutionPlanDescription","children":[],"type":"string","jpath":"$.solutionPlanDescription","previewValue":""},{"name":"hotCuts","children":[],"type":"string","jpath":"$.hotCuts","previewValue":""},{"name":"mnsAttributes","children":[],"type":"string","jpath":"$.mnsAttributes","previewValue":""},{"name":"sharedConfigs","children":[],"type":"object","jpath":"$.sharedConfigs","previewValue":""},{"name":"designGroupings","children":[],"type":"object","jpath":"$.designGroupings","previewValue":""},{"name":"transactionId","children":[],"type":"string","jpath":"$.transactionId","previewValue":"17293434-426c-4912-f9e3-62"},{"name":"guidedMode","children":[],"type":"string","jpath":"$.guidedMode","previewValue":"false"},{"name":"nGuidedDesign","children":[],"type":"string","jpath":"$.nGuidedDesign","previewValue":""},{"name":"isFederalAccount","children":[],"type":"string","jpath":"$.isFederalAccount","previewValue":"false"},{"name":"orderAttributes","children":[{"name":"billingaccount","children":[],"type":"string","jpath":"$.orderAttributes.billingaccount","previewValue":""},{"name":"customerpurchaseordernumber","children":[],"type":"string","jpath":"$.orderAttributes.customerpurchaseordernumber","previewValue":""},{"name":"legalentity","children":[],"type":"string","jpath":"$.orderAttributes.legalentity","previewValue":"Select"},{"name":"ordertype","children":[],"type":"string","jpath":"$.orderAttributes.ordertype","previewValue":"New"},{"name":"projectid","children":[],"type":"string","jpath":"$.orderAttributes.projectid","previewValue":""},{"name":"tspcode","children":[],"type":"string","jpath":"$.orderAttributes.tspcode","previewValue":""},{"name":"orderendusername","children":[],"type":"string","jpath":"$.orderAttributes.orderendusername","previewValue":""},{"name":"relatedquoteorordernumber","children":[],"type":"string","jpath":"$.orderAttributes.relatedquoteorordernumber","previewValue":""},{"name":"contractid","children":[],"type":"string","jpath":"$.orderAttributes.contractid","previewValue":""},{"name":"currencycode","children":[],"type":"string","jpath":"$.orderAttributes.currencycode","previewValue":"USD"},{"name":"proposalsigneddate","children":[],"type":"string","jpath":"$.orderAttributes.proposalsigneddate","previewValue":""},{"name":"solutionsupportassociate","children":[],"type":"string","jpath":"$.orderAttributes.solutionsupportassociate","previewValue":""},{"name":"contactsalesengineer","children":[],"type":"string","jpath":"$.orderAttributes.contactsalesengineer","previewValue":"Jay Bernstein"},{"name":"contactaccountdirector","children":[],"type":"string","jpath":"$.orderAttributes.contactaccountdirector","previewValue":"Hicks, Roshonda"},{"name":"contactassignedccm","children":[],"type":"string","jpath":"$.orderAttributes.contactassignedccm","previewValue":"Willie Grimes"},{"name":"contactassignedcsm","children":[],"type":"string","jpath":"$.orderAttributes.contactassignedcsm","previewValue":""},{"name":"customerexpedited","children":[],"type":"string","jpath":"$.orderAttributes.customerexpedited","previewValue":"false"},{"name":"hybridorder","children":[],"type":"string","jpath":"$.orderAttributes.hybridorder","previewValue":"false"},{"name":"multivendor","children":[],"type":"string","jpath":"$.orderAttributes.multivendor","previewValue":"false"}],"type":"object","jpath":"$.orderAttributes","previewValue":""},{"name":"links","children":[{"name":"links_string","children":[],"type":"string","jpath":"$.links[*]","previewValue":""}],"type":"array.string","jpath":"$.links[*]","previewValue":""},{"name":"designNIDComponents","children":[{"name":"designNIDComponents_string","children":[],"type":"string","jpath":"$.designNIDComponents[*]","previewValue":""}],"type":"array.string","jpath":"$.designNIDComponents[*]","previewValue":""},{"name":"designMNSComponents","children":[{"name":"designMNSComponents_string","children":[],"type":"string","jpath":"$.designMNSComponents[*]","previewValue":""}],"type":"array.string","jpath":"$.designMNSComponents[*]","previewValue":""},{"name":"designSdwanUrlFilteringProfileComponents","children":[{"name":"designSdwanUrlFilteringProfileComponents_string","children":[],"type":"string","jpath":"$.designSdwanUrlFilteringProfileComponents[*]","previewValue":""}],"type":"array.string","jpath":"$.designSdwanUrlFilteringProfileComponents[*]","previewValue":""},{"name":"designSdwanGeoFilteringProfileComponents","children":[{"name":"designSdwanGeoFilteringProfileComponents_string","children":[],"type":"string","jpath":"$.designSdwanGeoFilteringProfileComponents[*]","previewValue":""}],"type":"array.string","jpath":"$.designSdwanGeoFilteringProfileComponents[*]","previewValue":""},{"name":"designOrderContacts","children":[{"name":"designOrderContacts_object","children":[{"name":"contactemail","children":[],"type":"string","jpath":"$.designOrderContacts[*].contactemail","previewValue":""},{"name":"contactmobile","children":[],"type":"string","jpath":"$.designOrderContacts[*].contactmobile","previewValue":""},{"name":"contactphone","children":[],"type":"string","jpath":"$.designOrderContacts[*].contactphone","previewValue":""},{"name":"contactfax","children":[],"type":"string","jpath":"$.designOrderContacts[*].contactfax","previewValue":""},{"name":"contacttitle","children":[],"type":"string","jpath":"$.designOrderContacts[*].contacttitle","previewValue":""},{"name":"contactname","children":[],"type":"string","jpath":"$.designOrderContacts[*].contactname","previewValue":""},{"name":"contactrolename","children":[{"name":"contactrolename_string","children":[],"type":"string","jpath":"$.designOrderContacts[*].contactrolename[*]","previewValue":"Primary"}],"type":"array.string","jpath":"$.designOrderContacts[*].contactrolename[*]","previewValue":""},{"name":"contactlandlinephone","children":[],"type":"string","jpath":"$.designOrderContacts[*].contactlandlinephone","previewValue":""},{"name":"contactcablingcompany","children":[],"type":"string","jpath":"$.designOrderContacts[*].contactcablingcompany","previewValue":""},{"name":"tootherproduct","children":[],"type":"string","jpath":"$.designOrderContacts[*].tootherproduct","previewValue":"false"},{"name":"uuid","children":[],"type":"string","jpath":"$.designOrderContacts[*].uuid","previewValue":"1540287f-07f6-4354-b7b4-e968275c076c"},{"name":"contactid","children":[],"type":"string","jpath":"$.designOrderContacts[*].contactid","previewValue":""}],"type":"object","jpath":"$.designOrderContacts[*]","previewValue":""}],"type":"array.object","jpath":"$.designOrderContacts[*]","previewValue":""},{"name":"completenessLevel","children":[],"type":"string","jpath":"$.completenessLevel","previewValue":"0"},{"name":"userFK","children":[],"type":"string","jpath":"$.userFK","previewValue":"75649"},{"name":"numberSites","children":[],"type":"string","jpath":"$.numberSites","previewValue":"1"},{"name":"numberProducts","children":[],"type":"string","jpath":"$.numberProducts","previewValue":"1"},{"name":"iSeDesignId","children":[],"type":"string","jpath":"$.iSeDesignId","previewValue":"ise-2808919"},{"name":"externalState","children":[],"type":"object","jpath":"$.externalState","previewValue":""},{"name":"sites","children":[{"name":"sites_object","children":[{"name":"countryCode","children":[],"type":"string","jpath":"$.sites[*].countryCode","previewValue":"US"},{"name":"cityName","children":[],"type":"string","jpath":"$.sites[*].cityName","previewValue":"IRVINE"},{"name":"guid","children":[],"type":"string","jpath":"$.sites[*].guid","previewValue":"c59d6a3b-bb73-4637-fa32-011550fec797"},{"name":"eeid","children":[],"type":"string","jpath":"$.sites[*].eeid","previewValue":"PL0000009572"},{"name":"groupName","children":[],"type":"string","jpath":"$.sites[*].groupName","previewValue":"Customer Site"},{"name":"lattitude","children":[],"type":"string","jpath":"$.sites[*].lattitude","previewValue":"33.69041"},{"name":"line1Address","children":[],"type":"string","jpath":"$.sites[*].line1Address","previewValue":"17222 VON KARMAN AVE"},{"name":"longitude","children":[],"type":"string","jpath":"$.sites[*].longitude","previewValue":"-117.840591"},{"name":"placeholder","children":[],"type":"string","jpath":"$.sites[*].placeholder","previewValue":""},{"name":"postalCode","children":[],"type":"string","jpath":"$.sites[*].postalCode","previewValue":"92614"},{"name":"siteAttributes","children":[{"name":"clli","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.clli","previewValue":"IRVECARQ"},{"name":"customerlocationname","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.customerlocationname","previewValue":""},{"name":"lcar","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.lcar","previewValue":""},{"name":"demarcfloor","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.demarcfloor","previewValue":"1"},{"name":"demarcroom","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.demarcroom","previewValue":"TELC"},{"name":"demarcsuite","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.demarcsuite","previewValue":""},{"name":"demarcbldg","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.demarcbldg","previewValue":""},{"name":"endusername","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.endusername","previewValue":"BCM One, Inc"},{"name":"hoursofoperartion","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.hoursofoperartion","previewValue":""},{"name":"specialbuildingaccess","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.specialbuildingaccess","previewValue":"false"},{"name":"specialstable","children":[{"name":"specialstable_string","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.specialstable[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteAttributes.specialstable[*]","previewValue":""},{"name":"notes","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.notes","previewValue":""},{"name":"isPrimary","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.isPrimary","previewValue":""},{"name":"stage","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.stage","previewValue":""},{"name":"startDate","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.startDate","previewValue":""},{"name":"customerdemarcfloor","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.customerdemarcfloor","previewValue":"1"},{"name":"customerdemarcroom","children":[],"type":"string","jpath":"$.sites[*].siteAttributes.customerdemarcroom","previewValue":"SERVER"}],"type":"object","jpath":"$.sites[*].siteAttributes","previewValue":""},{"name":"otherAttributes","children":[],"type":"object","jpath":"$.sites[*].otherAttributes","previewValue":""},{"name":"stateCode","children":[],"type":"string","jpath":"$.sites[*].stateCode","previewValue":"CA"},{"name":"lastModified","children":[],"type":"string","jpath":"$.sites[*].lastModified","previewValue":"1664230885823"},{"name":"clliCode","children":[],"type":"string","jpath":"$.sites[*].clliCode","previewValue":"IRVECARQ"},{"name":"onnetFlag","children":[],"type":"string","jpath":"$.sites[*].onnetFlag","previewValue":"Y"},{"name":"imported","children":[],"type":"string","jpath":"$.sites[*].imported","previewValue":"true"},{"name":"customerSolutionId","children":[],"type":"string","jpath":"$.sites[*].customerSolutionId","previewValue":""},{"name":"siteSolutionId","children":[],"type":"string","jpath":"$.sites[*].siteSolutionId","previewValue":""},{"name":"siteProducts","children":[{"name":"siteProducts_object","children":[{"name":"groupProductGuid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].groupProductGuid","previewValue":"fc31659d-bf84-4c18-6a68-f5e91a66c21e"},{"name":"guid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].guid","previewValue":"70c3ff09-2a75-48c6-c305-e694842fc1b5"},{"name":"productId","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].productId","previewValue":"1"},{"name":"bondedId","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].bondedId","previewValue":""},{"name":"siteEeid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].siteEeid","previewValue":"PL0000009572"},{"name":"productName","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].productName","previewValue":"INTERNET"},{"name":"circuitName","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].circuitName","previewValue":"INTERNET 1"},{"name":"attributes","children":[{"name":"internetType","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.internetType","previewValue":"DIA"},{"name":"portspeed","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.portspeed","previewValue":"GigE"},{"name":"cdr","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.cdr","previewValue":"200 Mbps"},{"name":"productportspeed","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.productportspeed","previewValue":"GigE"},{"name":"productcdr","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.productcdr","previewValue":"200 Mbps"},{"name":"accesstype","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.accesstype","previewValue":"Ethernet Switched Access"},{"name":"mnsdiatierspeed","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.mnsdiatierspeed","previewValue":"100 Mbps"},{"name":"diabillingmethod","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.diabillingmethod","previewValue":"Flat Rate"},{"name":"accesspop","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.accesspop","previewValue":"Nearest"},{"name":"voiceoverdia","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.voiceoverdia","previewValue":"No Voice"},{"name":"voicecdr","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.voicecdr","previewValue":""},{"name":"productpop","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.productpop","previewValue":"Nearest"},{"name":"orderentrysystem","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.orderentrysystem","previewValue":"SwIFT"},{"name":"voiceoverip","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.voiceoverip","previewValue":"false"},{"name":"internetMspVlanAttributes","children":[{"name":"internetMspVlanAttributes_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.internetMspVlanAttributes[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].attributes.internetMspVlanAttributes[*]","previewValue":""},{"name":"bidirectionalforwardingdetection","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.bidirectionalforwardingdetection","previewValue":"false"},{"name":"managedfirewall","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.managedfirewall","previewValue":"false"},{"name":"managedrouterflag","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.managedrouterflag","previewValue":"false"},{"name":"multicast","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.multicast","previewValue":"No"},{"name":"managediadflag","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.managediadflag","previewValue":"false"},{"name":"nidflag","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.nidflag","previewValue":"false"},{"name":"nidoptout","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.nidoptout","previewValue":"false"},{"name":"notes","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.notes","previewValue":""},{"name":"primarydns","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.primarydns","previewValue":"false"},{"name":"managedethernetaccess","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.managedethernetaccess","previewValue":"false"},{"name":"managedSBC","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.managedSBC","previewValue":"false"},{"name":"wanOptimization","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.wanOptimization","previewValue":"false"},{"name":"hotcut","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.hotcut","previewValue":"false"},{"name":"billingaccount","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.billingaccount","previewValue":"5-LDCQYPCH"},{"name":"orderexpedite","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.orderexpedite","previewValue":"false"},{"name":"term","children":[{"name":"termqty","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.term.termqty","previewValue":"36"},{"name":"termunits","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.term.termunits","previewValue":"Months"}],"type":"object","jpath":"$.sites[*].siteProducts[*].attributes.term","previewValue":""},{"name":"termcontracttype","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.termcontracttype","previewValue":""},{"name":"customerfiberconnectortype","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.customerfiberconnectortype","previewValue":"LC"},{"name":"taxid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.taxid","previewValue":""},{"name":"customerrequesteddate","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.customerrequesteddate","previewValue":"2022-11-04T05:00:00.000Z"},{"name":"servicestatus","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.servicestatus","previewValue":"Install"},{"name":"provisionednetwork","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.provisionednetwork","previewValue":"Red"},{"name":"orderstatus","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.orderstatus","previewValue":"Completed"},{"name":"customercablingtype","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.customercablingtype","previewValue":"Fiber"},{"name":"customerfibermode","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.customerfibermode","previewValue":"2 Fiber SMF"},{"name":"circuitcontacts","children":[{"name":"circuitcontacts_object","children":[{"name":"contactemail","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].contactemail","previewValue":""},{"name":"contactmobile","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].contactmobile","previewValue":""},{"name":"contactphone","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].contactphone","previewValue":""},{"name":"contactfax","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].contactfax","previewValue":""},{"name":"contacttitle","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].contacttitle","previewValue":""},{"name":"contactname","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].contactname","previewValue":""},{"name":"contactrolename","children":[{"name":"contactrolename_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].contactrolename[*]","previewValue":"Primary"}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].contactrolename[*]","previewValue":""},{"name":"contactlandlinephone","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].contactlandlinephone","previewValue":""},{"name":"contactcablingcompany","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].contactcablingcompany","previewValue":""},{"name":"tootherproduct","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].tootherproduct","previewValue":"false"},{"name":"uuid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].uuid","previewValue":"1540287f-07f6-4354-b7b4-e968275c076c"},{"name":"contactid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*].contactid","previewValue":""}],"type":"object","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*]","previewValue":""}],"type":"array.object","jpath":"$.sites[*].siteProducts[*].attributes.circuitcontacts[*]","previewValue":""},{"name":"producttransport","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.producttransport","previewValue":"EPL"},{"name":"pathtype","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.pathtype","previewValue":"Standard"},{"name":"gctoassignwanips","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.gctoassignwanips","previewValue":"true"},{"name":"serviceid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.serviceid","previewValue":"444547011"},{"name":"changerequest","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.changerequest","previewValue":"false"},{"name":"orderId","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.orderId","previewValue":"552860049"},{"name":"expressflag","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.expressflag","previewValue":"false"},{"name":"offnet","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.offnet","previewValue":"false"},{"name":"latency","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.latency","previewValue":"None"},{"name":"level3providedLOACFA","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.level3providedLOACFA","previewValue":"false"},{"name":"accessdiversity","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.accessdiversity","previewValue":"false"},{"name":"framingandlinecoding","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.framingandlinecoding","previewValue":"Ethernet/None"},{"name":"thirdPartyCrossConnect","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.thirdPartyCrossConnect","previewValue":"false"},{"name":"extension","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.extension","previewValue":"false"},{"name":"jumboframe","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.jumboframe","previewValue":"false"},{"name":"mtu","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.mtu","previewValue":""},{"name":"customerlocnum","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.customerlocnum","previewValue":""},{"name":"productgatewaylocnum","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.productgatewaylocnum","previewValue":""},{"name":"lineitemreference","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.lineitemreference","previewValue":""},{"name":"solutionid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.solutionid","previewValue":""},{"name":"existingcircuitid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.existingcircuitid","previewValue":""},{"name":"mnsdiaencapsulation","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.mnsdiaencapsulation","previewValue":"Ethernet"},{"name":"mnsdiadlci","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.mnsdiadlci","previewValue":""},{"name":"diversity","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.diversity","previewValue":"false"},{"name":"dynamiccapacity","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.dynamiccapacity","previewValue":"false"},{"name":"voicecompleteflag","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.voicecompleteflag","previewValue":"false"},{"name":"mnsec","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.mnsec","previewValue":"false"},{"name":"samob","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.samob","previewValue":"false"},{"name":"ddos","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.ddos","previewValue":"false"},{"name":"diamsp","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.diamsp","previewValue":"false"},{"name":"mnsdiaipversion","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.mnsdiaipversion","previewValue":"IPv4"},{"name":"ipblocksize","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.ipblocksize","previewValue":"/30"},{"name":"ipv6blocksize","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.ipv6blocksize","previewValue":""},{"name":"vrfgctoassignlanips","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.vrfgctoassignlanips","previewValue":"true"},{"name":"vrflanipblocksize","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.vrflanipblocksize","previewValue":"/27"},{"name":"vrflanv6ipblocksize","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.vrflanv6ipblocksize","previewValue":""},{"name":"diaroutingprotocol","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.diaroutingprotocol","previewValue":"Static"},{"name":"routingprotocolversion","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.routingprotocolversion","previewValue":"IPv4"},{"name":"lanips","children":[{"name":"lanips_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.lanips[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].attributes.lanips[*]","previewValue":""},{"name":"relatedservices","children":[{"name":"relatedservices_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.relatedservices[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].attributes.relatedservices[*]","previewValue":""},{"name":"productcustomernumber","children":[{"name":"text","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.productcustomernumber.text","previewValue":"BCM One, Inc"},{"name":"value","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.productcustomernumber.value","previewValue":"2-HMJYDG"}],"type":"object","jpath":"$.sites[*].siteProducts[*].attributes.productcustomernumber","previewValue":""},{"name":"tspcode","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.tspcode","previewValue":""},{"name":"customerpurchaseordernumber","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.customerpurchaseordernumber","previewValue":""},{"name":"projectid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.projectid","previewValue":""},{"name":"specialstable","children":[{"name":"specialstable_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.specialstable[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].attributes.specialstable[*]","previewValue":""},{"name":"defaultsacknowledged","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.defaultsacknowledged","previewValue":"true"},{"name":"defaultconfigapplied","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.defaultconfigapplied","previewValue":"false"},{"name":"customerreplied","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.customerreplied","previewValue":"false"},{"name":"refreshedfromdigitaltdg","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.refreshedfromdigitaltdg","previewValue":"false"},{"name":"connectionsegments","children":[{"name":"connectionsegments_object","children":[{"name":"wavesname","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].wavesname","previewValue":""},{"name":"wavesaddress","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].wavesaddress","previewValue":""},{"name":"wavessiteid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].wavessiteid","previewValue":""},{"name":"waveslatitude","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].waveslatitude","previewValue":""},{"name":"waveslongitude","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].waveslongitude","previewValue":""},{"name":"wavesclli","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].wavesclli","previewValue":""},{"name":"wavessegmenttype","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].wavessegmenttype","previewValue":"marker"},{"name":"wavesdelete","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].wavesdelete","previewValue":"false"},{"name":"suppressdisplay","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].suppressdisplay","previewValue":"false"},{"name":"locationmarker","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].locationmarker","previewValue":"Standard Path not Custom"},{"name":"wavessegmentequipmentname","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].wavessegmentequipmentname","previewValue":""},{"name":"wavessegmentnetworkcolor","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].wavessegmentnetworkcolor","previewValue":""},{"name":"wavessource","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].wavessource","previewValue":""},{"name":"wavesdisplayAddr","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*].wavesdisplayAddr","previewValue":"Location Marker: Standard Path not Custom"}],"type":"object","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*]","previewValue":""}],"type":"array.object","jpath":"$.sites[*].siteProducts[*].attributes.connectionsegments[*]","previewValue":""},{"name":"billstartdate","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.billstartdate","previewValue":"2022-11-02T10:28:52Z"},{"name":"serviceordercompletedate","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].attributes.serviceordercompletedate","previewValue":"2022-11-02T04:36:24Z"}],"type":"object","jpath":"$.sites[*].siteProducts[*].attributes","previewValue":""},{"name":"vlanAttributes","children":[{"name":"vlanAttributes_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].vlanAttributes[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].vlanAttributes[*]","previewValue":""},{"name":"subiAttributes","children":[{"name":"subiAttributes_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].subiAttributes[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].subiAttributes[*]","previewValue":""},{"name":"internetVrfAttributes","children":[{"name":"internetVrfAttributes_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].internetVrfAttributes[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].internetVrfAttributes[*]","previewValue":""},{"name":"standardVrfAttributes","children":[{"name":"standardVrfAttributes_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].standardVrfAttributes[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].standardVrfAttributes[*]","previewValue":""},{"name":"internetMspVlanAttributes","children":[{"name":"internetMspVlanAttributes_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].internetMspVlanAttributes[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].internetMspVlanAttributes[*]","previewValue":""},{"name":"source","children":[],"type":"object","jpath":"$.sites[*].siteProducts[*].source","previewValue":""},{"name":"accessPop","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].accessPop","previewValue":""},{"name":"productPop","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].productPop","previewValue":""},{"name":"eeid","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].eeid","previewValue":"SL0000343663"},{"name":"importedProductId","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].importedProductId","previewValue":"444547011"},{"name":"previousImportedProductId","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].previousImportedProductId","previewValue":""},{"name":"accesspopLat","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].accesspopLat","previewValue":""},{"name":"accesspopLong","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].accesspopLong","previewValue":""},{"name":"managednetworkattributes","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].managednetworkattributes","previewValue":""},{"name":"managednetworkvrfattributes","children":[],"type":"object","jpath":"$.sites[*].siteProducts[*].managednetworkvrfattributes","previewValue":""},{"name":"opportunityId","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].opportunityId","previewValue":"58587351"},{"name":"proposalId","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].proposalId","previewValue":"2516944"},{"name":"quoteId","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].quoteId","previewValue":"SM10236207"},{"name":"customerNumber","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].customerNumber","previewValue":"2-HMJYDG"},{"name":"orderId","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].orderId","previewValue":"552860049"},{"name":"customerSolutionId","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].customerSolutionId","previewValue":""},{"name":"siteSolutionId","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].siteSolutionId","previewValue":""},{"name":"billingCoordination","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].billingCoordination","previewValue":""},{"name":"lastCalculatedCompletenessAnalysisResult","children":[{"name":"level","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.level","previewValue":"0"},{"name":"notQuoteableMessages","children":[{"name":"notQuoteableMessages_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.notQuoteableMessages[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.notQuoteableMessages[*]","previewValue":""},{"name":"incompleteMessages","children":[{"name":"incompleteMessages_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.incompleteMessages[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.incompleteMessages[*]","previewValue":""},{"name":"infoMessages","children":[{"name":"infoMessages_object","children":[{"name":"key","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.infoMessages[*].key","previewValue":""},{"name":"message","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.infoMessages[*].message","previewValue":"Validations are not applied to product in &lt;b&gt;Completed&lt;/b&gt; status."},{"name":"anchorKey","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.infoMessages[*].anchorKey","previewValue":""},{"name":"roleOverrides","children":[{"name":"roleOverrides_string","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.infoMessages[*].roleOverrides[*]","previewValue":""}],"type":"array.string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.infoMessages[*].roleOverrides[*]","previewValue":""}],"type":"object","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.infoMessages[*]","previewValue":""}],"type":"array.object","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.infoMessages[*]","previewValue":""},{"name":"seComplete","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.seComplete","previewValue":"true"},{"name":"infoOnly","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.infoOnly","previewValue":"true"},{"name":"wasFiltered","children":[],"type":"string","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult.wasFiltered","previewValue":"false"}],"type":"object","jpath":"$.sites[*].siteProducts[*].lastCalculatedCompletenessAnalysisResult","previewValue":""}],"type":"object","jpath":"$.sites[*].siteProducts[*]","previewValue":""}],"type":"array.object","jpath":"$.sites[*].siteProducts[*]","previewValue":""},{"name":"siteContacts","children":[{"name":"siteContacts_object","children":[{"name":"contactemail","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].contactemail","previewValue":""},{"name":"contactmobile","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].contactmobile","previewValue":""},{"name":"contactphone","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].contactphone","previewValue":""},{"name":"contactfax","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].contactfax","previewValue":""},{"name":"contacttitle","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].contacttitle","previewValue":""},{"name":"contactname","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].contactname","previewValue":""},{"name":"contactrolename","children":[{"name":"contactrolename_string","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].contactrolename[*]","previewValue":"Primary"}],"type":"array.string","jpath":"$.sites[*].siteContacts[*].contactrolename[*]","previewValue":""},{"name":"contactlandlinephone","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].contactlandlinephone","previewValue":""},{"name":"contactcablingcompany","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].contactcablingcompany","previewValue":""},{"name":"tootherproduct","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].tootherproduct","previewValue":"false"},{"name":"uuid","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].uuid","previewValue":"1540287f-07f6-4354-b7b4-e968275c076c"},{"name":"contactid","children":[],"type":"string","jpath":"$.sites[*].siteContacts[*].contactid","previewValue":""}],"type":"object","jpath":"$.sites[*].siteContacts[*]","previewValue":""}],"type":"array.object","jpath":"$.sites[*].siteContacts[*]","previewValue":""}],"type":"object","jpath":"$.sites[*]","previewValue":""}],"type":"array.object","jpath":"$.sites[*]","previewValue":""}],"type":"object","jpath":"$","previewValue":""}</value>
+        <variable display_value="Target">4674240787523300f917e55936cb0b0e</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_d334dd8187a35d5084b2a18e0ebb3577^id=d334dd8187a35d5084b2a18e0ebb3577"/>
+    <sys_element_mapping action="delete_multiple" query="id=d334dd8187a35d5084b2a18e0ebb3577"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>sample_payload</field>
+        <id>d334dd8187a35d5084b2a18e0ebb3577</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>6734dd8187a35d5084b2a18e0ebb3587</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>source_data</field>
+        <id>d334dd8187a35d5084b2a18e0ebb3577</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>ef34dd8187a35d5084b2a18e0ebb3586</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
+        <value>{{step[98f12151-8a8c-4e2a-a6c0-15ff428e952b].response_body}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>target_schema</field>
+        <id>d334dd8187a35d5084b2a18e0ebb3577</id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>a334dd8187a35d5084b2a18e0ebb3587</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <table>var__m_sys_flow_step_definition_input_502328c387523300f917e55936cb0bf0</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=d334dd8187a35d5084b2a18e0ebb3577"/>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=d334dd8187a35d5084b2a18e0ebb3577^sys_idNOT INa734dd8187a35d5084b2a18e0ebb357f"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>co_type_name=FD5734dd8174a35d5066051b46b6f1f77b,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=6a160918-e70b-4531-9981-dc05518fbd2e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>root</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>root</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="JSON Parser step">d334dd8187a35d5084b2a18e0ebb3577</model>
+        <model_id>d334dd8187a35d5084b2a18e0ebb3577</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_d334dd8187a35d5084b2a18e0ebb3577</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>a734dd8187a35d5084b2a18e0ebb357f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=d334dd8187a35d5084b2a18e0ebb3577"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_d334dd8187a35d5084b2a18e0ebb3577^sys_idNOT INa334dd8187a35d5084b2a18e0ebb3584"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>root</element>
+        <help/>
+        <hint/>
+        <label>root</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_d334dd8187a35d5084b2a18e0ebb3577</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:58</sys_created_on>
+        <sys_id>a334dd8187a35d5084b2a18e0ebb3584</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:58</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=2f49f4c587235d5084b2a18e0ebb3582"/>
+    <sys_hub_action_output action="delete_multiple" query="model=2f49f4c587235d5084b2a18e0ebb3582^sys_idNOT IN7334dd8187a35d5084b2a18e0ebb35bc,fb34dd8187a35d5084b2a18e0ebb35c1"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDf334dd81b8a35d50de0141004219e4b9,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=cb1b1927-1578-43a4-acc5-943c55da4a3e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="DIA_SERVICE_ORDER_ENRICH">2f49f4c587235d5084b2a18e0ebb3582</model>
+        <model_id>2f49f4c587235d5084b2a18e0ebb3582</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_2f49f4c587235d5084b2a18e0ebb3582</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:59</sys_created_on>
+        <sys_id>7334dd8187a35d5084b2a18e0ebb35bc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7334dd8187a35d5084b2a18e0ebb35bc"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=7334dd8187a35d5084b2a18e0ebb35bc"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=e64dfb67-1d67-4931-955a-a39ec8c137f2,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="DIA_SERVICE_ORDER_ENRICH">2f49f4c587235d5084b2a18e0ebb3582</model>
+        <model_id>2f49f4c587235d5084b2a18e0ebb3582</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_2f49f4c587235d5084b2a18e0ebb3582</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:59</sys_created_on>
+        <sys_id>fb34dd8187a35d5084b2a18e0ebb35c1</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:59</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=fb34dd8187a35d5084b2a18e0ebb35c1"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=fb34dd8187a35d5084b2a18e0ebb35c1"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=2f49f4c587235d5084b2a18e0ebb3582"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=2f49f4c587235d5084b2a18e0ebb3582^sys_idNOT IN6b6a7c0987235d5084b2a18e0ebb3546"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="DIA_SERVICE_ORDER_ENRICH">2f49f4c587235d5084b2a18e0ebb3582</action_type_id>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-01 22:23:11</sys_created_on>
+        <sys_id>6b6a7c0987235d5084b2a18e0ebb3546</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-01 22:23:11</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=6b6a7c0987235d5084b2a18e0ebb3546"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_2f49f4c587235d5084b2a18e0ebb3582"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_2f49f4c587235d5084b2a18e0ebb3582"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_2f49f4c587235d5084b2a18e0ebb3582^sys_idNOT IN3f34dd8187a35d5084b2a18e0ebb35c0,f334dd8187a35d5084b2a18e0ebb35c8"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_2f49f4c587235d5084b2a18e0ebb3582</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:59</sys_created_on>
+        <sys_id>3f34dd8187a35d5084b2a18e0ebb35c0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_2f49f4c587235d5084b2a18e0ebb3582</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-12-02 00:15:59</sys_created_on>
+        <sys_id>f334dd8187a35d5084b2a18e0ebb35c8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-12-02 00:15:59</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_2f49f4c587235d5084b2a18e0ebb3582"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=2f49f4c587235d5084b2a18e0ebb3582"/>
+</record_update>

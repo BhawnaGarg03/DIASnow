@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="7a8f93141b0b20102885a932604bcb70" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>true</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <compiler_build/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>updatebillingsdate</internal_name>
+        <label_cache/>
+        <latest_snapshot/>
+        <master_snapshot/>
+        <name>UpdateBilling'sDate</name>
+        <natlang/>
+        <outputs/>
+        <state>draft</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>kruti.wankhade</sys_created_by>
+        <sys_created_on>2022-05-30 08:43:53</sys_created_on>
+        <sys_domain>7a8f93141b0b20102885a932604bcb70</sys_domain>
+        <sys_domain_path>!!!/!!&amp;/</sys_domain_path>
+        <sys_id>46c05191873f4d5084b2a18e0ebb354f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>UpdateBilling'sDate</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_46c05191873f4d5084b2a18e0ebb354f</sys_update_name>
+        <sys_updated_by>kruti.wankhade</sys_updated_by>
+        <sys_updated_on>2022-05-30 08:43:53</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=46c05191873f4d5084b2a18e0ebb354f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=46c05191873f4d5084b2a18e0ebb354f"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47080970000001</claim_timestamp>
+        <metadata_update_name>sys_hub_action_type_definition_46c05191873f4d5084b2a18e0ebb354f</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:29</sys_created_on>
+        <sys_id>7d3429931b251d500f4ccbb8624bcbbf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:29</sys_updated_on>
+    </sys_claim>
+    <sys_hub_step_instance action="delete_multiple" query="action=46c05191873f4d5084b2a18e0ebb354f"/>
+    <sys_hub_action_input action="delete_multiple" query="model=46c05191873f4d5084b2a18e0ebb354f"/>
+    <sys_hub_action_output action="delete_multiple" query="model=46c05191873f4d5084b2a18e0ebb354f"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=46c05191873f4d5084b2a18e0ebb354f"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=46c05191873f4d5084b2a18e0ebb354f"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_46c05191873f4d5084b2a18e0ebb354f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_46c05191873f4d5084b2a18e0ebb354f"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_46c05191873f4d5084b2a18e0ebb354f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_46c05191873f4d5084b2a18e0ebb354f"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=46c05191873f4d5084b2a18e0ebb354f"/>
+</record_update>

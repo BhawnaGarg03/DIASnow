@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Billing Account Details" max_length="40" name="sn_ind_tmt_orm_billin_account_details" sizeclass="331" type="collection">
+        <element attributes="encode_utf8=false" label="Customer Order" max_length="32" name="u_customer_order" reference="sn_ind_tmt_orm_order" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Billing Account Number" max_length="100" name="u_billing_account_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Vendor Org ID" max_length="40" name="u_vendor_org_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Number Of endpoints" max_length="40" name="u_number_of_endpoints" type="string"/>
+        <element label="Account Name" max_length="32" name="u_account_name" reference="customer_account" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="PIID" max_length="100" name="u_piid" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Number of Active Sensors" max_length="40" name="u_number_of_active_sensors" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="BillingCycle Date" max_length="40" name="u_billingcycle_date" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Date" max_length="40" name="u_date" type="glide_date"/>
+        <element label="Number of Sensors OverUsed" max_length="40" name="u_difference" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Billing Cycle" max_length="40" name="u_billing_cycle" type="string"/>
+        <index name="index">
+            <element name="u_account_name"/>
+        </index>
+        <index name="index2">
+            <element name="u_customer_order"/>
+        </index>
+    </element>
+</database>

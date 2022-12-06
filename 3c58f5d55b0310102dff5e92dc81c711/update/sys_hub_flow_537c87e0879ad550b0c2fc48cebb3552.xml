@@ -43,6 +43,20 @@
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=537c87e0879ad550b0c2fc48cebb3552"/>
     <sys_variable_value action="delete_multiple" query="document_key=537c87e0879ad550b0c2fc48cebb3552"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fad9bb0000001</claim_timestamp>
+        <metadata_update_name>sys_hub_flow_537c87e0879ad550b0c2fc48cebb3552</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:30</sys_created_on>
+        <sys_id>8fc6c8a28727151094fa0e58cebb3568</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:30</sys_updated_on>
+    </sys_claim>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=537c87e0879ad550b0c2fc48cebb3552"/>
     <sys_hub_flow_stage action="delete_multiple" query="flow=537c87e0879ad550b0c2fc48cebb3552"/>
     <sys_flow_cat_variable_model action="delete_multiple" query="id=537c87e0879ad550b0c2fc48cebb3552^sys_idNOT IN537c87e0879ad550b0c2fc48cebb3554"/>

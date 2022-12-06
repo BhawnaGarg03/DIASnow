@@ -1,0 +1,757 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>sn_ind_tmt_orm.TMFProductOrderAPIUtil1</api_name>
+        <caller_access/>
+        <client_callable>false</client_callable>
+        <description/>
+        <name>TMFProductOrderAPIUtil1</name>
+        <script><![CDATA[var TMFProductOrderAPIUtil1 = Class.create();
+TMFProductOrderAPIUtil1.prototype = {
+    initialize: function() {
+        this.tmfCommonOrderAPIUtil = new TMFCommonOrderAPIUtil1();
+        this.jsonSchemaValidation = new sn_ind_tsm_core.JSONSchemaValidation();
+        this.tsmOpenAPIUtil = new sn_ind_tsm_core.TSMOpenAPIUtil();
+        this.productOrderProcessor = new ProductOrderProcessor();
+        this.apiCoreUtil = new sn_ind_tsm_core.APICoreUtil();
+        this._logger = new global.GSLog(TMFOrderAPIConstants.LEVEL_OF_LOGGING, this.type);
+        this.response = {};
+        this.response.status = TMFOrderAPIConstants.STATUS_CODES.ERROR; // success or error 
+        this.response.details = {};
+    },
+
+    processCreateOrder: function(orderObject) {
+        try {
+            // validation		
+            var schema = this.productOrderProcessor.getProductOrderSchema();
+            if (!this.isValidOrderPayload(orderObject, schema, '', TMFOrderAPIConstants.OPERATION_POST)) {
+                this._logger.logDebug("processCreateOrder: validation failed");
+                return this.response;
+            }
+            // Write to glide record
+            var orderGr = this.transformAndCreateOrder(orderObject);
+            this.tmfCommonOrderAPIUtil.updateOrderNotes(orderObject, orderGr);
+            var restructuredOrdLineItemArr = this.tmfCommonOrderAPIUtil.getHierarchyParentChild(orderObject, 'productOrderItem', 'productOrderItemRelationship');
+            var custOdrPriceObj = this.transformAndCreateOrdLineItm(restructuredOrdLineItemArr, orderGr);
+            this.updateOrdTypeAndPriceAndStateOnCustOrd(orderGr, orderObject.orderType, TMFOrderAPIConstants.ORDER_STATE_NEW, custOdrPriceObj);
+            delete orderObject.orderType;
+            this.prepareCreateOrderResponse(orderObject, orderGr);
+        } catch (ex) {
+            this._logger.logErr("processCreateOrder: Process aborted, error is: " + ex);
+            var errorObj = this.apiCoreUtil.getErrorObj(TMFOrderAPIConstants.ERROR_CODES.INTERNAL_ERROR, TMFOrderAPIConstants.MESSAGES.CREATE_ERROR, TMFOrderAPIConstants.MESSAGES.CREATE_ERROR);
+            var details = [];
+            details.push(this.apiCoreUtil.getErrorDetailsObj(ex.message + '', ''));
+            errorObj.details = details;
+            this.response.details = errorObj;
+        }
+        this._logger.logDebug("processCreateOrder: Order created succesfully");
+        return this.response;
+    },
+
+    processPatchOrder: function(id, orderObject) {
+        try {
+            // Validation
+            var errorDetails = [];
+            var isValidOrderId = this.isValidOrdIdForPatch(id, errorDetails);
+
+            var schema = this.productOrderProcessor.getPatchProductOrderSchema();
+            if (!this.isValidOrderPayload(orderObject, schema, id, TMFOrderAPIConstants.OPERATION_PATCH)) {
+                this._logger.logDebug("processPatchOrder: validation failed");
+                return this.response;
+            }
+
+            var hierarchyMap = this.prepareHierarchyMap(orderObject);
+            var isPONRReachedOrNotInProgress = this.isPONRReachedOrNotInProgress(id, orderObject, hierarchyMap, errorDetails);
+
+            var isValidRevisionOperation = this.isValidRevisionOperation(id, orderObject, errorDetails);
+            var isQuantityCharsValidationPassed = this.productOrderProcessor.validateQuantityChars(orderObject.productOrderItem, id, errorDetails);
+
+            if (!isValidOrderId || !isValidRevisionOperation || isPONRReachedOrNotInProgress || !isQuantityCharsValidationPassed) {
+                this._logger.logErr("processPatchOrder: Process aborted, error is: " + JSON.stringify(errorDetails));
+                var errorObj = this.apiCoreUtil.getErrorObj(TMFOrderAPIConstants.ERROR_CODES.INTERNAL_ERROR, TMFOrderAPIConstants.MESSAGES.PATCH_ERROR, TMFOrderAPIConstants.MESSAGES.PATCH_ERROR);
+                var details = [];
+                details.push(errorDetails);
+                errorObj.details = details;
+                this.response.details = errorObj;
+                return this.response;
+            }
+
+            var warnings = [];
+            this.patchOrderDetails(id, orderObject);
+            this.applyInflightChange(id, orderObject, warnings);
+
+            this.preparePatchOrderResponse(orderObject, warnings);
+        } catch (ex) {
+            this._logger.logErr("processPatchOrder: Process aborted, error is: " + ex);
+            errorObj = this.apiCoreUtil.getErrorObj(TMFOrderAPIConstants.ERROR_CODES.INTERNAL_ERROR, TMFOrderAPIConstants.MESSAGES.PATCH_ERROR, TMFOrderAPIConstants.MESSAGES.PATCH_ERROR);
+            details = [];
+            details.push(this.apiCoreUtil.getErrorDetailsObj(errorObj.message + '', ''));
+            errorObj.details = details;
+            this.response.details = errorObj;
+        }
+
+        this._logger.logDebug("processPatchOrder: Order updated succesfully");
+        return this.response;
+
+    },
+
+    prepareHierarchyMap: function(orderObject) {
+        var hierarchy = {};
+        for (var lineItemIndex = 0; lineItemIndex < orderObject.productOrderItem.length; lineItemIndex++) {
+            if (!hierarchy.hasOwnProperty(orderObject.productOrderItem[lineItemIndex].id)) {
+                if (!gs.nil(this.getParentLineIdFromPayload(orderObject.productOrderItem[lineItemIndex]))) {
+                    hierarchy[orderObject.productOrderItem[lineItemIndex].id] = this.getParentLineIdFromPayload(orderObject.productOrderItem[lineItemIndex]);
+                }
+            }
+        }
+
+        return hierarchy;
+    },
+
+    getParentLineIdFromPayload: function(orderLineItem) {
+        var relationships = orderLineItem.productOrderItemRelationship;
+        if (relationships != null && relationships.length > 0) {
+            for (var i = 0; i < relationships.length; i++) {
+                if (relationships[i].relationshipType == "HasParent") {
+                    return relationships[i].id;
+                }
+            }
+        }
+
+        return "";
+    },
+
+    getTopLineItemId: function(id, hierarchy) {
+        var topLineId;
+        var childLineId = id;
+        while (true) {
+            if (!hierarchy.hasOwnProperty(childLineId)) {
+                topLineId = childLineId;
+                break;
+            } else {
+                childLineId = hierarchy[childLineId];
+            }
+        }
+
+        return topLineId;
+    },
+
+    isValidOrdIdForPatch: function(id, errorDetails) {
+        var prdOrder = this.apiCoreUtil.getRecordBySysIdOrAlternateId(id, Constants.TABLE_CUSTOMER_ORDER, Constants.EXTERNAL_ID);
+        if (gs.nil(prdOrder) || !prdOrder.next()) {
+            errorDetails.push(this.apiCoreUtil.getErrorDetailsObj(TMFOrderAPIConstants.MESSAGES.ORDER_NOT_FOUND, ''));
+            return false;
+        } else {
+            var errMessage;
+            if (prdOrder.ponr) {
+                errMessage = TMFOrderAPIConstants.MESSAGES.PONR_REACHED_ERROR;
+            } else if (prdOrder.state == TMFOrderAPIConstants.ORDER_STATE_NEW) {
+                errMessage = TMFOrderAPIConstants.MESSAGES.NEW_STATE_ERROR;
+            }
+
+            if (!gs.nil(errMessage)) {
+                this._logger.logErr("processPatchOrder: Process aborted, error is: " + errMessage);
+                errorDetails.push(this.apiCoreUtil.getErrorDetailsObj(errMessage, ''));
+                return false;
+            }
+        }
+        this._logger.logDebug("isValidOrdIdForPatch: valid Order ID");
+        return true;
+    },
+
+    patchOrderDetails: function(id, productOrderObject) {
+        var orderGr = this.apiCoreUtil.getRecordBySysIdOrAlternateId(id, Constants.TABLE_CUSTOMER_ORDER, Constants.EXTERNAL_ID);
+        if (!gs.nil(orderGr) && orderGr.next()) {
+            this.tmfCommonOrderAPIUtil.updateOrderNotes(productOrderObject, orderGr);
+            if (!gs.nil(productOrderObject.orderDate))
+                orderGr.order_date = this.tsmOpenAPIUtil.transformISODateToGlideDateTime(productOrderObject.orderDate, Constants.SIMPLE_DATE_FORMAT);
+            if (!gs.nil(productOrderObject.requestedStartDate))
+                orderGr.expected_start_date = this.tsmOpenAPIUtil.transformISODateToGlideDateTime(productOrderObject.requestedStartDate, Constants.SIMPLE_DATE_FORMAT);
+            if (!gs.nil(productOrderObject.requestedCompletionDate))
+                orderGr.expected_end_date = this.tsmOpenAPIUtil.transformISODateToGlideDateTime(productOrderObject.requestedCompletionDate, Constants.SIMPLE_DATE_FORMAT);
+            accountId = this.apiCoreUtil.mapAccount(productOrderObject);
+            contactId = this.apiCoreUtil.mapAccountContact(productOrderObject);
+            if (!gs.nil(accountId))
+                orderGr.account = accountId;
+            if (!gs.nil(contactId))
+                orderGr.contact = contactId;
+            orderGr.update();
+        }
+    },
+
+    isPONRReachedOrNotInProgress: function(id, orderObject, hierarchyMap, errorDetails) {
+        var orderGr = this.apiCoreUtil.getRecordBySysIdOrAlternateId(id, Constants.TABLE_CUSTOMER_ORDER, Constants.EXTERNAL_ID);
+        var orderLineItemGr;
+        var qc;
+        var errMsg = "";
+        var isNewTopLineItemFound = false;
+        var isValidLineItemState = true;
+        var isPonrSet = false;
+        if (!gs.nil(orderGr) && orderGr.next()) {
+            if (orderGr.getValue('state') == Constants.ORDER_STATE_REJECTED) {
+                return false;
+            }
+            for (var i = 0; i < orderObject.productOrderItem.length; i++) {
+                var topLineId = this.getTopLineItemId(orderObject.productOrderItem[i].id, hierarchyMap);
+                var revisionOperation = orderObject.productOrderItem[i].revisionOperation;
+
+                orderLineItemGr = new GlideRecordSecure(Constants.TABLE_CUSTOMER_ORDER_LINE_ITEM);
+                orderLineItemGr.addQuery("order", orderGr.getValue("sys_id"));
+                qc = orderLineItemGr.addQuery("external_id", topLineId);
+                qc.addOrCondition('sys_id', topLineId);
+                orderLineItemGr.query();
+
+                // Not accepting the new order as part of patch. Reject this request.
+                if (gs.nil(topLineId) && !orderLineItemGr.hasNext()) {
+                    this._logger.logErr("processPatchOrder: Process aborted, error is: " + TMFOrderAPIConstants.MESSAGES.NEW_ORDERS_NOT_ACCEPTED);
+                    errorDetails.push(this.apiCoreUtil.getErrorDetailsObj(TMFOrderAPIConstants.MESSAGES.NEW_ORDERS_NOT_ACCEPTED, '/productOrderItem[' + i + ']/'));
+                    isNewTopLineItemFound = true;
+                }
+
+                if (orderLineItemGr.next()) {
+                    if (orderLineItemGr.getValue("state") != Constants.ORDER_LINE_STATE_IN_PROGRESS &&
+                        orderLineItemGr.getValue("state") != Constants.ORDER_LINE_STATE_REJECTED) {
+                        this._logger.logErr("processPatchOrder: Process aborted, error is: Order line Item is in an invalid state: " + orderLineItemGr.getValue("state"));
+                        errMsg = TMFOrderAPIConstants.MESSAGES.ORDER_LINE_NOT_INPROGRESS + orderLineItemGr.getValue("state");
+                        errorDetails.push(this.apiCoreUtil.getErrorDetailsObj(errMsg, '/productOrderItem[' + i + ']/'));
+                        isValidLineItemState = false;
+                    }
+                    if (orderLineItemGr.ponr == true) {
+                        this._logger.logErr("processPatchOrder: Process aborted, error is: PONR Reached");
+                        errorDetails.push(this.apiCoreUtil.getErrorDetailsObj(TMFOrderAPIConstants.MESSAGES.PONR_REACHED_ORDERLINE_ERROR, '/productOrderItem[' + i + ']/'));
+                        isPonrSet = true;
+                    }
+                }
+            }
+        }
+
+        return isNewTopLineItemFound || !isValidLineItemState || isPonrSet;
+    },
+
+    isValidRevisionOperation: function(id, orderObject, errorDetails) {
+        var orderGr = this.apiCoreUtil.getRecordBySysIdOrAlternateId(id, Constants.TABLE_CUSTOMER_ORDER, Constants.EXTERNAL_ID);
+        var isValidRevisionOperation = true;
+        if (!gs.nil(orderGr) && orderGr.next()) {
+            for (var i = 0; i < orderObject.productOrderItem.length; i++) {
+                var revisionOperation = orderObject.productOrderItem[i].revisionOperation;
+                if (!gs.nil(revisionOperation) && TMFOrderAPIConstants.REVISION_OPERATIONS.indexOf(revisionOperation) == -1 && revisionOperation.length > 0) {
+                    this._logger.logErr("processPatchOrder: Process aborted, error is: invalid revisionOperation");
+                    errorDetails.push(this.apiCoreUtil.getErrorDetailsObj(TMFOrderAPIConstants.MESSAGES.INVALID_REVISION_OPERATION, '/productOrderItem[' + i + ']/'));
+                    isValidRevisionOperation = false;
+                }
+            }
+        }
+
+        return isValidRevisionOperation;
+    },
+
+    isValidOrderPayload: function(orderObject, schema, id, operation) {
+        var isValidPayload = true;
+        var validationResults = this.jsonSchemaValidation.validateJSON(orderObject, schema, '');
+        var errorObj = this.apiCoreUtil.getErrorObj(TMFOrderAPIConstants.ERROR_CODES.MISSING_BODY_FIELD, TMFOrderAPIConstants.MESSAGES.MISSING_BODY_FIELD, TMFOrderAPIConstants.MESSAGES.MISSING_BODY_FIELD);
+        var details = [];
+        if (validationResults.length > 0) {
+            if (validationResults[0].message == TMFOrderAPIConstants.MESSAGES.PAYLOAD_MISSING) {
+                this._logger.logDebug("isValidOrderPayload: Missing request body, invalid payload");
+                errorObj = this.apiCoreUtil.getErrorObj(TMFOrderAPIConstants.ERROR_CODES.MISSING_BODY, TMFOrderAPIConstants.MESSAGES.MISSING_BODY, TMFOrderAPIConstants.MESSAGES.MISSING_BODY);
+                details.push(this.apiCoreUtil.getErrorDetailsObj(TMFOrderAPIConstants.MESSAGES.MISSING_BODY, ''));
+                errorObj.details = details;
+                this.response.details = errorObj;
+                return false;
+            } else {
+                for (var i = 0; i < validationResults.length; i++) {
+                    var missingFieldMsg = TMFOrderAPIConstants.MESSAGES.MISSING_FIELD_PRODUCT_ORDER;
+                    var message = validationResults[i].message;
+                    var errorMessage = '';
+                    if (message.indexOf('missing') != -1) {
+                        var newMessage = this.apiCoreUtil.constructErrorMsg(message, validationResults[i].dataPath);
+                        errorMessage = missingFieldMsg.replace(/\$key/g, newMessage);
+                    } else errorMessage = message;
+                    details.push(this.apiCoreUtil.getErrorDetailsObj(errorMessage, validationResults[i].dataPath));
+                }
+            }
+            isValidPayload = false;
+        }
+        var isValidRelatedParty = this.productOrderProcessor.validateRelatedPartyObj(orderObject, details); // Customize related party validation as per requirement.
+        var isValidProductObj = this.productOrderProcessor.validateProductObj(orderObject.productOrderItem, details, operation); // Customize sold product validation as per requirement.
+        var isValidLocation = this.productOrderProcessor.validLocation(orderObject, details); //Customized location validation, defaults to true.
+		//var isValidshippingLocation = this.productOrderProcessor.validshippingLocation(orderObject, details);
+        var isValidPostRequest = this.productOrderProcessor.validatePostRequest(orderObject, details); // Customized validation, defaults to true.
+        // TK isValidPayload = isValidPayload && isValidRelatedParty && isValidProductObj && isValidPostRequest && isValidLocation;
+		isValidPayload = isValidPayload  && isValidProductObj && isValidPostRequest;
+
+        if (!isValidPayload) {
+            errorObj.details = details;
+            this.response.details = errorObj;
+        }
+        return isValidPayload;
+    },
+
+    transformAndCreateOrder: function(productOrderObject) {
+        var orderGr = new GlideRecordSecure(Constants.TABLE_CUSTOMER_ORDER);
+        orderGr.initialize();
+        if (gs.nil(productOrderObject.orderDate))
+            orderGr.order_date = new GlideDateTime().getDisplayValue();
+        else orderGr.order_date = this.tsmOpenAPIUtil.transformISODateToGlideDateTime(productOrderObject.orderDate, Constants.SIMPLE_DATE_FORMAT);
+        if (!gs.nil(productOrderObject.requestedStartDate))
+            orderGr.expected_start_date = this.tsmOpenAPIUtil.transformISODateToGlideDateTime(productOrderObject.requestedStartDate, Constants.SIMPLE_DATE_FORMAT);
+        if (!gs.nil(productOrderObject.requestedCompletionDate))
+            orderGr.expected_end_date = this.tsmOpenAPIUtil.transformISODateToGlideDateTime(productOrderObject.requestedCompletionDate, Constants.SIMPLE_DATE_FORMAT);
+        if (!gs.nil(productOrderObject.orderTotalPrice))
+            orderGr.total_amount = productOrderObject.orderTotalPrice;
+        if (!gs.nil(productOrderObject.externalId))
+            orderGr.external_id = productOrderObject.externalId;
+        orderGr.fullfilment_code = TMFOrderAPIConstants.FULLFILMENT_CODE;
+        orderGr.state = TMFOrderAPIConstants.ORDER_STATE_DRAFT;
+        orderGr.external_system = TMFOrderAPIConstants.EXTERNAL_SYSTEM_ID;
+        if (!gs.nil(productOrderObject.channel) && productOrderObject.channel.length > 0)
+            orderGr.channel = this.mapChannel(productOrderObject);
+        else orderGr.channel = TMFOrderAPIConstants.DEFAULT_CHANNEL;
+        orderGr.account = this.apiCoreUtil.mapAccount(productOrderObject);
+        orderGr.contact = this.apiCoreUtil.mapAccountContact(productOrderObject);
+        orderGr = this.productOrderProcessor.transformOrderGr(productOrderObject, orderGr); // Customize Order GR as per requirement.
+        orderGr.insert();
+        return orderGr;
+    },
+
+    transformAndCreateOrdLineItm: function(orderLineItem, orderGr) {
+        var idSysIdMap = {};
+        var custOdrPriceObj = {};
+        for (var i = 0; i < orderLineItem.length; i++) {
+            insertOrderLineResult = this.insertOrderLineItem(orderLineItem, orderGr, idSysIdMap, custOdrPriceObj, i);
+            idSysIdMap = insertOrderLineResult.idSysIdMap;
+            custOdrPriceObj = insertOrderLineResult.custOdrPriceObj;
+        }
+        return custOdrPriceObj;
+    },
+
+    setQuantity: function(orderLineItemGr, orderLineItem) {
+        if (orderLineItem.action == Constants.ACTION_ADD) {
+            if (orderLineItem.revisionOperation != Constants.REVISION_OPERATION_CANCEL) {
+                if (!gs.nil(orderLineItem.quantity)) {
+                    orderLineItemGr.quantity = orderLineItem.quantity;
+                } else {
+                    if (gs.nil(orderLineItem.revisionOperation)) {
+                        orderLineItemGr.quantity = orderLineItem.defaultQuantity;
+                    }
+                }
+            }
+        } else {
+            orderLineItemGr.quantity = 1;
+        }
+        delete orderLineItem.defaultQuantity;
+    },
+
+    insertOrderLineItem: function(orderLineItem, orderGr, idSysIdMap, custOdrPriceObj, i, operation) {
+
+        var ordLineItmGr = new GlideRecordSecure(Constants.TABLE_CUSTOMER_ORDER_LINE_ITEM);
+        ordLineItmGr.initialize();
+        var lineItmPrice = {};
+		//var shippingLocation = {};
+        this.setQuantity(ordLineItmGr, orderLineItem[i]);
+		ordLineItmGr.shippingInfo = this.tmfCommonOrderAPIUtil.getshippingLocation(orderLineItem[i]);
+		gs.info('teja:'+this.tmfCommonOrderAPIUtil.getshippingLocation(orderLineItem[i]));
+	//if (!gs.nil(orderLineItemGr.getValue('shipping_city')))
+       this.processModifiedOrder(orderLineItem[i], ordLineItmGr);
+        ordLineItmGr.action = this.tmfCommonOrderAPIUtil.getCustOrdLineItmAction(orderLineItem[i]);
+        if (ordLineItmGr.getValue('action') == Constants.ACTION_CHANGE || ordLineItmGr.getValue('action') == Constants.ACTION_DISCONNECT)
+            this.processModifiedOrder(orderLineItem[i], ordLineItmGr);
+        ordLineItmGr.order = orderGr.getValue('sys_id');
+        ordLineItmGr.state = TMFOrderAPIConstants.ORDER_LINE_ITEM_STATE_DRAFT;
+        var prdOffRecord = this.apiCoreUtil.getRecordBySysIdOrAlternateId(orderLineItem[i].productOffering.id, Constants.TABLE_PRODUCT_OFFERING, Constants.EXTERNAL_ID);
+        if (!gs.nil(prdOffRecord) && prdOffRecord.next())
+            ordLineItmGr.product_offering = prdOffRecord.getValue('sys_id');
+        this.productOrderProcessor.getLineItemPrice(orderLineItem[i], custOdrPriceObj, lineItmPrice ); // Customize line item price as per requirement.
+        if (!gs.nil(lineItmPrice.mrc))
+            ordLineItmGr.mrc = lineItmPrice.mrc;
+        if (!gs.nil(lineItmPrice.nrc))
+            ordLineItmGr.nrc = lineItmPrice.nrc;
+        if (!gs.nil(lineItmPrice.total_price))
+            ordLineItmGr.total_price = lineItmPrice.total_price;
+//         if (!gs.nil(shippingLocation.shippingCity))
+//             ordLineItmGr.u_shipping_city = shippingLocation.shippingCity;
+        var productObj = orderLineItem[i].product;
+        var prdSpecRecord = this.apiCoreUtil.getRecordBySysIdOrAlternateId(productObj.productSpecification.id, Constants.TABLE_PRODUCT_SPEC, Constants.EXTERNAL_ID);
+        if (!gs.nil(prdSpecRecord) && prdSpecRecord.next())
+            ordLineItmGr.product_specification = prdSpecRecord.getValue('sys_id');
+        if (!gs.nil(orderLineItem[i].product.place) && !gs.nil(orderLineItem[i].product.place.id)) {
+            var locationRecord = this.apiCoreUtil.getRecordBySysIdOrAlternateId(orderLineItem[i].product.place.id, Constants.TABLE_LOCATION, sn_ind_tsm_core.Constants.TSM_EXTERNAL_ID);
+            if (!gs.nil(locationRecord) && locationRecord.next())
+                ordLineItmGr.location = locationRecord.getValue('sys_id');
+        }
+		//if (!gs.nil(orderLineItem[i].product.shippingLocation.shippingCity)) {
+// 		var shippingRecord= this.apiCoreUtil.getRecordBySysId(orderLineItem[i].product.shippingLocation.shippingCity,sn_ind_tsm_core.Constants.u_shpping_city) ;                                    if (!gs.nil(shippingRecord))
+//                                  ordLineItmGr.shipping_city = shippingRecord.getValue('shipping_city');
+//                         }
+        // this is for inflight scenario where a new line item is being added.
+        if (operation == TMFOrderAPIConstants.OPERATION_PATCH && !gs.nil(orderLineItem[i].parent_line_item)) {
+            ordLineItmGr.parent_line_item = orderLineItem[i].parent_line_item;
+        } else if (!gs.nil(orderLineItem[i].parent_line_item)) {
+            ordLineItmGr.parent_line_item = idSysIdMap[orderLineItem[i].parent_line_item];
+        }
+
+        delete orderLineItem[i]['parent_line_item'];
+        ordLineItmGr.external_id = orderLineItem[i].id;
+        ordLineItmGr.external_system = TMFOrderAPIConstants.EXTERNAL_SYSTEM_ID;
+        ordLineItmGr.account = orderGr.getValue('account');
+        ordLineItmGr.contact = orderGr.getValue('contact');
+        orderLineItem[i].state = TMFOrderAPIConstants.ORDER_LINE_ITEM_STATE_NEW;
+        ordLineItmGr = this.productOrderProcessor.transformOrdLineItemGr(orderLineItem[i], orderGr, ordLineItmGr); // Customize Order Line Item GR as per requirement.
+        var ordLineItemId = ordLineItmGr.insert();
+        idSysIdMap[ordLineItmGr.getValue('external_id')] = ordLineItemId;
+        this.createCustLineItmContact(productObj.relatedParty, ordLineItemId);
+        this.createOrdCharacteristics(productObj.productCharacteristic, ordLineItmGr);
+        return {
+            "idSysIdMap": idSysIdMap,
+            "custOdrPriceObj": custOdrPriceObj,
+            "ordLineItemId": ordLineItemId
+        };
+
+    },
+
+    applyInflightChange: function(id, orderObject, warnings) {
+        var restructuredOrdLineItemArr = this.tmfCommonOrderAPIUtil.getHierarchyParentChild(orderObject, 'productOrderItem', 'productOrderItemRelationship');
+        var orderGr = this.apiCoreUtil.getRecordBySysIdOrAlternateId(id, Constants.TABLE_CUSTOMER_ORDER, Constants.EXTERNAL_ID);
+        var topLineIds = [];
+        var priceChange = {};
+        priceChange.orderLevelMrcChange = 0;
+        priceChange.orderLevelNrcChange = 0;
+        priceChange.orderLevelTotalPriceChange = 0;
+        if (!gs.nil(orderGr) && orderGr.next()) {
+            for (var i = 0; i < restructuredOrdLineItemArr.length; i++) {
+                var topLineId = '';
+                var revisionOperation = restructuredOrdLineItemArr[i].revisionOperation;
+                var orderLineItemGr = new GlideRecord(Constants.TABLE_CUSTOMER_ORDER_LINE_ITEM);
+                orderLineItemGr.addQuery("order", orderGr.getValue("sys_id"));
+                var qc = orderLineItemGr.addQuery("external_id", restructuredOrdLineItemArr[i].id);
+                qc.addOrCondition('sys_id', restructuredOrdLineItemArr[i].id);
+                orderLineItemGr.query();
+                if (orderLineItemGr.next()) {
+                    topLineId = orderLineItemGr.getValue("top_line_item");
+                    if (revisionOperation == Constants.REVISION_OPERATION_CANCEL) {
+                        if (orderLineItemGr.getValue('revision_operation') != Constants.REVISION_OPERATION_CANCEL) {
+                            orderLineItemGr.revision_operation = Constants.REVISION_OPERATION_CANCEL;
+                            orderLineItemGr.state = Constants.ORDER_STATE_ASSESSING_CANCELLATION;
+							if (topLineIds.indexOf(topLineId) == -1) {
+                                OrderLineItemDAO.reviseTopLineItems([topLineId]);
+                                topLineIds.push(topLineId);
+                            }
+                            orderLineItemGr.update();
+                            var orderRefGr = orderLineItemGr.order.getRefRecord();
+                            orderRefGr.setValue('state', Constants.ORDER_STATE_REVISION_RECEIVED);
+                            orderRefGr.update();
+                            this.updateOrderPriceChangeForCancelledLineItems(orderLineItemGr, priceChange);
+							continue;
+                        } else if (orderLineItemGr.getValue('revision_operation') == Constants.REVISION_OPERATION_CANCEL) {
+                            warnings.push("Order line item with id " + restructuredOrdLineItemArr[i].id + " is in state " + orderLineItemGr.getDisplayValue('state') + ". So, patch operation will be ignored for this line item.");
+                        }
+                    } else {
+                        orderLineItemGr.setValue("state", Constants.ORDER_STATE_REVISION_RECEIVED);
+                        this.updateOrderLineQuantityAndPriceFromPayload(restructuredOrdLineItemArr[i], orderLineItemGr, priceChange);
+                        if (!gs.nil(restructuredOrdLineItemArr[i].product.place) && !gs.nil(restructuredOrdLineItemArr[i].product.place.id)) {
+                            var locationRecord = this.apiCoreUtil.getRecordBySysIdOrAlternateId(restructuredOrdLineItemArr[i].product.place.id, Constants.TABLE_LOCATION, sn_ind_tsm_core.Constants.TSM_EXTERNAL_ID);
+                            if (!gs.nil(locationRecord) && locationRecord.next())
+                                orderLineItemGr.location = locationRecord.getValue('sys_id');
+                        }
+// 						if (!gs.nil(restructuredOrdLineItemArr[i].product.shippingInfo.u_shipping_city)) {
+// 						var shippingRecord= restructuredOrdLineItemArr[i].product.shippingInfo.u_shipping_city;
+//                            if (!gs.nil(shippingRecord && shippingRecord.next()))
+//                                 orderLineItemGr.u_shipping_city = shippingRecord.getValue('u_shipping_city');
+//                         }
+
+						if (topLineIds.indexOf(topLineId) == -1) {
+                            topLineIds.push(topLineId);
+                            OrderLineItemDAO.reviseTopLineItems([topLineId]);
+                        }
+                        orderLineItemGr.update();
+
+                        this.updateOrderlineCharacsFromPayload(restructuredOrdLineItemArr[i].product.productCharacteristic, orderLineItemGr);
+                        this.updateOrderlineContactsFromPayload(restructuredOrdLineItemArr[i].product.relatedParty, orderLineItemGr);
+                    }
+                } else {
+                    this.handleNewLineItem(restructuredOrdLineItemArr, i, orderGr, topLineIds, priceChange);
+                }
+            }
+
+            this.updateOrderPrice(id, priceChange);
+        }
+    },
+
+    handleNewLineItem: function(restructuredOrdLineItemArr, i, orderGr, topLineIds, priceChange) {
+        var parentLineIdInRequest = this.tmfCommonOrderAPIUtil.getParentLineIdFromRequest(restructuredOrdLineItemArr[i].productOrderItemRelationship);
+        var parentLineGr = null;
+        var topLineItemId = null;
+        var parentLineItemId = null;
+        if (!gs.nil(parentLineIdInRequest)) {
+            parentLineGr = OrderLineItemDAO.orderLineByOrderId(parentLineIdInRequest, orderGr.getValue('sys_id'));
+            if (parentLineGr.next()) {
+                topLineItemId = parentLineGr.getValue("top_line_item");
+                parentLineItemId = parentLineGr.getValue("sys_id");
+            }
+        }
+        restructuredOrdLineItemArr[i].parent_line_item = parentLineItemId;
+		if (topLineIds.indexOf(topLineItemId) == -1) {
+            topLineIds.push(topLineItemId);
+            OrderLineItemDAO.reviseTopLineItems([topLineItemId]);
+        }
+        var insertOrderLineItemResult = this.insertOrderLineItem(restructuredOrdLineItemArr, orderGr, {}, {}, i, TMFOrderAPIConstants.OPERATION_PATCH);
+        var newOrdLineItmGr = new GlideRecordSecure(Constants.TABLE_CUSTOMER_ORDER_LINE_ITEM);
+        newOrdLineItmGr.get(insertOrderLineItemResult.ordLineItemId);
+        newOrdLineItmGr.state = TMFOrderAPIConstants.ORDER_LINE_ITEM_STATE_NEW;
+		newOrdLineItmGr.update();
+        this.updateOrderPriceChangeForNewLineItems(restructuredOrdLineItemArr[i], priceChange);
+    },
+
+    updateOrderPrice: function(id, priceChange) {
+        var orderGr = new GlideRecord(Constants.TABLE_CUSTOMER_ORDER);
+        orderGr.addQuery('sys_id', id);
+        orderGr.query();
+        if (!gs.nil(orderGr) && orderGr.next()) {
+            var mrc = orderGr.getValue('mrc');
+            var mrcCode = orderGr.mrc.getCurrencyCode();
+            var nrc = orderGr.getValue('nrc');
+            var nrcCode = orderGr.nrc.getCurrencyCode();
+            var total_amount = orderGr.getValue('total_amount');
+            var total_amount_code = orderGr.total_amount.getCurrencyCode();
+            var updatedMrc = parseFloat(mrc) + parseFloat(priceChange.orderLevelMrcChange);
+            var updatedNrc = parseFloat(nrc) + parseFloat(priceChange.orderLevelNrcChange);
+            var updatedTotalAmount = parseFloat(total_amount) + parseFloat(priceChange.orderLevelTotalPriceChange);
+
+            orderGr.setValue('mrc', mrcCode + ";" + updatedMrc);
+            orderGr.setValue('nrc', nrcCode + ";" + updatedNrc);
+            orderGr.setValue('total_amount', total_amount_code + ";" + updatedTotalAmount);
+            orderGr.update();
+        }
+    },
+
+    updateOrderlineCharacsFromPayload: function(orderLineCharacsPayload, orderLineItemGr) {
+        if (gs.nil(orderLineCharacsPayload) || orderLineCharacsPayload.length == 0 || gs.nil(orderLineItemGr) || Object.keys(orderLineItemGr).length === 0) {
+            return;
+        }
+        for (var i = 0; i < orderLineCharacsPayload.length; i++) {
+            var orderCharacValueGr = new GlideRecordSecure(Constants.TABLE_ORDER_CHAR_VALUE);
+            orderCharacValueGr.addQuery('characteristic.name', orderLineCharacsPayload[i].name);
+            orderCharacValueGr.addQuery('specification', orderLineItemGr.getValue('specification'));
+            orderCharacValueGr.addQuery('order_line_item', orderLineItemGr.sys_id + '');
+            var qc = orderCharacValueGr.addQuery('characteristic_option_value', '!=', orderLineCharacsPayload[i].value);
+            qc.addOrCondition('characteristic_option_value','ISEMPTY', '');
+            orderCharacValueGr.query();
+            while (orderCharacValueGr.next()) {
+            orderCharacValueGr.setValue('characteristic_option_value', orderLineCharacsPayload[i].value);
+                orderCharacValueGr.update();
+            }
+        }
+    },
+
+    updateOrderlineContactsFromPayload: function(relatedPartyPayload, orderLineItemGr) {
+        if (relatedPartyPayload == null) {
+            return;
+        }
+        for (var c = 0; c < relatedPartyPayload.length; c++) {
+            var contactId = relatedPartyPayload[c].id;
+            var contactGr = new GlideRecord(Constants.TABLE_CUSTOMER_LINE_ITEM_CONTACT);
+            contactGr.addQuery('sys_id', contactId);
+            contactGr.addQuery("order_line_item", orderLineItemGr.sys_id + '');
+            contactGr.query();
+            var ordItmContactGr;
+            if (gs.nil(contactId) || contactGr == null || !contactGr.hasNext()) {
+                ordItmContactGr = this.tmfCommonOrderAPIUtil.initialiseCustLineItmContact(relatedPartyPayload[c], orderLineItemGr.sys_id + '');
+            } else {
+                contactGr.next();
+                ordItmContactGr = this.tmfCommonOrderAPIUtil.initialiseCustLineItmContact(relatedPartyPayload[c], orderLineItemGr.sys_id + '', contactGr);
+            }
+            ordItmContactGr = this.productOrderProcessor.transformCustLineItmContact(relatedPartyPayload[c], orderLineItemGr.sys_id + '', ordItmContactGr); // Customize Order Line Item Contact GR as per requirement.
+            if (!gs.nil(ordItmContactGr)) {
+                if (!gs.nil(contactGr)) {
+                    ordItmContactGr.update();
+                } else {
+                    ordItmContactGr.insert();
+                }
+            }
+        }
+    },
+
+    updateOrderPriceChangeForNewLineItems: function(orderLineItem, priceChange) {
+        var lineItmPrice = {};
+        this.productOrderProcessor.getLineItemPrice(orderLineItem, {}, lineItmPrice);
+        if (!gs.nil(lineItmPrice.mrc))
+            priceChange.orderLevelMrcChange += lineItmPrice.mrc.split(';')[1];
+        if (!gs.nil(lineItmPrice.nrc))
+            priceChange.orderLevelNrcChange += lineItmPrice.nrc.split(';')[1];
+        if (!gs.nil(lineItmPrice.total_price))
+            priceChange.orderLevelTotalPriceChange += lineItmPrice.total_price.split(';')[1];
+    },
+
+    updateOrderPriceChangeForCancelledLineItems: function(orderLineItemGr, priceChange) {
+        if (!gs.nil(orderLineItemGr.mrc))
+            priceChange.orderLevelMrcChange -= orderLineItemGr.mrc;
+        if (!gs.nil(orderLineItemGr.nrc))
+            priceChange.orderLevelNrcChange -= orderLineItemGr.nrc;
+        if (!gs.nil(orderLineItemGr.total_price))
+            priceChange.orderLevelTotalPriceChange -= orderLineItemGr.total_price;
+    },
+
+    updateOrderlinePricingFromPayload: function(productOrderItem, orderLineItemGr, priceChange) {
+        var lineItmPrice = {};
+        this.productOrderProcessor.getLineItemPrice(productOrderItem, {}, lineItmPrice);
+        if (!gs.nil(lineItmPrice.mrc) && lineItmPrice.mrc.split(';')[1] != orderLineItemGr.mrc) {
+            if (!gs.nil(lineItmPrice.mrc) && !gs.nil(orderLineItemGr.mrc)) {
+                priceChange.orderLevelMrcChange += parseFloat(lineItmPrice.mrc.split(';')[1]) - orderLineItemGr.mrc;
+            }
+
+            orderLineItemGr.mrc = lineItmPrice.mrc.split(';')[1];
+        }
+
+        if (!gs.nil(lineItmPrice.nrc) && lineItmPrice.nrc.split(';')[1] != orderLineItemGr.nrc) {
+            if (!gs.nil(lineItmPrice.nrc) && !gs.nil(orderLineItemGr.nrc)) {
+                priceChange.orderLevelNrcChange += parseFloat(lineItmPrice.nrc.split(';')[1]) - orderLineItemGr.nrc;
+            }
+
+            orderLineItemGr.nrc = lineItmPrice.nrc.split(';')[1];
+        }
+
+		priceChange.orderLevelTotalPriceChange = priceChange.orderLevelMrcChange + priceChange.orderLevelNrcChange;
+		orderLineItemGr.total_price = parseFloat(orderLineItemGr.mrc) + parseFloat(orderLineItemGr.nrc);
+    },
+
+    updateOrderLineQuantityAndPriceFromPayload: function(orderLineItem, orderLineItemGr, priceChange) {
+        this.setQuantity(orderLineItemGr, orderLineItem);
+        if (orderLineItem.itemPrice) {
+            this.updateOrderlinePricingFromPayload(orderLineItem, orderLineItemGr, priceChange);
+        }
+    },
+
+    updateOrdTypeAndPriceAndStateOnCustOrd: function(orderGr, orderType, state, custOdrPriceObj) {
+        var custOrdGr = new GlideRecord(Constants.TABLE_CUSTOMER_ORDER);
+        custOrdGr.addQuery('sys_id', orderGr.getValue('sys_id'));
+        custOrdGr.query();
+        if (custOrdGr.next()) {
+            var currCode = gs.nil(custOdrPriceObj.currCode) ? '' : custOdrPriceObj.currCode;
+            var totalMrc = gs.nil(custOdrPriceObj.totalMrc) ? 0 : parseFloat(custOdrPriceObj.totalMrc);
+            var totalNrc = gs.nil(custOdrPriceObj.totalNrc) ? 0 : parseFloat(custOdrPriceObj.totalNrc);
+            custOrdGr.mrc = currCode + ";" + totalMrc;
+            custOrdGr.nrc = currCode + ";" + totalNrc;
+            custOrdGr.total_amount = currCode + ";" + (totalMrc + totalNrc);
+            custOrdGr.order_type = orderType;
+            custOrdGr.state = state;
+            custOrdGr = this.productOrderProcessor.transformPriceOrderTypeAndState(orderType, state, custOdrPriceObj, custOrdGr); // Customize Order GR as per requirement.
+            custOrdGr.update();
+        }
+    },
+
+    prepareCreateOrderResponse: function(orderObject, orderGr) {
+        if (!gs.nil(orderGr.getValue('sys_id'))) {
+            orderObject.id = orderGr.getValue('sys_id');
+            orderObject.state = TMFOrderAPIConstants.ORDER_STATE_NEW;
+            orderObject = this.productOrderProcessor.transformPostOrderResponse(orderObject, orderGr); // Customize response payload as per requirement.
+            this.response.status = TMFOrderAPIConstants.STATUS_CODES.CREATED;
+            this.response.details = orderObject;
+        } else {
+            var errorObj = this.apiCoreUtil.getErrorObj(TMFOrderAPIConstants.ERROR_CODES.INTERNAL_ERROR, TMFOrderAPIConstants.MESSAGES.CREATE_ERROR, TMFOrderAPIConstants.MESSAGES.CREATE_ERROR);
+            var details = [];
+            details.push(this.apiCoreUtil.getErrorDetailsObj(TMFOrderAPIConstants.MESSAGES.CREATE_ERROR, ''));
+            errorObj.details = details;
+            this.response.details = errorObj;
+        }
+        this._logger.logDebug("prepareCreateOrderResponse: success response");
+    },
+
+    preparePatchOrderResponse: function(orderObject, warnings) {
+
+        orderObject.state = Constants.ORDER_STATE_REVISION_RECEIVED;
+        orderObject = this.productOrderProcessor.transformPatchOrderResponse(orderObject); // Customize response payload as per requirement.
+        this.response.status = TMFOrderAPIConstants.STATUS_CODES.OK;
+        this.response.details = orderObject;
+        if (!gs.nil(warnings) && warnings.length > 0) {
+            this.response.details.warnings = warnings;
+        }
+        this._logger.logDebug("preparePatchOrderResponse: success response");
+    },
+
+    processModifiedOrder: function(orderLineItem, ordLineItmGr) {
+        if (!gs.nil(orderLineItem.product.id)) {
+            var soldProdExternalId = orderLineItem.product.id;
+            var soldProdGr = new GlideRecordSecure(sn_prd_invt.Constants.TABLE_PRODUCT_INVENTORY);
+            var qc = soldProdGr.addQuery(sn_prd_invt.Constants.INVT_EXTERNAL_ID, soldProdExternalId);
+            qc.addOrCondition('sys_id', soldProdExternalId);
+            soldProdGr.query();
+            if (soldProdGr.next()) {
+                ordLineItmGr.previous_product_model = soldProdGr.product;
+                ordLineItmGr.sold_product = soldProdGr.sys_id;
+            }
+        }
+    },
+
+    mapChannel: function(productOrderObject) {
+        var channel = productOrderObject.channel;
+        var channelObj = channel[0];
+        if (!gs.nil(channelObj.id)) {
+            var chnl = new GlideRecordSecure(Constants.TABLE_DISTRIBUTION_CHANNEL);
+            var qc = chnl.addQuery(Constants.EXTERNAL_ID, channelObj.id);
+            qc.addOrCondition('sys_id', channelObj.id);
+            chnl.query();
+            if (chnl.next())
+                return chnl.getValue(Constants.ORDER_CHANNEL);
+            else return TMFOrderAPIConstants.DEFAULT_CHANNEL;
+        } else return TMFOrderAPIConstants.DEFAULT_CHANNEL;
+    },
+
+    createCustLineItmContact: function(relatedParty, ordLineItemId) {
+        if (!gs.nil(relatedParty) && relatedParty.length > 0) {
+            for (var c = 0; c < relatedParty.length; c++) {
+                var ordItmContactGr = this.tmfCommonOrderAPIUtil.initialiseCustLineItmContact(relatedParty[c], ordLineItemId);
+                ordItmContactGr = this.productOrderProcessor.transformCustLineItmContact(relatedParty[c], ordLineItemId, ordItmContactGr); // Customize Order Line Item Contact GR as per requirement.
+                if (!gs.nil(ordItmContactGr))
+                    ordItmContactGr.insert();
+            }
+        }
+    },
+
+    createOrdCharacteristics: function(productCharacteristicObj, ordLineItmGr) {
+        if (!gs.nil(productCharacteristicObj)) {
+            var missChar = {};
+            var missCharValues = {};
+            for (var j = 0; j < productCharacteristicObj.length; j++) {
+                var ordLineItemCharGr = this.tmfCommonOrderAPIUtil.initialiseOrderItemChar(productCharacteristicObj[j], ordLineItmGr, missChar, missCharValues, TMFOrderAPIConstants.PRODUCT_SPECIFICATION);
+                ordLineItemCharGr = this.productOrderProcessor.transformOrderItemChar(productCharacteristicObj[j], ordLineItemCharGr); // Customize Order Characteristic GR as per requirement.
+                if (!gs.nil(ordLineItemCharGr))
+                    ordLineItemCharGr.insert();
+            }
+            if (!global.JSUtil.isEmpty(missChar))
+                this.tmfCommonOrderAPIUtil.updateWorkNotesForCharMissing(ordLineItmGr.getValue('sys_id'), missChar, TMFOrderAPIConstants.PRODUCT_SPECIFICATION);
+            if (!global.JSUtil.isEmpty(missCharValues))
+                this.tmfCommonOrderAPIUtil.updateWorkNotesForCharValueMissing(ordLineItmGr.getValue('sys_id'), missCharValues);
+        }
+    },
+
+    type: 'TMFProductOrderAPIUtil1'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>Tejasree.Karnati</sys_created_by>
+        <sys_created_on>2022-05-03 02:14:25</sys_created_on>
+        <sys_id>c2c3f460879f8dd084b2a18e0ebb35d4</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_name>TMFProductOrderAPIUtil1</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_include_c2c3f460879f8dd084b2a18e0ebb35d4</sys_update_name>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-07-27 18:59:07</sys_updated_on>
+    </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f470867e0000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_c2c3f460879f8dd084b2a18e0ebb35d4</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:31</sys_created_on>
+        <sys_id>863469931b251d500f4ccbb8624bcb7a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:31</sys_updated_on>
+    </sys_claim>
+</record_update>

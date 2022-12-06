@@ -1,0 +1,3779 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="7a8f93141b0b20102885a932604bcb70" table="sys_hub_action_type_definition">
+    <sys_hub_action_type_definition action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <active>false</active>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <ih_action>false</ih_action>
+        <internal_name>emp_readytoschedule_defaultdec</internal_name>
+        <label_cache>[{"name":"{{action.order_id}}","label":"action➛order_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.account_id}}","label":"action➛account_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.contact_id}}","label":"action➛contact_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.external_id}}","label":"action➛external_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.parent_id}}","label":"action➛parent_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.orderlineitem_id}}","label":"action➛orderLineItem_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[adb9683f-36ba-473b-b05c-050e05254cff].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[adb9683f-36ba-473b-b05c-050e05254cff].responsexml}}","label":"step➛Script step➛responsexml","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master_snapshot>5609ccf287f7c59025a20edc0ebb35d3</master_snapshot>
+        <name>EMP_ReadyToSchedule_Default-DEC</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <state>published</state>
+        <sys_class_name>sys_hub_action_type_definition</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:07:16</sys_created_on>
+        <sys_domain>7a8f93141b0b20102885a932604bcb70</sys_domain>
+        <sys_domain_path>!!!/!!&amp;/</sys_domain_path>
+        <sys_id>30d580be87b7c59025a20edc0ebb35fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>EMP_ReadyToSchedule_Default-DEC</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_hub_action_type_definition_30d580be87b7c59025a20edc0ebb35fd</sys_update_name>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 09:39:14</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_definition>
+    <sys_translated_text action="delete_multiple" query="documentkey=30d580be87b7c59025a20edc0ebb35fd"/>
+    <sys_variable_value action="delete_multiple" query="document_key=30d580be87b7c59025a20edc0ebb35fd"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>30d580be87b7c59025a20edc0ebb35fd</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:33</sys_created_on>
+        <sys_id>f847483287f7c59025a20edc0ebb3533</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:33</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">3047483287f7c59025a20edc0ebb3529</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_definition</document>
+        <document_key>30d580be87b7c59025a20edc0ebb35fd</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:33</sys_created_on>
+        <sys_id>fc47483287f7c59025a20edc0ebb3533</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:14:04</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDf0474832e8f7c590a33dc6dfab160d1f":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDf0474832e8f7c590a33dc6dfab160d1f.$type_facets":{"SimpleMapFacet":"{\"sourceId\":\"\",\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"abbc549b-762d-47aa-82a1-f37ba3dbdb26\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDf0474832e8f7c590a33dc6dfab160d1f\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"sourceUiUniqueId\":\"\",\"sourceType\":\"\",\"hint\":\"\",\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">b847483287f7c59025a20edc0ebb3522</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=30d580be87b7c59025a20edc0ebb35fd"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>responsexml</field>
+        <id>30d580be87b7c59025a20edc0ebb35fd</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 20:02:14</sys_created_on>
+        <sys_id>b96254f2873bc59025a20edc0ebb35f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 20:02:14</sys_updated_on>
+        <table>var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd</table>
+        <value>{{step[adb9683f-36ba-473b-b05c-050e05254cff].responsexml}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>30d580be87b7c59025a20edc0ebb35fd</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:33</sys_created_on>
+        <sys_id>7847483287f7c59025a20edc0ebb3533</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:33</sys_updated_on>
+        <table>var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>30d580be87b7c59025a20edc0ebb35fd</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:33</sys_created_on>
+        <sys_id>b447483287f7c59025a20edc0ebb3533</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:33</sys_updated_on>
+        <table>var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4708c960000001</claim_timestamp>
+        <metadata_update_name>sys_hub_action_type_definition_30d580be87b7c59025a20edc0ebb35fd</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:32</sys_created_on>
+        <sys_id>6234a9931b251d500f4ccbb8624bcb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:32</sys_updated_on>
+    </sys_claim>
+    <sys_hub_step_instance action="delete_multiple" query="action=30d580be87b7c59025a20edc0ebb35fd^sys_idNOT INcde608fe87b7c59025a20edc0ebb3511"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</action>
+        <cid>adb9683f-36ba-473b-b05c-050e05254cff</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:11:56</sys_created_on>
+        <sys_id>cde608fe87b7c59025a20edc0ebb3511</sys_id>
+        <sys_mod_count>4</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:53:17</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=cde608fe87b7c59025a20edc0ebb3511"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>cde608fe87b7c59025a20edc0ebb3511</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:11:57</sys_created_on>
+        <sys_id>19e6803287f7c59025a20edc0ebb3535</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:11:57</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>cde608fe87b7c59025a20edc0ebb3511</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:11:57</sys_created_on>
+        <sys_id>95e6803287f7c59025a20edc0ebb3536</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:18:46</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  // ... code ...
+
+  var dateTime = new GlideDateTime().getDisplayValue();
+  var dt = dateTime.split(' ');
+  var f = dt[0].split('-');
+  var t = dt[1].split(':');
+  var event = new Date(f[0], f[1]-1, f[2], t[0], t[1], t[2]);
+  var isoDate = event.toISOString();
+
+
+
+  var orXml =  publishOrderXml();
+  var xmlString = orXml.toString();
+  var xmlClean = global.JSUtil.unescapeText(xmlString);
+  outputs.responsexml = xmlClean;
+  // gs.info("Ash: "+ xmlClean);
+
+
+
+  function publishOrderXml(){
+
+    var strPlayLoad = "";
+    var xmlDoc = new XMLDocument2();
+    var command = xmlDoc.createElement("command");
+    xmlDoc.setCurrentElement(command);
+
+    var messageType = xmlDoc.createElementWithTextValue('messageType','E.Customer.Notification.DEC.OrderMilestone.Command');
+    var commandType = xmlDoc.createElementWithTextValue('commandType','Ready To Schedule non-GON');
+    var eventTimestamp = xmlDoc.createElementWithTextValue('eventTimestamp',isoDate);//gs.nowDateTime());
+    var correlationId = xmlDoc.createElementWithTextValue('correlationId',"889898989");
+
+
+    var messageSource = xmlDoc.createElementWithTextValue('messageSource','Service Now');
+    var entity,name,value; 
+
+    var businessKeys = xmlDoc.createElement('businessKeys');
+    for(var i =0; i&lt;3; i++){
+
+      var businessKey= xmlDoc.createElement('businessKey');
+      businessKeys.appendChild(businessKey);   
+
+      if(i==0){
+        entity = xmlDoc.createElementWithTextValue('entity','Customer');
+        name = xmlDoc.createElementWithTextValue('name','Customer Number');
+        value = xmlDoc.createElementWithTextValue('value',"");//'SNOW-SwIFT_55000072-0');
+        businessKey.appendChild(entity);
+        businessKey.appendChild(name);
+        businessKey.appendChild(value);
+      }
+      else if(i==1){
+        entity = xmlDoc.createElementWithTextValue('entity','Customer');
+        name = xmlDoc.createElementWithTextValue('name','BillingAccountNumber');
+        value = xmlDoc.createElementWithTextValue('value',"");//'SNOW-SwIFT_55000072-0');
+        businessKey.appendChild(entity);
+        businessKey.appendChild(name);
+        businessKey.appendChild(value);
+      }
+      else if(i==2){
+        entity = xmlDoc.createElementWithTextValue('entity','Document');
+        name = xmlDoc.createElementWithTextValue('name','DocumentID');
+        value = xmlDoc.createElementWithTextValue('value', new GlideDateTime().getNumericValue());
+        businessKey.appendChild(entity);
+        businessKey.appendChild(name);
+        businessKey.appendChild(value);
+      }        
+    }	
+    var payload = xmlDoc.createElementWithTextValue('payload',strPlayLoad);
+    return xmlDoc;  
+  }
+
+
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=cde608fe87b7c59025a20edc0ebb3511"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>account_id</field>
+        <id>cde608fe87b7c59025a20edc0ebb3511</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:14:04</sys_created_on>
+        <sys_id>5c670c3287f7c59025a20edc0ebb35e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:14:04</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</table>
+        <value>{{action.account_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>contact_id</field>
+        <id>cde608fe87b7c59025a20edc0ebb3511</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:14:04</sys_created_on>
+        <sys_id>10670c3287f7c59025a20edc0ebb35e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:14:04</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</table>
+        <value>{{action.contact_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>external_id</field>
+        <id>cde608fe87b7c59025a20edc0ebb3511</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:14:04</sys_created_on>
+        <sys_id>98670c3287f7c59025a20edc0ebb35e7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:14:04</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</table>
+        <value>{{action.external_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>orderlineitem_id</field>
+        <id>cde608fe87b7c59025a20edc0ebb3511</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:53:17</sys_created_on>
+        <sys_id>3e5094fe87f7c59025a20edc0ebb3597</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:53:17</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</table>
+        <value>{{action.orderlineitem_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>order_id</field>
+        <id>cde608fe87b7c59025a20edc0ebb3511</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:14:04</sys_created_on>
+        <sys_id>d0670c3287f7c59025a20edc0ebb35e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:14:04</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</table>
+        <value>{{action.order_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>parent_id</field>
+        <id>cde608fe87b7c59025a20edc0ebb3511</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:14:04</sys_created_on>
+        <sys_id>94670c3287f7c59025a20edc0ebb35e8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:14:04</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</table>
+        <value>{{action.parent_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_cde608fe87b7c59025a20edc0ebb3511^id=cde608fe87b7c59025a20edc0ebb3511"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=cde608fe87b7c59025a20edc0ebb3511"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=cde608fe87b7c59025a20edc0ebb3511^sys_idNOT IN09e6803287f7c59025a20edc0ebb351d,41e6803287f7c59025a20edc0ebb3523,7047483287f7c59025a20edc0ebb350e,91e6803287f7c59025a20edc0ebb3526,d1e6803287f7c59025a20edc0ebb3529,f65094fe87f7c59025a20edc0ebb358d"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>order_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">cde608fe87b7c59025a20edc0ebb3511</model>
+        <model_id>cde608fe87b7c59025a20edc0ebb3511</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:11:56</sys_created_on>
+        <sys_id>09e6803287f7c59025a20edc0ebb351d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:11:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>account_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">cde608fe87b7c59025a20edc0ebb3511</model>
+        <model_id>cde608fe87b7c59025a20edc0ebb3511</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:11:56</sys_created_on>
+        <sys_id>41e6803287f7c59025a20edc0ebb3523</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:11:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>parent_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">cde608fe87b7c59025a20edc0ebb3511</model>
+        <model_id>cde608fe87b7c59025a20edc0ebb3511</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</name>
+        <next_element/>
+        <order>400</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:33</sys_created_on>
+        <sys_id>7047483287f7c59025a20edc0ebb350e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>external_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">cde608fe87b7c59025a20edc0ebb3511</model>
+        <model_id>cde608fe87b7c59025a20edc0ebb3511</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</name>
+        <next_element/>
+        <order>200</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:11:56</sys_created_on>
+        <sys_id>91e6803287f7c59025a20edc0ebb3526</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:11:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>contact_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">cde608fe87b7c59025a20edc0ebb3511</model>
+        <model_id>cde608fe87b7c59025a20edc0ebb3511</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</name>
+        <next_element/>
+        <order>300</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:11:56</sys_created_on>
+        <sys_id>d1e6803287f7c59025a20edc0ebb3529</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:11:56</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>orderlineitem_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label/>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">cde608fe87b7c59025a20edc0ebb3511</model>
+        <model_id>cde608fe87b7c59025a20edc0ebb3511</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_cde608fe87b7c59025a20edc0ebb3511</name>
+        <next_element/>
+        <order>500</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:53:17</sys_created_on>
+        <sys_id>f65094fe87f7c59025a20edc0ebb358d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:53:17</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=cde608fe87b7c59025a20edc0ebb3511^sys_idNOT IN29e09832873bc59025a20edc0ebb35ce"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=8dbbf49c-dfc8-4978-8119-fbbeb752e77c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>responsexml</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>responsexml</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">cde608fe87b7c59025a20edc0ebb3511</model>
+        <model_id>cde608fe87b7c59025a20edc0ebb3511</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_cde608fe87b7c59025a20edc0ebb3511</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:55:40</sys_created_on>
+        <sys_id>29e09832873bc59025a20edc0ebb35ce</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:55:40</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=cde608fe87b7c59025a20edc0ebb3511"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_cde608fe87b7c59025a20edc0ebb3511^sys_idNOT IN25e09832873bc59025a20edc0ebb35d4"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>responsexml</element>
+        <help/>
+        <hint/>
+        <label>responsexml</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_cde608fe87b7c59025a20edc0ebb3511</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:55:40</sys_created_on>
+        <sys_id>25e09832873bc59025a20edc0ebb35d4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>responsexml</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_cde608fe87b7c59025a20edc0ebb3511_responsexml_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:55:40</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=30d580be87b7c59025a20edc0ebb35fd^sys_idNOT IN2047083287f7c59025a20edc0ebb35ef,6047ccbe87b7c59025a20edc0ebb3565,6447083287f7c59025a20edc0ebb35ea,725094fe87f7c59025a20edc0ebb3553,a847083287f7c59025a20edc0ebb35e5,ec47083287f7c59025a20edc0ebb35e0"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=4cf9a3d0-8826-49b6-9d00-3dccb8655ef0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>parent_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>parent_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</model>
+        <model_id>30d580be87b7c59025a20edc0ebb35fd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:32</sys_created_on>
+        <sys_id>2047083287f7c59025a20edc0ebb35ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2047083287f7c59025a20edc0ebb35ef"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=a791aa28-ceb3-49ac-80d0-3c3fd34258d7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>order_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>order_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</model>
+        <model_id>30d580be87b7c59025a20edc0ebb35fd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:32</sys_created_on>
+        <sys_id>6047ccbe87b7c59025a20edc0ebb3565</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6047ccbe87b7c59025a20edc0ebb3565"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=cf38121e-7e06-467a-8017-dabe0b6bde9d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>external_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>external_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</model>
+        <model_id>30d580be87b7c59025a20edc0ebb35fd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:32</sys_created_on>
+        <sys_id>6447083287f7c59025a20edc0ebb35ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6447083287f7c59025a20edc0ebb35ea"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=476edb2c-d3ca-4069-8e71-957d5588333a</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>orderlineitem_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>orderLineItem_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</model>
+        <model_id>30d580be87b7c59025a20edc0ebb35fd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:53:16</sys_created_on>
+        <sys_id>725094fe87f7c59025a20edc0ebb3553</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:53:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=725094fe87f7c59025a20edc0ebb3553"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=8ecca4f7-37c2-48b1-a2ad-bb94ea50670e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>contact_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>contact_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</model>
+        <model_id>30d580be87b7c59025a20edc0ebb35fd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:32</sys_created_on>
+        <sys_id>a847083287f7c59025a20edc0ebb35e5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a847083287f7c59025a20edc0ebb35e5"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=4671fb5d-8ece-4b66-85de-516e0881778f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>account_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>account_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</model>
+        <model_id>30d580be87b7c59025a20edc0ebb35fd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:32</sys_created_on>
+        <sys_id>ec47083287f7c59025a20edc0ebb35e0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:32</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ec47083287f7c59025a20edc0ebb35e0"/>
+    <sys_hub_action_output action="delete_multiple" query="model=30d580be87b7c59025a20edc0ebb35fd^sys_idNOT IN3047483287f7c59025a20edc0ebb3529,316254f2873bc59025a20edc0ebb35ec,b847483287f7c59025a20edc0ebb3522"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=fd6c4059-8068-4d5d-82fe-f99749361564,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</model>
+        <model_id>30d580be87b7c59025a20edc0ebb35fd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:33</sys_created_on>
+        <sys_id>3047483287f7c59025a20edc0ebb3529</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3047483287f7c59025a20edc0ebb3529"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=3047483287f7c59025a20edc0ebb3529"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=aa46868a-21ce-4b67-aa0c-d9b87a10cfb4</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>responsexml</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>responseXML</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</model>
+        <model_id>30d580be87b7c59025a20edc0ebb35fd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 20:02:14</sys_created_on>
+        <sys_id>316254f2873bc59025a20edc0ebb35ec</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 20:02:14</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=316254f2873bc59025a20edc0ebb35ec"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=316254f2873bc59025a20edc0ebb35ec"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDf0474832e8f7c590a33dc6dfab160d1f,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=abbc549b-762d-47aa-82a1-f37ba3dbdb26</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</model>
+        <model_id>30d580be87b7c59025a20edc0ebb35fd</model_id>
+        <model_table>sys_hub_action_type_definition</model_table>
+        <name>var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:33</sys_created_on>
+        <sys_id>b847483287f7c59025a20edc0ebb3522</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:33</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b847483287f7c59025a20edc0ebb3522"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=b847483287f7c59025a20edc0ebb3522"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=30d580be87b7c59025a20edc0ebb35fd"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=30d580be87b7c59025a20edc0ebb35fd^sys_idNOT IN1de6803287f7c59025a20edc0ebb353b"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</action_type_id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:11:57</sys_created_on>
+        <sys_id>1de6803287f7c59025a20edc0ebb353b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:11:57</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=1de6803287f7c59025a20edc0ebb353b"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd^sys_idNOT IN2c47083287f7c59025a20edc0ebb35f2,6047083287f7c59025a20edc0ebb35ee,a447083287f7c59025a20edc0ebb35e9,ac47083287f7c59025a20edc0ebb35df,ba5094fe87f7c59025a20edc0ebb3570,e847083287f7c59025a20edc0ebb35e4"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>parent_id</element>
+        <help/>
+        <hint/>
+        <label>parent_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:32</sys_created_on>
+        <sys_id>2c47083287f7c59025a20edc0ebb35f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>parent_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd_parent_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>external_id</element>
+        <help/>
+        <hint/>
+        <label>external_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:32</sys_created_on>
+        <sys_id>6047083287f7c59025a20edc0ebb35ee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>external_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd_external_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>contact_id</element>
+        <help/>
+        <hint/>
+        <label>contact_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:32</sys_created_on>
+        <sys_id>a447083287f7c59025a20edc0ebb35e9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>contact_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd_contact_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>order_id</element>
+        <help/>
+        <hint/>
+        <label>order_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:32</sys_created_on>
+        <sys_id>ac47083287f7c59025a20edc0ebb35df</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>order_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd_order_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>orderlineitem_id</element>
+        <help/>
+        <hint/>
+        <label>orderLineItem_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:53:17</sys_created_on>
+        <sys_id>ba5094fe87f7c59025a20edc0ebb3570</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>orderLineItem_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd_orderlineitem_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:53:17</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>account_id</element>
+        <help/>
+        <hint/>
+        <label>account_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:32</sys_created_on>
+        <sys_id>e847083287f7c59025a20edc0ebb35e4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>account_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd_account_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:32</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_30d580be87b7c59025a20edc0ebb35fd"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd^sys_idNOT IN356254f2873bc59025a20edc0ebb35f1,7047483287f7c59025a20edc0ebb3528,f047483287f7c59025a20edc0ebb3530"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>responsexml</element>
+        <help/>
+        <hint/>
+        <label>responseXML</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 20:02:14</sys_created_on>
+        <sys_id>356254f2873bc59025a20edc0ebb35f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>responseXML</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd_responsexml_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 20:02:14</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:33</sys_created_on>
+        <sys_id>7047483287f7c59025a20edc0ebb3528</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Action Status</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd___action_status___en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:13:33</sys_created_on>
+        <sys_id>f047483287f7c59025a20edc0ebb3530</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Don't Treat as Error</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd___dont_treat_as_error___en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:13:33</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_30d580be87b7c59025a20edc0ebb35fd"/>
+    <sys_hub_action_plan action="delete_multiple" query="action_id=30d580be87b7c59025a20edc0ebb35fd^sys_idNOT IN8b09003687f7c59025a20edc0ebb35c6"/>
+    <sys_hub_action_plan action="INSERT_OR_UPDATE">
+        <action_id display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</action_id>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"8b09003687f7c59025a20edc0ebb35c6","name":"plan","plan_signature":null}}</plan>
+        <snapshot>926294f2873bc59025a20edc0ebb3587</snapshot>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:21</sys_created_on>
+        <sys_domain>7a8f93141b0b20102885a932604bcb70</sys_domain>
+        <sys_domain_path>!!!/!!&amp;/</sys_domain_path>
+        <sys_id>8b09003687f7c59025a20edc0ebb35c6</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 20:02:17</sys_updated_on>
+    </sys_hub_action_plan>
+    <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <action_status/>
+        <action_template/>
+        <annotation/>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from/>
+        <copied_from_name/>
+        <description/>
+        <internal_name>emp_readytoschedule_defaultdec</internal_name>
+        <label_cache>[{"name":"{{action.order_id}}","label":"action➛order_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.account_id}}","label":"action➛account_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.contact_id}}","label":"action➛contact_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.external_id}}","label":"action➛external_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.parent_id}}","label":"action➛parent_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{action.orderlineitem_id}}","label":"action➛orderLineItem_id","type":"action","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[adb9683f-36ba-473b-b05c-050e05254cff].variable}}","label":"step➛Script step➛variable","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{}},{"name":"{{step[adb9683f-36ba-473b-b05c-050e05254cff].responsexml}}","label":"step➛Script step➛responsexml","type":"step","ref":"","reference_display":"","base_type":"string","parent_table_name":"","column_name":"","choices":null,"attributes":{"sourceId":"","sourceUiUniqueId":"","sourceType":""}}]</label_cache>
+        <master>true</master>
+        <name>EMP_ReadyToSchedule_Default-DEC</name>
+        <natlang/>
+        <outputs/>
+        <outputs/>
+        <parent_action display_value="EMP_ReadyToSchedule_Default-DEC">30d580be87b7c59025a20edc0ebb35fd</parent_action>
+        <sys_class_name>sys_hub_action_type_snapshot</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:18</sys_created_on>
+        <sys_domain>7a8f93141b0b20102885a932604bcb70</sys_domain>
+        <sys_domain_path>!!!/!!&amp;/</sys_domain_path>
+        <sys_id>5609ccf287f7c59025a20edc0ebb35d3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:55:41</sys_updated_on>
+        <system_level>false</system_level>
+        <type/>
+    </sys_hub_action_type_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=5609ccf287f7c59025a20edc0ebb35d3"/>
+    <sys_variable_value action="delete_multiple" query="document_key=5609ccf287f7c59025a20edc0ebb35d3"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>5609ccf287f7c59025a20edc0ebb35d3</document_key>
+        <order>1</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:20</sys_created_on>
+        <sys_id>7a09003687f7c59025a20edc0ebb355e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:20</sys_updated_on>
+        <value>{"version":"1.0","complexObject":{"code":{"$cv":{"$c":"java.lang.String","$v":""}},"message":{"$cv":{"$c":"java.lang.String","$v":""}}},"complexObjectSchema":{"FlowDesigner:FDea090036f3f7c590500338e1780ed34a":{"code":"Integer","code.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"Integer\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"integer\",\"default_value\":\"\",\"label\":\"Code\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"40\"}"},"message":"String","message.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"default_value\":\"\",\"label\":\"Message\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"order\":\"2\",\"max_length\":\"4000\"}"}},"FlowDesigner:FDea090036f3f7c590500338e1780ed34a.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Action Status\",\"action_error_output\":\"true\",\"mandatory\":\"false\",\"uiUniqueId\":\"abbc549b-762d-47aa-82a1-f37ba3dbdb26\",\"uiTypeLabel\":\"Object\",\"co_type_name\":\"FDea090036f3f7c590500338e1780ed34a\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"object\",\"order\":\"1\",\"max_length\":\"65000\"}"}},"serializationFormat":"JSON"}</value>
+        <variable display_value="Action Status">be09003687f7c59025a20edc0ebb354d</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_action_type_snapshot</document>
+        <document_key>5609ccf287f7c59025a20edc0ebb35d3</document_key>
+        <order>2</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:20</sys_created_on>
+        <sys_id>b609003687f7c59025a20edc0ebb355e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:20</sys_updated_on>
+        <value>0</value>
+        <variable display_value="Don't Treat as Error">be09003687f7c59025a20edc0ebb3553</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=5609ccf287f7c59025a20edc0ebb35d3"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>responsexml</field>
+        <id>5609ccf287f7c59025a20edc0ebb35d3</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 20:02:16</sys_created_on>
+        <sys_id>1e6294f2873bc59025a20edc0ebb3584</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 20:02:16</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3</table>
+        <value>{{step[adb9683f-36ba-473b-b05c-050e05254cff].responsexml}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__action_status__</field>
+        <id>5609ccf287f7c59025a20edc0ebb35d3</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:20</sys_created_on>
+        <sys_id>3609003687f7c59025a20edc0ebb355e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:20</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>__dont_treat_as_error__</field>
+        <id>5609ccf287f7c59025a20edc0ebb35d3</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:20</sys_created_on>
+        <sys_id>7209003687f7c59025a20edc0ebb355e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:20</sys_updated_on>
+        <table>var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3</table>
+        <value/>
+    </sys_element_mapping>
+    <sys_hub_step_instance action="delete_multiple" query="action=5609ccf287f7c59025a20edc0ebb35d3^sys_idNOT INa209003687f7c59025a20edc0ebb3500"/>
+    <sys_hub_step_instance action="INSERT_OR_UPDATE">
+        <action display_value="EMP_ReadyToSchedule_Default-DEC">5609ccf287f7c59025a20edc0ebb35d3</action>
+        <cid>adb9683f-36ba-473b-b05c-050e05254cff</cid>
+        <error_handling_type>1</error_handling_type>
+        <extended_inputs/>
+        <extended_inputs/>
+        <extended_outputs/>
+        <icon/>
+        <inputs/>
+        <label>Script step</label>
+        <order>1</order>
+        <outputs/>
+        <section/>
+        <step_type display_value="Script">106afb6647032200b4fad7527c9a71e7</step_type>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>a209003687f7c59025a20edc0ebb3500</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:53:19</sys_updated_on>
+    </sys_hub_step_instance>
+    <sys_variable_value action="delete_multiple" query="document_key=a209003687f7c59025a20edc0ebb3500"/>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>a209003687f7c59025a20edc0ebb3500</document_key>
+        <order>600</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>e609003687f7c59025a20edc0ebb3545</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <value>(function execute(inputs, outputs) {
+  // ... code ...
+
+  var dateTime = new GlideDateTime().getDisplayValue();
+  var dt = dateTime.split(' ');
+  var f = dt[0].split('-');
+  var t = dt[1].split(':');
+  var event = new Date(f[0], f[1]-1, f[2], t[0], t[1], t[2]);
+  var isoDate = event.toISOString();
+
+
+
+  var orXml =  publishOrderXml();
+  var xmlString = orXml.toString();
+  var xmlClean = global.JSUtil.unescapeText(xmlString);
+  outputs.responsexml = xmlClean;
+  // gs.info("Ash: "+ xmlClean);
+
+
+
+  function publishOrderXml(){
+
+    var strPlayLoad = "";
+    var xmlDoc = new XMLDocument2();
+    var command = xmlDoc.createElement("command");
+    xmlDoc.setCurrentElement(command);
+
+    var messageType = xmlDoc.createElementWithTextValue('messageType','E.Customer.Notification.DEC.OrderMilestone.Command');
+    var commandType = xmlDoc.createElementWithTextValue('commandType','Ready To Schedule non-GON');
+    var eventTimestamp = xmlDoc.createElementWithTextValue('eventTimestamp',isoDate);//gs.nowDateTime());
+    var correlationId = xmlDoc.createElementWithTextValue('correlationId',"889898989");
+
+
+    var messageSource = xmlDoc.createElementWithTextValue('messageSource','Service Now');
+    var entity,name,value; 
+
+    var businessKeys = xmlDoc.createElement('businessKeys');
+    for(var i =0; i&lt;3; i++){
+
+      var businessKey= xmlDoc.createElement('businessKey');
+      businessKeys.appendChild(businessKey);   
+
+      if(i==0){
+        entity = xmlDoc.createElementWithTextValue('entity','Customer');
+        name = xmlDoc.createElementWithTextValue('name','Customer Number');
+        value = xmlDoc.createElementWithTextValue('value',"");//'SNOW-SwIFT_55000072-0');
+        businessKey.appendChild(entity);
+        businessKey.appendChild(name);
+        businessKey.appendChild(value);
+      }
+      else if(i==1){
+        entity = xmlDoc.createElementWithTextValue('entity','Customer');
+        name = xmlDoc.createElementWithTextValue('name','BillingAccountNumber');
+        value = xmlDoc.createElementWithTextValue('value',"");//'SNOW-SwIFT_55000072-0');
+        businessKey.appendChild(entity);
+        businessKey.appendChild(name);
+        businessKey.appendChild(value);
+      }
+      else if(i==2){
+        entity = xmlDoc.createElementWithTextValue('entity','Document');
+        name = xmlDoc.createElementWithTextValue('name','DocumentID');
+        value = xmlDoc.createElementWithTextValue('value', new GlideDateTime().getNumericValue());
+        businessKey.appendChild(entity);
+        businessKey.appendChild(name);
+        businessKey.appendChild(value);
+      }        
+    }	
+    var payload = xmlDoc.createElementWithTextValue('payload',strPlayLoad);
+    return xmlDoc;  
+  }
+
+
+})(inputs, outputs);
+</value>
+        <variable display_value="Script">71aa7f6647032200b4fad7527c9a719b</variable>
+    </sys_variable_value>
+    <sys_variable_value action="INSERT_OR_UPDATE">
+        <document>sys_hub_step_instance</document>
+        <document_key>a209003687f7c59025a20edc0ebb3500</document_key>
+        <order>400</order>
+        <sys_class_name>sys_variable_value</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>ea09003687f7c59025a20edc0ebb3544</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <value>35aa573fd7802200bdbaee5b5e610375</value>
+        <variable display_value="MID Application">f5e56d79b3101300176b051a16a8dce4</variable>
+    </sys_variable_value>
+    <sys_element_mapping action="delete_multiple" query="id=a209003687f7c59025a20edc0ebb3500"/>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>account_id</field>
+        <id>a209003687f7c59025a20edc0ebb3500</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>ae09003687f7c59025a20edc0ebb3546</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</table>
+        <value>{{action.account_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>contact_id</field>
+        <id>a209003687f7c59025a20edc0ebb3500</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>6209003687f7c59025a20edc0ebb3547</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</table>
+        <value>{{action.contact_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>external_id</field>
+        <id>a209003687f7c59025a20edc0ebb3500</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>ea09003687f7c59025a20edc0ebb3546</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</table>
+        <value>{{action.external_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>orderlineitem_id</field>
+        <id>a209003687f7c59025a20edc0ebb3500</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:53:19</sys_created_on>
+        <sys_id>df50d4fe87f7c59025a20edc0ebb3547</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:53:19</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</table>
+        <value>{{action.orderlineitem_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>order_id</field>
+        <id>a209003687f7c59025a20edc0ebb3500</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>2609003687f7c59025a20edc0ebb3547</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</table>
+        <value>{{action.order_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="INSERT_OR_UPDATE">
+        <field>parent_id</field>
+        <id>a209003687f7c59025a20edc0ebb3500</id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>e609003687f7c59025a20edc0ebb3547</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</table>
+        <value>{{action.parent_id}}</value>
+    </sys_element_mapping>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_step_ext_output_a209003687f7c59025a20edc0ebb3500^id=a209003687f7c59025a20edc0ebb3500"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=a209003687f7c59025a20edc0ebb3500"/>
+    <sys_hub_step_ext_input action="delete_multiple" query="model=a209003687f7c59025a20edc0ebb3500^sys_idNOT IN6209003687f7c59025a20edc0ebb3504,6a09003687f7c59025a20edc0ebb350d,6e09003687f7c59025a20edc0ebb3515,9f50d4fe87f7c59025a20edc0ebb353e,e609003687f7c59025a20edc0ebb3509,ea09003687f7c59025a20edc0ebb3511"/>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>order_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>order_id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">a209003687f7c59025a20edc0ebb3500</model>
+        <model_id>a209003687f7c59025a20edc0ebb3500</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</name>
+        <next_element/>
+        <order>0</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>6209003687f7c59025a20edc0ebb3504</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>external_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>external_id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">a209003687f7c59025a20edc0ebb3500</model>
+        <model_id>a209003687f7c59025a20edc0ebb3500</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</name>
+        <next_element/>
+        <order>200</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>6a09003687f7c59025a20edc0ebb350d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>parent_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>parent_id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">a209003687f7c59025a20edc0ebb3500</model>
+        <model_id>a209003687f7c59025a20edc0ebb3500</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</name>
+        <next_element/>
+        <order>400</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>6e09003687f7c59025a20edc0ebb3515</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>orderlineitem_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>orderlineitem_id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">a209003687f7c59025a20edc0ebb3500</model>
+        <model_id>a209003687f7c59025a20edc0ebb3500</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</name>
+        <next_element/>
+        <order>500</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:53:19</sys_created_on>
+        <sys_id>9f50d4fe87f7c59025a20edc0ebb353e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:53:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>account_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>account_id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">a209003687f7c59025a20edc0ebb3500</model>
+        <model_id>a209003687f7c59025a20edc0ebb3500</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>e609003687f7c59025a20edc0ebb3509</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>contact_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>contact_id</label>
+        <mandatory>true</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">a209003687f7c59025a20edc0ebb3500</model>
+        <model_id>a209003687f7c59025a20edc0ebb3500</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_input_a209003687f7c59025a20edc0ebb3500</name>
+        <next_element/>
+        <order>300</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>ea09003687f7c59025a20edc0ebb3511</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_input>
+    <sys_hub_step_ext_output action="delete_multiple" query="model=a209003687f7c59025a20edc0ebb3500^sys_idNOT IN8ae0d832873bc59025a20edc0ebb3566"/>
+    <sys_hub_step_ext_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=8dbbf49c-dfc8-4978-8119-fbbeb752e77c</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>responsexml</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>responsexml</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Script step">a209003687f7c59025a20edc0ebb3500</model>
+        <model_id>a209003687f7c59025a20edc0ebb3500</model_id>
+        <model_table>sys_hub_step_instance</model_table>
+        <name>var__m_sys_hub_step_ext_output_a209003687f7c59025a20edc0ebb3500</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_step_ext_output</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:55:41</sys_created_on>
+        <sys_id>8ae0d832873bc59025a20edc0ebb3566</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:55:41</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_step_ext_output>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=a209003687f7c59025a20edc0ebb3500"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_step_ext_output_a209003687f7c59025a20edc0ebb3500^sys_idNOT INc6e0d832873bc59025a20edc0ebb356a"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>responsexml</element>
+        <help/>
+        <hint/>
+        <label>responsexml</label>
+        <language>en</language>
+        <name>var__m_sys_hub_step_ext_output_a209003687f7c59025a20edc0ebb3500</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:55:41</sys_created_on>
+        <sys_id>c6e0d832873bc59025a20edc0ebb356a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>responsexml</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_step_ext_output_a209003687f7c59025a20edc0ebb3500_responsexml_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:55:41</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_hub_action_input action="delete_multiple" query="model=5609ccf287f7c59025a20edc0ebb35d3^sys_idNOT IN2e09ccf287f7c59025a20edc0ebb35f9,6209ccf287f7c59025a20edc0ebb35f5,9a09ccf287f7c59025a20edc0ebb35d8,a609ccf287f7c59025a20edc0ebb35f0,c350d4fe87f7c59025a20edc0ebb352e,da09ccf287f7c59025a20edc0ebb35eb"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=4cf9a3d0-8826-49b6-9d00-3dccb8655ef0</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>parent_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>parent_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">5609ccf287f7c59025a20edc0ebb35d3</model>
+        <model_id>5609ccf287f7c59025a20edc0ebb35d3</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <next_element/>
+        <order>5</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>2e09ccf287f7c59025a20edc0ebb35f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=2e09ccf287f7c59025a20edc0ebb35f9"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=cf38121e-7e06-467a-8017-dabe0b6bde9d</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>external_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>external_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">5609ccf287f7c59025a20edc0ebb35d3</model>
+        <model_id>5609ccf287f7c59025a20edc0ebb35d3</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <next_element/>
+        <order>4</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>6209ccf287f7c59025a20edc0ebb35f5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=6209ccf287f7c59025a20edc0ebb35f5"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=a791aa28-ceb3-49ac-80d0-3c3fd34258d7</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>order_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>order_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">5609ccf287f7c59025a20edc0ebb35d3</model>
+        <model_id>5609ccf287f7c59025a20edc0ebb35d3</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:18</sys_created_on>
+        <sys_id>9a09ccf287f7c59025a20edc0ebb35d8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:18</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=9a09ccf287f7c59025a20edc0ebb35d8"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=8ecca4f7-37c2-48b1-a2ad-bb94ea50670e</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>contact_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>contact_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">5609ccf287f7c59025a20edc0ebb35d3</model>
+        <model_id>5609ccf287f7c59025a20edc0ebb35d3</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>a609ccf287f7c59025a20edc0ebb35f0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a609ccf287f7c59025a20edc0ebb35f0"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=476edb2c-d3ca-4069-8e71-957d5588333a</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>orderlineitem_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>orderLineItem_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">5609ccf287f7c59025a20edc0ebb35d3</model>
+        <model_id>5609ccf287f7c59025a20edc0ebb35d3</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <next_element/>
+        <order>6</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:53:18</sys_created_on>
+        <sys_id>c350d4fe87f7c59025a20edc0ebb352e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:53:18</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=c350d4fe87f7c59025a20edc0ebb352e"/>
+    <sys_hub_action_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=4671fb5d-8ece-4b66-85de-516e0881778f</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>account_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>account_id</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">5609ccf287f7c59025a20edc0ebb35d3</model>
+        <model_id>5609ccf287f7c59025a20edc0ebb35d3</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_input</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:18</sys_created_on>
+        <sys_id>da09ccf287f7c59025a20edc0ebb35eb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:18</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=da09ccf287f7c59025a20edc0ebb35eb"/>
+    <sys_hub_action_output action="delete_multiple" query="model=5609ccf287f7c59025a20edc0ebb35d3^sys_idNOT IN1e6294f2873bc59025a20edc0ebb357d,be09003687f7c59025a20edc0ebb354d,be09003687f7c59025a20edc0ebb3553"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=string,uiTypeLabel=String,uiUniqueId=aa46868a-21ce-4b67-aa0c-d9b87a10cfb4</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>responsexml</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>responseXML</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">5609ccf287f7c59025a20edc0ebb35d3</model>
+        <model_id>5609ccf287f7c59025a20edc0ebb35d3</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <next_element/>
+        <order>3</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 20:02:16</sys_created_on>
+        <sys_id>1e6294f2873bc59025a20edc0ebb357d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 20:02:16</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1e6294f2873bc59025a20edc0ebb357d"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=1e6294f2873bc59025a20edc0ebb357d"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,co_type_name=FDea090036f3f7c590500338e1780ed34a,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=object,uiTypeLabel=Object,uiUniqueId=abbc549b-762d-47aa-82a1-f37ba3dbdb26</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__action_status__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Action Status</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">5609ccf287f7c59025a20edc0ebb35d3</model>
+        <model_id>5609ccf287f7c59025a20edc0ebb35d3</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>be09003687f7c59025a20edc0ebb354d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=be09003687f7c59025a20edc0ebb354d"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=be09003687f7c59025a20edc0ebb354d"/>
+    <sys_hub_action_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>action_error_output=true,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=boolean,uiTypeLabel=True/False,uiUniqueId=fd6c4059-8068-4d5d-82fe-f99749361564,visible_in_ui=false</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value>true</default_value>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>__dont_treat_as_error__</element>
+        <element_prototype/>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="">boolean</internal_type>
+        <label>Don't Treat as Error</label>
+        <mandatory>false</mandatory>
+        <max_length>40</max_length>
+        <model display_value="EMP_ReadyToSchedule_Default-DEC">5609ccf287f7c59025a20edc0ebb35d3</model>
+        <model_id>5609ccf287f7c59025a20edc0ebb35d3</model_id>
+        <model_table>sys_hub_action_type_snapshot</model_table>
+        <name>var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_action_output</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:20</sys_created_on>
+        <sys_id>be09003687f7c59025a20edc0ebb3553</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:20</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_action_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=be09003687f7c59025a20edc0ebb3553"/>
+    <sys_hub_input_scripts action="delete_multiple" query="instance=be09003687f7c59025a20edc0ebb3553"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=5609ccf287f7c59025a20edc0ebb35d3"/>
+    <sys_hub_action_status_metadata action="delete_multiple" query="action_type_id=5609ccf287f7c59025a20edc0ebb35d3^sys_idNOT IN7a09003687f7c59025a20edc0ebb3560"/>
+    <sys_hub_action_status_metadata action="INSERT_OR_UPDATE">
+        <action_type_id display_value="EMP_ReadyToSchedule_Default-DEC">5609ccf287f7c59025a20edc0ebb35d3</action_type_id>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:20</sys_created_on>
+        <sys_id>7a09003687f7c59025a20edc0ebb3560</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:20</sys_updated_on>
+    </sys_hub_action_status_metadata>
+    <sys_hub_status_condition action="delete_multiple" query="action_status_metadata_id=7a09003687f7c59025a20edc0ebb3560"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3^sys_idNOT IN1e09ccf287f7c59025a20edc0ebb35ea,2a09ccf287f7c59025a20edc0ebb35fd,6e09ccf287f7c59025a20edc0ebb35f8,a209ccf287f7c59025a20edc0ebb35f4,df50d4fe87f7c59025a20edc0ebb3531,e609ccf287f7c59025a20edc0ebb35ef"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>order_id</element>
+        <help/>
+        <hint/>
+        <label>order_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:18</sys_created_on>
+        <sys_id>1e09ccf287f7c59025a20edc0ebb35ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>order_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3_order_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>parent_id</element>
+        <help/>
+        <hint/>
+        <label>parent_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>2a09ccf287f7c59025a20edc0ebb35fd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>parent_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3_parent_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>external_id</element>
+        <help/>
+        <hint/>
+        <label>external_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>6e09ccf287f7c59025a20edc0ebb35f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>external_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3_external_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>contact_id</element>
+        <help/>
+        <hint/>
+        <label>contact_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:19</sys_created_on>
+        <sys_id>a209ccf287f7c59025a20edc0ebb35f4</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>contact_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3_contact_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:19</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>orderlineitem_id</element>
+        <help/>
+        <hint/>
+        <label>orderLineItem_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:53:18</sys_created_on>
+        <sys_id>df50d4fe87f7c59025a20edc0ebb3531</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>orderLineItem_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3_orderlineitem_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:53:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>account_id</element>
+        <help/>
+        <hint/>
+        <label>account_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:18</sys_created_on>
+        <sys_id>e609ccf287f7c59025a20edc0ebb35ef</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>account_id</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3_account_id_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:18</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_input_5609ccf287f7c59025a20edc0ebb35d3"/>
+    <sys_documentation action="delete_multiple" query="name=var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3^sys_idNOT IN5a6294f2873bc59025a20edc0ebb3581,7e09003687f7c59025a20edc0ebb355a,fe09003687f7c59025a20edc0ebb3552"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>responsexml</element>
+        <help/>
+        <hint/>
+        <label>responseXML</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 20:02:16</sys_created_on>
+        <sys_id>5a6294f2873bc59025a20edc0ebb3581</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>responseXML</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3_responsexml_en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 20:02:16</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__dont_treat_as_error__</element>
+        <help/>
+        <hint/>
+        <label>Don't Treat as Error</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:20</sys_created_on>
+        <sys_id>7e09003687f7c59025a20edc0ebb355a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Don't Treat as Error</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3___dont_treat_as_error___en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>__action_status__</element>
+        <help/>
+        <hint/>
+        <label>Action Status</label>
+        <language>en</language>
+        <name>var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>Amrita Sarkhel</sys_created_by>
+        <sys_created_on>2022-06-03 19:21:20</sys_created_on>
+        <sys_id>fe09003687f7c59025a20edc0ebb3552</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Action Status</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3___action_status___en</sys_update_name>
+        <sys_updated_by>Amrita Sarkhel</sys_updated_by>
+        <sys_updated_on>2022-06-03 19:21:20</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_action_output_5609ccf287f7c59025a20edc0ebb35d3"/>
+    <sys_hub_action_type_definition action="UPDATE">
+        <sys_id>30d580be87b7c59025a20edc0ebb35fd</sys_id>
+        <latest_snapshot>5609ccf287f7c59025a20edc0ebb35d3</latest_snapshot>
+        <compiler_build>glide-sandiego-12-22-2021__patch1-hotfix1a-03-31-2022_04-12-2022_2208.zip</compiler_build>
+    </sys_hub_action_type_definition>
+</record_update>

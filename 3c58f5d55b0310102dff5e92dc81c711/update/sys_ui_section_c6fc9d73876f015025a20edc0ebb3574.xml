@@ -3,210 +3,168 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>order_id</element>
             <position>0</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>697957ea87599510574bb958dabb353a</sys_id>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>52fc9d73876f015025a20edc0ebb35fe</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>account</element>
             <position>1</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>6d7957ea87599510574bb958dabb353a</sys_id>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>5efc9d73876f015025a20edc0ebb35fe</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>contact</element>
             <position>2</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>ed7957ea87599510574bb958dabb3553</sys_id>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>52fc9d73876f015025a20edc0ebb35ff</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>channel</element>
-            <position>3</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>e17957ea87599510574bb958dabb3554</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>order_date</element>
-            <position>4</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>e57957ea87599510574bb958dabb3554</sys_id>
+            <position>3</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>56fc9d73876f015025a20edc0ebb35ff</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>ponr</element>
-            <position>5</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>e97957ea87599510574bb958dabb3554</sys_id>
+            <position>4</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>5afc9d73876f015025a20edc0ebb35ff</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>6</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>ed7957ea87599510574bb958dabb3554</sys_id>
+            <position>5</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>5efc9d73876f015025a20edc0ebb35ff</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>order_category</element>
-            <position>7</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>e17957ea87599510574bb958dabb3555</sys_id>
+            <position>6</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>52fcdd73876f015025a20edc0ebb3500</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>state</element>
-            <position>8</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>e57957ea87599510574bb958dabb3555</sys_id>
+            <position>7</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>56fcdd73876f015025a20edc0ebb3500</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_approved_by</element>
-            <position>9</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>e97957ea87599510574bb958dabb3555</sys_id>
+            <position>8</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>5afcdd73876f015025a20edc0ebb3500</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>fullfilment_code</element>
-            <position>10</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>ed7957ea87599510574bb958dabb3555</sys_id>
+            <position>9</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>5efcdd73876f015025a20edc0ebb3500</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>version</element>
-            <position>11</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>e17957ea87599510574bb958dabb3556</sys_id>
+            <position>10</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>52fcdd73876f015025a20edc0ebb3501</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>revision_operation</element>
-            <position>12</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>e57957ea87599510574bb958dabb3556</sys_id>
+            <position>11</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-05-25 17:46:15</sys_created_on>
+            <sys_id>56fcdd73876f015025a20edc0ebb3501</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>external_id</element>
-            <position>13</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>e97957ea87599510574bb958dabb3556</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>partner_contact</element>
-            <position>14</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-08-17 05:27:38</sys_created_on>
-            <sys_id>ed7957ea87599510574bb958dabb3556</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">c6fc9d73876f015025a20edc0ebb3574</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-08-17 05:27:38</sys_updated_on>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-05-25 17:46:15</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -223,7 +181,7 @@
             <sys_id>c6fc9d73876f015025a20edc0ebb3574</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_name>sn_ind_tmt_orm_order</sys_name>
-            <sys_overrides display_value="">03f077cfc3482010912d89bc2840dd18</sys_overrides>
+            <sys_overrides caption="Customer Order" display_value="Customer Order" name="sn_ind_tmt_orm_order" sys_domain="global" view="Default view">03f077cfc3482010912d89bc2840dd18</sys_overrides>
             <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
             <sys_policy/>
             <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -236,4 +194,18 @@
             <view_name/>
         </sys_ui_section>
     </sys_ui_section>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4708b010000001</claim_timestamp>
+        <metadata_update_name>sys_ui_section_c6fc9d73876f015025a20edc0ebb3574</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:32</sys_created_on>
+        <sys_id>d634a9931b251d500f4ccbb8624bcb23</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:32</sys_updated_on>
+    </sys_claim>
 </record_update>

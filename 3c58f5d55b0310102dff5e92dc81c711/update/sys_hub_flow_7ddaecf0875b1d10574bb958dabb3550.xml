@@ -41,6 +41,20 @@
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=7ddaecf0875b1d10574bb958dabb3550"/>
     <sys_variable_value action="delete_multiple" query="document_key=7ddaecf0875b1d10574bb958dabb3550"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fad42f0000001</claim_timestamp>
+        <metadata_update_name>sys_hub_flow_7ddaecf0875b1d10574bb958dabb3550</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:28</sys_created_on>
+        <sys_id>bec688a28727151094fa0e58cebb35f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:28</sys_updated_on>
+    </sys_claim>
     <sys_flow_record_trigger action="INSERT_OR_UPDATE">
         <active>true</active>
         <condition table="sn_ind_tmt_orm_order_characteristic_value">order_line_item.product_specification=806f285287f6095025a20edc0ebb35d6^characteristic=cdf8d8f1873255501aa9337d0ebb3563^characteristic_option_valueCHANGESTOYes<item display_table="sn_prd_pm_product_specification" display_value="SASE CPE" endquery="false" field="order_line_item.product_specification" goto="false" newquery="false" operator="=" or="false" value="806f285287f6095025a20edc0ebb35d6"/>
@@ -432,10 +446,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-18 17:57:52</sys_created_on>
         <sys_id>de018df087db1d10574bb958dabb354d</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-18 17:57:59</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-11-18 18:10:39</sys_updated_on>
         <ui_id>e0de27bc-2e96-4189-bfd3-0cd8f88a6737</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=de018df087db1d10574bb958dabb354d"/>
@@ -610,7 +624,7 @@
         <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"a4fc2038875b1d10574bb958dabb3503","name":"plan","plan_signature":null}}</plan>
         <plan_id>7ddaecf0875b1d10574bb958dabb3550</plan_id>
-        <snapshot>6fecacf4875b1d10574bb958dabb3579</snapshot>
+        <snapshot>41f3453c87db1d10574bb958dabb3529</snapshot>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-18 16:30:06</sys_created_on>
         <sys_domain>global</sys_domain>

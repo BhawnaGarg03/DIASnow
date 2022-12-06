@@ -47,11 +47,11 @@
         <sys_created_by>AD11761</sys_created_by>
         <sys_created_on>2022-10-26 06:23:00</sys_created_on>
         <sys_domain>7a8f93141b0b20102885a932604bcb70</sys_domain>
-        <sys_domain_path>/</sys_domain_path>
+        <sys_domain_path>!!!/!!&amp;/</sys_domain_path>
         <sys_id>53658c5d8772dd101aa9337d0ebb3503</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_name>DIA TEST FORM</sys_name>
-        <sys_overrides display_value="">dcd8e981878e1550b9342f07cebb356a</sys_overrides>
+        <sys_overrides display_value="DIA TEST FORM">dcd8e981878e1550b9342f07cebb356a</sys_overrides>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
@@ -62,4 +62,18 @@
         <ui11_compatible>true</ui11_compatible>
         <ui16_compatible>false</ui16_compatible>
     </sys_ui_action>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fadf400000001</claim_timestamp>
+        <metadata_update_name>sys_ui_action_53658c5d8772dd101aa9337d0ebb3503</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:31</sys_created_on>
+        <sys_id>abc6c8a28727151094fa0e58cebb35ea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:31</sys_updated_on>
+    </sys_claim>
 </record_update>

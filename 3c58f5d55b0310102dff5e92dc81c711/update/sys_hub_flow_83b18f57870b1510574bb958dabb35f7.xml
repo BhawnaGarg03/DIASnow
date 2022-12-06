@@ -41,6 +41,20 @@
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=83b18f57870b1510574bb958dabb35f7"/>
     <sys_variable_value action="delete_multiple" query="document_key=83b18f57870b1510574bb958dabb35f7"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6facfd20000001</claim_timestamp>
+        <metadata_update_name>sys_hub_flow_83b18f57870b1510574bb958dabb35f7</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:27</sys_created_on>
+        <sys_id>66c688a28727151094fa0e58cebb3580</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:27</sys_updated_on>
+    </sys_claim>
     <sys_flow_record_trigger action="INSERT_OR_UPDATE">
         <active>true</active>
         <condition table="sn_ind_tmt_orm_order_task">short_descriptionLIKESASE Profile - SASE Services^state=5<item endquery="false" field="short_description" goto="false" newquery="false" operator="LIKE" or="false" value="SASE Profile - SASE Services"/>
@@ -417,10 +431,10 @@
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-14 11:33:08</sys_created_on>
         <sys_id>6792c3db870b1510574bb958dabb35ef</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-14 11:33:53</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-11-14 16:04:30</sys_updated_on>
         <ui_id>19e7ec42-c5c7-4360-a759-91ffa20decc8</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=6792c3db870b1510574bb958dabb35ef"/>
@@ -519,9 +533,9 @@
     <sys_flow_trigger_plan action="delete_multiple" query="plan_id=83b18f57870b1510574bb958dabb35f7^sys_idNOT IN16c20b1f870b1510574bb958dabb35fd"/>
     <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
         <binding_strategy>com.snc.process_flow.engine.binding.OncePerRecord</binding_strategy>
-        <plan/>
+        <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"16c20b1f870b1510574bb958dabb35fd","name":"plan","plan_signature":null}}</plan>
         <plan_id>83b18f57870b1510574bb958dabb35f7</plan_id>
-        <snapshot>b5c2471f870b1510574bb958dabb3592</snapshot>
+        <snapshot>aeb044e7874bd1101aa9337d0ebb350a</snapshot>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-11-14 11:33:53</sys_created_on>
         <sys_domain>global</sys_domain>
@@ -1002,6 +1016,6 @@
     <sys_hub_flow action="UPDATE">
         <sys_id>83b18f57870b1510574bb958dabb35f7</sys_id>
         <latest_snapshot>b5c2471f870b1510574bb958dabb3592</latest_snapshot>
-        <compiler_build/>
+        <compiler_build>glide-sandiego-12-22-2021__patch7a-09-20-2022_10-04-2022_1309.zip</compiler_build>
     </sys_hub_flow>
 </record_update>

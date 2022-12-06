@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>Update Service Spec</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[var gr=new GlideRecord('sn_prd_pm_service_specification');
+//var gr=new GlideRecord('sn_prd_pm_resource_specification');
+//var gr=new GlideRecord('sn_prd_pm_product_specification');
+gr.get("5ae3285a87f2819084b2a18e0ebb35ca");
+gr.query();
+if(gr.next())
+	{
+	gr.status="draft";
+	gr.update();	
+	} ]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>Tejasree.Karnati</sys_created_by>
+        <sys_created_on>2022-04-15 17:35:32</sys_created_on>
+        <sys_id>655a9f7e87f2459084b2a18e0ebb35e6</sys_id>
+        <sys_mod_count>113</sys_mod_count>
+        <sys_name>Update Service Spec</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_fix_655a9f7e87f2459084b2a18e0ebb35e6</sys_update_name>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-08-14 04:00:57</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4706dbe0000001</claim_timestamp>
+        <metadata_update_name>sys_script_fix_655a9f7e87f2459084b2a18e0ebb35e6</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:25</sys_created_on>
+        <sys_id>e43465931b251d500f4ccbb8624bcb9b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:25</sys_updated_on>
+    </sys_claim>
+</record_update>

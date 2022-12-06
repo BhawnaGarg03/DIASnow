@@ -25,7 +25,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>bc4157a88796199000154155dabb3575</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>Node_TDG_Task_State - In Progress</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
@@ -33,12 +33,26 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_action_type_definition_bc4157a88796199000154155dabb3575</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-29 16:49:15</sys_updated_on>
+        <sys_updated_on>2022-10-18 10:43:22</sys_updated_on>
         <system_level>false</system_level>
         <type/>
     </sys_hub_action_type_definition>
     <sys_translated_text action="delete_multiple" query="documentkey=bc4157a88796199000154155dabb3575"/>
     <sys_variable_value action="delete_multiple" query="document_key=bc4157a88796199000154155dabb3575"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fae7450000001</claim_timestamp>
+        <metadata_update_name>sys_hub_action_type_definition_bc4157a88796199000154155dabb3575</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:33</sys_created_on>
+        <sys_id>88d60ca28727151094fa0e58cebb35a1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:33</sys_updated_on>
+    </sys_claim>
     <sys_hub_step_instance action="delete_multiple" query="action=bc4157a88796199000154155dabb3575^sys_idNOT IN28d11fe88796199000154155dabb3551"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="Node_TDG_Task_State - In Progress">bc4157a88796199000154155dabb3575</action>
@@ -102,18 +116,6 @@
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=28d11fe88796199000154155dabb3551"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>28d11fe88796199000154155dabb3551</id>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-29 16:49:12</sys_created_on>
-        <sys_id>38d11fe88796199000154155dabb356c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-29 16:49:12</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>orderLineID</field>
         <id>28d11fe88796199000154155dabb3551</id>
         <sys_created_by>AD12224</sys_created_by>
@@ -124,18 +126,6 @@
         <sys_updated_on>2022-09-29 16:49:12</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_28d11fe88796199000154155dabb3551</table>
         <value>{{action.order_line_id}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>28d11fe88796199000154155dabb3551</id>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-29 16:49:12</sys_created_on>
-        <sys_id>fcd11fe88796199000154155dabb356c</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-29 16:49:12</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=28d11fe88796199000154155dabb3551"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=28d11fe88796199000154155dabb3551^sys_idNOT IN70d11fe88796199000154155dabb3559"/>
@@ -333,11 +323,11 @@
         <sys_created_on>2022-09-29 16:49:11</sys_created_on>
         <sys_id>68d11fe88796199000154155dabb354f</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Order Line ID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_bc4157a88796199000154155dabb3575_order_line_id_en</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
         <sys_updated_on>2022-09-29 16:49:11</sys_updated_on>
         <url/>
@@ -463,18 +453,6 @@
     </sys_variable_value>
     <sys_element_mapping action="delete_multiple" query="id=95d11fe88796199000154155dabb35dc"/>
     <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>application</field>
-        <id>95d11fe88796199000154155dabb35dc</id>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-29 16:49:14</sys_created_on>
-        <sys_id>91d11fe88796199000154155dabb35e7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-29 16:49:14</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>orderLineID</field>
         <id>95d11fe88796199000154155dabb35dc</id>
         <sys_created_by>AD12224</sys_created_by>
@@ -485,18 +463,6 @@
         <sys_updated_on>2022-09-29 16:49:14</sys_updated_on>
         <table>var__m_sys_hub_step_ext_input_95d11fe88796199000154155dabb35dc</table>
         <value>{{action.order_line_id}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>script</field>
-        <id>95d11fe88796199000154155dabb35dc</id>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-29 16:49:14</sys_created_on>
-        <sys_id>55d11fe88796199000154155dabb35e7</sys_id>
-        <sys_mod_count>0</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-29 16:49:14</sys_updated_on>
-        <table>var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7</table>
-        <value/>
     </sys_element_mapping>
     <sys_element_mapping action="delete_multiple" query="table=var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7^id=95d11fe88796199000154155dabb35dc"/>
     <sys_hub_step_ext_input action="delete_multiple" query="model=95d11fe88796199000154155dabb35dc^sys_idNOT IN99d11fe88796199000154155dabb35df"/>
@@ -864,11 +830,11 @@
         <sys_created_on>2022-09-29 16:49:14</sys_created_on>
         <sys_id>d5d11fe88796199000154155dabb35da</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Order Line ID</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_input_51d11fe88796199000154155dabb35b9_order_line_id_en</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
         <sys_updated_on>2022-09-29 16:49:14</sys_updated_on>
         <url/>
@@ -889,11 +855,11 @@
         <sys_created_on>2022-09-29 16:49:15</sys_created_on>
         <sys_id>69d11fe88796199000154155dabb35f9</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Don't Treat as Error</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_51d11fe88796199000154155dabb35b9___dont_treat_as_error___en</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
         <sys_updated_on>2022-09-29 16:49:15</sys_updated_on>
         <url/>
@@ -912,11 +878,11 @@
         <sys_created_on>2022-09-29 16:49:14</sys_created_on>
         <sys_id>a1d11fe88796199000154155dabb35f2</sys_id>
         <sys_mod_count>0</sys_mod_count>
-        <sys_name/>
+        <sys_name>Action Status</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_update_name/>
+        <sys_update_name>sys_documentation_var__m_sys_hub_action_output_51d11fe88796199000154155dabb35b9___action_status___en</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
         <sys_updated_on>2022-09-29 16:49:14</sys_updated_on>
         <url/>
@@ -926,6 +892,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>bc4157a88796199000154155dabb3575</sys_id>
         <latest_snapshot>51d11fe88796199000154155dabb35b9</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch4a-06-21-2022_07-12-2022_1907.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch7-08-17-2022_08-23-2022_1902.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>

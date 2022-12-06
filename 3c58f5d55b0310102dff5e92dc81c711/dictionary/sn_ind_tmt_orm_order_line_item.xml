@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="sn_csm_om_order_line_item" label="Auftragspositionselement" max_length="40" name="sn_ind_tmt_orm_order_line_item" sizeclass="3108" type="collection">
+        <element attributes="encode_utf8=false,readonly_clickthrough=true" label="Service Specification" max_length="32" name="service_specification" reference="sn_prd_pm_service_specification" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Action Change Reason" max_length="40" name="u_action_change_reason" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false,glide_list=true" label="Tiering ID" max_length="100" name="u_tiering_id" reference="sn_ind_tmt_orm_tiering" reference_qual="u_tiering_idISNOTEMPTY^EQ" reference_qual_condition="u_tiering_idISNOTEMPTY^EQ" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Approved By" max_length="40" name="u_approved_by" read_only="true" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="State Change Reason" max_length="40" name="u_state_change_reason" type="string"/>
+        <index name="index">
+            <element name="service_specification"/>
+        </index>
+        <index name="index2">
+            <element name="u_tiering_id"/>
+        </index>
+        <index name="index3">
+            <element name="u_approved_by"/>
+        </index>
+    </element>
+</database>

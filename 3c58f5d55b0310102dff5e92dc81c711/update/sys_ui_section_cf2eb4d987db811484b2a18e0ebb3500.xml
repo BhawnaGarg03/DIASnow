@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="" section_id="cf2eb4d987db811484b2a18e0ebb3500" sys_domain="7a8f93141b0b20102885a932604bcb70" table="sn_ind_tmt_orm_order_line_item" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>order_line_id</element>
+            <position>0</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>f61acae987a0195425a20edc0ebb35ce</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>contact</element>
+            <position>1</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>321acae987a0195425a20edc0ebb35cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>order</element>
+            <position>2</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>361acae987a0195425a20edc0ebb35cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>parent_line_item</element>
+            <position>3</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3a1acae987a0195425a20edc0ebb35cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>product_offering</element>
+            <position>4</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3e1acae987a0195425a20edc0ebb35cf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>product_specification</element>
+            <position>5</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>321acae987a0195425a20edc0ebb35d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>service_specification</element>
+            <position>6</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>361acae987a0195425a20edc0ebb35d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>version</element>
+            <position>7</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3a1acae987a0195425a20edc0ebb35d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>revision_operation</element>
+            <position>8</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3e1acae987a0195425a20edc0ebb35d0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>ponr</element>
+            <position>9</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>321acae987a0195425a20edc0ebb35d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>external_id</element>
+            <position>10</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>361acae987a0195425a20edc0ebb35d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>11</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3a1acae987a0195425a20edc0ebb35d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>account</element>
+            <position>12</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3e1acae987a0195425a20edc0ebb35d1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>order_category</element>
+            <position>13</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>321acae987a0195425a20edc0ebb35d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>state</element>
+            <position>14</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>361acae987a0195425a20edc0ebb35d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_action_change_reason</element>
+            <position>15</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3a1acae987a0195425a20edc0ebb35d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_state_change_reason</element>
+            <position>16</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3e1acae987a0195425a20edc0ebb35d2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_approved_by</element>
+            <position>17</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>321acae987a0195425a20edc0ebb35d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>quantity</element>
+            <position>18</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>361acae987a0195425a20edc0ebb35d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>location</element>
+            <position>19</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3a1acae987a0195425a20edc0ebb35d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_tiering_id</element>
+            <position>20</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3e1acae987a0195425a20edc0ebb35d3</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>shipping_city</element>
+            <position>21</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>321acae987a0195425a20edc0ebb35d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>shipping_country</element>
+            <position>22</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>361acae987a0195425a20edc0ebb35d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>shipping_state</element>
+            <position>23</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3a1acae987a0195425a20edc0ebb35d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>shipping_street</element>
+            <position>24</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>3e1acae987a0195425a20edc0ebb35d4</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>shipping_zip</element>
+            <position>25</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>321acae987a0195425a20edc0ebb35d5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>product_specification.name</element>
+            <position>26</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>361acae987a0195425a20edc0ebb35d5</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>action</element>
+            <position>27</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>7a1a0ee987a0195425a20edc0ebb352c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.end_split</element>
+            <position>28</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>7e1a0ee987a0195425a20edc0ebb352c</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type>.end_split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>short_description</element>
+            <position>29</position>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-07-07 14:19:54</sys_created_on>
+            <sys_id>721a0ee987a0195425a20edc0ebb352d</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="7a8f93141b0b20102885a932604bcb70" view="Default view">cf2eb4d987db811484b2a18e0ebb3500</sys_ui_section>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-07-07 14:19:54</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption/>
+            <header>false</header>
+            <name>sn_ind_tmt_orm_order_line_item</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>Anoop.jain</sys_created_by>
+            <sys_created_on>2022-05-05 10:51:10</sys_created_on>
+            <sys_domain>7a8f93141b0b20102885a932604bcb70</sys_domain>
+            <sys_domain_path>!!!/!!&amp;/</sys_domain_path>
+            <sys_id>cf2eb4d987db811484b2a18e0ebb3500</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>sn_ind_tmt_orm_order_line_item</sys_name>
+            <sys_overrides caption="NULL" display_value="" name="sn_ind_tmt_orm_order_line_item" sys_domain="global" view="Default view">46eb3d315b5310102dff5e92dc81c7d2</sys_overrides>
+            <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+            <sys_update_name>sys_ui_section_cf2eb4d987db811484b2a18e0ebb3500</sys_update_name>
+            <sys_updated_by>Anoop.jain</sys_updated_by>
+            <sys_updated_on>2022-05-05 10:51:10</sys_updated_on>
+            <sys_user/>
+            <title>true</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47090050000001</claim_timestamp>
+        <metadata_update_name>sys_ui_section_cf2eb4d987db811484b2a18e0ebb3500</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:33</sys_created_on>
+        <sys_id>2a34a9931b251d500f4ccbb8624bcbe9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:33</sys_updated_on>
+    </sys_claim>
+</record_update>

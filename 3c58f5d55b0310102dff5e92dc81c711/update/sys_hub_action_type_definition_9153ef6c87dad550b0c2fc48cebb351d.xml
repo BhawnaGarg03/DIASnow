@@ -105,6 +105,20 @@
         <table>var__m_sys_hub_action_output_9153ef6c87dad550b0c2fc48cebb351d</table>
         <value/>
     </sys_element_mapping>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6faef2a0000001</claim_timestamp>
+        <metadata_update_name>sys_hub_action_type_definition_9153ef6c87dad550b0c2fc48cebb351d</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:35</sys_created_on>
+        <sys_id>e8d64ca28727151094fa0e58cebb3567</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:35</sys_updated_on>
+    </sys_claim>
     <sys_hub_step_instance action="delete_multiple" query="action=9153ef6c87dad550b0c2fc48cebb351d^sys_idNOT IN66c1328987ba5d10e10064ed0ebb3598,6a53ef6c87dad550b0c2fc48cebb35d8,de386bf18772d15025a20edc0ebb353f,ee53ef6c87dad550b0c2fc48cebb35e9"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="MEDR-LMN-Salesforce-GetAddressAction-SOM">9153ef6c87dad550b0c2fc48cebb351d</action>
@@ -1700,17 +1714,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="MEDR-LMN-Salesforce-GetAddressAction-SOM">9153ef6c87dad550b0c2fc48cebb351d</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"fbd88a03876edd10574bb958dabb3543","name":"plan","plan_signature":null}}</plan>
-        <snapshot>0193b00187b6dd50b9342f07cebb352f</snapshot>
+        <snapshot>ee50b8c6873ed15025a20edc0ebb35c5</snapshot>
         <sys_created_by>AD20957</sys_created_by>
         <sys_created_on>2022-10-19 16:10:58</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>fbd88a03876edd10574bb958dabb3543</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
-        <sys_updated_by>AD13765</sys_updated_by>
-        <sys_updated_on>2022-10-25 15:06:14</sys_updated_on>
+        <sys_updated_by>AD20957</sys_updated_by>
+        <sys_updated_on>2022-10-28 17:26:04</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>

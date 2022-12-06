@@ -3,126 +3,112 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>number</element>
             <position>0</position>
-            <sys_created_by>AD12224</sys_created_by>
-            <sys_created_on>2022-09-29 19:00:22</sys_created_on>
-            <sys_id>dedf6764879a199000154155dabb355b</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-10 04:56:38</sys_created_on>
+            <sys_id>86f91d5fc3203010912d89bc2840dd2b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_characteristic_value" sys_domain="global" view="Default view">c43acef55b5310102dff5e92dc81c7df</sys_ui_section>
-            <sys_updated_by>AD12224</sys_updated_by>
-            <sys_updated_on>2022-09-29 19:00:22</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-10 04:56:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>characteristic</element>
             <position>1</position>
-            <sys_created_by>AD12224</sys_created_by>
-            <sys_created_on>2022-09-29 19:00:22</sys_created_on>
-            <sys_id>5adf6764879a199000154155dabb355c</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-10 04:56:38</sys_created_on>
+            <sys_id>0af91d5fc3203010912d89bc2840dd2b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_characteristic_value" sys_domain="global" view="Default view">c43acef55b5310102dff5e92dc81c7df</sys_ui_section>
-            <sys_updated_by>AD12224</sys_updated_by>
-            <sys_updated_on>2022-09-29 19:00:22</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-10 04:56:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>characteristic_option</element>
             <position>2</position>
-            <sys_created_by>AD12224</sys_created_by>
-            <sys_created_on>2022-09-29 19:00:22</sys_created_on>
-            <sys_id>5edf6764879a199000154155dabb355c</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-10 04:56:38</sys_created_on>
+            <sys_id>8af91d5fc3203010912d89bc2840dd2b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_characteristic_value" sys_domain="global" view="Default view">c43acef55b5310102dff5e92dc81c7df</sys_ui_section>
-            <sys_updated_by>AD12224</sys_updated_by>
-            <sys_updated_on>2022-09-29 19:00:22</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-10 04:56:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>characteristic_option_value</element>
             <position>3</position>
-            <sys_created_by>AD12224</sys_created_by>
-            <sys_created_on>2022-09-29 19:00:22</sys_created_on>
-            <sys_id>52df63a4879a199000154155dabb3506</sys_id>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-10 04:56:38</sys_created_on>
+            <sys_id>0ef91d5fc3203010912d89bc2840dd2b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_characteristic_value" sys_domain="global" view="Default view">c43acef55b5310102dff5e92dc81c7df</sys_ui_section>
-            <sys_updated_by>AD12224</sys_updated_by>
-            <sys_updated_on>2022-09-29 19:00:22</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>previous_characteristic_option_value</element>
-            <position>4</position>
-            <sys_created_by>AD12224</sys_created_by>
-            <sys_created_on>2022-09-29 19:00:22</sys_created_on>
-            <sys_id>56df63a4879a199000154155dabb3506</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_characteristic_value" sys_domain="global" view="Default view">c43acef55b5310102dff5e92dc81c7df</sys_ui_section>
-            <sys_updated_by>AD12224</sys_updated_by>
-            <sys_updated_on>2022-09-29 19:00:22</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-10 04:56:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>5</position>
-            <sys_created_by>AD12224</sys_created_by>
-            <sys_created_on>2022-09-29 19:00:22</sys_created_on>
-            <sys_id>5adf63a4879a199000154155dabb3506</sys_id>
+            <position>4</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-10 04:56:38</sys_created_on>
+            <sys_id>8ef91d5fc3203010912d89bc2840dd2b</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_characteristic_value" sys_domain="global" view="Default view">c43acef55b5310102dff5e92dc81c7df</sys_ui_section>
-            <sys_updated_by>AD12224</sys_updated_by>
-            <sys_updated_on>2022-09-29 19:00:22</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-10 04:56:38</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>specification</element>
-            <position>6</position>
-            <sys_created_by>AD12224</sys_created_by>
-            <sys_created_on>2022-09-29 19:00:22</sys_created_on>
-            <sys_id>5edf63a4879a199000154155dabb3506</sys_id>
+            <position>5</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-10 04:56:38</sys_created_on>
+            <sys_id>02f91d5fc3203010912d89bc2840dd2c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_characteristic_value" sys_domain="global" view="Default view">c43acef55b5310102dff5e92dc81c7df</sys_ui_section>
-            <sys_updated_by>AD12224</sys_updated_by>
-            <sys_updated_on>2022-09-29 19:00:22</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-10 04:56:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>order_line_item</element>
-            <position>7</position>
-            <sys_created_by>AD12224</sys_created_by>
-            <sys_created_on>2022-09-29 19:00:22</sys_created_on>
-            <sys_id>52df63a4879a199000154155dabb3507</sys_id>
+            <position>6</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-10 04:56:38</sys_created_on>
+            <sys_id>82f91d5fc3203010912d89bc2840dd2c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_characteristic_value" sys_domain="global" view="Default view">c43acef55b5310102dff5e92dc81c7df</sys_ui_section>
-            <sys_updated_by>AD12224</sys_updated_by>
-            <sys_updated_on>2022-09-29 19:00:22</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-10 04:56:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>order_line_version</element>
-            <position>8</position>
-            <sys_created_by>AD12224</sys_created_by>
-            <sys_created_on>2022-09-29 19:00:22</sys_created_on>
-            <sys_id>56df63a4879a199000154155dabb3507</sys_id>
+            <position>7</position>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2021-06-10 04:56:38</sys_created_on>
+            <sys_id>06f91d5fc3203010912d89bc2840dd2c</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_order_characteristic_value" sys_domain="global" view="Default view">c43acef55b5310102dff5e92dc81c7df</sys_ui_section>
-            <sys_updated_by>AD12224</sys_updated_by>
-            <sys_updated_on>2022-09-29 19:00:22</sys_updated_on>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2021-06-10 04:56:38</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -152,4 +138,18 @@
             <view_name/>
         </sys_ui_section>
     </sys_ui_section>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fad7f20000001</claim_timestamp>
+        <metadata_update_name>sys_ui_section_c43acef55b5310102dff5e92dc81c7df</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:29</sys_created_on>
+        <sys_id>8bc6c8a28727151094fa0e58cebb354b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:29</sys_updated_on>
+    </sys_claim>
 </record_update>

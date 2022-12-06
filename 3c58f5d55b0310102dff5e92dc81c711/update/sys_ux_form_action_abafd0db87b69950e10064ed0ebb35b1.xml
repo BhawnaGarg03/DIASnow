@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ux_form_action">
+    <sys_ux_form_action action="INSERT_OR_UPDATE">
+        <action_type>ui_action</action_type>
+        <active>true</active>
+        <declarative_action/>
+        <description/>
+        <name>Pair SIM</name>
+        <specificity>40</specificity>
+        <sys_class_name>sys_ux_form_action</sys_class_name>
+        <sys_created_by>AC44389</sys_created_by>
+        <sys_created_on>2022-11-01 13:25:34</sys_created_on>
+        <sys_id>abafd0db87b69950e10064ed0ebb35b1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Pair SIM</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_ux_form_action_abafd0db87b69950e10064ed0ebb35b1</sys_update_name>
+        <sys_updated_by>AC44389</sys_updated_by>
+        <sys_updated_on>2022-11-01 13:25:34</sys_updated_on>
+        <table>sn_ind_tmt_orm_mobile_order_task</table>
+        <ui_action display_value="Pair SIM">27afd0db87b69950e10064ed0ebb35b1</ui_action>
+    </sys_ux_form_action>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fafc500000001</claim_timestamp>
+        <metadata_update_name>sys_ux_form_action_abafd0db87b69950e10064ed0ebb35b1</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:39</sys_created_on>
+        <sys_id>ddd68ca28727151094fa0e58cebb35bd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:39</sys_updated_on>
+    </sys_claim>
+</record_update>

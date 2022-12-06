@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="sn_install_base_sold_product" label="Inventario prodotti" max_length="40" name="sn_ind_tmt_orm_product_inventory" sizeclass="0" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="External ID" max_length="360" name="sn_ind_tmt_orm_external_id" type="string"/>
+    </element>
+</database>

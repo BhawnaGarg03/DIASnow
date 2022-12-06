@@ -1,0 +1,458 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>true</active>
+        <api_name>sn_ind_tmt_orm.TMFCommonOrderAPIUtil1</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>TMFCommonOrderAPIUtil1</name>
+        <script><![CDATA[var TMFCommonOrderAPIUtil1 = Class.create();
+TMFCommonOrderAPIUtil1.prototype = {
+	initialize: function() {},
+
+	getHierarchyParentChild: function(data, lineItemKey, orderRelationshipKey) {
+		var orderItm = data[lineItemKey];
+		var lineItemArray = [];
+		if (gs.nil(orderItm)) {
+			return lineItemArray;
+		}
+		var allChild = {};
+		var parentChildMap = {};
+		var idObjMap = {};
+		for (var i = 0; i < orderItm.length; i++) {
+			idObjMap[orderItm[i].id] = orderItm[i];
+			var childList = [];
+			var relArr = orderItm[i][orderRelationshipKey];
+			this.getChildListAndAllChildMap(relArr, childList, allChild, orderItm[i]);
+			if (childList.length > 0) {
+				parentChildMap[orderItm[i].id] = childList;
+			}
+		}
+
+		var root = [];
+		var orderType = '';
+		for (var key in idObjMap) {
+			if (gs.nil(allChild[key])) {
+				root.push(key);
+				var obj = idObjMap[key];
+				orderType = this.getOrderType(orderType, obj);
+			}
+		}
+		data.orderType = orderType;
+		for (var g = 0; g < root.length; g++) {
+			this.getPrntChildHierarchy(root[g], parentChildMap, lineItemArray, idObjMap);
+		}
+		return lineItemArray;
+	},
+
+	getParentLineIdFromRequest: function(productOrderItemRelationship) {
+		if (!gs.nil(productOrderItemRelationship)) {
+			for (var parentRelationIndex = 0; parentRelationIndex < productOrderItemRelationship.length; parentRelationIndex++) {
+				var prdRelationObj = productOrderItemRelationship[parentRelationIndex];
+				if (prdRelationObj.relationshipType == 'HasParent') {
+					return prdRelationObj.id;
+				}
+			}
+		}
+	},
+
+	getChildListAndAllChildMap: function(relArr, childList, allChild, custOrdLineItmObj) {
+		if (!gs.nil(relArr)) {
+			for (var k = 0; k < relArr.length; k++) {
+				var prdRelationObj = relArr[k];
+				if (prdRelationObj.relationshipType == 'HasChild') {
+					childList.push(prdRelationObj.id);
+					allChild[prdRelationObj.id] = prdRelationObj.id;
+				}
+				if (prdRelationObj.relationshipType == 'HasParent') {
+					custOrdLineItmObj.parent_line_item = prdRelationObj.id;
+				}
+			}
+		}
+	},
+
+	getOrderType: function(orderType, obj) {
+		if (obj.action == TMFOrderAPIConstants.LINE_ITEM_ACTION.CHANGE) {
+			return TMFOrderAPIConstants.ORDER_TYPE.CHANGE;
+		} else if (obj.action == TMFOrderAPIConstants.LINE_ITEM_ACTION.ADD && (orderType != TMFOrderAPIConstants.ORDER_TYPE.CHANGE && orderType != TMFOrderAPIConstants.ORDER_TYPE.DELETE)) {
+			return TMFOrderAPIConstants.ORDER_TYPE.ADD;
+		} else if (obj.action == TMFOrderAPIConstants.LINE_ITEM_ACTION.DELETE && (orderType != TMFOrderAPIConstants.ORDER_TYPE.CHANGE && orderType != TMFOrderAPIConstants.ORDER_TYPE.ADD)) {
+			return TMFOrderAPIConstants.ORDER_TYPE.DELETE;
+		}
+	},
+
+	getPrntChildHierarchy: function(id, parentChildMap, custOrdLineItmArr, idObjMap) {
+		if (!gs.nil(idObjMap[id]))
+			custOrdLineItmArr.push(idObjMap[id]);
+		if (!gs.nil(parentChildMap[id])) {
+			var brr = parentChildMap[id];
+			for (var i = 0; i < brr.length; i++) {
+				this.getPrntChildHierarchy(brr[i], parentChildMap, custOrdLineItmArr, idObjMap);
+			}
+		}
+	},
+
+	getRelatedParty: function(customerOrder) {
+		var relatedParty = [];
+		var customerObj = this.getCustomerAccount(customerOrder);
+		if (!gs.nil(customerObj))
+			relatedParty.push(customerObj);
+		var customerContactObj = this.getCustomerContact(customerOrder);
+		if (!gs.nil(customerContactObj))
+			relatedParty.push(customerContactObj);
+		return relatedParty;
+	},
+
+	getCustomerAccount: function(customerOrder) {
+		if (!gs.nil(customerOrder.getValue('account'))) 
+		{
+			var customerObj = {};
+			customerObj.id = gs.nil(customerOrder.account.sn_ind_tmt_orm_external_id + '') ? customerOrder.account + '' : customerOrder.account.sn_ind_tmt_orm_external_id + '';
+			customerObj.name = customerOrder.account.name + '';
+
+			//Querry Address
+			var address = {};
+			var addressArr = [];
+			var accAddresses = "";
+			var gr = new GlideRecord('cmn_location');
+			gr.addEncodedQuery("account="+customerOrder.account+"^primary=true");
+			gr.query();
+			if(gr.next()){
+				//gs.info(gr.name+", "+gr.street+", "+gr.city+", "+gr.state+", Zip Code: "+gr.zip+", "+"("+gr.country+")");
+				//accAddresses = gr.name+", "+gr.street+", "+gr.city+", "+gr.state+", Zip Code: "+gr.zip+", "+"("+gr.country+")";
+				address.id = gr.sn_ind_tmt_orm_external_id + '';
+				address.name = gr.name + '';
+				address.street = gr.street + '';
+				address.city = gr.city + '';
+				address.state = gr.state + '';
+				address.zip = gr.zip + '';
+				address.country = gr.country + '';
+				addressArr.push(address);
+			}
+			customerObj.billingLegalAddress = addressArr;
+
+			customerObj.billingAccountNumber = customerOrder.account.u_billing_account_number + '';
+			customerObj.customerNumber = customerOrder.account.u_customer_number + '';
+			customerObj["@type"] = TMFOrderAPIConstants.TYPE_RELATED_PARTY;
+			customerObj["@referredType"] = TMFOrderAPIConstants.CUSTOMER_REFFERED_TYPE;
+			return customerObj;
+		}
+	},
+
+	getCustomerContact: function(customerOrder) {
+		if (!gs.nil(customerOrder.getValue('contact'))) {
+			var customerContactObj = {};
+			customerContactObj.id = gs.nil(customerOrder.contact.sn_ind_tmt_orm_external_id) ? customerOrder.contact + '' : customerOrder.contact.sn_ind_tmt_orm_external_id + '';
+			customerContactObj.name = customerOrder.contact.first_name + '' + " " + customerOrder.contact.last_name + '';
+			customerContactObj["@type"] = TMFOrderAPIConstants.TYPE_RELATED_PARTY;
+			customerContactObj["@referredType"] = TMFOrderAPIConstants.CUSTOMER_CONTACT_REFFERED_TYPE;
+			return customerContactObj;
+		}
+	},
+
+	getNotes: function(customerOrder) {
+		var note = [];
+		var notes = customerOrder.comments.getJournalEntry(-1);
+		var na = notes.split("\n\n");
+		for (var i = 0; i < na.length; i++) {
+			if (gs.nil(na[i])) continue;
+			var noteObj = {};
+			var textArray = na[i].split("\n");
+			noteObj.author = textArray[0].substring(textArray[0].lastIndexOf("-") + 1, textArray[0].indexOf("(")).trim();
+			noteObj.date = new Date(new GlideDateTime(textArray[0].substring(0, textArray[0].lastIndexOf("-")).trim()).getNumericValue()).toISOString();
+			noteObj.text = textArray[1];
+			note.push(noteObj);
+		}
+		return note;
+	},
+
+	getLocation: function(customerOrderLineItem) {
+		var placeObj = {};
+
+		placeObj.id = gs.nil(customerOrderLineItem.location.sn_ind_tmt_orm_external_id) ? customerOrderLineItem.location + '' : customerOrderLineItem.location.sn_ind_tmt_orm_external_id + '';
+		placeObj.name = customerOrderLineItem.location.name + '';
+		placeObj.street = customerOrderLineItem.location.street + '';
+		placeObj.address2 = customerOrderLineItem.location.u_address_2 + '';
+		placeObj.city = customerOrderLineItem.location.city + '';
+		placeObj.state = customerOrderLineItem.location.state + '';
+		placeObj.zip = customerOrderLineItem.location.zip + '';
+		placeObj.country = customerOrderLineItem.location.country + '';
+		placeObj['@type'] = TMFOrderAPIConstants.TYPE_PLACE;
+		return placeObj;
+	},
+	getshippingLocation: function(customerOrderLineItem) {
+		var shippingObj = {};
+		shippingObj.shippingCity = customerOrderLineItem.shipping_city+ '';
+		shippingObj.shippingStreet = customerOrderLineItem.shipping_street+ '';
+		shippingObj.shippingState = customerOrderLineItem.shipping_state+ '';
+		shippingObj.shippingCountry = customerOrderLineItem.shipping_country+ '';
+		shippingObj.shippingZip = customerOrderLineItem.shipping_zip+ '';	
+		return shippingObj;
+	},
+
+
+	getTieringInfo: function(customerOrderLineItem) {
+
+		var tieringInfo1 = [];
+		if (customerOrderLineItem.u_tiering_id)
+		{
+			var gr = new GlideRecord('sn_ind_tmt_orm_tiering');
+			gr.addQuery('u_tiering_id',customerOrderLineItem.getDisplayValue('u_tiering_id'));
+			gr.query();
+			while (gr.next()) {
+				var rec = {};
+				var kTest = gr.u_upper_bound;
+				rec.rateDescription = gr.u_rate_description + '';
+				if( kTest == 0 || (kTest == 0) == true){
+					gs.info(">> Upper Bound value: "+gr.u_upper_bound);
+				}else{
+					rec.upperBound = parseInt(gr.u_upper_bound);
+				}
+				rec.percentage = parseInt(gr.u_percentage);
+				tieringInfo1.push(rec);
+
+			}
+		}
+		return tieringInfo1;
+	},
+
+
+	getRelatedPartyCustomerLineItem: function(customerOrderLineItem) {
+		var relatedPartyCustomerLineItem = [];
+		var customerLineItemContact = new GlideRecordSecure(Constants.TABLE_CUSTOMER_LINE_ITEM_CONTACT);
+		customerLineItemContact.addQuery('order_line_item', customerOrderLineItem.sys_id + '');
+		customerLineItemContact.query();
+		while (customerLineItemContact.next()) {
+			var relatedPartyCustomerLineItemObj = {};
+			relatedPartyCustomerLineItemObj.id = customerLineItemContact.sys_id + '';
+			relatedPartyCustomerLineItemObj.firstName = customerLineItemContact.getValue('first_name');
+			relatedPartyCustomerLineItemObj.lastName = customerLineItemContact.getValue('last_name');
+			relatedPartyCustomerLineItemObj.email = customerLineItemContact.getValue('email');
+			relatedPartyCustomerLineItemObj.phone = customerLineItemContact.getValue('business_phone');
+			relatedPartyCustomerLineItemObj.role = customerLineItemContact.getValue('u_role');
+			relatedPartyCustomerLineItemObj.customerContactId = customerLineItemContact.getValue('u_customer_contact_id');
+			relatedPartyCustomerLineItemObj.mobilePhoneNumber = customerLineItemContact.getValue('u_mobile_phone_number');
+			relatedPartyCustomerLineItemObj.preferredContactMethod = customerLineItemContact.getValue('u_preferred_contact_method');
+			relatedPartyCustomerLineItemObj['@type'] = TMFOrderAPIConstants.TYPE_RELATED_PARTY;
+			relatedPartyCustomerLineItemObj['@referredType'] = TMFOrderAPIConstants.LINE_ITEM_CONTACT_REFFERED_TYPE;
+			relatedPartyCustomerLineItem.push(relatedPartyCustomerLineItemObj);
+		}
+		return relatedPartyCustomerLineItem;
+	},
+
+	getOrderItemRelationship: function(customerOrderLineItem) {
+		var orderItemRelationship = [];
+		var parent = customerOrderLineItem.parent_line_item;
+		if (!gs.nil(parent)) {
+			var parentRec = parent.getRefRecord();
+			var orderItemRelationshipObj = {};
+			orderItemRelationshipObj.id = parentRec.getValue(Constants.EXTERNAL_ID);
+			orderItemRelationshipObj.relationshipType = TMFOrderAPIConstants.HAS_PARENT;
+			orderItemRelationship.push(orderItemRelationshipObj);
+		}
+		var child = new GlideRecordSecure(Constants.TABLE_CUSTOMER_ORDER_LINE_ITEM);
+		child.addQuery("parent_line_item", customerOrderLineItem.sys_id);
+		child.query();
+		while (child.next()) {
+			var orderItemRelationshipChildObj = {};
+			orderItemRelationshipChildObj.id = gs.nil(child.getValue(Constants.EXTERNAL_ID)) ? child.getValue("sys_id") : child.getValue(Constants.EXTERNAL_ID);
+			orderItemRelationshipChildObj.relationshipType = TMFOrderAPIConstants.HAS_CHILD;
+			orderItemRelationship.push(orderItemRelationshipChildObj);
+		}
+		return orderItemRelationship;
+	},
+
+	updateOrderNotes: function(orderObject, orderGr) {
+		if (!gs.nil(orderObject.note) && orderObject.note.length > 0) {
+			var orderId = orderGr.getValue('sys_id');
+			orderGr = new GlideRecordSecure(Constants.TABLE_CUSTOMER_ORDER);
+			orderGr.get(orderId);
+			var noteArr = orderObject.note;
+			for (var k = 0; k < noteArr.length; k++) {
+				var noteObj = noteArr[k];
+				if (!gs.nil(noteObj.text)) {
+					orderGr['comments'] = noteObj.text;
+					orderGr.update();
+				}
+			}
+		}
+	},
+
+	initialiseCustLineItmContact: function(relatedParty, ordLineItemId, contactGr) {
+		if (!gs.nil(relatedParty['@referredType']) && relatedParty['@referredType'] == TMFOrderAPIConstants.LINE_ITEM_CONTACT_REFFERED_TYPE) {
+
+			var ordItmContactGr;
+			if (contactGr == null) {
+				ordItmContactGr = new GlideRecordSecure(Constants.TABLE_CUSTOMER_LINE_ITEM_CONTACT);
+			} else {
+				ordItmContactGr = contactGr;
+			}
+
+			if (!gs.nil(relatedParty.firstName)) {
+				ordItmContactGr.first_name = relatedParty.firstName;
+			}
+			if (!gs.nil(relatedParty.lastName)) {
+				ordItmContactGr.last_name = relatedParty.lastName;
+			}
+			if (!gs.nil(relatedParty.email)) {
+				ordItmContactGr.email = relatedParty.email;
+			}
+			if (!gs.nil(relatedParty.phone)) {
+				ordItmContactGr.business_phone = relatedParty.phone;
+			}
+			if (!gs.nil(relatedParty.role)) {
+				ordItmContactGr.u_role = relatedParty.role;
+			}
+			if (!gs.nil(relatedParty.customerContactId)) {
+				ordItmContactGr.u_customer_contact_id = relatedParty.customerContactId;
+			}
+			if (!gs.nil(relatedParty.mobilePhoneNumber)) {
+				ordItmContactGr.u_mobile_phone_number = relatedParty.mobilePhoneNumber;
+			}
+			if (!gs.nil(relatedParty.preferredContactMethod)) {
+				ordItmContactGr.u_preferred_contact_method = relatedParty.preferredContactMethod;
+			}
+			ordItmContactGr.order_line_item = ordLineItemId;
+			return ordItmContactGr;
+		}
+	},
+
+	getCustOrdLineItmAction: function(orderLineItem) {
+		var action = '';
+		if (!gs.nil(orderLineItem.action)) {
+			if (orderLineItem.action == TMFOrderAPIConstants.LINE_ITEM_ACTION.CHANGE) {
+				action = TMFOrderAPIConstants.LINE_ITEM_ACTION.CHANGE;
+			} else if (orderLineItem.action == TMFOrderAPIConstants.LINE_ITEM_ACTION.DELETE) {
+				action = TMFOrderAPIConstants.ORDER_TYPE.DELETE;
+			} else {
+				action = TMFOrderAPIConstants.LINE_ITEM_ACTION.ADD;
+			}
+		}
+		return action;
+	},
+
+	updateWorkNotesForCharMissing: function(ordLineItemId, missChar, specificationType) {
+		var ordLineItemGr = new GlideRecordSecure(Constants.TABLE_CUSTOMER_ORDER_LINE_ITEM);
+		ordLineItemGr.get(ordLineItemId);
+		var message = TMFOrderAPIConstants.MESSAGES.INVALID_CHARACTERISTIC;
+		var keyIndex = message.indexOf(':');
+		var charMessage = message.slice(0, keyIndex + 1);
+		for (var keys in missChar) {
+			charMessage = charMessage + " " + keys + ", ";
+		}
+		var index = charMessage.lastIndexOf(',');
+		charMessage = charMessage.slice(0, index) + charMessage.slice(index).replace(',', '. ');
+		charMessage = charMessage + message.slice(keyIndex + 1);
+		var charChange = charMessage.replace(/\$name/g, ordLineItemGr.getDisplayValue(specificationType));
+		ordLineItemGr.work_notes = charChange;
+		ordLineItemGr.update();
+	},
+
+	updateWorkNotesForCharValueMissing: function(ordLineItemId, missCharValues) {
+		var ordLineItmGr = new GlideRecordSecure(Constants.TABLE_CUSTOMER_ORDER_LINE_ITEM);
+		ordLineItmGr.get(ordLineItemId);
+		var charValue = TMFOrderAPIConstants.MESSAGES.INVALID_CHAR_OPTION;
+		var sliceIndex = charValue.indexOf('.');
+		var charValueMessage = charValue.slice(0, sliceIndex + 1);
+		var finalMessage = '';
+		for (var keys in missCharValues) {
+			var changeOne = charValueMessage.replace(/\$characteristic_name/g, keys);
+			var changeTwo = changeOne.replace(/\$characteristic_value/g, missCharValues[keys]);
+			finalMessage = finalMessage + changeTwo + '\n';
+		}
+		finalMessage = finalMessage + charValue.slice(sliceIndex + 1);
+		ordLineItmGr.work_notes = finalMessage;
+		ordLineItmGr.update();
+	},
+
+	initialiseOrderItemChar: function(characteristicObj, ordLineItmGr, missChar, missCharValues, specificationType) {
+		var charGr = new GlideRecordSecure(Constants.TABLE_CHAR);
+		var ordLineItemCharGr = new GlideRecordSecure(Constants.TABLE_ORDER_CHAR_VALUE);
+		ordLineItemCharGr.initialize();
+		ordLineItemCharGr.order_line_item = ordLineItmGr.getValue('sys_id');
+		ordLineItemCharGr.specification = ordLineItmGr.getValue(specificationType);
+		this.populateCharacterOption(charGr, ordLineItemCharGr, characteristicObj, missChar, missCharValues);
+		ordLineItemCharGr.characteristic_option_value = characteristicObj.value;
+		if (!gs.nil(ordLineItemCharGr.getValue('characteristic'))) {
+			return ordLineItemCharGr;
+		}
+	},
+
+	populateCharacterOption: function(charGr, ordLineItemCharGr, characteristicObj, missChar, missCharValues) {
+		charGr.addQuery('name', characteristicObj.name);
+		charGr.query();
+		if (charGr.next()) {
+			ordLineItemCharGr.characteristic = charGr.getValue('sys_id');
+			var charOptionGr = new GlideRecordSecure(Constants.TABLE_CHARACTERISTIC_OPTION);
+			charOptionGr.addQuery("option", characteristicObj.value);
+			charOptionGr.addQuery("characteristic", charGr.getValue('sys_id'));
+			charOptionGr.query();
+			if (charOptionGr.next()) {
+				ordLineItemCharGr.characteristic_option = charOptionGr.getValue('sys_id');
+			} else if (Constants.INPUT_TYPE.indexOf(charGr.getValue('input_type')) > -1) {
+				missCharValues[characteristicObj.name] = characteristicObj.value;
+			}
+		} else {
+			missChar[characteristicObj.name] = characteristicObj.value;
+		}
+	},
+
+	updateOrderTypeAndState: function(orderGr, orderType, state) {
+		var custOrdUpdated = new GlideRecordSecure(Constants.TABLE_CUSTOMER_ORDER);
+		custOrdUpdated.addQuery('sys_id', orderGr.getValue('sys_id'));
+		custOrdUpdated.query();
+		if (custOrdUpdated.next()) {
+			custOrdUpdated.order_type = orderType;
+			custOrdUpdated.state = state;
+			custOrdUpdated.update();
+		}
+	},
+
+	getCharacteristicArray: function(charcteristics) {
+		var characteristicObj = {};
+		characteristicObj.name = charcteristics.getDisplayValue('characteristic');
+		characteristicObj.valueType = charcteristics.characteristic.input_type + '';
+		characteristicObj.value = charcteristics.getDisplayValue('characteristic_option_value');
+		characteristicObj.previousValue = charcteristics.getValue("previous_characteristic_option_value");
+		return characteristicObj;
+	},
+	getParentLineItem: function(orderGr) {
+		var orderLineItemGr = new GlideRecordSecure(Constants.TABLE_CUSTOMER_ORDER_LINE_ITEM);
+		orderLineItemGr.addQuery("order", orderGr.sys_id + '');
+		orderLineItemGr.addNullQuery("parent_line_item");
+		orderLineItemGr.query();
+		if (orderLineItemGr.next())
+			return orderLineItemGr.sys_id + '';
+	},
+
+	type: 'TMFCommonOrderAPIUtil1'
+};]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>Tejasree.Karnati</sys_created_by>
+        <sys_created_on>2022-04-10 04:33:34</sys_created_on>
+        <sys_id>8597f60187f601109e3131dd0ebb3534</sys_id>
+        <sys_mod_count>161</sys_mod_count>
+        <sys_name>TMFCommonOrderAPIUtil1</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_include_8597f60187f601109e3131dd0ebb3534</sys_update_name>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-07-20 22:07:39</sys_updated_on>
+    </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47081f90000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_8597f60187f601109e3131dd0ebb3534</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:30</sys_created_on>
+        <sys_id>753429931b251d500f4ccbb8624bcbee</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:30</sys_updated_on>
+    </sys_claim>
+</record_update>

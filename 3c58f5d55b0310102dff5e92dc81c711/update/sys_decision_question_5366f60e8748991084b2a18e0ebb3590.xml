@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_decision_question">
+    <sys_decision_question action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <answer>03b73e8e8748991084b2a18e0ebb35c6</answer>
+        <condition table="var__m_sys_decision_input_3eaf4464c3b71010d216b5183c40ddd6">product_specification=5f2ef44787e7015084b2a18e0ebb35c8^ORproduct_specification=783f84ee87c05d1025a20edc0ebb3561^ORproduct_specification=60474d8b872b015084b2a18e0ebb351c^ORproduct_specification=b609858f872b015084b2a18e0ebb353e^customer_order_line_item.ponr=true^EQ<item display_table="sn_prd_pm_product_specification" display_value="Managed Endpoint Detection and Response" endquery="false" field="product_specification" goto="false" newquery="false" operator="=" or="false" value="5f2ef44787e7015084b2a18e0ebb35c8"/>
+            <item endquery="false" field="product_specification" goto="false" newquery="false" operator="=" or="true" value="783f84ee87c05d1025a20edc0ebb3561"/>
+            <item endquery="false" field="product_specification" goto="false" newquery="false" operator="=" or="true" value="60474d8b872b015084b2a18e0ebb351c"/>
+            <item endquery="false" field="product_specification" goto="false" newquery="false" operator="=" or="true" value="b609858f872b015084b2a18e0ebb353e"/>
+            <item endquery="false" field="customer_order_line_item.ponr" goto="false" newquery="false" operator="=" or="false" value="true"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <decision_table display_value="Product Order Fulfilment Policy">3eaf4464c3b71010d216b5183c40ddd6</decision_table>
+        <default_answer>false</default_answer>
+        <input_table>var__m_sys_decision_input_3eaf4464c3b71010d216b5183c40ddd6</input_table>
+        <label>MEDR_Product</label>
+        <order>100</order>
+        <sys_class_name>sys_decision_question</sys_class_name>
+        <sys_created_by>AD12227</sys_created_by>
+        <sys_created_on>2022-06-14 10:23:15</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>5366f60e8748991084b2a18e0ebb3590</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_name>MEDR_Product</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_decision_question_5366f60e8748991084b2a18e0ebb3590</sys_update_name>
+        <sys_updated_by>AD11373</sys_updated_by>
+        <sys_updated_on>2022-06-17 15:26:55</sys_updated_on>
+    </sys_decision_question>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fae1790000001</claim_timestamp>
+        <metadata_update_name>sys_decision_question_5366f60e8748991084b2a18e0ebb3590</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:32</sys_created_on>
+        <sys_id>2bc60ca28727151094fa0e58cebb3516</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:32</sys_updated_on>
+    </sys_claim>
+</record_update>

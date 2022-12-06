@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Sn install base sold product" max_length="40" name="sn_install_base_sold_product" sizeclass="30647073" type="collection">
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false,readonly_clickthrough=true" label="Product Offering" max_length="32" name="product_offering" reference="sn_prd_pm_product_offering" type="reference"/>
+        <index name="index">
+            <element name="product_offering"/>
+        </index>
+    </element>
+</database>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci_network_port" label="Network Interface" max_length="40" name="cmdb_ci_ni_interface" sizeclass="1" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Related Product New Product Instance ID" max_length="40" name="u_relatedproductnewproductinstanceid" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Access Provider Name" max_length="40" name="u_accessprovidername" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="MGMT Indic" max_length="40" name="u_mgmtindic" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Related Access ID" max_length="40" name="u_relatedaccessid" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Access Provider Service ID" max_length="40" name="u_accessproviderservice_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="IP Address Type" max_length="40" name="u_ipaddresstype" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Static Client IP Address" max_length="40" name="u_staticclientipaddress" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Related Access Number" max_length="40" name="u_relatedaccessnumber" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="VLAN ID" max_length="40" name="u_vlanid" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Static IP Address Subnet Mask" max_length="40" name="u_staticipaddresssubnetmask" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Customer Provided Access" max_length="40" name="u_customerprovidedaccess" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="IP Addressing Method" max_length="40" name="u_ipaddressingmethod" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Access Provider Contact" max_length="40" name="u_accessprovidercontact" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Static Gateway Next Hop IP Address" max_length="40" name="u_staticgatewaynexthopipaddress" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="PPOE Indic" max_length="40" name="u_ppoeindic" type="string"/>
+    </element>
+</database>

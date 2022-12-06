@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_staticclientipaddress" label="Static Client IP Address" language="en" table="cmdb_ci_ni_interface">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_staticclientipaddress</element>
+            <help/>
+            <hint/>
+            <label>Static Client IP Address</label>
+            <language>en</language>
+            <name>cmdb_ci_ni_interface</name>
+            <plural>Static Client IP Address</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-06-29 09:09:00</sys_created_on>
+            <sys_id>aa36fbbe8798d91025a20edc0ebb354f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Static Client IP Address</sys_name>
+            <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+            <sys_update_name>sys_documentation_cmdb_ci_ni_interface_u_staticclientipaddress_en</sys_update_name>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-06-29 09:09:00</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47088db0000001</claim_timestamp>
+        <metadata_update_name>sys_documentation_cmdb_ci_ni_interface_u_staticclientipaddress_en</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:32</sys_created_on>
+        <sys_id>5e3469931b251d500f4ccbb8624bcbdf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:32</sys_updated_on>
+    </sys_claim>
+</record_update>

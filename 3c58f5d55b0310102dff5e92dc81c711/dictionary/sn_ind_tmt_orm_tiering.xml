@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element label="Tiering" max_length="40" name="sn_ind_tmt_orm_tiering" sizeclass="3" type="collection">
+        <element attributes="edge_encryption_enabled=true" display="true" label="Tiering ID" max_length="100" name="u_tiering_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Percentage" max_length="40" name="u_percentage" type="integer"/>
+        <element attributes="edge_encryption_enabled=true" label="Rate Description" max_length="100" name="u_rate_description" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Upper bound" max_length="40" name="u_upper_bound" type="integer"/>
+    </element>
+</database>

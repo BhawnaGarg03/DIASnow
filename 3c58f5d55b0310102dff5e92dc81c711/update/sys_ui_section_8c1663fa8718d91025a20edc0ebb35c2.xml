@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_ui_section caption="CPE Port" section_id="8c1663fa8718d91025a20edc0ebb35c2" sys_domain="global" table="cmdb_ci_network_port" version="3" view="">
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_cpe_port_number</element>
+            <position>0</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>19e18c198720115425a20edc0ebb35be</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_hand_off_type</element>
+            <position>1</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>51e18c198720115425a20edc0ebb35bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_speed</element>
+            <position>2</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>55e18c198720115425a20edc0ebb35bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_duplex</element>
+            <position>3</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>59e18c198720115425a20edc0ebb35bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_type</element>
+            <position>4</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>5de18c198720115425a20edc0ebb35bf</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_multi_access_service_indic</element>
+            <position>5</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>51e18c198720115425a20edc0ebb35c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_lan_management_subnet</element>
+            <position>6</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>55e18c198720115425a20edc0ebb35c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>.split</element>
+            <position>7</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>59e18c198720115425a20edc0ebb35c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type>.split</type>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_lan_vlan_id</element>
+            <position>8</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>5de18c198720115425a20edc0ebb35c0</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_lan_protocol</element>
+            <position>9</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>51e18c198720115425a20edc0ebb35c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_lan_ip_address</element>
+            <position>10</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>55e18c198720115425a20edc0ebb35c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_lan_interface_id</element>
+            <position>11</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>59e18c198720115425a20edc0ebb35c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_lan_gateway_ip_address</element>
+            <position>12</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>5de18c198720115425a20edc0ebb35c1</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_lan_subnet_mask</element>
+            <position>13</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>51e18c198720115425a20edc0ebb35c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_element action="INSERT_OR_UPDATE">
+            <element>u_lan_dhcp_pool</element>
+            <position>14</position>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-07-06 09:46:18</sys_created_on>
+            <sys_id>55e18c198720115425a20edc0ebb35c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_ui_formatter/>
+            <sys_ui_section caption="CPE Port" display_value="CPE Port" name="cmdb_ci_network_port" sys_domain="global" view="Default view">8c1663fa8718d91025a20edc0ebb35c2</sys_ui_section>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-07-06 09:46:18</sys_updated_on>
+            <sys_user/>
+            <type/>
+        </sys_ui_element>
+        <sys_ui_section action="INSERT_OR_UPDATE">
+            <caption>CPE Port</caption>
+            <header>false</header>
+            <name>cmdb_ci_network_port</name>
+            <roles/>
+            <sys_class_name>sys_ui_section</sys_class_name>
+            <sys_created_by>AD12224</sys_created_by>
+            <sys_created_on>2022-06-29 07:58:22</sys_created_on>
+            <sys_domain>global</sys_domain>
+            <sys_domain_path>/</sys_domain_path>
+            <sys_id>8c1663fa8718d91025a20edc0ebb35c2</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>cmdb_ci_network_port</sys_name>
+            <sys_overrides/>
+            <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+            <sys_update_name>sys_ui_section_8c1663fa8718d91025a20edc0ebb35c2</sys_update_name>
+            <sys_updated_by>AD12224</sys_updated_by>
+            <sys_updated_on>2022-06-29 07:58:22</sys_updated_on>
+            <sys_user/>
+            <title>false</title>
+            <view display_value="Default view" name="NULL">Default view</view>
+            <view_name/>
+        </sys_ui_section>
+    </sys_ui_section>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4708b230000001</claim_timestamp>
+        <metadata_update_name>sys_ui_section_8c1663fa8718d91025a20edc0ebb35c2</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:32</sys_created_on>
+        <sys_id>5a34a9931b251d500f4ccbb8624bcb27</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:32</sys_updated_on>
+    </sys_claim>
+</record_update>

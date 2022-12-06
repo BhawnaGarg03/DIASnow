@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="7a8f93141b0b20102885a932604bcb70" table="sys_ui_action">
+    <sys_ui_action action="DELETE">
+        <action_name/>
+        <active>true</active>
+        <client>true</client>
+        <client_script_v2><![CDATA[function onClick(g_form) {
+
+}]]></client_script_v2>
+        <comments/>
+        <condition>current.short_description== "TDG Fill/ Order Validation (OES)"</condition>
+        <form_action>true</form_action>
+        <form_button>true</form_button>
+        <form_button_v2>false</form_button_v2>
+        <form_context_menu>true</form_context_menu>
+        <form_link>false</form_link>
+        <form_menu_button_v2>false</form_menu_button_v2>
+        <form_style/>
+        <format_for_configurable_workspace>false</format_for_configurable_workspace>
+        <hint/>
+        <isolate_script>true</isolate_script>
+        <list_action>false</list_action>
+        <list_banner_button>false</list_banner_button>
+        <list_button>false</list_button>
+        <list_choice>false</list_choice>
+        <list_context_menu>false</list_context_menu>
+        <list_link>false</list_link>
+        <list_save_with_form_button>false</list_save_with_form_button>
+        <list_style/>
+        <messages/>
+        <name>SOM DIA TDG </name>
+        <onclick>dothis()</onclick>
+        <order>100</order>
+        <script><![CDATA[function dothis() {
+    var gdw = new GlideDialogWindow('sn_ind_tmt_orm_SOM_DIA_TDG_EndPoint');
+    var orderLine = g_form.getValue('order_line_item');
+    gdw.setPreference('sysparm_order_line_item', orderLine);
+    gdw.setTitle('DIA TDG FORM');
+    gdw.setSize(600, 600);
+    gdw.setPreference("orderLine", orderLine);
+    gdw.render();
+}]]></script>
+        <show_insert>false</show_insert>
+        <show_multiple_update>false</show_multiple_update>
+        <show_query>false</show_query>
+        <show_update>true</show_update>
+        <sys_class_name>sys_ui_action</sys_class_name>
+        <sys_created_by>AD11761</sys_created_by>
+        <sys_created_on>2022-10-26 06:21:20</sys_created_on>
+        <sys_domain>7a8f93141b0b20102885a932604bcb70</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>035404998772dd101aa9337d0ebb35f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SOM DIA TDG </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_ui_action_035404998772dd101aa9337d0ebb35f9</sys_update_name>
+        <sys_updated_by>AD11761</sys_updated_by>
+        <sys_updated_on>2022-10-26 06:21:20</sys_updated_on>
+        <table>sn_ind_tmt_orm_order_task</table>
+        <ui11_compatible>true</ui11_compatible>
+        <ui16_compatible>false</ui16_compatible>
+    </sys_ui_action>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</application>
+        <file_path/>
+        <instance_id>de96c48c1bf98910c8432f8dee4bcb22</instance_id>
+        <instance_name>lumendev2</instance_name>
+        <name>sys_ui_action_035404998772dd101aa9337d0ebb35f9</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update sys_domain="7a8f93141b0b20102885a932604bcb70" table="sys_ui_action"&gt;&lt;sys_ui_action action="INSERT_OR_UPDATE"&gt;&lt;action_name/&gt;&lt;active&gt;true&lt;/active&gt;&lt;client&gt;true&lt;/client&gt;&lt;client_script_v2&gt;&lt;![CDATA[function onClick(g_form) {
+
+}]]&gt;&lt;/client_script_v2&gt;&lt;comments/&gt;&lt;condition&gt;current.short_description== "TDG Fill/ Order Validation (OES)"&lt;/condition&gt;&lt;form_action&gt;true&lt;/form_action&gt;&lt;form_button&gt;true&lt;/form_button&gt;&lt;form_button_v2&gt;false&lt;/form_button_v2&gt;&lt;form_context_menu&gt;true&lt;/form_context_menu&gt;&lt;form_link&gt;false&lt;/form_link&gt;&lt;form_menu_button_v2&gt;false&lt;/form_menu_button_v2&gt;&lt;form_style/&gt;&lt;format_for_configurable_workspace&gt;false&lt;/format_for_configurable_workspace&gt;&lt;hint/&gt;&lt;isolate_script&gt;true&lt;/isolate_script&gt;&lt;list_action&gt;false&lt;/list_action&gt;&lt;list_banner_button&gt;false&lt;/list_banner_button&gt;&lt;list_button&gt;false&lt;/list_button&gt;&lt;list_choice&gt;false&lt;/list_choice&gt;&lt;list_context_menu&gt;false&lt;/list_context_menu&gt;&lt;list_link&gt;false&lt;/list_link&gt;&lt;list_save_with_form_button&gt;false&lt;/list_save_with_form_button&gt;&lt;list_style/&gt;&lt;messages/&gt;&lt;name&gt;SOM DIA TDG &lt;/name&gt;&lt;onclick&gt;dothis()&lt;/onclick&gt;&lt;order&gt;100&lt;/order&gt;&lt;script&gt;&lt;![CDATA[function dothis() {
+    var gdw = new GlideDialogWindow('sn_ind_tmt_orm_SOM_DIA_TDG_EndPoint');
+    var orderLine = g_form.getValue('order_line_item');
+    gdw.setPreference('sysparm_order_line_item', orderLine);
+    gdw.setTitle('DIA TDG FORM');
+    gdw.setSize(600, 600);
+    gdw.setPreference("orderLine", orderLine);
+    gdw.render();
+}]]&gt;&lt;/script&gt;&lt;show_insert&gt;false&lt;/show_insert&gt;&lt;show_multiple_update&gt;false&lt;/show_multiple_update&gt;&lt;show_query&gt;false&lt;/show_query&gt;&lt;show_update&gt;true&lt;/show_update&gt;&lt;sys_class_name&gt;sys_ui_action&lt;/sys_class_name&gt;&lt;sys_created_by&gt;AD11761&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-26 06:21:20&lt;/sys_created_on&gt;&lt;sys_domain&gt;7a8f93141b0b20102885a932604bcb70&lt;/sys_domain&gt;&lt;sys_domain_path&gt;/&lt;/sys_domain_path&gt;&lt;sys_id&gt;035404998772dd101aa9337d0ebb35f9&lt;/sys_id&gt;&lt;sys_mod_count&gt;0&lt;/sys_mod_count&gt;&lt;sys_name&gt;SOM DIA TDG &lt;/sys_name&gt;&lt;sys_overrides/&gt;&lt;sys_package display_value="Order Management for Telecom, Media &amp;amp; Tech" source="sn_ind_tmt_orm"&gt;3c58f5d55b0310102dff5e92dc81c711&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order Management for Telecom, Media &amp;amp; Tech"&gt;3c58f5d55b0310102dff5e92dc81c711&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_action_035404998772dd101aa9337d0ebb35f9&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;AD11761&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-10-26 06:21:20&lt;/sys_updated_on&gt;&lt;table&gt;sn_ind_tmt_orm_order_task&lt;/table&gt;&lt;ui11_compatible&gt;true&lt;/ui11_compatible&gt;&lt;ui16_compatible&gt;false&lt;/ui16_compatible&gt;&lt;/sys_ui_action&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1782106378</payload_hash>
+        <record_name>SOM DIA TDG </record_name>
+        <reverted_from/>
+        <source>73c500c487ba91101aa9337d0ebb3522</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>AD11761</sys_created_by>
+        <sys_created_on>2022-10-26 06:21:20</sys_created_on>
+        <sys_id>f205c8998772dd101aa9337d0ebb35b2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>18412f3d4580000001</sys_recorded_at>
+        <sys_updated_by>AD11761</sys_updated_by>
+        <sys_updated_on>2022-10-26 06:21:20</sys_updated_on>
+        <type>UI Action</type>
+        <update_guid>fa05c8996e72dd108932b64163e837b1</update_guid>
+        <update_guid_history>fa05c8996e72dd108932b64163e837b1:1782106378</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>AD11761</sys_created_by>
+        <sys_created_on>2022-10-27 07:49:46</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_action">sys_ui_action</sys_db_object>
+        <sys_id>773fc8971e194a4e87da4511fb4e1f64</sys_id>
+        <sys_metadata>035404998772dd101aa9337d0ebb35f9</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SOM DIA TDG </sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_parent display_value="Sn Ind Tmt Orm Order Task">2ddee18e87d0cd5092deb808cebb35ad</sys_parent>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_scope_delete display_value="">4a6c4b399c0c40b9a273e4f088627129</sys_scope_delete>
+        <sys_update_name>sys_ui_action_035404998772dd101aa9337d0ebb35f9</sys_update_name>
+        <sys_update_version display_value="sys_ui_action_035404998772dd101aa9337d0ebb35f9">f205c8998772dd101aa9337d0ebb35b2</sys_update_version>
+        <sys_updated_by>AD11761</sys_updated_by>
+        <sys_updated_on>2022-10-27 07:49:46</sys_updated_on>
+    </sys_metadata_delete>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fad5310000001</claim_timestamp>
+        <metadata_update_name>sys_ui_action_035404998772dd101aa9337d0ebb35f9</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:29</sys_created_on>
+        <sys_id>bec6c8a28727151094fa0e58cebb3507</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:29</sys_updated_on>
+    </sys_claim>
+</record_update>

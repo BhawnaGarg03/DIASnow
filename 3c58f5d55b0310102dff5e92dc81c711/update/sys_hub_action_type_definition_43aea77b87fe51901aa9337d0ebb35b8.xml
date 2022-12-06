@@ -117,6 +117,20 @@
         <table>var__m_sys_hub_action_output_43aea77b87fe51901aa9337d0ebb35b8</table>
         <value/>
     </sys_element_mapping>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fae9fa0000001</claim_timestamp>
+        <metadata_update_name>sys_hub_action_type_definition_43aea77b87fe51901aa9337d0ebb35b8</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:34</sys_created_on>
+        <sys_id>84d60ca28727151094fa0e58cebb35dd</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:34</sys_updated_on>
+    </sys_claim>
     <sys_hub_step_instance action="delete_multiple" query="action=43aea77b87fe51901aa9337d0ebb35b8^sys_idNOT IN18be2b7b87fe51901aa9337d0ebb3518,8dbe2b7b87fe51901aa9337d0ebb35bb,f3aee77b87fe51901aa9337d0ebb355e"/>
     <sys_hub_step_instance action="INSERT_OR_UPDATE">
         <action display_value="SASE LMN-Order Tasks Update Payload_FD">43aea77b87fe51901aa9337d0ebb35b8</action>
@@ -9042,17 +9056,17 @@
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="SASE LMN-Order Tasks Update Payload_FD">43aea77b87fe51901aa9337d0ebb35b8</action_id>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"e91fa3bb87fe51901aa9337d0ebb3503","name":"plan","plan_signature":null}}</plan>
-        <snapshot>5859ee4287035dd0b9342f07cebb350b</snapshot>
+        <snapshot>6c55fe0687435dd0b9342f07cebb35d2</snapshot>
         <sys_created_by>AD11754</sys_created_by>
         <sys_created_on>2022-11-03 17:48:42</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e91fa3bb87fe51901aa9337d0ebb3503</sys_id>
-        <sys_mod_count>49</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>AD13659</sys_updated_by>
-        <sys_updated_on>2022-11-10 12:30:18</sys_updated_on>
+        <sys_updated_on>2022-11-10 13:22:46</sys_updated_on>
     </sys_hub_action_plan>
     <sys_hub_action_type_snapshot action="INSERT_OR_UPDATE">
         <access>public</access>

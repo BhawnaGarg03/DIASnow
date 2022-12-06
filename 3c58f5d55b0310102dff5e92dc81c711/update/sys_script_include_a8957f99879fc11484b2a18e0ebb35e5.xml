@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>package_private</access>
+        <active>false</active>
+        <api_name>sn_ind_tmt_orm.TMFOrderAPIConstants1</api_name>
+        <caller_access/>
+        <client_callable>true</client_callable>
+        <description/>
+        <name>TMFOrderAPIConstants1</name>
+        <script><![CDATA[var TMFOrderAPIConstants1 = Class.create();
+TMFOrderAPIConstants1.prototype = {
+    initialize: function() {},
+    type: 'TMFOrderAPIConstants1'
+};
+
+TMFOrderAPIConstants1.OPERATION_POST = "POST";
+TMFOrderAPIConstants1.OPERATION_PATCH = "PATCH";
+TMFOrderAPIConstants1.EXTENSION_POINT = "ProductOrderExtensionPoint";
+TMFOrderAPIConstants1.SERVICE_ORD_EXTENSION_POINT = "ServiceOrderExtensionPoint";
+TMFOrderAPIConstants1.LEVEL_OF_LOGGING = "sn_ind_tmt_orm.product.order.log";
+TMFOrderAPIConstants1.SERVICE_ORDER_LEVEL_OF_LOGGING = "sn_ind_tmt_orm.service.order.log";
+TMFOrderAPIConstants1.FULLFILMENT_CODE = "deliver";
+TMFOrderAPIConstants1.ORDER_STATE_NEW = "new";
+TMFOrderAPIConstants1.ORDER_STATE_DRAFT = "draft";
+TMFOrderAPIConstants1.ORDER_LINE_ITEM_STATE_NEW = "new";
+TMFOrderAPIConstants1.ORDER_LINE_ITEM_STATE_DRAFT = "draft";
+TMFOrderAPIConstants1.DEFAULT_CHANNEL = "agent_assist";
+TMFOrderAPIConstants1.HAS_CHILD = 'HasChild';
+TMFOrderAPIConstants1.HAS_PARENT = 'HasParent';
+TMFOrderAPIConstants1.LINE_ITEM_CONTACT_REFFERED_TYPE = 'OrderLineItemContact';
+TMFOrderAPIConstants1.CUSTOMER_REFFERED_TYPE = 'Customer';
+TMFOrderAPIConstants1.CUSTOMER_CONTACT_REFFERED_TYPE = 'CustomerContact';
+TMFOrderAPIConstants1.LOG_STATEMENT = ' for order line item ';
+TMFOrderAPIConstants1.EXTERNAL_SYSTEM_ID = 'TMF622';
+TMFOrderAPIConstants1.CONTENT_TYPE = 'application/json';
+TMFOrderAPIConstants1.SERVICE_ORDER_ITEM_KEY = 'serviceOrderItem';
+TMFOrderAPIConstants1.SERVICE_ORDER_RELATIONSHIP_KEY = 'orderRelationship';
+TMFOrderAPIConstants1.TYPE_PRODUCT_ORDER = 'ProductOrder';
+TMFOrderAPIConstants1.TYPE_PRODUCT_ORDER_ITEM = 'ProductOrderItem';
+TMFOrderAPIConstants1.TYPE_RELATED_PARTY = 'RelatedParty';
+TMFOrderAPIConstants1.TYPE_SERVICE_ORDER = 'ServiceOrder';
+TMFOrderAPIConstants1.TYPE_SERVICE_ORDER_ITEM = 'ServiceOrderItem';
+TMFOrderAPIConstants1.TYPE_SERVICE_SPECIFICATION = 'ServiceSpecificationRef';
+TMFOrderAPIConstants1.TYPE_PRODUCT_SPECIFICATION = 'ProductSpecificationRef';
+TMFOrderAPIConstants1.PRODUCT_SPECIFICATION = 'product_specification';
+TMFOrderAPIConstants1.TYPE_SERVICE = 'Service';
+TMFOrderAPIConstants1.TYPE_PLACE = 'Place';
+TMFOrderAPIConstants1.SERVICE_ORD_EXTERNAL_SYSTEM_ID = 'TMF641';
+TMFOrderAPIConstants1.INVALID_PAYLOAD = 'Invalid Payload';
+TMFOrderAPIConstants1.ORDER_CATEGORY = {
+    "SERVICE": "service"
+};
+TMFOrderAPIConstants1.LINE_ITEM_ACTION = {
+    "ADD": "add",
+    "DELETE": "delete",
+    "CHANGE": "change"
+};
+TMFOrderAPIConstants1.ORDER_TYPE = {
+    "ADD": "add",
+    "DELETE": "disconnect",
+    "CHANGE": "change"
+};
+TMFOrderAPIConstants1.REVISION_OPERATIONS = ['cancel'];
+TMFOrderAPIConstants1.SOLD_PRODUCT_ACTIONS = ['delete', 'change'];
+TMFOrderAPIConstants1.INVENTORY_STATES = ['installation_pending', 'change_pending', 'inactivation_pending', 'active', 'inactive'];
+TMFOrderAPIConstants1.STATUS_CODES = {
+     	ERROR: '400',
+	CREATED: '201',
+	OK: '200',
+	NOT_FOUND: '404',
+	PARTIAL_CONTENT: '206'
+};
+TMFOrderAPIConstants1.ERROR_CODES = {
+    INTERNAL_ERROR: 1,
+    MISSING_BODY: 21,
+    MISSING_BODY_FIELD: 23,
+    INVALID_BODY_FIELD: 24,
+    RESOURCE_NOT_FOUND: 60
+};
+TMFOrderAPIConstants1.MESSAGES = {
+	NEW_STATE_ERROR: 'Cannot patch the order in state new',
+    INVALID_REVISION_OPERATION: 'Invalid paylod: invalid revisionOperation',
+    INVALID_REVISION_OPERATION_CANCEL_ORDERLINE: 'Invalid payload: Revision operation \'cancel\' is not allowed for new line item',
+    PATCH_ERROR: 'Invalid payload: Order creation failed',
+    PONR_REACHED_ERROR: 'PONR is reached for the order. Cannot accept anymore changes.',
+    PONR_REACHED_ORDERLINE_ERROR: 'PONR is reached for the order line. Cannot accept anymore changes.',
+	NEW_ORDERS_NOT_ACCEPTED: 'Cannot accept new orders as part of patch request.',
+    ORDER_NOT_INPROGRESS: 'Cannot update the order in state: ',
+    ORDER_LINE_NOT_INPROGRESS: 'Cannot update the order line in state: ',
+    CREATE_ERROR: 'Invalid payload: Order creation failed',
+    INVALID_SOLD_PRODUCT_ID: 'Invalid payload: Product Inventory does not exist',
+    MISSING_SOLD_PRODUCT: 'Invalid payload: Product inventory ID is missing',
+    INVALID_CHARACTERISTIC: 'The following Order Item characteristics does not exist:\nReview specification $name and correct the characteristic and characteristic option in the order line item prior to approving the order.',
+    INVALID_CHAR_OPTION: 'Order Item characteristic: \'$characteristic_name\' with characteristic value: \'$characteristic_value\' is invalid. Correct the characteristic values before approving the order.',
+    INVALID_SOLD_PRODUCT_STATE: 'Invalid payload: Sold Product is not active',
+    ORDER_NOT_FOUND: 'Invalid payload: Order ID is not valid',
+    GET_ERROR: 'Existing dialog is good',
+    RESOURCE_NOT_FOUND: 'Resource not found',
+    CATALOG_NOT_FOUND: 'Catalog not found',
+    MISSING_BODY_FIELD: 'Missing body field',
+    MISSING_BODY: 'Invalid payload: Request body missing',
+    INVALID_BODY_FIELD: 'Invalid body field',
+    MISSING_FIELD_SERVICE_ORDER: 'Invalid payload: $key is missing',
+    MISSING_FIELD_PRODUCT_ORDER: 'Invalid payload: $key is missing',
+    PAYLOAD_MISSING: 'JSON to be validated is missing',
+    MISSING_ACCOUNT: 'Invalid payload: Customer Account is missing',
+    CANCEL_ERROR: 'Cannot cancel the order',
+    CREATE_PRODUCT_SPECIFICATION_ERROR: 'Failed creating product specification',
+    CREATE_SERVICE_SPECIFICATION_ERROR: 'Failed creating service specification',
+    CREATE_PRODUCT_INVENTORY_ERROR: "Failed creating product inventory",
+    INVALID_SPECIFICATION_TYPE: 'Invalid payload : @type has invalid value',
+    INVALID_VALUE_TYPE: 'Invalid payload : valueType has invalid value',
+    MISSING_NAME: 'Invalid payload :characteristic name is missing',
+    INVALID_FILTER_CONDITION: 'No Record found for given filtering criteria',
+    INVALID_LOCATION: 'Invalid payload: The place is not related to the account',
+    INVALID_LOCATION_INDB: "Invalid payload: The place doesn't exist in the system",
+    DUPLICATE_EXTERNAL_ID: 'Invalid payload: A record with the specified externalId-name combination already exists',
+    DUPLICATE_BODY_FIELD: 'Duplicate body field',
+    INVALID_OFFERING_CHARACTERISTIC: 'Invalid characteristic: Either the characteristic is not present in the system or the characteristic does not belong to the specified product specification tree hierarchy',
+    INVALID_EDIT_ON_PUBLISHED_CHAR: 'Characteristic cannot be updated as it is being used in another published specification.',
+    INVALID_PAGE_LIMIT: 'Invalid Limit : Please enter appropriate limit',
+    INVALID_OFFSET_MESSAGE: 'Invalid Offset : Please enter appropriate Offset',
+    OFFSET_INVALID_REASON: 'Invalid Offset',
+    INVALID_LIMIT_MESSAGE: 'Invalid Limit : Please enter appropriate Limit',
+    LIMIT_INVALID_REASON: 'Invalid Limit',
+    LIMIT_INVALID: 'Exceeded Maximum Limit',
+    INVALID_INVENTORY_STATE: 'Invalid inventory state: Please provide correct inventory state',
+    INVALID_INVENTORY_CHARACTERISTIC: 'Invalid inventory characteristics found',
+    QUANTITY_CHAR_FOUND: 'Invalid payload: \'{0}\' is a quantity characteristic, therefore it can not be changed during in-flight journey'
+};
+TMFOrderAPIConstants1.SCHEMA = {
+    CREATE_PRODUCT_ORDER: "{\"title\":\"ProductOrder\",\"type\":\"object\",\"properties\":{\"relatedParty\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"@referredType\":{\"type\":\"string\"}},\"reference\":[{\"referenceKey\":\"id\",\"table\":\"customer_account\",\"field\":[\"sys_id\",\"sn_ind_tsm_core_external_id\"],\"errorMsg\":\"Invalid payload: Customer Account does not exist\",\"referenceCondition\":{\"conditionKey\":\"@referredType\",\"conditionValue\":\"Customer\",\"conditionOperator\":\"==\"}}],\"required\":[\"id\",\"@referredType\"]}},\"productOrderItem\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"action\":{\"type\":\"string\"},\"product\":{\"type\":\"object\",\"properties\":{\"productCharacteristic\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"}},\"required\":[\"name\"]}},\"productSpecification\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"}},\"required\":[\"id\"],\"reference\":[{\"referenceKey\":\"id\",\"table\":\"sn_prd_pm_product_specification\",\"field\":[\"sys_id\",\"external_id\"],\"errorMsg\":\"Invalid payload: Product specification does not exist\"}]}},\"required\":[\"productSpecification\"]},\"productOffering\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"}},\"required\":[\"id\"],\"reference\":[{\"referenceKey\":\"id\",\"table\":\"sn_prd_pm_product_offering\",\"field\":[\"sys_id\",\"external_id\"],\"errorMsg\":\"Invalid payload: Product offering does not exist\"}]},\"productOrderItemRelationship\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"relationshipType\":{\"type\":\"string\"}},\"required\":[\"id\",\"relationshipType\"]}}},\"required\":[\"id\",\"action\",\"product\",\"productOffering\"]}}},\"required\":[\"productOrderItem\",\"relatedParty\"]}",
+    CREATE_SERVICE_ORDER: "{\"title\":\"ServiceOrder\",\"type\":\"object\",\"properties\":{\"relatedParty\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"@referredType\":{\"type\":\"string\"}},\"reference\":[{\"referenceKey\":\"id\",\"table\":\"customer_account\",\"field\":[\"sys_id\",\"sn_ind_tsm_core_external_id\"],\"errorMsg\":\"Invalid payload: Customer Account does not exist\",\"referenceCondition\":{\"conditionKey\":\"@referredType\",\"conditionValue\":\"Customer\",\"conditionOperator\":\"==\"}}],\"required\":[\"id\",\"@referredType\"]}},\"serviceOrderItem\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"action\":{\"type\":\"string\"},\"service\":{\"type\":\"object\",\"properties\":{\"serviceCharacteristic\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"}},\"required\":[\"name\"]}},\"serviceSpecification\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"}},\"required\":[\"id\"],\"reference\":[{\"referenceKey\":\"id\",\"table\":\"sn_prd_pm_service_specification\",\"field\":[\"sys_id\",\"external_id\"],\"errorMsg\":\"Invalid payload: Service Specification does not exist\"}]}}},\"orderRelationship\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"relationshipType\":{\"type\":\"string\"}},\"required\":[\"id\",\"relationshipType\"]}}},\"required\":[\"id\",\"action\",\"service\"]}}},\"required\":[\"serviceOrderItem\"]}",
+    CANCEL_PRODUCT_ORDER: "{\"title\":\"CancelProductOrder\",\"type\":\"object\",\"properties\":{\"productOrder\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"}},\"reference\":[{\"referenceKey\":\"id\",\"table\":\"sn_ind_tmt_orm_order\",\"field\":[\"sys_id\",\"external_id\"],\"errorMsg\":\"Invalid payload: Order does not exist\"}],\"required\":[\"id\"]}},\"required\":[\"productOrder\"]}",
+    PATCH_PRODUCT_ORDER: "{\"title\":\"ProductOrder\",\"type\":\"object\",\"properties\":{\"relatedParty\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"@referredType\":{\"type\":\"string\"}},\"reference\":[{\"referenceKey\":\"id\",\"table\":\"customer_account\",\"field\":[\"sys_id\",\"sn_ind_tsm_core_external_id\"],\"errorMsg\":\"Invalid payload: Customer Account does not exist\",\"referenceCondition\":{\"conditionKey\":\"@referredType\",\"conditionValue\":\"Customer\",\"conditionOperator\":\"==\"}}],\"required\":[\"id\",\"@referredType\"]}},\"productOrderItem\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"action\":{\"type\":\"string\"},\"revisionOperation\":{\"type\":\"string\"},\"product\":{\"type\":\"object\",\"properties\":{\"productCharacteristic\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"name\":{\"type\":\"string\"}},\"required\":[\"name\"]}},\"productSpecification\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"}},\"required\":[\"id\"],\"reference\":[{\"referenceKey\":\"id\",\"table\":\"sn_prd_pm_product_specification\",\"field\":[\"sys_id\",\"external_id\"],\"errorMsg\":\"Invalid payload: Product specification does not exist\"}]}},\"required\":[\"productSpecification\"]},\"productOffering\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"}},\"required\":[\"id\"],\"reference\":[{\"referenceKey\":\"id\",\"table\":\"sn_prd_pm_product_offering\",\"field\":[\"sys_id\",\"external_id\"],\"errorMsg\":\"Invalid payload: Product offering does not exist\"}]},\"productOrderItemRelationship\":{\"type\":\"array\",\"items\":{\"type\":\"object\",\"properties\":{\"id\":{\"type\":\"string\"},\"relationshipType\":{\"type\":\"string\"}},\"required\":[\"id\",\"relationshipType\"]}}},\"required\":[\"id\",\"action\",\"product\",\"productOffering\"]}}},\"required\":[\"productOrderItem\",\"relatedParty\"]}"
+};
+TMFOrderAPIConstants.TRANSFORM_MAP = {};
+
+TMFOrderAPIConstants.TRANSFORM_MAP[Constants.TABLE_PRODUCT_ORDER] = [{
+}];
+
+TMFOrderAPIConstants.TRANSFORM_MAP[Constants.TABLE_SERVICE_ORDER] = [{
+}];]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>Tejasree.Karnati</sys_created_by>
+        <sys_created_on>2022-05-06 00:15:25</sys_created_on>
+        <sys_id>a8957f99879fc11484b2a18e0ebb35e5</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>TMFOrderAPIConstants1</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_include_a8957f99879fc11484b2a18e0ebb35e5</sys_update_name>
+        <sys_updated_by>Tejasree.Karnati</sys_updated_by>
+        <sys_updated_on>2022-05-06 00:18:44</sys_updated_on>
+    </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47091360000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_a8957f99879fc11484b2a18e0ebb35e5</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:34</sys_created_on>
+        <sys_id>7234e9931b251d500f4ccbb8624bcb0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:34</sys_updated_on>
+    </sys_claim>
+</record_update>

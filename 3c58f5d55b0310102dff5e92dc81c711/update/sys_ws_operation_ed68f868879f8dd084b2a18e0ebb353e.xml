@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>cf9d01d3e73003009d6247e603f6a990</enforce_acl>
+        <http_method>POST</http_method>
+        <name>createorderdetails</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+    var tsmOpenAPIUtil = new sn_ind_tsm_core.TSMOpenAPIUtil();
+    response.setContentType(TMFOrderAPIConstants.CONTENT_TYPE);
+    try {
+        var tmfProductOrderAPIUtil = new TMFProductOrderAPIUtil1();
+        var apiResponse = tmfProductOrderAPIUtil.processCreateOrder(request.body.data);
+        response.setStatus(apiResponse.status);
+        return tsmOpenAPIUtil.responseBuilder(response, apiResponse.details);
+    } catch (ex) {
+        response.setStatus(sn_ind_tsm_core.Constants.STATUS_CODES.ERROR);
+        var apiCoreUtil = new sn_ind_tsm_core.APICoreUtil();
+        var errorObj = apiCoreUtil.getErrorObj(sn_ind_tsm_core.Constants.ERROR_CODES.INTERNAL_ERROR, TMFOrderAPIConstants.MESSAGES.CREATE_ERROR, TMFOrderAPIConstants.MESSAGES.CREATE_ERROR);
+        var details = [];
+        details.push(apiCoreUtil.getErrorDetailsObj(ex.message + '', ''));
+        errorObj.details = details;
+        return tsmOpenAPIUtil.responseBuilder(response, errorObj);
+    }
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/sn_ind_tmt_orm/getting_order_details</operation_uri>
+        <produces>application/json,application/xml,text/xml</produces>
+        <produces_customized>false</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>true</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>Tejasree.Karnati</sys_created_by>
+        <sys_created_on>2022-05-03 02:31:11</sys_created_on>
+        <sys_id>ed68f868879f8dd084b2a18e0ebb353e</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>createorderdetails</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_ws_operation_ed68f868879f8dd084b2a18e0ebb353e</sys_update_name>
+        <sys_updated_by>Tejasree.Karnati</sys_updated_by>
+        <sys_updated_on>2022-05-03 02:33:03</sys_updated_on>
+        <web_service_definition display_value="Getting Order Details">e86b33ab87260510e44997983cbb35f6</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47086930000001</claim_timestamp>
+        <metadata_update_name>sys_ws_operation_ed68f868879f8dd084b2a18e0ebb353e</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:31</sys_created_on>
+        <sys_id>823469931b251d500f4ccbb8624bcb7d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:31</sys_updated_on>
+    </sys_claim>
+</record_update>

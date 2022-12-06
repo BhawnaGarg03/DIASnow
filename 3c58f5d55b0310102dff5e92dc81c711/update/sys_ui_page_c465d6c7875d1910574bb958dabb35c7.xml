@@ -2,50 +2,22 @@
     <sys_ui_page action="INSERT_OR_UPDATE">
         <category>general</category>
         <client_script><![CDATA[function sendDetails() {
-    var orgKey = gel('org_key').value;
-    var orgID = gel('org_id').value;
-    var apiKey = gel('api_key').value;
-    var apiID = gel('api_id').value;
-
-    if (!orgKey || !orgID || !apiKey || !apiID) {
-        alert('Please fill mandatory fields.');
-        return;
-    }
-
-    var gdw = GlideDialogWindow.get();
-    var orderLine = gdw.getPreference("orderLine");
-    var orderTaskSysID = gdw.getPreference("orderTaskSysID");
-    var soarData = orderLine + ',' + orgKey + ',' + orgID + "," + apiKey + ',' + apiID + ',' + orderTaskSysID;
-
+    alert("The provided information will be sending to SOAR, Thank you!");
     var getAPIGEEToken = new GlideAjax('sn_ind_tmt_orm.SOARAPI');
-    getAPIGEEToken.addParam('sysparm_name', 'configTenant'); //Method
-    getAPIGEEToken.addParam('sysparm_soarData', soarData);
-    getAPIGEEToken.getXMLAnswer(getResponse);
-
-    function getResponse(response) {
-        //  var parseResponse = JSON.parse(response);
-        alert(response);
-        GlideDialogWindow.get().destroy();
-			window.location.reload();
-
-    }
-
-
+	getAPIGEEToken.addParam('sysparm_name', 'getAPIGEEToken'); //Method
+	//getAPIGEEToken.addParam('userId',user); //Parameters
+	getAPIGEEToken.getXMLAnswer(getResponse);
+	
+	function getResponse(response){
+		var parseResponse = JSON.parse(response);
+		alert(parseResponse.access_token);
+	}
+    GlideDialogWindow.get().destroy();
 }
 
 function continueCancel() {
     //alert("Cancelled");
     GlideDialogWindow.get().destroy();
-}
-document.getElementById('org_id_label').setAttribute("class", "required");
-document.getElementById('org_key_label').setAttribute("class", "required");
-document.getElementById('api_id_label').setAttribute("class", "required");
-document.getElementById('api_key_label').setAttribute("class", "required");
-
-function checkMandatory(label_id, input_id) {
-    if (document.getElementById(input_id) != "")
-        document.getElementById(label_id).setAttribute("class", "notrequired");
-
 }]]></client_script>
         <description/>
         <direct>false</direct>
@@ -74,24 +46,11 @@ function checkMandatory(label_id, input_id) {
 		width: 100%;
 		border: 1px solid #ddd;
 		}
-		
-		.required::before {
-		  content: '*';
-		  margin-right: 6px;
-		  color: red;
-		}
-		
-		.notrequired::before {
-		  content: '*';
-		  margin-right: 6px;
-		  color: grey;
-		}
-		
+
 		th, td {
 		text-align: left;
 		padding: 16px;
 		}
-
 .nopadding
 {
 padding:0px;
@@ -100,81 +59,73 @@ padding:0px;
 		tr:nth-child(even) {
 		background-color: #f2f2f2;
 		}
-
 	</style>
 	<g:evaluate var="jvar_totalCount">
 		   var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + '';
-		var grCharacteristic = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
-        grCharacteristic.addQuery('order_line_item', orderLineItem);
-		grCharacteristic.addQuery('characteristic', 'afbfca4e8730555099d253d73cbb3567');
-        grCharacteristic.orderBy('sys_created_on');
-        grCharacteristic.query();
+
+				var grCharacteristic = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+               grCharacteristic.addQuery('order_line_item', orderLineItem);
+		       grCharacteristic.addQuery('characteristic', 'afbfca4e8730555099d253d73cbb3567');
+               grCharacteristic.orderBy('sys_created_on');
+               grCharacteristic.query();
+			   
 		var totalCount =0;
 		if(grCharacteristic.next())
 		totalCount= grCharacteristic.characteristic_option_value;
 		totalCount; 
+		
+
+
        </g:evaluate>
      <g:ui_form>
 	<table width="100%">
-		<form>
 		<tr>
                    <td style="width:25%">
 			<g:form_label>
-			<span id="org_id_label">
-			ORG ID : 
-			</span>
+			Org ID : 
 			</g:form_label>
                    </td>
 		    <td style="width:60%">
-            <input type="text"  aria-label="Org ID" name="org_id" id="org_id" onchange="checkMandatory('org_id_label', 'org_id')" required="required" value="${jvar_orgID}"/>
+            <input type="text"  aria-label="Org ID" name="org_id" id="org_id"  value="${jvar_orgID}"/>
                     </td>
                 </tr>
 				<tr>
                    <td style="width:25%">
 			<g:form_label>
-				<span id="org_key_label">
-					ORG Key : 
-				</span>
+			ORG key: 
 			</g:form_label>
                    </td>
 		    <td style="width:60%">
-            <input type="text"  aria-label="ORG Key" name="org_key" id="org_key"  onchange="checkMandatory('org_key_label', 'org_key')" required="required" value="${jvar_orgKEY}"/>
+            <input type="text"  aria-label="ORG Key" name="api_key" id="api_key"  value="${jvar_orgKEY}"/>
                     </td>
                 </tr>
 				<tr>
                    <td style="width:25%">
 			<g:form_label>
-			<span id="api_id_label">
 			API ID : 
-			</span>
 			</g:form_label>
                    </td>
 		    <td style="width:60%">
-            <input type="text"  aria-label="API ID" name="api_id" id="api_id" onchange="checkMandatory('api_id_label', 'api_id')" required="required" value="${jvar_apiID}"/>
+            <input type="text"  aria-label="API ID" name="api_id" id="api_id"  value="${jvar_apiID}"/>
                     </td>
                 </tr>
 						<tr>
                    <td style="width:25%">
 			<g:form_label>
-			<span id="api_key_label">
 			API Key : 
-			</span>
 			</g:form_label>
                    </td>
 		    <td style="width:60%">
-            <input type="text"  aria-label="API Key" name="api_key" id="api_key" onchange="checkMandatory('api_key_label', 'api_key')" required="required" value="${jvar_apiKEY}"/>
+            <input type="text"  aria-label="API Key" name="api_key" id="org_id"  value="${jvar_apiKEY}"/>
                     </td>
                 </tr>
-		<!--</table>
-		 <table width="100%" style="align:center"> -->
-		 	<tr>
-				<td width="25%"/>
+		
+		<tr>
                      <td>
-                       <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return sendDetails()" ok_type="submit" ok_text="Submit to SOAR" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
+                       <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return sendDetails()" ok_type="button" ok_text="${gs.getMessage('Save')}" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()"/>
                     </td>
                </tr>
-			</form>
-		 </table>
+	</table>
 	</g:ui_form>
 </j:jelly>]]></html>
         <name>details_submit_to_soar</name>
@@ -183,13 +134,27 @@ padding:0px;
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-08-18 13:54:53</sys_created_on>
         <sys_id>c465d6c7875d1910574bb958dabb35c7</sys_id>
-        <sys_mod_count>68</sys_mod_count>
+        <sys_mod_count>7</sys_mod_count>
         <sys_name>details_submit_to_soar</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_ui_page_c465d6c7875d1910574bb958dabb35c7</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-09-22 10:14:48</sys_updated_on>
+        <sys_updated_on>2022-08-23 09:03:29</sys_updated_on>
     </sys_ui_page>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4706ee90000001</claim_timestamp>
+        <metadata_update_name>sys_ui_page_c465d6c7875d1910574bb958dabb35c7</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:25</sys_created_on>
+        <sys_id>2034a5931b251d500f4ccbb8624bcb00</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:25</sys_updated_on>
+    </sys_claim>
 </record_update>

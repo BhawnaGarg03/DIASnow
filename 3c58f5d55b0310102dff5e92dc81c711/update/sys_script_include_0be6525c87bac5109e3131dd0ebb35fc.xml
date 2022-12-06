@@ -57,9 +57,7 @@ TMF622GetOrderDetailsAPIUtil.prototype = Object.extendsObject(sn_prd_pm_adv.Base
 				}
 				//SASE Profile - ItemPrice Amount Passing null - END
 
-				//prdOrderObj = JSON.parse(JSON.stringify(prdOrderObj).replace(/null/gi, "\"\""));
-				prdOrderObj = JSON.parse(JSON.stringify(prdOrderObj));
-
+				prdOrderObj = JSON.parse(JSON.stringify(prdOrderObj).replace(/null/gi, "\"\""));
 			}else{
 				for (var i = 0; i < prdOrderObj['productOrderItem'].length; i++) {
 					if(prdOrderObj['productOrderItem'][i]["id"] != OLI_EXT_ID){
@@ -88,9 +86,7 @@ TMF622GetOrderDetailsAPIUtil.prototype = Object.extendsObject(sn_prd_pm_adv.Base
 					}
 				}
 				//SASE Profile - ItemPrice Amount Passing null - END
-				//prdOrderObj = JSON.parse(JSON.stringify(prdOrderObj).replace(/null/gi, "\"\""));
-				prdOrderObj = JSON.parse(JSON.stringify(prdOrderObj));
-
+				prdOrderObj = JSON.parse(JSON.stringify(prdOrderObj).replace(/null/gi, "\"\""));
 			}
 
 
@@ -395,13 +391,27 @@ TMF622GetOrderDetailsAPIUtil.prototype = Object.extendsObject(sn_prd_pm_adv.Base
         <sys_created_by>Tejasree.Karnati</sys_created_by>
         <sys_created_on>2022-04-07 18:14:44</sys_created_on>
         <sys_id>0be6525c87bac5109e3131dd0ebb35fc</sys_id>
-        <sys_mod_count>88</sys_mod_count>
+        <sys_mod_count>87</sys_mod_count>
         <sys_name>TMF622GetOrderDetailsAPIUtil</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_0be6525c87bac5109e3131dd0ebb35fc</sys_update_name>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-08 18:42:45</sys_updated_on>
+        <sys_updated_on>2022-08-17 19:34:19</sys_updated_on>
     </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47086790000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_0be6525c87bac5109e3131dd0ebb35fc</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:31</sys_created_on>
+        <sys_id>ca3469931b251d500f4ccbb8624bcb79</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:31</sys_updated_on>
+    </sys_claim>
 </record_update>

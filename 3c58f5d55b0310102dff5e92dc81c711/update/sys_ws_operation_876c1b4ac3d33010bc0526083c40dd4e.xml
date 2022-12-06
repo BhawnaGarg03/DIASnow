@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ws_operation">
+    <sys_ws_operation action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <consumes>application/json,application/xml,text/xml</consumes>
+        <consumes_customized>false</consumes_customized>
+        <default_operation_uri/>
+        <enforce_acl>e9e88b94c3712010df4773ce3640dd0e</enforce_acl>
+        <http_method>GET</http_method>
+        <name>List Product Order</name>
+        <operation_script><![CDATA[(function process( /*RESTAPIRequest*/ request, /*RESTAPIResponse*/ response) {
+
+    // implement resource here
+    var tsmOpenAPIUtil = new sn_ind_tsm_core.TSMOpenAPIUtil();
+    response.setContentType(sn_ind_tsm_core.Constants.CONTENT_TYPE);
+    try {
+        var tmfProductInventoryGetAPIUtil = new TMF622GetOrderDetailsAPIUtil();
+        var apiResponse = tmfProductInventoryGetAPIUtil.processListProductOrder(request.queryParams, request.url.toString());
+        response.setStatus(apiResponse.status);
+        //Pagination Status
+        if (!gs.nil(apiResponse.totalCount)) {
+            response.setHeader('X-Total-Count', apiResponse.totalCount);
+            response.setHeader('Content-Range', apiResponse.contentRange);
+            response.setHeader('Link', apiResponse.links);
+        }
+        return tsmOpenAPIUtil.responseBuilder(response, apiResponse.details);
+    } catch (ex) {
+        response.setStatus(sn_ind_tsm_core.Constants.STATUS_CODES.ERROR);
+        var apiCoreUtil = new sn_ind_tsm_core.APICoreUtil();
+        var errorObj = apiCoreUtil.getErrorObj(sn_ind_tsm_core.Constants.ERROR_CODES.INTERNAL_ERROR, sn_ind_tsm_core.Constants.MESSAGES.GET_ERROR, sn_ind_tsm_core.Constants.MESSAGES.GET_ERROR);
+        var details = [];
+        details.push(apiCoreUtil.getErrorDetailsObj(ex.message + '', ''));
+        errorObj.details = details;
+        return tsmOpenAPIUtil.responseBuilder(response, errorObj);
+    }
+
+})(request, response);]]></operation_script>
+        <operation_uri>/api/sn_ind_tmt_orm/productorder</operation_uri>
+        <produces>application/json</produces>
+        <produces_customized>true</produces_customized>
+        <relative_path>/</relative_path>
+        <request_example/>
+        <requires_acl_authorization>true</requires_acl_authorization>
+        <requires_authentication>true</requires_authentication>
+        <requires_snc_internal_role>false</requires_snc_internal_role>
+        <short_description/>
+        <sys_class_name>sys_ws_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2021-10-21 10:08:53</sys_created_on>
+        <sys_id>876c1b4ac3d33010bc0526083c40dd4e</sys_id>
+        <sys_mod_count>7</sys_mod_count>
+        <sys_name>List Product Order</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_ws_operation_876c1b4ac3d33010bc0526083c40dd4e</sys_update_name>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-07-05 20:56:56</sys_updated_on>
+        <web_service_definition display_value="Product Order Open API">0249bdaa53b820102f18ddeeff7b12b3</web_service_definition>
+        <web_service_version/>
+    </sys_ws_operation>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4706e130000001</claim_timestamp>
+        <metadata_update_name>sys_ws_operation_876c1b4ac3d33010bc0526083c40dd4e</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:25</sys_created_on>
+        <sys_id>643465931b251d500f4ccbb8624bcba6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:25</sys_updated_on>
+    </sys_claim>
+</record_update>

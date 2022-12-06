@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" label="Contact de l'élément de ligne de commande" max_length="40" name="sn_ind_tmt_orm_order_line_item_contact" sizeclass="1189" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Role" max_length="100" name="u_role" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Contact Name" max_length="32" name="u_contact_name" reference="customer_contact" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Preferred Contact Method" max_length="100" name="u_preferred_contact_method" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:current.getTableName();" label="Class" max_length="80" name="sys_class_name" type="sys_class_name"/>
+        <element attributes="edge_encryption_enabled=true" label="External ID" max_length="40" name="external_id" type="string"/>
+        <element attributes="encode_utf8=false" label="Customer Contact ID" max_length="32" name="u_customer_contact_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Mobile Phone Number" max_length="100" name="u_mobile_phone_number" type="string"/>
+        <index name="index">
+            <element name="u_contact_name"/>
+        </index>
+        <index name="index2">
+            <element name="sys_class_name"/>
+        </index>
+    </element>
+</database>

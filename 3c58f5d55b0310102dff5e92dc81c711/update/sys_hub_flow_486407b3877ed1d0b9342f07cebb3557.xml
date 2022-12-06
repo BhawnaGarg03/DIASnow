@@ -41,6 +41,20 @@
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=486407b3877ed1d0b9342f07cebb3557"/>
     <sys_variable_value action="delete_multiple" query="document_key=486407b3877ed1d0b9342f07cebb3557"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6faf4fd0000001</claim_timestamp>
+        <metadata_update_name>sys_hub_flow_486407b3877ed1d0b9342f07cebb3557</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:37</sys_created_on>
+        <sys_id>34d68ca28727151094fa0e58cebb350a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:37</sys_updated_on>
+    </sys_claim>
     <sys_flow_record_trigger action="INSERT_OR_UPDATE">
         <active>true</active>
         <condition table="sn_ind_tmt_orm_order_task">order_line_item.product_specification=9ed9cc5e8772819084b2a18e0ebb35ef^short_descriptionLIKEDesign SASE Configuration^state=5^NQorder_line_item.product_specification=577cd85287f2819084b2a18e0ebb35be^short_descriptionLIKESASE General Support^state=5^NQorder_line_item.product_specification=288e6c1287f6095025a20edc0ebb35dd^ORorder_line_item.product_specification=a4f79ea587db051484b2a18e0ebb35f3^short_descriptionLIKESASE Activation^state=5<item display_table="sn_prd_pm_product_specification" display_value="SASE Profile" endquery="false" field="order_line_item.product_specification" goto="false" newquery="false" operator="=" or="false" value="9ed9cc5e8772819084b2a18e0ebb35ef"/>
@@ -439,10 +453,10 @@
         <sys_created_by>AD13659</sys_created_by>
         <sys_created_on>2022-11-04 11:27:46</sys_created_on>
         <sys_id>577167c0874b15d0b9342f07cebb35a8</sys_id>
-        <sys_mod_count>110</sys_mod_count>
+        <sys_mod_count>114</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD13659</sys_updated_by>
-        <sys_updated_on>2022-11-10 13:24:36</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-11-14 16:07:31</sys_updated_on>
         <ui_id>844f6e2a-04da-4038-a412-a7d8f52bcb85</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=577167c0874b15d0b9342f07cebb35a8"/>
@@ -703,10 +717,10 @@
         <sys_created_by>AD13659</sys_created_by>
         <sys_created_on>2022-11-03 14:55:15</sys_created_on>
         <sys_id>7c67cb37877ed1d0b9342f07cebb3549</sys_id>
-        <sys_mod_count>184</sys_mod_count>
+        <sys_mod_count>188</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD13659</sys_updated_by>
-        <sys_updated_on>2022-11-10 13:24:36</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-11-14 16:07:31</sys_updated_on>
         <ui_id>171318bc-97cf-4d76-981f-0fab9660db46</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=7c67cb37877ed1d0b9342f07cebb3549"/>
@@ -757,11 +771,11 @@
         <sys_created_by>AD13659</sys_created_by>
         <sys_created_on>2022-11-03 14:55:15</sys_created_on>
         <sys_id>7067cb37877ed1d0b9342f07cebb354d</sys_id>
-        <sys_mod_count>32</sys_mod_count>
-        <sys_updated_by>AD13659</sys_updated_by>
-        <sys_updated_on>2022-11-10 12:50:31</sys_updated_on>
+        <sys_mod_count>33</sys_mod_count>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-11-14 16:07:31</sys_updated_on>
         <table>var__m_sys_hub_action_input_e2c15a55876c995099d253d73cbb35f2</table>
-        <value>{"version":"1.0","complexObjectSchema":{"FlowDesigner:FDaec15a555a6c99501904ca8019f03cf5":{"$COCollectionField":[{"Messages_child0":{"value":"String","value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].value\\\":\\\"{{844f6e2a-04da-4038-a412-a7d8f52bcb85.variable}}\\\"}\",\"default_value\":\"\",\"label\":\"Value\",\"mandatory\":\"true\",\"order\":\"2\",\"max_length\":\"0\"}"},"key":"String","key.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].key\\\":\\\"{{Updated_1.current.order_line_item.order.order_id}}\\\"}\",\"default_value\":\"\",\"label\":\"Key\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Messages\",\"mandatory\":\"false\",\"child_name\":\"Messages_child0\",\"uiUniqueId\":\"165ec4bb-c28f-4295-9fe4-08df2917300d\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDaec15a555a6c99501904ca8019f03cf5\",\"child_label\":\"Messages_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"d90b3ece-696b-41e7-bc4b-e692de81d76e\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDaec15a555a6c99501904ca8019f03cf5.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Messages\",\"mandatory\":\"false\",\"child_name\":\"Messages_child0\",\"uiUniqueId\":\"165ec4bb-c28f-4295-9fe4-08df2917300d\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDaec15a555a6c99501904ca8019f03cf5\",\"child_label\":\"Messages_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"d90b3ece-696b-41e7-bc4b-e692de81d76e\"}"}},"complexObject":{"name$":"FDaec15a555a6c99501904ca8019f03cf5","$COCollectionField":[{"value":{"$cv":{"$c":"java.lang.String","$v":""}},"key":{"$cv":{"$c":"java.lang.String","$v":""}}}]},"serializationFormat":"JSON"}</value>
+        <value>{"version":"1.0","complexObject":{"name$":"FDaec15a555a6c99501904ca8019f03cf5","$COCollectionField":[{"value":{"$cv":{"$c":"java.lang.String","$v":""}},"key":{"$cv":{"$c":"java.lang.String","$v":""}}}]},"complexObjectSchema":{"FlowDesigner:FDaec15a555a6c99501904ca8019f03cf5":{"$COCollectionField":[{"Messages_child0":{"value":"String","value.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].value\\\":\\\"{{844f6e2a-04da-4038-a412-a7d8f52bcb85.variable}}\\\"}\",\"default_value\":\"\",\"label\":\"Value\",\"mandatory\":\"true\",\"order\":\"2\",\"max_length\":\"0\"}"},"key":"String","key.$field_facets":{"SimpleMapFacet":"{\"uiTypeLabel\":\"String\",\"read_only\":\"false\",\"hint\":\"\",\"uiType\":\"string\",\"mapped\":\"{\\\"[0].key\\\":\\\"{{Updated_1.current.order_line_item.order.order_id}}\\\"}\",\"default_value\":\"\",\"label\":\"Key\",\"mandatory\":\"false\",\"order\":\"1\",\"max_length\":\"0\"}"}}}],"$COCollectionField.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Messages\",\"mandatory\":\"false\",\"child_name\":\"Messages_child0\",\"uiUniqueId\":\"165ec4bb-c28f-4295-9fe4-08df2917300d\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDaec15a555a6c99501904ca8019f03cf5\",\"child_label\":\"Messages_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"d90b3ece-696b-41e7-bc4b-e692de81d76e\"}"},"$COCollectionField.$field_facets":{"SimpleMapFacet":"{\"up-shift-collection-level\":\"true\"}"}},"FlowDesigner:FDaec15a555a6c99501904ca8019f03cf5.$type_facets":{"SimpleMapFacet":"{\"default_value\":\"\",\"label\":\"Messages\",\"mandatory\":\"false\",\"child_name\":\"Messages_child0\",\"uiUniqueId\":\"165ec4bb-c28f-4295-9fe4-08df2917300d\",\"uiTypeLabel\":\"Array.Object\",\"co_type_name\":\"FDaec15a555a6c99501904ca8019f03cf5\",\"child_label\":\"Messages_child0\",\"child_type_label\":\"Object\",\"element_mapping_provider\":\"com.glide.flow_design.action.data.FlowDesignVariableMapper\",\"read_only\":\"false\",\"hint\":null,\"uiType\":\"array.object\",\"child_type\":\"object\",\"order\":\"2\",\"max_length\":\"65000\",\"child_uiUniqueId\":\"d90b3ece-696b-41e7-bc4b-e692de81d76e\"}"}},"serializationFormat":"JSON"}</value>
     </sys_element_mapping>
     <sys_element_mapping action="INSERT_OR_UPDATE">
         <field>topic</field>
@@ -791,10 +805,10 @@
         <sys_created_by>AD11754</sys_created_by>
         <sys_created_on>2022-11-03 18:46:50</sys_created_on>
         <sys_id>9d6cf37b873291901aa9337d0ebb3597</sys_id>
-        <sys_mod_count>136</sys_mod_count>
+        <sys_mod_count>140</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD13659</sys_updated_by>
-        <sys_updated_on>2022-11-10 13:24:36</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-11-14 16:07:31</sys_updated_on>
         <ui_id>fb9b992d-6e79-411d-a33f-ae745a609060</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=9d6cf37b873291901aa9337d0ebb3597"/>
@@ -996,7 +1010,7 @@ Kafka Response:﻿{{171318bc-97cf-4d76-981f-0fab9660db46.response}}</value>
         <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"b4a49fbf877ed1d0b9342f07cebb3568","name":"plan","plan_signature":null}}</plan>
         <plan_id>486407b3877ed1d0b9342f07cebb3557</plan_id>
-        <snapshot>db941fbf877ed1d0b9342f07cebb359a</snapshot>
+        <snapshot>5a618ce38747151025a20edc0ebb350a</snapshot>
         <sys_created_by>AD13659</sys_created_by>
         <sys_created_on>2022-11-03 15:53:08</sys_created_on>
         <sys_domain>global</sys_domain>
@@ -1944,6 +1958,6 @@ Kafka Response:﻿{{171318bc-97cf-4d76-981f-0fab9660db46.response}}</value>
     <sys_hub_flow action="UPDATE">
         <sys_id>486407b3877ed1d0b9342f07cebb3557</sys_id>
         <latest_snapshot>db941fbf877ed1d0b9342f07cebb359a</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch7-08-17-2022_08-23-2022_1902.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch7a-09-20-2022_10-04-2022_1309.zip</compiler_build>
     </sys_hub_flow>
 </record_update>

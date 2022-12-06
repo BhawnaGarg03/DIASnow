@@ -12,12 +12,12 @@
 or 
 Service Level = Pro managed))</description>
         <internal_name>lmn_sase_node__sase_activation__from_characteristics_update</internal_name>
-        <label_cache>[{"name":"Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"9f425823-26e4-4038-81e1-2567044fc219.__dont_treat_as_error__","label":"1 - LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"b0ce4bb4-4324-4326-b7cd-9b69d44ff1a5"}},{"name":"9f425823-26e4-4038-81e1-2567044fc219.__action_status__","label":"1 - LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDfc25ff539fc8d15016f8564b9e41b076","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3f4948d7-193d-4f5e-bc1d-a271f868bb6f"}},{"name":"Updated_1.current.order_line_item.location","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Shipping Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"sn_csm_om_order_line_item","column_name":"location"},{"name":"Updated_1.current.order_line_item.location.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Shipping Location➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"cmn_location","column_name":"sys_id"}]</label_cache>
+        <label_cache>[{"name":"9f425823-26e4-4038-81e1-2567044fc219.__action_status__","label":"1 - LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDfc25ff539fc8d15016f8564b9e41b076","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3f4948d7-193d-4f5e-bc1d-a271f868bb6f"}},{"name":"9f425823-26e4-4038-81e1-2567044fc219.__dont_treat_as_error__","label":"1 - LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"b0ce4bb4-4324-4326-b7cd-9b69d44ff1a5"}},{"name":"Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"}]</label_cache>
         <master_snapshot>b2753b9387c8d15025a20edc0ebb356c</master_snapshot>
         <name>LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update</name>
         <natlang/>
         <outputs/>
-        <remote_trigger_id>f569146587b5d5107f3265bd0ebb35a1</remote_trigger_id>
+        <remote_trigger_id>229a7b3787f05d50950253d73cbb3542</remote_trigger_id>
         <run_as>system</run_as>
         <run_with_roles/>
         <sc_callable>false</sc_callable>
@@ -30,19 +30,33 @@ Service Level = Pro managed))</description>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>e6dfdf9f8708d15025a20edc0ebb354a</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_hub_flow_e6dfdf9f8708d15025a20edc0ebb354a</sys_update_name>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-15 17:19:48</sys_updated_on>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 09:44:49</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=e6dfdf9f8708d15025a20edc0ebb354a"/>
     <sys_variable_value action="delete_multiple" query="document_key=e6dfdf9f8708d15025a20edc0ebb354a"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4708fc50000001</claim_timestamp>
+        <metadata_update_name>sys_hub_flow_e6dfdf9f8708d15025a20edc0ebb354a</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:33</sys_created_on>
+        <sys_id>6234a9931b251d500f4ccbb8624bcbc9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:33</sys_updated_on>
+    </sys_claim>
     <sys_flow_record_trigger action="INSERT_OR_UPDATE">
         <active>true</active>
         <condition table="sn_ind_tmt_orm_order_characteristic_value">characteristic=e53e011c873e095084b2a18e0ebb3509^ORcharacteristic=b210555c873e095084b2a18e0ebb35a1^characteristic_option_valueCHANGESTOPro managed^ORcharacteristic_option_valueCHANGESTOYes^order_line_item.product_specification=288e6c1287f6095025a20edc0ebb35dd^specification=288e6c1287f6095025a20edc0ebb35dd<item display_table="sn_prd_pm_characteristic" display_value="Service Level" endquery="false" field="characteristic" goto="false" newquery="false" operator="=" or="false" value="e53e011c873e095084b2a18e0ebb3509"/>
@@ -63,42 +77,42 @@ Service Level = Pro managed))</description>
         <run_when_user_setting>any</run_when_user_setting>
         <sys_class_name>sys_flow_record_trigger</sys_class_name>
         <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-07 09:25:59</sys_created_on>
+        <sys_created_on>2022-07-27 08:33:25</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>f569146587b5d5107f3265bd0ebb35a1</sys_id>
+        <sys_id>229a7b3787f05d50950253d73cbb3542</sys_id>
         <sys_mod_count>0</sys_mod_count>
         <sys_overrides/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:25:59</sys_updated_on>
+        <sys_updated_on>2022-07-27 08:33:25</sys_updated_on>
         <table>sn_ind_tmt_orm_order_characteristic_value</table>
     </sys_flow_record_trigger>
     <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
         <active>true</active>
-        <data>{"table":"sys_trigger_runner_mapping","id":"8269146587b5d5107f3265bd0ebb35a2","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
+        <data>{"table":"sys_trigger_runner_mapping","id":"2e9a7b3787f05d50950253d73cbb3542","name":"trigger_runner","type":"java.util.Collections$UnmodifiableMap"}</data>
         <identifier>e6dfdf9f8708d15025a20edc0ebb354a</identifier>
         <runner>FDTriggerRunner</runner>
         <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-07 09:25:59</sys_created_on>
-        <sys_id>8269146587b5d5107f3265bd0ebb35a2</sys_id>
-        <sys_mod_count>5</sys_mod_count>
+        <sys_created_on>2022-07-27 08:33:25</sys_created_on>
+        <sys_id>2e9a7b3787f05d50950253d73cbb3542</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-11-15 17:19:48</sys_updated_on>
-        <trigger display_value="">f569146587b5d5107f3265bd0ebb35a1</trigger>
+        <sys_updated_on>2022-07-27 08:33:25</sys_updated_on>
+        <trigger display_value="">229a7b3787f05d50950253d73cbb3542</trigger>
     </sys_trigger_runner_mapping>
     <sys_json_chunk action="INSERT_OR_UPDATE">
         <data>H4sIAAAAAAAAAGXLWwqAIBBA0b3MdytwKxGD5fggGUFHLKK99yAo6Pce7ga5MtqYGgYGBaOeZpdTZQPdTc0TYy2UMYYioPrh0wuJBHbXl8T/jpc1r48mRlqE2JA5u9WxEOwH5v2lw4YAAAA=</data>
-        <document_id>8269146587b5d5107f3265bd0ebb35a2</document_id>
+        <document_id>2e9a7b3787f05d50950253d73cbb3542</document_id>
         <field>trigger_runner</field>
         <length>144</length>
         <position>0</position>
         <source_table>sys_trigger_runner_mapping</source_table>
         <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-07 09:25:59</sys_created_on>
-        <sys_id>8a69146587b5d5107f3265bd0ebb35a2</sys_id>
+        <sys_created_on>2022-07-27 08:33:25</sys_created_on>
+        <sys_id>669a7b3787f05d50950253d73cbb3543</sys_id>
     </sys_json_chunk>
-    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=e6dfdf9f8708d15025a20edc0ebb354a^sys_idNOT IN8269146587b5d5107f3265bd0ebb35a2"/>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=e6dfdf9f8708d15025a20edc0ebb354a^sys_idNOT IN2e9a7b3787f05d50950253d73cbb3542"/>
     <sys_hub_trigger_instance action="delete_multiple" query="flow=e6dfdf9f8708d15025a20edc0ebb354a^sys_idNOT IN37b2afd38748d15025a20edc0ebb3557"/>
     <sys_hub_trigger_instance action="INSERT_OR_UPDATE">
         <comment/>
@@ -109,10 +123,10 @@ Service Level = Pro managed))</description>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 10:45:09</sys_created_on>
         <sys_id>37b2afd38748d15025a20edc0ebb3557</sys_id>
-        <sys_mod_count>16</sys_mod_count>
+        <sys_mod_count>11</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:26:00</sys_updated_on>
+        <sys_updated_on>2022-07-27 08:33:26</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -239,14 +253,14 @@ Service Level = Pro managed))</description>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 10:45:09</sys_created_on>
         <sys_id>73b2afd38748d15025a20edc0ebb3552</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:26:00</sys_updated_on>
+        <sys_updated_on>2022-07-27 08:33:26</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -320,14 +334,14 @@ Service Level = Pro managed))</description>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 10:45:09</sys_created_on>
         <sys_id>fbb223938748d15025a20edc0ebb3543</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>5</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:26:00</sys_updated_on>
+        <sys_updated_on>2022-07-27 08:33:26</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -343,7 +357,7 @@ Service Level = Pro managed))</description>
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD6969146549b5d510eb1b49f8a484834d,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD869a3b3709f05d506fe51eeb699864ca,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -401,14 +415,14 @@ Service Level = Pro managed))</description>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 10:45:09</sys_created_on>
         <sys_id>fbb2afd38748d15025a20edc0ebb354e</sys_id>
-        <sys_mod_count>15</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:26:00</sys_updated_on>
+        <sys_updated_on>2022-07-27 08:33:26</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -437,10 +451,10 @@ Service Level = Pro managed))</description>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 12:06:54</sys_created_on>
         <sys_id>5175f79387c8d15025a20edc0ebb35e1</sys_id>
-        <sys_mod_count>50</sys_mod_count>
+        <sys_mod_count>28</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>system</sys_updated_by>
-        <sys_updated_on>2022-11-14 10:27:10</sys_updated_on>
+        <sys_updated_by>AD12224</sys_updated_by>
+        <sys_updated_on>2022-07-27 08:33:26</sys_updated_on>
         <ui_id>9f425823-26e4-4038-81e1-2567044fc219</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=5175f79387c8d15025a20edc0ebb35e1"/>
@@ -480,18 +494,6 @@ Service Level = Pro managed))</description>
         <sys_updated_on>2022-06-18 12:06:54</sys_updated_on>
         <table>var__m_sys_hub_action_input_1025ff5387c8d15025a20edc0ebb3527</table>
         <value>{{Updated_1.current.order_line_item.sys_id}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>shipping_location</field>
-        <id>5175f79387c8d15025a20edc0ebb35e1</id>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-07 09:16:51</sys_created_on>
-        <sys_id>0057506187b5d5107f3265bd0ebb3543</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:25:55</sys_updated_on>
-        <table>var__m_sys_hub_action_input_1025ff5387c8d15025a20edc0ebb3527</table>
-        <value>{{Updated_1.current.order_line_item.location.sys_id}}</value>
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=5175f79387c8d15025a20edc0ebb35e1"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=5175f79387c8d15025a20edc0ebb35e1"/>
@@ -577,18 +579,18 @@ Service Level = Pro managed))</description>
         <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"47757b9387c8d15025a20edc0ebb3506","name":"plan","plan_signature":null}}</plan>
         <plan_id>e6dfdf9f8708d15025a20edc0ebb354a</plan_id>
-        <snapshot>8d83325787471510574bb958dabb3558</snapshot>
+        <snapshot>b2753b9387c8d15025a20edc0ebb356c</snapshot>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 12:07:01</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>47757b9387c8d15025a20edc0ebb3506</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_overrides/>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:26:00</sys_updated_on>
-        <trigger display_value="">f569146587b5d5107f3265bd0ebb35a1</trigger>
+        <sys_updated_on>2022-07-27 08:33:25</sys_updated_on>
+        <trigger display_value="">229a7b3787f05d50950253d73cbb3542</trigger>
     </sys_flow_trigger_plan>
     <sys_flow_subflow_plan action="delete_multiple" query="plan_id=e6dfdf9f8708d15025a20edc0ebb354a"/>
     <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
@@ -604,7 +606,7 @@ Service Level = Pro managed))</description>
 or 
 Service Level = Pro managed))</description>
         <internal_name>lmn_sase_node_so_and_swg_so__sase_activation__from_characteristics_update</internal_name>
-        <label_cache>[{"name":"Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"9f425823-26e4-4038-81e1-2567044fc219.__dont_treat_as_error__","label":"1 - LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"b0ce4bb4-4324-4326-b7cd-9b69d44ff1a5"}},{"name":"9f425823-26e4-4038-81e1-2567044fc219.__action_status__","label":"1 - LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDfc25ff539fc8d15016f8564b9e41b076","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3f4948d7-193d-4f5e-bc1d-a271f868bb6f"}},{"name":"Updated_1.current.order_line_item.location","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Shipping Location","reference":"cmn_location","reference_display":"Location","type":"reference","base_type":"reference","parent_table_name":"sn_csm_om_order_line_item","column_name":"location"},{"name":"Updated_1.current.order_line_item.location.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Shipping Location➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"cmn_location","column_name":"sys_id"}]</label_cache>
+        <label_cache>[{"name":"9f425823-26e4-4038-81e1-2567044fc219.__action_status__","label":"1 - LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update➛Action Status","reference_display":"Action Status","type":"object","base_type":"object","attributes":{"uiTypeLabel":"Object","co_type_name":"FDfc25ff539fc8d15016f8564b9e41b076","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"object","action_error_output":"true","uiUniqueId":"3f4948d7-193d-4f5e-bc1d-a271f868bb6f"}},{"name":"9f425823-26e4-4038-81e1-2567044fc219.__dont_treat_as_error__","label":"1 - LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update➛Don\u0027t Treat as Error","reference_display":"Don\u0027t Treat as Error","type":"boolean","base_type":"boolean","attributes":{"uiTypeLabel":"True/False","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiType":"boolean","visible_in_ui":"false","action_error_output":"true","uiUniqueId":"b0ce4bb4-4324-4326-b7cd-9b69d44ff1a5"}},{"name":"Updated_1.current.order_line_item.account.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Account➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"customer_account","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order_line_item","column_name":"sys_id"},{"name":"Updated_1.current.order_line_item.order.sys_id","label":"Trigger - Record Updated➛Customer Order Characteristic Value Record➛Customer Order Line Item➛Order➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"sn_csm_om_order","column_name":"sys_id"}]</label_cache>
         <master>true</master>
         <name>LMN_SASE_NODE_SO_AND_SWG_SO - SASE ACTIVATION - From Characteristics Update</name>
         <natlang/>
@@ -621,7 +623,7 @@ Service Level = Pro managed))</description>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>b2753b9387c8d15025a20edc0ebb356c</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_overrides/>
         <sys_package/>
@@ -629,7 +631,7 @@ Service Level = Pro managed))</description>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:25:58</sys_updated_on>
+        <sys_updated_on>2022-07-27 08:33:24</sys_updated_on>
         <type>flow</type>
     </sys_hub_flow_snapshot>
     <sys_translated_text action="delete_multiple" query="documentkey=b2753b9387c8d15025a20edc0ebb356c"/>
@@ -644,10 +646,10 @@ Service Level = Pro managed))</description>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 12:07:00</sys_created_on>
         <sys_id>3a753b9387c8d15025a20edc0ebb35a4</sys_id>
-        <sys_mod_count>14</sys_mod_count>
+        <sys_mod_count>8</sys_mod_count>
         <sys_scope/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:26:00</sys_updated_on>
+        <sys_updated_on>2022-07-27 08:33:25</sys_updated_on>
         <trigger_definition display_value="Updated">bb695e60c31322002841b63b12d3aea5</trigger_definition>
         <trigger_inputs/>
         <trigger_outputs/>
@@ -774,14 +776,14 @@ Service Level = Pro managed))</description>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 12:07:00</sys_created_on>
         <sys_id>32753b9387c8d15025a20edc0ebb358f</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:25:58</sys_updated_on>
+        <sys_updated_on>2022-07-27 08:33:24</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -855,14 +857,14 @@ Service Level = Pro managed))</description>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 12:06:59</sys_created_on>
         <sys_id>ba753b9387c8d15025a20edc0ebb3570</sys_id>
-        <sys_mod_count>7</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:25:58</sys_updated_on>
+        <sys_updated_on>2022-07-27 08:33:24</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -878,7 +880,7 @@ Service Level = Pro managed))</description>
         <active>true</active>
         <array>false</array>
         <array_denormalized>false</array_denormalized>
-        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD6969146549b5d510eb1b49f8a484834d,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FD869a3b3709f05d506fe51eeb699864ca,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
         <audit>false</audit>
         <calculation><![CDATA[(function calculatedFieldValue(current) {
 
@@ -936,14 +938,14 @@ Service Level = Pro managed))</description>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 12:07:00</sys_created_on>
         <sys_id>fe753b9387c8d15025a20edc0ebb3586</sys_id>
-        <sys_mod_count>4</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_name/>
         <sys_package/>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name/>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:25:58</sys_updated_on>
+        <sys_updated_on>2022-07-27 08:33:24</sys_updated_on>
         <table_reference>false</table_reference>
         <text_index>false</text_index>
         <unique>false</unique>
@@ -972,10 +974,10 @@ Service Level = Pro managed))</description>
         <sys_created_by>AD12224</sys_created_by>
         <sys_created_on>2022-06-18 12:07:00</sys_created_on>
         <sys_id>3e753b9387c8d15025a20edc0ebb35a2</sys_id>
-        <sys_mod_count>18</sys_mod_count>
+        <sys_mod_count>10</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:25:58</sys_updated_on>
+        <sys_updated_on>2022-07-27 08:33:24</sys_updated_on>
         <ui_id>9f425823-26e4-4038-81e1-2567044fc219</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=3e753b9387c8d15025a20edc0ebb35a2"/>
@@ -1015,18 +1017,6 @@ Service Level = Pro managed))</description>
         <sys_updated_on>2022-06-18 12:07:00</sys_updated_on>
         <table>var__m_sys_hub_action_input_1025ff5387c8d15025a20edc0ebb3527</table>
         <value>{{Updated_1.current.order_line_item.sys_id}}</value>
-    </sys_element_mapping>
-    <sys_element_mapping action="INSERT_OR_UPDATE">
-        <field>shipping_location</field>
-        <id>3e753b9387c8d15025a20edc0ebb35a2</id>
-        <sys_created_by>AD12224</sys_created_by>
-        <sys_created_on>2022-09-07 09:17:01</sys_created_on>
-        <sys_id>6257146187b5d5107f3265bd0ebb3513</sys_id>
-        <sys_mod_count>1</sys_mod_count>
-        <sys_updated_by>AD12224</sys_updated_by>
-        <sys_updated_on>2022-09-07 09:25:57</sys_updated_on>
-        <table>var__m_sys_hub_action_input_1025ff5387c8d15025a20edc0ebb3527</table>
-        <value>{{Updated_1.current.order_line_item.location.sys_id}}</value>
     </sys_element_mapping>
     <sys_hub_input_scripts action="delete_multiple" query="instance=3e753b9387c8d15025a20edc0ebb35a2"/>
     <sys_hub_alias_mapping action="delete_multiple" query="source_id=3e753b9387c8d15025a20edc0ebb35a2"/>
@@ -1110,6 +1100,6 @@ Service Level = Pro managed))</description>
     <sys_hub_flow action="UPDATE">
         <sys_id>e6dfdf9f8708d15025a20edc0ebb354a</sys_id>
         <latest_snapshot>b2753b9387c8d15025a20edc0ebb356c</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch7a-09-20-2022_10-04-2022_1309.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch4-05-25-2022_06-08-2022_0838.zip</compiler_build>
     </sys_hub_flow>
 </record_update>

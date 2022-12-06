@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+    <sys_ui_page action="DELETE">
+        <category>general</category>
+        <client_script/>
+        <description/>
+        <direct>false</direct>
+        <endpoint>sn_ind_tmt_orm_SOM_DIA_TDG_EndPoint.do</endpoint>
+        <html><![CDATA[<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <style>
+        * { box-sizing: border-box; }
+        .row { display: flex; margin-left: -5px; margin-right: -5px; }
+        .column { flex: 50%; padding: 5px; }
+        table { border-collapse: collapse; border-spacing: 0; width: 100%; border: 1px solid #ddd; }
+        th,
+        td { text-align: left; padding: 16px; }
+        .nopadding { padding: 0px; }
+        tr:nth-child(even) { background-color: #f2f2f2;}
+		
+    </style>
+	<g:evaluate var="jvar_custord">
+		var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + '';
+		var odrline = new GlideRecord('sn_ind_tmt_orm_order_line_item');
+		odrline.addQuery("sys_id", orderLineItem); 
+		odrline.query();
+		while(odrline.next()) {
+			odrline.getDisplayValue('order');
+		}
+	</g:evaluate>	
+	
+    <g:ui_form>
+        <table width="100%">
+            <tr>
+                <td style="width:25%">
+                    <g:form_label>Customer Order</g:form_label>
+                </td>
+                <td style="width:60%">
+                   	<input type="number"  value="${jvar_custord}"   name="cust_ord" id="cust_ord"    readonly="readonly" maxlength="40"/>
+                </td>
+            </tr>
+			
+<!-- 			<g:evaluate>
+				var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + '';
+				var grAttr = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+				grAttr.addQuery("order_line_item", orderLineItem); 
+				grAttr.orderBy('sys_created_on');
+				grAttr.query();
+				var ids = [];
+				while (grAttr.next()) {
+					ids.push({
+						'attrbts': grAttr.getDisplayValue('characteristic'),
+						'id': grAttr.getDisplayValue('characteristic_option_value')
+					});
+				}
+			</g:evaluate>
+ -->			
+		
+			<g:evaluate>
+				var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + '';
+				var grOpt = new GlideRecord('sn_ind_tmt_orm_order_line_item');
+				grOpt.addQuery("sys_id", orderLineItem);
+				grOpt.query();
+				while(grOpt.next()) {	
+						var chrt = new GlideRecord('sn_prd_pm_specification_characteristic');
+						chrt.addQuery("specification.sys_id", grOpt.product_specification.sys_id);
+				<!--    chrt.addQuery("specification", grOpt.product_specification); -->
+						chrt.query();
+						while (chrt.next()) {
+						<!--	if (chrt.characteristic.input_type == 'single_line_text') { -->
+							var grOptn = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+							grOptn.addQuery("specification.sys_id", grOpt.product_specification.sys_id);
+						<!-- grOptn.addQuery("specification", grOpt.getValue('product_specification')); -->
+						<!--	grOptn.addQuery("order_line_item", orderLineItem); -->
+						<!--	grOptn.orderBy('sys_created_on'); -->
+							grOptn.query();
+							var characteristicsList = [];
+							var keys = '';
+							for (var k in grOptn) {
+								keys = keys + ', ' + k;
+							}
+							var val = ''
+
+							while(grOptn.next()){ 
+									var grc = new GlideRecord('sn_prd_pm_characteristic');
+									grc.addQuery('name', grOptn.getDisplayValue('characteristic'));
+									grc.query();
+									while (grc.next()) {
+							<!--		if (grc.next()) {
+									{
+									   val = val + ', ' + grc.input_type;
+									} -->
+										var grOption = new GlideRecord('sn_prd_pm_characteristic_option');
+										grOption.addQuery("characteristic", grc.name.sys_id);
+										grOption.query();
+										while (grOption.next()) {
+										characteristicsList.push({
+										'name': grOptn.getDisplayValue('characteristic'),
+										'sysid': grOptn.getDisplayValue('sys_id'),
+										'type': grc.input_type,
+									<!--	'value': grOptn.getDisplayValue('characteristic_option_value'), -->
+										'optt': grOptn.getDisplayValue('characteristic_option'),
+										'optionlist': grOption.getDisplayValue('option')
+								}); 
+										<!--	} -->
+				 } 
+			   }
+			}
+		}
+	}
+			</g:evaluate>
+			
+			<g:form_label>All available Keys --- ${keys}</g:form_label> 
+			<j:forEach var="jvar_charItem" items="${characteristicsList}">
+				<tr>
+					<td style="width:25%">
+						<g:form_label>${jvar_charItem.name} -- ${jvar_charItem.type} </g:form_label>
+					</td>  
+					<j:if test="${jvar_charItem.type == 'single_line_text'}"> 
+						<td style="width:60%">  
+							<input type="text"  value="${jvar_charItem.optt}"  name="attr_vl" id="attr_vl" />
+						</td>
+					</j:if>
+					<j:if test="${jvar_charItem.type == 'choice'}"> 
+						<td style="width:60%">
+								<select name="${jvar_charItem.name}" id="${jvar_charItem.name}_id" style="width:200px">
+							  <option value="${jvar_charItem.optionlist}">${charItem.optionlist}</option>
+							</select>
+						</td>
+					</j:if>
+					<j:if test="${jvar_charItem.type == 'yes_no'}"> 
+						<td style="width:60%">
+								<select name="${jvar_charItem.name}" id="${jvar_charItem.name}_id" style="width:200px">
+							  <option value="Yes">Yes</option>
+							  <option value="No">No</option>
+							</select>
+						</td>
+					</j:if>
+					
+				</tr>
+
+		</j:forEach>
+
+			<tr>
+                <td style="width:25%">
+                    <g:form_label>
+                        Primary_DNS_Additional_Blocks_of_25 :
+                    </g:form_label>
+                </td>
+                <td style="width:60%">
+			 	<input type="text" name="prm_dns" id="prm_dns" value="0" maxlength="40"/>
+                </td>
+            </tr>
+			
+			<tr>
+                <td style="width:25%">
+
+                    <g:form_label>
+                        Customer Domain Name : (Please include .com,.net,.gov etc at the end)<br/>
+                    </g:form_label>
+                </td>
+                <td style="width:60%">
+                    <input type="text" aria-label="Customer Domain Name" name="dns_domain" id="dns_domain" maxlength="25" required="true" size="30" />
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="button" ok_text="${gs.getMessage('Save')}" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()" />
+                </td>
+            </tr>
+        </table>
+    </g:ui_form>
+</j:jelly>]]></html>
+        <name>SOM_DIA_TDG_EndPoint</name>
+        <processing_script/>
+        <sys_class_name>sys_ui_page</sys_class_name>
+        <sys_created_by>AD11761</sys_created_by>
+        <sys_created_on>2022-10-26 06:17:24</sys_created_on>
+        <sys_id>47e300598772dd101aa9337d0ebb352f</sys_id>
+        <sys_mod_count>334</sys_mod_count>
+        <sys_name>SOM_DIA_TDG_EndPoint</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_ui_page_47e300598772dd101aa9337d0ebb352f</sys_update_name>
+        <sys_updated_by>AD11761</sys_updated_by>
+        <sys_updated_on>2022-11-01 05:15:45</sys_updated_on>
+    </sys_ui_page>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</application>
+        <file_path/>
+        <instance_id>de96c48c1bf98910c8432f8dee4bcb22</instance_id>
+        <instance_name>lumendev2</instance_name>
+        <name>sys_ui_page_47e300598772dd101aa9337d0ebb352f</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;&lt;sys_ui_page action="INSERT_OR_UPDATE"&gt;&lt;category&gt;general&lt;/category&gt;&lt;client_script/&gt;&lt;description/&gt;&lt;direct&gt;false&lt;/direct&gt;&lt;endpoint&gt;sn_ind_tmt_orm_SOM_DIA_TDG_EndPoint.do&lt;/endpoint&gt;&lt;html&gt;&lt;![CDATA[&lt;?xml version="1.0" encoding="utf-8" ?&gt;
+&lt;j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null"&gt;
+    &lt;style&gt;
+        * { box-sizing: border-box; }
+        .row { display: flex; margin-left: -5px; margin-right: -5px; }
+        .column { flex: 50%; padding: 5px; }
+        table { border-collapse: collapse; border-spacing: 0; width: 100%; border: 1px solid #ddd; }
+        th,
+        td { text-align: left; padding: 16px; }
+        .nopadding { padding: 0px; }
+        tr:nth-child(even) { background-color: #f2f2f2;}
+		
+    &lt;/style&gt;
+	&lt;g:evaluate var="jvar_custord"&gt;
+		var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + '';
+		var odrline = new GlideRecord('sn_ind_tmt_orm_order_line_item');
+		odrline.addQuery("sys_id", orderLineItem); 
+		odrline.query();
+		while(odrline.next()) {
+			odrline.getDisplayValue('order');
+		}
+	&lt;/g:evaluate&gt;	
+	
+    &lt;g:ui_form&gt;
+        &lt;table width="100%"&gt;
+            &lt;tr&gt;
+                &lt;td style="width:25%"&gt;
+                    &lt;g:form_label&gt;Customer Order&lt;/g:form_label&gt;
+                &lt;/td&gt;
+                &lt;td style="width:60%"&gt;
+                   	&lt;input type="number"  value="${jvar_custord}"   name="cust_ord" id="cust_ord"    readonly="readonly" maxlength="40"/&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+			
+&lt;!-- 			&lt;g:evaluate&gt;
+				var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + '';
+				var grAttr = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+				grAttr.addQuery("order_line_item", orderLineItem); 
+				grAttr.orderBy('sys_created_on');
+				grAttr.query();
+				var ids = [];
+				while (grAttr.next()) {
+					ids.push({
+						'attrbts': grAttr.getDisplayValue('characteristic'),
+						'id': grAttr.getDisplayValue('characteristic_option_value')
+					});
+				}
+			&lt;/g:evaluate&gt;
+ --&gt;			
+		
+			&lt;g:evaluate&gt;
+				var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + '';
+				var grOpt = new GlideRecord('sn_ind_tmt_orm_order_line_item');
+				grOpt.addQuery("sys_id", orderLineItem);
+				grOpt.query();
+				while(grOpt.next()) {	
+						var chrt = new GlideRecord('sn_prd_pm_specification_characteristic');
+						chrt.addQuery("specification.sys_id", grOpt.product_specification.sys_id);
+				&lt;!--    chrt.addQuery("specification", grOpt.product_specification); --&gt;
+						chrt.query();
+						while (chrt.next()) {
+						&lt;!--	if (chrt.characteristic.input_type == 'single_line_text') { --&gt;
+							var grOptn = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+							grOptn.addQuery("specification.sys_id", grOpt.product_specification.sys_id);
+						&lt;!-- grOptn.addQuery("specification", grOpt.getValue('product_specification')); --&gt;
+						&lt;!--	grOptn.addQuery("order_line_item", orderLineItem); --&gt;
+						&lt;!--	grOptn.orderBy('sys_created_on'); --&gt;
+							grOptn.query();
+							var characteristicsList = [];
+							var keys = '';
+							for (var k in grOptn) {
+								keys = keys + ', ' + k;
+							}
+							var val = ''
+
+							while(grOptn.next()){ 
+									var grc = new GlideRecord('sn_prd_pm_characteristic');
+									grc.addQuery('name', grOptn.getDisplayValue('characteristic'));
+									grc.query();
+									while (grc.next()) {
+							&lt;!--		if (grc.next()) {
+									{
+									   val = val + ', ' + grc.input_type;
+									} --&gt;
+										var grOption = new GlideRecord('sn_prd_pm_characteristic_option');
+										grOption.addQuery("characteristic", grc.name.sys_id);
+										grOption.query();
+										while (grOption.next()) {
+										characteristicsList.push({
+										'name': grOptn.getDisplayValue('characteristic'),
+										'sysid': grOptn.getDisplayValue('sys_id'),
+										'type': grc.input_type,
+									&lt;!--	'value': grOptn.getDisplayValue('characteristic_option_value'), --&gt;
+										'optt': grOptn.getDisplayValue('characteristic_option'),
+										'optionlist': grOption.getDisplayValue('option')
+								}); 
+										&lt;!--	} --&gt;
+				 } 
+			   }
+			}
+		}
+	}
+			&lt;/g:evaluate&gt;
+			
+			&lt;g:form_label&gt;All available Keys --- ${keys}&lt;/g:form_label&gt; 
+			&lt;j:forEach var="jvar_charItem" items="${characteristicsList}"&gt;
+				&lt;tr&gt;
+					&lt;td style="width:25%"&gt;
+						&lt;g:form_label&gt;${jvar_charItem.name} -- ${jvar_charItem.type} &lt;/g:form_label&gt;
+					&lt;/td&gt;  
+					&lt;j:if test="${jvar_charItem.type == 'single_line_text'}"&gt; 
+						&lt;td style="width:60%"&gt;  
+							&lt;input type="text"  value="${jvar_charItem.optt}"  name="attr_vl" id="attr_vl" /&gt;
+						&lt;/td&gt;
+					&lt;/j:if&gt;
+					&lt;j:if test="${jvar_charItem.type == 'choice'}"&gt; 
+						&lt;td style="width:60%"&gt;
+								&lt;select name="${jvar_charItem.name}" id="${jvar_charItem.name}_id" style="width:200px"&gt;
+							  &lt;option value="${jvar_charItem.optionlist}"&gt;${charItem.optionlist}&lt;/option&gt;
+							&lt;/select&gt;
+						&lt;/td&gt;
+					&lt;/j:if&gt;
+					&lt;j:if test="${jvar_charItem.type == 'yes_no'}"&gt; 
+						&lt;td style="width:60%"&gt;
+								&lt;select name="${jvar_charItem.name}" id="${jvar_charItem.name}_id" style="width:200px"&gt;
+							  &lt;option value="Yes"&gt;Yes&lt;/option&gt;
+							  &lt;option value="No"&gt;No&lt;/option&gt;
+							&lt;/select&gt;
+						&lt;/td&gt;
+					&lt;/j:if&gt;
+					
+				&lt;/tr&gt;
+
+		&lt;/j:forEach&gt;
+
+			&lt;tr&gt;
+                &lt;td style="width:25%"&gt;
+                    &lt;g:form_label&gt;
+                        Primary_DNS_Additional_Blocks_of_25 :
+                    &lt;/g:form_label&gt;
+                &lt;/td&gt;
+                &lt;td style="width:60%"&gt;
+			 	&lt;input type="text" name="prm_dns" id="prm_dns" value="0" maxlength="40"/&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+			
+			&lt;tr&gt;
+                &lt;td style="width:25%"&gt;
+
+                    &lt;g:form_label&gt;
+                        Customer Domain Name : (Please include .com,.net,.gov etc at the end)&lt;br/&gt;
+                    &lt;/g:form_label&gt;
+                &lt;/td&gt;
+                &lt;td style="width:60%"&gt;
+                    &lt;input type="text" aria-label="Customer Domain Name" name="dns_domain" id="dns_domain" maxlength="25" required="true" size="30" /&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+            &lt;tr&gt;
+                &lt;td&gt;
+                    &lt;g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="button" ok_text="${gs.getMessage('Save')}" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()" /&gt;
+                &lt;/td&gt;
+            &lt;/tr&gt;
+        &lt;/table&gt;
+    &lt;/g:ui_form&gt;
+&lt;/j:jelly&gt;]]&gt;&lt;/html&gt;&lt;name&gt;SOM_DIA_TDG_EndPoint&lt;/name&gt;&lt;processing_script/&gt;&lt;sys_class_name&gt;sys_ui_page&lt;/sys_class_name&gt;&lt;sys_created_by&gt;AD11761&lt;/sys_created_by&gt;&lt;sys_created_on&gt;2022-10-26 06:17:24&lt;/sys_created_on&gt;&lt;sys_id&gt;47e300598772dd101aa9337d0ebb352f&lt;/sys_id&gt;&lt;sys_mod_count&gt;334&lt;/sys_mod_count&gt;&lt;sys_name&gt;SOM_DIA_TDG_EndPoint&lt;/sys_name&gt;&lt;sys_package display_value="Order Management for Telecom, Media &amp;amp; Tech" source="sn_ind_tmt_orm"&gt;3c58f5d55b0310102dff5e92dc81c711&lt;/sys_package&gt;&lt;sys_policy/&gt;&lt;sys_scope display_value="Order Management for Telecom, Media &amp;amp; Tech"&gt;3c58f5d55b0310102dff5e92dc81c711&lt;/sys_scope&gt;&lt;sys_update_name&gt;sys_ui_page_47e300598772dd101aa9337d0ebb352f&lt;/sys_update_name&gt;&lt;sys_updated_by&gt;AD11761&lt;/sys_updated_by&gt;&lt;sys_updated_on&gt;2022-11-01 05:15:45&lt;/sys_updated_on&gt;&lt;/sys_ui_page&gt;&lt;/record_update&gt;</payload>
+        <payload_hash>1310651876</payload_hash>
+        <record_name>SOM_DIA_TDG_EndPoint</record_name>
+        <reverted_from/>
+        <source>73c500c487ba91101aa9337d0ebb3522</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>AD11761</sys_created_by>
+        <sys_created_on>2022-11-01 05:15:45</sys_created_on>
+        <sys_id>b89feacb87b2195094fa0e58cebb3576</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>184319df1390000001</sys_recorded_at>
+        <sys_updated_by>AD11761</sys_updated_by>
+        <sys_updated_on>2022-11-01 05:15:45</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>709feacbf5b219502cf329a8bbc3fe76</update_guid>
+        <update_guid_history>709feacbf5b219502cf329a8bbc3fe76:1310651876,d00f2e0f38b219508b402e8f064cf0a2:2121290218,e615781ab376915066c14c8dd9a233bc:1310651876,2ab4bc5644769150e3f93907bf6c8721:-1367274119,ca8378161d769150b5bf6ee08aa7b8aa:-864389392,5c43381650769150776bfbad659021a2:-417963692,230378922f7691500abb12bd5d195a38:232458578,88827c123a7691501fdc6acd806cef6b:-879277874,cf80b09e9636915012f7d4aeb6d7853f:-1708214655,4f40789e1236915085b5afa8d1c0e56b:2121290218,9def689ec6369150c6fecd6613ef9066:-905868837,761dac5abc369150aad84c3e04bed03e:1913858324,a2bc241aa0369150ffcff75ffef19a6c:-1154085303,0f5ce4d6db3691500ff135ceb6ad20f2:1395955301,450c6c12143691500c9e7702edb597be:-2106049646,6319acd674f29150b260cdbf02b20997:-1896335469,9c19245ad9f29150b80a6373e643fd0b:1475453923,b5f86cd6cef29150c0986c661b2e73c5:1971233302,76b8289625f291509c96b58361aee7fd:348869481,3698e056caf2915044bc7700b6e6d9f3:-2027294670,8a746c5e09b291505f90da816526a499:-1896335469,caa2e8d6047291506fbf76fbe6d67f9c:-892136718,a7efdc9ad9329150cb26c2278d477d9b:-1390716297,f52233caefba51503a9787983bc5c807:1186976099,94e073ca45ba51502e1b88241979975a:-1381003395,551037c657ba5150dfd4ac034a8d4067:-30182050,e67fa70a97ba51501e9b952af74fff28:-908449790,37ee6b86acba5150891309aa38a3642d:1186976099,399ee34689ba5150fe78bdf331b63d40:577591312,687ee70632ba5150e66a6e30577a7a46:1976158304,442ee3c20eba51505d61afe836d8e8bb:-1907734944,fbdd274260ba5150e97c88bb82102236:967968865,929ba3cef27a5150062f031fc6d818dd:1671300832,53bae74e0a7a51502b36dc3d381071c8:591594827,f0f9e74efd7a51502f6ce63930bb3fe5:-25608035,5a996fca447a5150cdb7b9e7b94ac3f3:-114271628,b32963cac47a5150b6a0cc36f867c57d:2098291218,4ae8270a1f7a515086477131d0112e5c:1996203136,8d98e38ade7a51509745f32af9cacd2c:-342139839,6548e74ab27a515015c1c78392a1cd2c:2065318387,0fc7efc6797a51500497c4e635e02a29:-592375567,a8a76fc68f7a5150e1f177a1ecb1a855:2082134823,ab77af86d27a515029149317dd79a2f6:1692025290,1a57a3869f7a515028c10c1551615183:841232381,dc176f466f7a5150941cf1487715928e:983792425,fbd6eb06357a5150830aa66e78de8f27:-1093599944,08b6a3464b7a515057d46ad50725bcbe:-119169908,34262fc2f17a515059fedbd6ddb12873:1692025290,31e5a382f17a5150fa9db7115e63bea7:-418634808,d2b52742267a51502e80edc4f03942b6:-1651741269,8a3527cedd3a51502e6357d4af818cd8:-592375567,1f94e342607a5150d6f3b9d2e9bbeb90:-415713308,de44ab4e663a51508dec42cb9a67da4f:2118226709,12e3e78ec03a515036c96809d32ac050:2005098029,25b3638eb13a5150d7d25fd335bd5059:1965977137,3863e78e8c3a51505708656a682a2040:699801724,7613ab4e623a5150431f68710a72f288:-681520174,e052abc63c3a5150b28bfba87d744c28:1181154618,80026fcaab3a51503e431e01277b13f5:-1606595789,159f9fc2763a51503bb6bd6d845ff3b3:1173842327,5c4f9bc2523a515005e4977c5c70fc92:-1729059445,46ee5b06063a51505febff28a263ae31:1336098885,48be1b46b03a51505f33e0a29fae5e1e:-481295106,e00e9bc2b53a515098b4a502f092fa8c:233207111,988d1b82873a5150b893c8f725f8f528:1679470067,812d9782b83a5150dac78597eb1fd07c:767423923,e42cdfcec0f651509d8590739d751ff9:1679470067,54ab5b8edcf65150c180c8d7659263c3:846619818,2d5b9b8e61f65150b35bdc20ed225a57:-1739372734,d1fadf8ea4f65150ee4b3c6f3fa4099e:465741496,448a530e4ef65150fa447a1fc318c200:1643639640,e30a5bcae2f6515005d73181e5360582:1585838478,44a9d7cae0f65150cb429e723cf36044:846619818,4b39938a1ef65150f344b27e5e51bc05:1203305026,32e30082b8761150d0d95b994acef075:-304591038,3222c48e4536115051c7a158b24a8ab3:-1814922622,d3814c4e1a3611500f02f93f6b69e30c:882356202,0561c44e283611505cec2c46bdb8fe28:-1043242851,d5ef33f52e3611504a6d074ba695aff6:1492839570,3afa73f112361150cf05a36be45e9171:-2072392717,91eabf71f036115047e8b2a01de851a7:-1800789527,a9dab7f156361150d9265a4695e566de:350944123,639a33f1e83611500d2eb1386a91fccb:-558152958,ee5abb3190361150ad0544d6de8a1318:235535642,5fd93f31023611500dbdd8ab948771b6:1930719778,43a93b711c3611504a9a7b720131b21c:303251600,a49973716d3611508473e5f0e7cbd6b7:-178160242,ce797b3de3f21150c95dbfb9a1a2e063:-2107428996,a649f331ba361150d285347dd75e0c33:-18224213,a1963b7de8f21150be8fd3ada7d50652:923030877,39163b3d25f21150d3bbc109451047f9:-554097034,d925f7b91cf2115066d0468026383c8f:-1980784865,a7a23bf12ff21150727b506c90a53ec9:-1438790732,5c52f371f7f21150a34cc096f54eeb41:-936426003,e402f3b1d0f2115088727271012395c4:1970018033,7f00bb7157f21150e3ac55092e2680ef:1491694747,4d6f6b319ff211507f979ec96a616ee4:872781078,b91f6bbd50b21150009ee0a5062a5e1f:-602097056,4b8c233d1cb211507ef8676e73172ef5:-1411150257,2c1aafb1bdb2115087dcdbc06f01cb2b:-1361672912,93a92735a5b21150a15b4c37bf929671:672362465,3ce8ebb163b21150341a997b354de64a:870325640,83c867b12eb2115061245a0146040ef4:1082614027,80e7abbd6d7211501f0c586b4f956db0:-1883050837,6dc66fbd1b72115032b70c57931b2d62:90212081,84f52b3da7721150d4b2d2717ed0b59f:-387131668,2d95abf9d87211507ea94af3ec6cc77a:24872115,144363358a7211508ea5b1739d64ff24:-274234345,4d90e771fd7211503abceec4c3a53b9b:-1173930245,e10c97fd08bedd107a63a4ce76770565:1222265040,3d2a9ff924fedd1038e681618b994f6c:-387131668,a697937da17edd106a58aac8d9c43928:-990431552,f58413fd0f7edd10591ef19050ada4ae:-1748597861,8b64db7d8a7edd10f66f5722d33ecb6d:-576064539,8524d379847edd107fc2be930dcdc624:1755470655,0df393bd387edd10d9efe5994a45d558:-1018566127,82fc83f1e07edd1052239ea989416163:-1748597861,166ccf71e67edd1029ce78b47cf2a902:-24654373,09ebcf31b27edd102b082bfa116d6dd5:-1748597861,538b07bd673edd10fbf58d7b62557e30:-891489409,6e0b03fdca3edd10fca7fb2022cf3eff:-1576367960,22f1e2f5d73add10414ae2cb9991b5df:-555044571,58af9e71d23add1076dffcbce415ef3a:678252882,dee1d671d93a11504d83f82f34b8440e:-555044571,e951d231753a1150d4ee5ac7d4be4f44:1958817901,7db9407df2f6dd106089201a59a80d94:1393589240,3e190cf5d2f6dd10312e2cd8c542c8da:1823886048,298844f9fff6dd1067e57517a97ebf79:1579963420,4ec70875e5f6dd10da065a3c7eb24909:1959491700,23d6c475c7f6dd10516b3828194fa4fc:898000230,14558cf1ecf6dd10e4854642e036e23b:-2102478183,1b1544b1ccf6dd1098c5bef4f50743bd:-1336338114,43e44cf185f6dd10fb6efccb08fb0c39:-419257451,5c3400b147f6dd10d2cf00166ca1a821:1245308269,a66344f9b0b6dd100c198b5c18234305:276493116,22f20cf9d2b6dd1034e95aba49f1f45c:-124737933,3872887da8b6dd10a2736f103498199b:690564752,f9024839f0b6dd108e4c94c78a93ab40:1401282994,62d00c79beb6dd1095f32f275d8e5ec3:3968454,2410c4b59db6dd101b2da9a3e7b7336d:988772815,f4dff7a5c9b6dd109a58df3e6c67e5af:-989480254,b67ff7a5aeb6dd105b99a44452fb8fa9:1757348082,9d3fffa1e6b6dd10e1ab6707dcad22c1:2128027845,c7fe37a9f376dd10c3908dcceeb4b0e9:-211327145,b7ddbfa171b6dd104f95a3eda3d41493:-781139098,116d37a1d5b6dd102affc0dfde7b1952:786846296,fb1d776dbd76dd10f00c0e56c9927cea:-1768193286,ff5cb36d4276dd10a606d166a5b09e30:1445255249,64db7f6dc976dd10d5c6ad885716c071:28707243,893bffa97a76dd10ad605068bc0f48eb:1748371735,ccaa7b65a476dd103e9e2714e1133e46:372521857,579833257c76dd10372b26dc43e71e98:1754936511,8788b3255276dd109b6c412042f99a86:-1371181941,f036336d2e36dd104a5719ffd8ae5ef1:-775719343,56f4336d9736dd10afb2cbe5c65384ed:1923204621,88a477addf36dd10d2d5aba22362a55e:1987571242,e0043ba9c036dd10727117473bd8e09f:-955175558,b2c377a5fb36dd10b3034953c92280ab:-1623510822,66633ba91936dd10e238647fd3cedb9b:1637670506,5ad277e92f36dd101567890b6b15f01f:-1422572107,b772fba92436dd101cefc7c386eccce3:-476349608,3b4277a58136dd10d7c8fcb6afebc646:-155821018,ebaf6b615436dd1098ef1fbcc0920706:-817976187,0f7e6361ec36dd10854192da178b613c:882819672,a91e2bad16f2dd10f5263a926ee8161a:-1086139281,224c636dcff2dd10177a9baac72fcd0f:1646407771,1f1c236dd3f2dd1022a7f17419d768f6:-1476556498,c29b6be91df2dd10b94f4832275af43f:-2072718227,b45be7e983f2dd106a6b8f4b2865e9b5:374247788,752be3a926f2dd10fac4b1fda15b4913:-1701719717,d6faa3a9ddf2dd105adf56d43eda154b:-1801501137,bcf8e76516f2dd100f446f4858bfb55a:628156692,b8a8a3655ef2dd10b5d0904b67fb5223:462961358,4a88ef6198f2dd109e0f2feb7d376e6f:-1286827971,8348af2500f2dd107a7c8424daabeb14:-274608886,4128ebe16cf2dd10a6b7c1cefe98e090:-1289715783,2db66761f4f2dd105872da20d58b53ee:1468076665,29562fed5cb2dd109089742718f71b23:829641214,f3d5a76d0bb2dd10e7692006d56d27fd:-536592738,7235eb6dbcb2dd105dc34693933bd554:732895860,4341676545b2dd109a9f1aa7e6fcccdb:-510290880,20f067257eb2dd10764f19bc730272ff:1788928855,d6a0632581b2dd106104ac0a2a71085c:982700997,4302f2a1e3fe5d10cc22089da590a397:172585093,aea1f2652efe5d10e0bd0a40625c1b8a:-1971040749,fd61f2edb6be5d1076f77bbc2020b625:-1961591549,51bf62212efe5d10b8333fc4fa38fd88:-1708187108,20c62a6186be5d10d472c953d0380751:-1186170757,cc86e261f0be5d104b0f44d345d80256:-1418942635,af4622ed857e5d10c031f9b6191ee750:-1911380338,51262aad927e5d1069d5c5b8566a7eb6:-1800998250,c5f5aeaddd7e5d100b11357d9a1f63ab:661501304,a9f4e2adca7e5d10696244334f3d5d2d:1464545695,50c4262dee7e5d1077df658be0b86b8e:753890771,c184262d147e5d10e3a0218513ea438a:2138009357,2d44e26d247e5d101193c6325e0c66ed:-155441625,60042e2d757e5d103d5d6623e925ae72:1807355158,84836ae9577e5d109c436c35a5dfed82:964772311,bd3262e5317e5d10840ae24e3b710ac8:624860871,131262e5c97e5d1057bc1d4d773c26c5:2090678875,6cf162e5087e5d10d0079f51df86ab18:1084731772,22516ee57e7e5d101bc535d0e54eb3b4:719755275,483162e5897e5d102b1cc8b8910a6f08:-1686684061,80c02aa5867e5d1059102f9bd0ae4853:1972705793,c7b99a294c3e5d10eebc9301de7b73ed:-2119404685,976996e54e3e5d10142a906dc2875dee:1951888695,c1e85625163e5d10eb1540d81aa00d95:1346322266,2fa89a65b83e5d100a8889fe24b5221b:-572818321,8a685a65023e5d10ab31d54cc4966f0b:43835791,36c712655e3e5d1008474cfd7e2f443a:719501047,dde65aa1423e5d10b3f18643a72f826b:-1805201382,0476d261b33e5d10ba542a0c04b539ee:-1875142290,3e6512edebfa5d10aa79b960eb15c7f7:833482742,a44496e9f6fa5d10ee6c24d202a99fa2:-1375764239,bc6392e909fa5d10241734f125989e68:-1565355089,b11312a9a9fa5d106b0ffd86f8fda21c:1553756051,f3b2dea5edfa5d10f01f8a2f602912aa:1717542515,94821a293efa5d10a3c9dcf31c5f7736:-1978263853,d6e15ee136fa5d10ca7a60318bc029f8:821474930,c1411a618afa5d10f7536e65cb710ce9:1499263128,e4905eadd2ba5d10acc97e522e00837c:-2039187480,09ef8aad1cba5d103c45a2b6dea79942:1622289615,29af462dfdba5d10d0be51f12bbb3d1f:6941797,827f06e93dba5d107b06adc2cb93222a:1163194569,872fc2e9a1ba5d105b5d1dc83953c5db:1832873591,f1ee82e902ba5d10872169d1061113f9:1106771761,649ec6a9deba5d1079c34b1e444d3f52:-1376288142,a35e4229d7ba5d1003a5c1b365e5c6ea:-1420064110,2f2e422995ba5d10bbf5ae40e138ea3e:334088078,0edd0ee532ba5d104be61e75c005cf15:-1453397491,978d4aa56cba5d10c6b15db4c423f162:1806676572,d55d02e56cba5d10c31bc542cf9f8390:-922922596,b5fcce612dba5d106464b6733d7f5867:826426752,d76ac261f9ba5d10e44078d2ceb996a4:1867642432,3f0a022134ba5d103321b889e697d824:157938740,aad30e2d263a5d105c20555eb461d8a3:-368376131,931346adab3a5d10b53a1fc9d657cf48:-818867043,7b56b12d137ad150397d5e612e445191:1778420510,97d031651b7ad150bf834fa1b09484dc:156914615,0d90f1252f7ad1501a4c76187bc256a6:-1945039753,4c4fa9ed283ad15083450022c96af41c:-1157175864,f31fa9e5e03ad15028bd325d3de90425:-1506385721,359e69ed273ad15035d6878f343de851:-1903482051,847e25a5b13ad15056bc9759a3c120f8:-187458947,991eada5873ad150bc013b5e3986c67f:-1961345794,4e4de9a9643ad1505d74ca0a92482037:752729145,1036212d19f6d15044227cbd4daa3494:932947457,aaf121ad12b6d150d4b33bcfe750e5ec:-929719104,ffc1e56d91b6d150bba8baf3014837f0:1182851548,7da1e561f2f6d150c5686d71086b0742:-712327744,6171216151f6d150ce3bba9b603ada5e:-521242874,4541ed697fb6d15018e3c3f0bdf63dbc:-866294994,0f8029ad34b6d150cc5db2bad1da279d:1586309008,ef406125f8b6d150e6584843bcced308:1760849132,2a00a1e96db6d150b82d88af17ede5c2:-1859128598,09bd51e50db6d150a4d58228556cb4a5:-839369261,b61dd1a5feb6d1503daee96d562865fe:2073663081,bacc5961fdb6d1502e12c5c2caaf96a3:-488986066,163c11257ab6d15096da5314ea88a3c4:-1900774674,d75b5961beb6d150b5755a2e95fa649c:-1718170887,9b2bd16120b6d150e72c9fd1ea9cd95a:-1351332215,2d0b95ed0976d150d6e80907d73585d5:-926581771,b0cad1ed2e76d15060a0e6d10f58dc54:1445075115,58a955e98b76d15046282751efd40c4a:1836222599,051811659876d150a624423a9544fbf2:-977702778,e54755e59576d150ea2d79e137f0834d:1696224737,9b5611ede936d1506b402658bd469a89:-1457680769,98b511656876d1508a2e0bcc2ddb6b08:-805086109,24706d55f7f611504ec590fcc25ae4db:-270373848,0ddad59188b6115091581652b66657d9:-1940329320,9d0a591da076115006f673afb5c50fe4:1033163115,5ea9999de7761150e2ba21b44c79926a:1632646420,e5a895d945761150ab23c54b2f66c732:1048258238,5a385d19ad7611500d72c3e663ceba6b:-939717352,7cd75519767611503c051973971fd47c:802706100,3d17995598761150dc9a19a43ab4a4d0:1315151609,f1f5d9d9b036115090f2b66e454bc790:-404191513,a5951d119f7611501f95ff478dae8e92:-156051571,92b395590a3611500a613148088346cb:584228385,8a65b011df3edd10cf81eb3cd1c844e4:1048401407,bb05b8dd5bfadd1037441c9e31c5493d:836660084,fc34f85996fadd1028607c40e1892bee:-1894014614,b3037c1924fadd107cb6966d39f662b9:-1683816911,e8d2385558fadd10fe0657e21fb55028:133574863,be92f055c5fadd106f77bc2d4f58fc69:502497342,5c91bc5d78badd108c98cdbec7c89449:1268734461,15e0bc5dddbadd102c158179825f6c44:60579782,c900b4dd90badd1043497676b132e671:1733823641,1acf245dcdbadd1043f5287b1371706a:-1010809807,666f245de6badd10315ae7584f000d62:-1196219135,660aa855f67add10fa513907e8cb701a:-1387025066,dd99a8191f7add109479ee1cb9089bc0:-681694576,2c396819eb7add10031cc989d8d49bb8:-132294877,5dd824d5737add10b2fbd7741e462065:-789091753,72986895837add1066e289c53bbfd708:462794625,3c36289d1b3add106fbbc03eed5b64c4:-656745147,d6f5e01da93add108f71d27bc4c3f920:-124379781,878564d9733add10d9e019cc9861db8b:2073379976,8e5564d9dd3add1012c0964050fe3d69:-1466370813,1125a859bd3add10e057dc02afba3078:523248594,2d14ec55543add109dc75ef3ecc8cc8c:2039183399,b5b3e455863add1028b07e9b03350045:628175035,e9932455bb3add107ad50634c928d3fc:-1541582479,6802289daaf6dd10cda66dc941796829:-996692299,3491649d27f6dd10f424e4ed6a2896a0:36333111,d1b0245905f6dd101c93a9704abea082:230975612,32006895c2f6dd10a47f9a408c7893cc:-458568149,e0ced0555af6dd10d75c7defe3dd3f3c:1256962412,6abc189d50b6dd104823c04812c9768c:1692923899,d47b14150fb6dd10156e3271806ed565:292861638,044b1415a0b6dd1052caeecaa50a8dcf:1191935339,b31b5015eeb6dd10e141653d1088de31:-438896125,aeda10154ab6dd1091c881924dca41c7:284102998,0e4a94514b76dd1083cb1c12b21fc506:1922863113,5cf99051a9b6dd1095d8f42d35f5043d:-909847801,98d890114b76dd105d0419dd78b1861c:-334752723,88255819d936dd106af2cbcaec676fd2:1962451408,4ce4989d2636dd10077c60e1def4f579:671091964,a6a4145dc536dd106a2ef75771e03baa:-1269892608,e474541d4836dd1072ba5eebe5bfd4c4:1059676652,9c445819a436dd1025246c3d224f67ca:692868146,53839c99c836dd108064e2281748880e:-1387255646,d2035451c836dd10c61b56d3c40cfb35:-602534464,e752d491df36dd103276f01ceb728f90:-1641044547,b41254515436dd100edb0369fee6877f:295027319,50e090ddd7f2dd10b603b6dc100f7c3b:-468046268,4c70d4d927f2dd10caa1d52c670a6f28:-1011340108,2d2010517336dd10ff9cf2af387f49f5:-118807156,6e2f0c191ff2dd109cb00c8113eccd63:1972045666,188eccd975f2dd107b5cab86d0a323c7:-1486299527,884ec09dafb2dd10ea1bf5fe49d3cade:-12477838,4b7b0099e9b2dd1098de1d4ef57d5662:-1371092091,02da8c5dd2b2dd10ad8354782b29762a:1945041686,25f4c41dc372dd10383c74c68f673a01:1353103448,052448d57072dd1080e59b2891bb669c:90634235</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>AD11761</sys_created_by>
+        <sys_created_on>2022-11-01 13:32:10</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>0732429a15dd4d80b3696f5434ae4000</sys_id>
+        <sys_metadata>47e300598772dd101aa9337d0ebb352f</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SOM_DIA_TDG_EndPoint</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_scope_delete display_value="">4a6c4b399c0c40b9a273e4f088627129</sys_scope_delete>
+        <sys_update_name>sys_ui_page_47e300598772dd101aa9337d0ebb352f</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_47e300598772dd101aa9337d0ebb352f">b89feacb87b2195094fa0e58cebb3576</sys_update_version>
+        <sys_updated_by>AD11761</sys_updated_by>
+        <sys_updated_on>2022-11-01 13:32:10</sys_updated_on>
+    </sys_metadata_delete>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fafd620000001</claim_timestamp>
+        <metadata_update_name>sys_ui_page_47e300598772dd101aa9337d0ebb352f</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:39</sys_created_on>
+        <sys_id>d5d68ca28727151094fa0e58cebb35f8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:39</sys_updated_on>
+    </sys_claim>
+</record_update>

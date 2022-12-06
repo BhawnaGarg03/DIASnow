@@ -22,4 +22,18 @@
         <sys_updated_on>2022-11-09 19:34:43</sys_updated_on>
         <type>complex_object_collection</type>
     </sys_complex_object>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fafcd30000001</claim_timestamp>
+        <metadata_update_name>sys_complex_object_41e08779870b9dd0574bb958dabb3529</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:39</sys_created_on>
+        <sys_id>51d68ca28727151094fa0e58cebb35c7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:39</sys_updated_on>
+    </sys_claim>
 </record_update>

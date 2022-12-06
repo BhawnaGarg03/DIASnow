@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="7a8f93141b0b20102885a932604bcb70" table="sys_script">
+    <sys_script action="INSERT_OR_UPDATE">
+        <abort_action>false</abort_action>
+        <access>package_private</access>
+        <action_delete>false</action_delete>
+        <action_insert>false</action_insert>
+        <action_query>false</action_query>
+        <action_update>true</action_update>
+        <active>false</active>
+        <add_message>false</add_message>
+        <advanced>true</advanced>
+        <change_fields>false</change_fields>
+        <client_callable>false</client_callable>
+        <collection>sn_ind_tmt_orm_order_line_item</collection>
+        <condition/>
+        <description/>
+        <execute_function>false</execute_function>
+        <filter_condition/>
+        <is_rest>false</is_rest>
+        <message/>
+        <name>Update Contract Term Start Date</name>
+        <order>100</order>
+        <priority>100</priority>
+        <rest_method/>
+        <rest_method_text/>
+        <rest_service/>
+        <rest_service_text/>
+        <rest_variables/>
+        <role_conditions/>
+        <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
+
+	// Add your code here
+	
+	
+	var gt = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+    gt.addQuery('order_line_item', current.sys_id);
+    gt.addQuery('characteristic', "880d1a2d87db051484b2a18e0ebb3511"); //Bill start date SysID
+    gt.query();
+
+   if(gt.next()) {
+		commitDtae = gt.characteristic_option_value.getDisplayValue();
+   }
+    var gt1 = new GlideRecord('sn_ind_tmt_orm_order_characteristic_value');
+    gt1.addQuery('order_line_item', current.sys_id);
+    gt1.addQuery('characteristic', "ab3bcf6587d749d025a20edc0ebb356b"); //Contract term Start date SysID
+    gt1.query(); 
+    if(gt1.next()) {
+		
+        gt1.characteristic_option_value =gt.characteristic_option_value;
+        gt1.update();
+    }
+	
+
+})(current, previous);]]></script>
+        <sys_class_name>sys_script</sys_class_name>
+        <sys_created_by>kruti.wankhade</sys_created_by>
+        <sys_created_on>2022-05-25 14:08:33</sys_created_on>
+        <sys_domain>7a8f93141b0b20102885a932604bcb70</sys_domain>
+        <sys_domain_path>!!!/!!&amp;/</sys_domain_path>
+        <sys_id>1bd92cbf87a7015025a20edc0ebb35eb</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_name>Update Contract Term Start Date</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_1bd92cbf87a7015025a20edc0ebb35eb</sys_update_name>
+        <sys_updated_by>AD12076</sys_updated_by>
+        <sys_updated_on>2022-05-26 14:06:02</sys_updated_on>
+        <template/>
+        <when>async_always</when>
+    </sys_script>
+    <sys_translated_text action="delete_multiple" query="documentkey=1bd92cbf87a7015025a20edc0ebb35eb"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47084820000001</claim_timestamp>
+        <metadata_update_name>sys_script_1bd92cbf87a7015025a20edc0ebb35eb</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:30</sys_created_on>
+        <sys_id>0e3469931b251d500f4ccbb8624bcb3c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:30</sys_updated_on>
+    </sys_claim>
+</record_update>

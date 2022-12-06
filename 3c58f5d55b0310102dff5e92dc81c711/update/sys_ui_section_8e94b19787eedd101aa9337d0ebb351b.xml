@@ -3,154 +3,140 @@
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_billing_account_number</element>
             <position>0</position>
-            <sys_created_by>AD12227</sys_created_by>
-            <sys_created_on>2022-11-24 15:05:48</sys_created_on>
-            <sys_id>44331f2a87d7dd5025a20edc0ebb359b</sys_id>
+            <sys_created_by>AD13956</sys_created_by>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>fd980f0c87c315d0574bb958dabb3575</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
-            <sys_updated_by>AD12227</sys_updated_by>
-            <sys_updated_on>2022-11-24 15:05:48</sys_updated_on>
+            <sys_updated_by>AD13956</sys_updated_by>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_vendor_org_id</element>
             <position>1</position>
-            <sys_created_by>AD12227</sys_created_by>
-            <sys_created_on>2022-11-24 15:05:48</sys_created_on>
-            <sys_id>48331f2a87d7dd5025a20edc0ebb359b</sys_id>
+            <sys_created_by>AD13956</sys_created_by>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f1980f0c87c315d0574bb958dabb3576</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
-            <sys_updated_by>AD12227</sys_updated_by>
-            <sys_updated_on>2022-11-24 15:05:48</sys_updated_on>
+            <sys_updated_by>AD13956</sys_updated_by>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_piid</element>
             <position>2</position>
-            <sys_created_by>AD12227</sys_created_by>
-            <sys_created_on>2022-11-24 15:05:48</sys_created_on>
-            <sys_id>4c331f2a87d7dd5025a20edc0ebb359b</sys_id>
+            <sys_created_by>AD13956</sys_created_by>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f5980f0c87c315d0574bb958dabb3576</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
-            <sys_updated_by>AD12227</sys_updated_by>
-            <sys_updated_on>2022-11-24 15:05:48</sys_updated_on>
+            <sys_updated_by>AD13956</sys_updated_by>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_difference</element>
             <position>3</position>
-            <sys_created_by>AD12227</sys_created_by>
-            <sys_created_on>2022-11-24 15:05:48</sys_created_on>
-            <sys_id>40331f2a87d7dd5025a20edc0ebb359c</sys_id>
+            <sys_created_by>AD13956</sys_created_by>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f9980f0c87c315d0574bb958dabb3576</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
-            <sys_updated_by>AD12227</sys_updated_by>
-            <sys_updated_on>2022-11-24 15:05:48</sys_updated_on>
-            <sys_user/>
-            <type/>
-        </sys_ui_element>
-        <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_billingcycledate</element>
-            <position>4</position>
-            <sys_created_by>AD12227</sys_created_by>
-            <sys_created_on>2022-11-24 15:05:48</sys_created_on>
-            <sys_id>44331f2a87d7dd5025a20edc0ebb359c</sys_id>
-            <sys_mod_count>0</sys_mod_count>
-            <sys_ui_formatter/>
-            <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
-            <sys_updated_by>AD12227</sys_updated_by>
-            <sys_updated_on>2022-11-24 15:05:48</sys_updated_on>
+            <sys_updated_by>AD13956</sys_updated_by>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>.split</element>
-            <position>5</position>
-            <sys_created_by>AD12227</sys_created_by>
-            <sys_created_on>2022-11-24 15:05:48</sys_created_on>
-            <sys_id>48331f2a87d7dd5025a20edc0ebb359c</sys_id>
+            <position>4</position>
+            <sys_created_by>AD13956</sys_created_by>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>fd980f0c87c315d0574bb958dabb3576</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
-            <sys_updated_by>AD12227</sys_updated_by>
-            <sys_updated_on>2022-11-24 15:05:48</sys_updated_on>
+            <sys_updated_by>AD13956</sys_updated_by>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type>.split</type>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_customer_order</element>
-            <position>6</position>
-            <sys_created_by>AD12227</sys_created_by>
-            <sys_created_on>2022-11-24 15:05:48</sys_created_on>
-            <sys_id>4c331f2a87d7dd5025a20edc0ebb359c</sys_id>
+            <position>5</position>
+            <sys_created_by>AD13956</sys_created_by>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f1980f0c87c315d0574bb958dabb3577</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
-            <sys_updated_by>AD12227</sys_updated_by>
-            <sys_updated_on>2022-11-24 15:05:48</sys_updated_on>
+            <sys_updated_by>AD13956</sys_updated_by>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_number_of_endpoints</element>
-            <position>7</position>
-            <sys_created_by>AD12227</sys_created_by>
-            <sys_created_on>2022-11-24 15:05:48</sys_created_on>
-            <sys_id>40331f2a87d7dd5025a20edc0ebb359d</sys_id>
+            <position>6</position>
+            <sys_created_by>AD13956</sys_created_by>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f5980f0c87c315d0574bb958dabb3577</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
-            <sys_updated_by>AD12227</sys_updated_by>
-            <sys_updated_on>2022-11-24 15:05:48</sys_updated_on>
+            <sys_updated_by>AD13956</sys_updated_by>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_number_of_active_sensors</element>
-            <position>8</position>
-            <sys_created_by>AD12227</sys_created_by>
-            <sys_created_on>2022-11-24 15:05:48</sys_created_on>
-            <sys_id>44331f2a87d7dd5025a20edc0ebb359d</sys_id>
+            <position>7</position>
+            <sys_created_by>AD13956</sys_created_by>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f9980f0c87c315d0574bb958dabb3577</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
-            <sys_updated_by>AD12227</sys_updated_by>
-            <sys_updated_on>2022-11-24 15:05:48</sys_updated_on>
+            <sys_updated_by>AD13956</sys_updated_by>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
             <element>u_date</element>
-            <position>9</position>
-            <sys_created_by>AD12227</sys_created_by>
-            <sys_created_on>2022-11-24 15:05:48</sys_created_on>
-            <sys_id>48331f2a87d7dd5025a20edc0ebb359d</sys_id>
+            <position>8</position>
+            <sys_created_by>AD13956</sys_created_by>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>fd980f0c87c315d0574bb958dabb3577</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
-            <sys_updated_by>AD12227</sys_updated_by>
-            <sys_updated_on>2022-11-24 15:05:48</sys_updated_on>
+            <sys_updated_by>AD13956</sys_updated_by>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
         <sys_ui_element action="INSERT_OR_UPDATE">
-            <element>u_account_name</element>
-            <position>10</position>
-            <sys_created_by>AD13765</sys_created_by>
-            <sys_created_on>2022-11-28 11:00:46</sys_created_on>
-            <sys_id>bd71437b8793195084b2a18e0ebb3501</sys_id>
+            <element>u_billingcycle_date</element>
+            <position>9</position>
+            <sys_created_by>AD13956</sys_created_by>
+            <sys_created_on>2022-11-04 09:38:59</sys_created_on>
+            <sys_id>f1980f0c87c315d0574bb958dabb3578</sys_id>
             <sys_mod_count>0</sys_mod_count>
             <sys_ui_formatter/>
             <sys_ui_section caption="NULL" display_value="" name="sn_ind_tmt_orm_billin_account_details" sys_domain="global" view="Default view">8e94b19787eedd101aa9337d0ebb351b</sys_ui_section>
-            <sys_updated_by>AD13765</sys_updated_by>
-            <sys_updated_on>2022-11-28 11:00:46</sys_updated_on>
+            <sys_updated_by>AD13956</sys_updated_by>
+            <sys_updated_on>2022-11-04 09:38:59</sys_updated_on>
             <sys_user/>
             <type/>
         </sys_ui_element>
@@ -180,4 +166,18 @@
             <view_name/>
         </sys_ui_section>
     </sys_ui_section>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fae1510000001</claim_timestamp>
+        <metadata_update_name>sys_ui_section_8e94b19787eedd101aa9337d0ebb351b</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:32</sys_created_on>
+        <sys_id>6bc60ca28727151094fa0e58cebb3513</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:32</sys_updated_on>
+    </sys_claim>
 </record_update>

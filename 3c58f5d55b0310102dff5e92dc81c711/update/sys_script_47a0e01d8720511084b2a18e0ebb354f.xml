@@ -18,7 +18,7 @@
         <filter_condition table="sn_ind_tmt_orm_order_task">short_description=StartBilling^order_line_itemISNOTEMPTY^order_line_item.orderISNOTEMPTY^assignment_group=eebfb1f787281910842a53d73cbb3591^EQ<item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="false" value="StartBilling"/>
             <item endquery="false" field="order_line_item" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
             <item endquery="false" field="order_line_item.order" goto="false" newquery="false" operator="ISNOTEMPTY" or="false" value=""/>
-            <item display_table="sys_user_group" display_value="Cyber Threat Solutions" endquery="false" field="assignment_group" goto="false" newquery="false" operator="=" or="false" value="eebfb1f787281910842a53d73cbb3591"/>
+            <item display_table="sys_user_group" display_value="Cyber threat solutions" endquery="false" field="assignment_group" goto="false" newquery="false" operator="=" or="false" value="eebfb1f787281910842a53d73cbb3591"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
@@ -85,4 +85,18 @@
         <when>after</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=47a0e01d8720511084b2a18e0ebb354f"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fad8c80000001</claim_timestamp>
+        <metadata_update_name>sys_script_47a0e01d8720511084b2a18e0ebb354f</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:30</sys_created_on>
+        <sys_id>cbc6c8a28727151094fa0e58cebb355c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:30</sys_updated_on>
+    </sys_claim>
 </record_update>

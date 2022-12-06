@@ -41,6 +41,20 @@
     </sys_hub_flow>
     <sys_translated_text action="delete_multiple" query="documentkey=70bc32d587715510fe2811783cbb35ef"/>
     <sys_variable_value action="delete_multiple" query="document_key=70bc32d587715510fe2811783cbb35ef"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fae2550000001</claim_timestamp>
+        <metadata_update_name>sys_hub_flow_70bc32d587715510fe2811783cbb35ef</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:32</sys_created_on>
+        <sys_id>a7c60ca28727151094fa0e58cebb3535</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:32</sys_updated_on>
+    </sys_claim>
     <sys_flow_record_trigger action="INSERT_OR_UPDATE">
         <active>true</active>
         <condition table="sn_ind_tmt_orm_order_task">state=5^order_line_item.product_specification=5f2ef44787e7015084b2a18e0ebb35c8^short_description=MEDR Technical Data Gathering^ORshort_description=Cyber Threat Solutions Engineer Assignment^ORshort_description=Customer Setup in Cloud Partner Portal^ORshort_description=Assign API keys for Customer in Carbon Black console^ORshort_description=Capture Customer MEDR Tenant ID^ORshort_description=Activate MEDR Service^ORshort_description=Schedule coordinated Activation^ORshort_description=MEDR Activation^ORshort_description=MEDR Policies Tuning^ORshort_description=Finalize MEDR Policies Setup^ORshort_description=Disconnect Task<item display_value="Closed Complete" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="5"/>
@@ -442,10 +456,10 @@
         <sys_created_by>AD11373</sys_created_by>
         <sys_created_on>2022-09-07 02:41:00</sys_created_on>
         <sys_id>29bc72d587715510fe2811783cbb3573</sys_id>
-        <sys_mod_count>46</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD13765</sys_updated_by>
-        <sys_updated_on>2022-11-11 12:15:44</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-11-14 12:01:50</sys_updated_on>
         <ui_id>311b9dfe-d5d2-4c84-bb17-ca6a26a2e353</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=29bc72d587715510fe2811783cbb3573"/>
@@ -521,10 +535,10 @@ Kafka Response:
         <sys_created_by>AD11373</sys_created_by>
         <sys_created_on>2022-09-07 02:40:59</sys_created_on>
         <sys_id>d5bc72d587715510fe2811783cbb353d</sys_id>
-        <sys_mod_count>46</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD13765</sys_updated_by>
-        <sys_updated_on>2022-11-11 12:15:44</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-11-14 12:01:50</sys_updated_on>
         <ui_id>662c9335-51b0-4281-ba1e-24adca9888cf</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=d5bc72d587715510fe2811783cbb353d"/>
@@ -812,10 +826,10 @@ Kafka Response:
         <sys_created_by>AD11373</sys_created_by>
         <sys_created_on>2022-09-07 02:41:00</sys_created_on>
         <sys_id>ddbc72d587715510fe2811783cbb356b</sys_id>
-        <sys_mod_count>46</sys_mod_count>
+        <sys_mod_count>50</sys_mod_count>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
-        <sys_updated_by>AD13765</sys_updated_by>
-        <sys_updated_on>2022-11-11 12:15:44</sys_updated_on>
+        <sys_updated_by>system</sys_updated_by>
+        <sys_updated_on>2022-11-14 12:01:50</sys_updated_on>
         <ui_id>3589c4e0-c900-4eb3-995d-14d62d888e5c</ui_id>
     </sys_hub_action_instance>
     <sys_variable_value action="delete_multiple" query="document_key=ddbc72d587715510fe2811783cbb356b"/>
@@ -968,7 +982,7 @@ Kafka Response:
         <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
         <plan>{"persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"2fe7e6b11bf5d51047ff2f43604bcb79","name":"plan","plan_signature":null}}</plan>
         <plan_id>70bc32d587715510fe2811783cbb35ef</plan_id>
-        <snapshot>6ae7a6b11bf5d51047ff2f43604bcb42</snapshot>
+        <snapshot>e3298b13874fd110b9342f07cebb35db</snapshot>
         <sys_created_by>AD11373</sys_created_by>
         <sys_created_on>2022-09-08 14:27:10</sys_created_on>
         <sys_domain>global</sys_domain>
@@ -1837,6 +1851,6 @@ Kafka Response:
     <sys_hub_flow action="UPDATE">
         <sys_id>70bc32d587715510fe2811783cbb35ef</sys_id>
         <latest_snapshot>6ae7a6b11bf5d51047ff2f43604bcb42</latest_snapshot>
-        <compiler_build>glide-sandiego-12-22-2021__patch7-08-17-2022_08-23-2022_1902.zip</compiler_build>
+        <compiler_build>glide-sandiego-12-22-2021__patch7a-09-20-2022_10-04-2022_1309.zip</compiler_build>
     </sys_hub_flow>
 </record_update>

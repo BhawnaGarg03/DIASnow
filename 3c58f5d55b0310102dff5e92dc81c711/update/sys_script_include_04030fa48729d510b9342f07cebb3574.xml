@@ -5,302 +5,42 @@
         <api_name>sn_ind_tmt_orm.SOARAPI</api_name>
         <caller_access/>
         <client_callable>true</client_callable>
-        <description>SOARAPI</description>
+        <description/>
         <name>SOARAPI</name>
         <script><![CDATA[var SOARAPI = Class.create();
 SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
     getAPIGEEToken: function() {
         try {
-            var APIGEEToken = '';
             var r = new sn_ws.RESTMessageV2('GetAPIGEEToken', 'GetToken');
-           // r.setRequestHeader('Authorization', 'Basic S3VhNjhra2RzWWhzQXR4dFhnT3h4UlFJR0F6VnFTQ1Q6SkNIRjR3Wk9LTExMZzdxUQ==');
+            r.setRequestHeader('Authorization', 'Basic S3VhNjhra2RzWWhzQXR4dFhnT3h4UlFJR0F6VnFTQ1Q6SkNIRjR3Wk9LTExMZzdxUQ==');
             r.setRequestHeader('Content-Type', 'application/json');
             r.setQueryParameter('grant_type', 'client_credentials');
             var response = r.execute();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
-            var SOARToken = '';
-            if (httpStatus == '200' || httpStatus == '201') {
-                var parseResponse = JSON.parse(responseBody);
-                APIGEEToken = parseResponse.access_token;
-                //    gs.info("****APIGEE token******" + APIGEEToken);
-            }
+			var SOARToken ='';
+            if (httpStatus == '200' || httpStatus == '201')
+              SOARToken=  this.getSOARToken(responseBody);
         } catch (ex) {
             var message = ex.message;
         }
-        return APIGEEToken;
+         return SOARToken;
     },
-    getSOARToken: function(APIGEEToken) {
-        var SOARToken = '';
+    getSOARToken: function(APIGEEResponse) {
+        var parseResponse = JSON.parse(APIGEEResponse);
+        var APIGEEToken = parseResponse.access_token;
         try {
             var r = new sn_ws.RESTMessageV2('SOAREndpoint', 'GetSOARToken');
             r.setRequestHeader('Authorization', 'Bearer ' + APIGEEToken);
             r.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-            //r.setRequestBody('username=servicenow&password=ServiceNow20220809');
+            r.setRequestBody('username=servicenow&password=ServiceNow20220809');
             var response = r.execute();
             var responseBody = response.getBody();
             var httpStatus = response.getStatusCode();
-            //  gs.info("*****SOAR token sytatus********" + httpStatus);
-            if (httpStatus == '200' || httpStatus == '201') {
-                var parseResponse = JSON.parse(responseBody);
-                SOARToken = parseResponse.access_token;
-                //  gs.info("****SOAR token******" + SOARToken);
-
-            }
         } catch (ex) {
             var message = ex.message;
         }
-        return SOARToken;
-    },
-    configTenant: function() {
-        var soarData = this.getParameter('sysparm_soarData');
-        gs.info('*****SOAR Data****' + soarData);
-
-        var soarDataAr = soarData.split(",");
-        var orderLineItem = soarDataAr[0];
-        var orgKey = soarDataAr[1];
-        var orgId = soarDataAr[2];
-        var apiKey = soarDataAr[3];
-        var apiID = soarDataAr[4];
-        var orderTaskSysID = soarDataAr[5];
-        var region = '';
-        var orderLineGR = new GlideRecord("sn_ind_tmt_orm_order_line_item");
-        orderLineGR.addQuery("sys_id", orderLineItem);
-        orderLineGR.query();
-        var externalID = '';
-        var sidVal = '';
-        if (orderLineGR.next()) {
-            var grProduct = new GlideRecord("sn_ind_tmt_orm_product_order");
-            grProduct.addQuery("order_line_item", orderLineItem);
-            grProduct.query();
-            if (grProduct.next()) {
-                var grProductInvetory = new GlideRecord("sn_prd_invt_product_inventory");
-                grProductInvetory.addQuery("sys_id", grProduct.product_inventory);
-                grProductInvetory.query();
-                if (grProductInvetory.next()) {
-                    sidVal = grProductInvetory.sn_prd_invt_external_id;
-                }
-
-            }
-            var gr = new GlideRecord("sn_ind_tmt_orm_order");
-            gr.addQuery("sys_id", orderLineGR.order);
-            gr.query();
-            if (gr.next()) {
-                externalID = gr.external_id;
-            }
-        }
-
-
-        gs.info("**SOAR external id**" + externalID); //
-        gs.info("*******SOAR SID ****" + sidVal);
-        var grCharacteristicValue = new GlideRecord("sn_ind_tmt_orm_order_characteristic_value");
-        grCharacteristicValue.addEncodedQuery("order_line_item=" + orderLineItem + "^characteristic=f594b54c8706dd102f2d0dc5cebb35d5^ORcharacteristic=7ace2fa287eb8d1084b2a18e0ebb358c");
-        grCharacteristicValue.query();
-        while (grCharacteristicValue.next()) {
-            if (grCharacteristicValue.characteristic == 'f594b54c8706dd102f2d0dc5cebb35d5') {
-                grCharacteristicValue.characteristic_option_value = orgId;
-                grCharacteristicValue.update();
-                gs.info("******SOAR Org ID gets stored in characteristic*********");
-            } else if (grCharacteristicValue.characteristic == '7ace2fa287eb8d1084b2a18e0ebb358c')
-                region = grCharacteristicValue.characteristic_option_value;
-        }
-
-        var APIGEEToken = this.getAPIGEEToken();
-        var returnReponse = '';
-
-        var SOARToken = this.getSOARToken(APIGEEToken);
-        try {
-            var r = new sn_ws.RESTMessageV2('SOAREndpoint', 'POSTDetails');
-            r.setRequestHeader('Authorization', 'Bearer ' + APIGEEToken);
-            r.setRequestHeader('X-Auth', 'Bearer ' + SOARToken);
-            r.setRequestHeader('Accept', 'application/json');
-            r.setStringParameterNoEscape('sid', sidVal);
-            r.setStringParameterNoEscape('org_key', orgKey);
-            r.setStringParameterNoEscape('snow_id', externalID);
-            r.setStringParameterNoEscape('api_id', apiID);
-            if (region == '')
-                r.setStringParameterNoEscape('region', 'NA');
-            else
-                r.setStringParameterNoEscape('region', 'NA');
-            r.setStringParameter('org_id', orgId);
-            r.setStringParameterNoEscape('api_key', apiKey);
-            var errorDetails = '';
-            var errorCode = '';
-            var response = r.execute();
-            var soarResponseBody = response.getBody();
-            var httpStatus = response.getStatusCode();
-            var orderTaskGR = new GlideRecord("sn_ind_tmt_orm_order_task");
-            orderTaskGR.addQuery("sys_id", orderTaskSysID);
-            orderTaskGR.query();
-            gs.info("********SOAR Config Tenant status********" + httpStatus);
-           // gs.info("*********SOAR Config REquest Body******" + r.getRequestBody());
-            gs.info("*********SOAR Config Reponse******" + soarResponseBody);
-            if (httpStatus == '200' || httpStatus == '201') {
-                returnReponse = "MEDR Configuration details have been transferred to SOAR successfully, Please allow some time to complete other configurations.";
-                if (orderTaskGR.next()) {
-                    orderTaskGR.u_soar_response = true;
-                    orderTaskGR.update();
-                }
-
-            }
-			else if (httpStatus == '503') {
-                    returnReponse = "Service is unavailable, Team has been notified for the same , please allow some time to get it fix.";
-                    if (orderTaskGR.next()) {
-                        gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', orderTaskGR, 'dl-soar@lumen.com', soarResponseBody, '');
-                        orderTaskGR.work_notes = 'There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.';
-                        orderTaskGR.update();
-                    }
-                }
-			else if (httpStatus == '504') {
-                returnReponse = "There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.";
-                if (orderTaskGR.next()) {
-                    gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', orderTaskGR, 'dl-soar@lumen.com', soarResponseBody, '');
-                    orderTaskGR.work_notes = 'There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.';
-                    orderTaskGR.update();
-                }
-            }
-			else if (httpStatus == '500') {
-                    returnReponse = "There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.";
-                    if (orderTaskGR.next()) {
-                        gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', orderTaskGR, 'dl-soar@lumen.com', soarResponseBody, '');
-                        orderTaskGR.work_notes = 'There is some technical error occurred at SOAR end, Team has been notified for the fault , please allow some time to get it fix.';
-                        orderTaskGR.update();
-                    }
-                }
-			else {
-                var parseResponse = JSON.parse(soarResponseBody);
-                errorCode = parseResponse.detail.status_code + '';
-                errorDetails = parseResponse.detail.status_message + '';
-                gs.info("*****SOAR Config Error details*******" + errorCode);
-                if (errorCode == '1027') {
-                    returnReponse = "MEDR Configuration forwarded details already exists.";
-                    if (orderTaskGR.next()) {
-                        orderTaskGR.u_soar_response = true;
-                        orderTaskGR.update();
-                    }
-                } else if (errorCode == '1902' || errorCode == '1800') {
-                    returnReponse = "The Carbon Black tenant was configured successfully, Please allow some time to complete other configurations.";
-                    if (orderTaskGR.next()) {
-                        orderTaskGR.u_soar_response = true;
-                        orderTaskGR.update();
-                    }
-                }  else {
-                    returnReponse = "It looks like you have not entered correct details, Please provide the correct details and check the values in Org ID, Org Key, API ID, API Key, Region etc";
-                    if (orderTaskGR.next())
-                        gs.eventQueue('sn_ind_tmt_orm.user.unsucessful', orderTaskGR, '', '', '');
-                }
-            }
-        } catch (ex) {
-            var message = ex.message;
-        }
-
-        return returnReponse;
-
-    },
-
-
-    createUserInSOAR: function(current, externalID, orderContact, orderLineNum) {
-        // gs.info("*******SOAR User create Called***************"+orderContact);
-        var returnReponse = '';
-        var APIGEEToken = this.getAPIGEEToken();
-        var SOARToken = this.getSOARToken(APIGEEToken);
-        var userData = [];
-        var technicalemail = '';
-        var technicalFirstName = '';
-        var technicalLastName = '';
-        var firstName = '';
-        var lastName = '';
-        var email = '';
-        var orgID = '';
-        var grCharacteristicValue = new GlideRecord("sn_ind_tmt_orm_order_characteristic_value");
-        grCharacteristicValue.addEncodedQuery("order_line_item=" + orderLineNum + "^characteristic=f594b54c8706dd102f2d0dc5cebb35d5");
-        grCharacteristicValue.query();
-        if (grCharacteristicValue.next()) {
-            orgID = grCharacteristicValue.characteristic_option_value;
-            //  gs.info("*******SOAR User ORGID**********" + orgID);
-        }
-        try {
-            var r = new sn_ws.RESTMessageV2('SOAREndpoint', 'createUser');
-            r.setRequestHeader('Authorization', 'Bearer ' + APIGEEToken);
-            r.setRequestHeader('X-Auth', 'Bearer ' + SOARToken);
-            r.setRequestHeader('Accept', 'application/json');
-            r.setStringParameterNoEscape('org_id', orgID);
-            var grOrderLineContact = new GlideRecord("sn_ind_tmt_orm_order_line_item_contact");
-            grOrderLineContact.addQuery("order_line_item", orderLineNum);
-            grOrderLineContact.query();
-            if (grOrderLineContact.next()) {
-                technicalemail = grOrderLineContact.email;
-                technicalFirstName = grOrderLineContact.first_name;
-                technicalLastName = grOrderLineContact.last_name;
-            }
-
-            var grContact = new GlideRecord("customer_contact");
-            grContact.addQuery("sys_id", orderContact);
-            grContact.query();
-            if (grContact.next()) {
-                /*    var contactData = {
-                    "users": [{
-
-                            "email_address": grContact.email+'',
-                             "first_name": grContact.first_name+'',
-                             "last_name": grContact.last_name+'',
-                            "email_address": 'jyoti.chauhan@lumen.com',
-                            "first_name": 'Jyoti',
-                            "last_name": 'Chauhan',
-                            "customer_role": "Admin",
-                            "service_level": "Self-Managed"
-                        },
-
-                        {
-                            "email_address": technicalemail,
-                            "first_name": technicalFirstName,
-                            "last_name": technicalLastName,
-                            "customer_role": "Admin",
-                            "service_level": "Self-Managed"
-                        }
-                    ],
-                    "snow_id": externalID
-
-                };
-                userData.push(contactData);
-				*/
-                firstName = grContact.first_name;
-                lastName = grContact.last_name;
-                email = grContact.email;
-
-            }
-            // r.setStringParameterNoEscape('userData', userData);
-            r.setStringParameterNoEscape('technicalemail', technicalemail);
-            r.setStringParameterNoEscape('lastName', lastName);
-            r.setStringParameterNoEscape('email_address', email);
-            r.setStringParameterNoEscape('technicalLastName', technicalLastName);
-            r.setStringParameterNoEscape('snow_id', externalID);
-            r.setStringParameterNoEscape('firstName', firstName);
-            r.setStringParameterNoEscape('technicalFirstName', technicalFirstName);
-            var response = r.execute();
-            var statusCode = '';
-            var sspStatusCode = '';
-            var responseBody = response.getBody();
-            var httpStatus = response.getStatusCode();
-            gs.info("****SOAR User REsponse****" + httpStatus);
-            if (httpStatus != '200') {
-                var parseResponse = JSON.parse(responseBody);
-                statusCode = parseResponse.detail.status_code;
-                sspStatusCode = parseResponse.detail.ssp_status_code;
-            }
-            gs.info("****SOAR User statusCode response******" + statusCode);
-            gs.info("*******SOAR User Request Body*******" + r.getRequestBody());
-            gs.info("******SOAR USer Response Body*****" + responseBody);
-            if (httpStatus == '200' || httpStatus == '201' || sspStatusCode == '1027' || sspStatusCode == '403' || statusCode == '1801') {
-                returnReponse = "User is created successfully";
-            } else {
-                returnReponse = "User is not created due to following error code" + httpStatus;
-                // gs.eventQueue('sn_ind_tmt_orm.soar.unsucessful', current, '', '', '');
-            }
-        } catch (ex) {
-            var message = ex.message;
-        }
-        return returnReponse;
+        return responseBody;
     },
     type: 'SOARAPI'
 });]]></script>
@@ -308,13 +48,27 @@ SOARAPI.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-08-23 08:59:44</sys_created_on>
         <sys_id>04030fa48729d510b9342f07cebb3574</sys_id>
-        <sys_mod_count>100</sys_mod_count>
+        <sys_mod_count>3</sys_mod_count>
         <sys_name>SOARAPI</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_include_04030fa48729d510b9342f07cebb3574</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-11-22 18:58:06</sys_updated_on>
+        <sys_updated_on>2022-08-23 09:18:27</sys_updated_on>
     </sys_script_include>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4707fba0000001</claim_timestamp>
+        <metadata_update_name>sys_script_include_04030fa48729d510b9342f07cebb3574</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:29</sys_created_on>
+        <sys_id>2d3429931b251d500f4ccbb8624bcba3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:29</sys_updated_on>
+    </sys_claim>
 </record_update>

@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message">
+    <sys_rest_message action="DELETE">
+        <access>package_private</access>
+        <authentication_type>no_authentication</authentication_type>
+        <basic_auth_password/>
+        <basic_auth_profile/>
+        <basic_auth_user/>
+        <description/>
+        <name>SOARGetDetails</name>
+        <oauth2_profile/>
+        <protocol_name/>
+        <rest_endpoint>https://api-test.lumen.com/Security/v1/MEDR/endpointcount</rest_endpoint>
+        <sys_class_name>sys_rest_message</sys_class_name>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-10-20 13:20:35</sys_created_on>
+        <sys_id>946b22df872611501aa9337d0ebb35ad</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>SOARGetDetails</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_rest_message_946b22df872611501aa9337d0ebb35ad</sys_update_name>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-10-28 18:49:29</sys_updated_on>
+        <use_basic_auth>false</use_basic_auth>
+        <use_mutual_auth>false</use_mutual_auth>
+    </sys_rest_message>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</application>
+        <file_path/>
+        <instance_id>de96c48c1bf98910c8432f8dee4bcb22</instance_id>
+        <instance_name>lumendev2</instance_name>
+        <name>sys_rest_message_946b22df872611501aa9337d0ebb35ad</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_rest_message"><sys_rest_message action="INSERT_OR_UPDATE"><access>package_private</access><authentication_type>no_authentication</authentication_type><basic_auth_password/><basic_auth_profile/><basic_auth_user/><description/><name>SOARGetDetails</name><oauth2_profile/><protocol_name/><rest_endpoint>https://api-test.lumen.com/Security/v1/MEDR/endpointcount</rest_endpoint><sys_class_name>sys_rest_message</sys_class_name><sys_created_by>AD13956</sys_created_by><sys_created_on>2022-10-20 13:20:35</sys_created_on><sys_id>946b22df872611501aa9337d0ebb35ad</sys_id><sys_mod_count>2</sys_mod_count><sys_name>SOARGetDetails</sys_name><sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package><sys_policy/><sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope><sys_update_name>sys_rest_message_946b22df872611501aa9337d0ebb35ad</sys_update_name><sys_updated_by>AD13956</sys_updated_by><sys_updated_on>2022-10-28 18:49:29</sys_updated_on><use_basic_auth>false</use_basic_auth><use_mutual_auth>false</use_mutual_auth></sys_rest_message></record_update>]]></payload>
+        <payload_hash>1135239168</payload_hash>
+        <record_name>SOARGetDetails</record_name>
+        <reverted_from/>
+        <source>a7c3f15787eedd101aa9337d0ebb35dd</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-10-28 18:49:29</sys_created_on>
+        <sys_id>2d7301068736d5501aa9337d0ebb3534</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1841fed811f0000001</sys_recorded_at>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-10-28 18:49:29</sys_updated_on>
+        <type>REST Message</type>
+        <update_guid>e17301069536d55085fee24837612934</update_guid>
+        <update_guid_history>e17301069536d55085fee24837612934:1135239168,fab1db391db69550982fd3bac3164ff0:1670438686,8a7b621bfd661150abed5596d81ed945:-856888331</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-11-03 06:48:32</sys_created_on>
+        <sys_db_object display_value="" name="sys_rest_message">sys_rest_message</sys_db_object>
+        <sys_id>1ec5b1df799a452c941253a7f522a310</sys_id>
+        <sys_metadata>946b22df872611501aa9337d0ebb35ad</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SOARGetDetails</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_scope_delete display_value="">4a6c4b399c0c40b9a273e4f088627129</sys_scope_delete>
+        <sys_update_name>sys_rest_message_946b22df872611501aa9337d0ebb35ad</sys_update_name>
+        <sys_update_version display_value="sys_rest_message_946b22df872611501aa9337d0ebb35ad">2d7301068736d5501aa9337d0ebb3534</sys_update_version>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-11-03 06:48:32</sys_updated_on>
+    </sys_metadata_delete>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fae0060000001</claim_timestamp>
+        <metadata_update_name>sys_rest_message_946b22df872611501aa9337d0ebb35ad</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:31</sys_created_on>
+        <sys_id>2fc6c8a28727151094fa0e58cebb35f9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:31</sys_updated_on>
+    </sys_claim>
+</record_update>

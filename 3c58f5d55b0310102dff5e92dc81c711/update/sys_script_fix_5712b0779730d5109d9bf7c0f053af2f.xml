@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_fix">
+    <sys_script_fix action="INSERT_OR_UPDATE">
+        <before>false</before>
+        <description/>
+        <name>getChild</name>
+        <record_for_rollback>true</record_for_rollback>
+        <script><![CDATA[var count = new GlideAggregate('customer_account');
+count.addEncodedQuery('u_account_type=Billing Account (BAN)^u_customer_number=3-A85231');
+count.addAggregate('COUNT');
+count.query();
+var incidents = 0;
+if (count.next())
+   incidents = count.getAggregate('COUNT');
+gs.info("COUNT" + incidents);]]></script>
+        <sys_class_name>sys_script_fix</sys_class_name>
+        <sys_created_by>AC99347</sys_created_by>
+        <sys_created_on>2022-07-26 17:58:14</sys_created_on>
+        <sys_id>5712b0779730d5109d9bf7c0f053af2f</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>getChild</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_script_fix_5712b0779730d5109d9bf7c0f053af2f</sys_update_name>
+        <sys_updated_by>AC99347</sys_updated_by>
+        <sys_updated_on>2022-07-26 18:02:26</sys_updated_on>
+        <unloadable>false</unloadable>
+    </sys_script_fix>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47078130000001</claim_timestamp>
+        <metadata_update_name>sys_script_fix_5712b0779730d5109d9bf7c0f053af2f</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:27</sys_created_on>
+        <sys_id>c134e5931b251d500f4ccbb8624bcb9e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:27</sys_updated_on>
+    </sys_claim>
+</record_update>

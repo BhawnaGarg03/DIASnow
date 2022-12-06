@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element audit="true" extends="sn_csm_om_order" label="Customer Order" max_length="40" name="sn_ind_tmt_orm_order" sizeclass="530" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="Approved By" max_length="100" name="u_approved_by" read_only="true" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="u_approved_by"/>
+        </index>
+    </element>
+</database>

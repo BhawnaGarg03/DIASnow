@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_rate_description" label="Rate Description" language="en" table="sn_ind_tmt_orm_tiering">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_rate_description</element>
+            <help/>
+            <hint/>
+            <label>Rate Description</label>
+            <language>en</language>
+            <name>sn_ind_tmt_orm_tiering</name>
+            <plural>Rate Descriptions</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>Tejasree.Karnati</sys_created_by>
+            <sys_created_on>2022-04-24 23:58:01</sys_created_on>
+            <sys_id>f1c843b98783499025a20edc0ebb357f</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Rate Description</sys_name>
+            <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+            <sys_update_name>sys_documentation_sn_ind_tmt_orm_tiering_u_rate_description_en</sys_update_name>
+            <sys_updated_by>Tejasree.Karnati</sys_updated_by>
+            <sys_updated_on>2022-04-24 23:58:01</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47074740000001</claim_timestamp>
+        <metadata_update_name>sys_documentation_sn_ind_tmt_orm_tiering_u_rate_description_en</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:26</sys_created_on>
+        <sys_id>0534e5931b251d500f4ccbb8624bcb25</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:26</sys_updated_on>
+    </sys_claim>
+</record_update>

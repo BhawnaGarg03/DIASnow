@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="cmdb_ci_port" label="Netzwerkport" max_length="40" name="cmdb_ci_network_port" sizeclass="32721888" type="collection">
+        <element attributes="edge_encryption_enabled=true" label="LAN IP Address" max_length="40" name="u_lan_ip_address" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="LAN Gateway IP Address" max_length="40" name="u_lan_gateway_ip_address" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="LAN Subnet Mask" max_length="40" name="u_lan_subnet_mask" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="LAN Interface Id" max_length="40" name="u_lan_interface_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="LAN DHCP Pool" max_length="40" name="u_lan_dhcp_pool" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="LAN Management Subnet" max_length="40" name="u_lan_management_subnet" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="LAN Protocol" max_length="40" name="u_lan_protocol" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="CPE Port Number" max_length="40" name="u_cpe_port_number" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="LAN VLAN Id" max_length="40" name="u_lan_vlan_id" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Type" max_length="40" name="u_type" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Speed" max_length="40" name="u_speed" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Duplex" max_length="40" name="u_duplex" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Hand Off Type" max_length="40" name="u_hand_off_type" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Multi Access Service Indic" max_length="40" name="u_multi_access_service_indic" type="string"/>
+    </element>
+</database>

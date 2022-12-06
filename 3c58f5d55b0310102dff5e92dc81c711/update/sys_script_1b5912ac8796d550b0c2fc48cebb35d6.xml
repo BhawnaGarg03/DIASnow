@@ -15,8 +15,7 @@
         <condition/>
         <description/>
         <execute_function>false</execute_function>
-        <filter_condition table="sn_ind_tmt_orm_order_task">short_description=Cyber Threat Solutions Engineer Assignment^assignment_group=eebfb1f787281910842a53d73cbb3591^EQ<item endquery="false" field="short_description" goto="false" newquery="false" operator="=" or="false" value="Cyber Threat Solutions Engineer Assignment"/>
-            <item display_table="sys_user_group" display_value="Cyber threat solutions" endquery="false" field="assignment_group" goto="false" newquery="false" operator="=" or="false" value="eebfb1f787281910842a53d73cbb3591"/>
+        <filter_condition table="sn_ind_tmt_orm_order_task">assignment_group=6f863b6f87785d9004d253d73cbb359d^EQ<item display_table="sys_user_group" display_value="Security Digital Operations" endquery="false" field="assignment_group" goto="false" newquery="false" operator="=" or="false" value="6f863b6f87785d9004d253d73cbb359d"/>
             <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
         </filter_condition>
         <is_rest>false</is_rest>
@@ -32,31 +31,49 @@
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/ ) {
 
-    gs.info('Retrieving email from Salesforce', 'ac');
-    var digesttime = new Date().getTime();
-    var digest = 'AK110965420170';
 
-    //Getting APIGEE Token
-    var APIGEEToken = new SOARAPI().getAPIGEEToken(current.order_line_item.order.contact, current.order_line_item.order.contact.email);
-    var legalAddress = '';
-    gs.info('got APIGEE Token' + APIGEEToken, 'ac');
+        var APIGEEToken = '';
+        var r = new sn_ws.RESTMessageV2('GetAPIGEEToken', 'GetToken');
+        r.setRequestHeader('Authorization', 'Basic S3VhNjhra2RzWWhzQXR4dFhnT3h4UlFJR0F6VnFTQ1Q6SkNIRjR3Wk9LTExMZzdxUQ==');
+        r.setRequestHeader('Content-Type', 'application/json');
+        r.setQueryParameter('grant_type', 'client_credentials');
+        var response = r.execute();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+        var SOARToken = '';
+        if (httpStatus == '200' || httpStatus == '201') {
+            var parseResponse = JSON.parse(responseBody);
+            APIGEEToken = parseResponse.access_token;
+            gs.info("****APIGEE token******" + APIGEEToken);
+        }
 
-    //Passing Salesforce endpoint
-    var r = new sn_ws.RESTMessageV2('SalesforceEndpoint', 'POSTDetails');
+    /*
+        gs.info('Retrieving email from Salesforce', 'ac');
+        var digesttime = new Date().getTime();
+        var digest = 'AK110965420170';
 
-    //Passing token to Endpoint
-    r.setRequestHeader('x-level3-application-key', AIPGEEToken);
-    r.setRequestHeader('x-level3-digest', digest);
-    r.setRequestHeader('x-level3-digest-time', digesttime);
-    var response = r.execute();
-    var responseBody = response.getBody();
-    var httpStatus = response.getStatusCode();
-    gs.info('Response' + httpStatus);
-    if (httpStatus == '200' || httpStatus == '201') {
-        returnResponse = 'Email retrieved successfully';
-    } else {
-        returnResponse = 'Email not retrieved due to error: ' + httpStatus;
-    }
+        //Getting APIGEE Token
+        var APIGEEToken = new SOARAPI().getAPIGEEToken(current.order_line_item.order.contact, current.order_line_item.order.contact.email);
+        var legalAddress = '';
+        gs.info('got APIGEE Token' + APIGEEToken, 'ac');
+
+        //Passing Salesforce endpoint
+        var r = new sn_ws.RESTMessageV2('SalesforceEndpoint', 'POSTDetails');
+
+        //Passing token to Endpoint
+        r.setRequestHeader('x-level3-application-key', AIPGEEToken);
+        r.setRequestHeader('x-level3-digest', digest);
+        r.setRequestHeader('x-level3-digest-time', digesttime);
+        var response = r.execute();
+        var responseBody = response.getBody();
+        var httpStatus = response.getStatusCode();
+        gs.info('Response' + httpStatus);
+        if (httpStatus == '200' || httpStatus == '201') {
+            returnResponse = 'Email retrieved successfully';
+        } else {
+            returnResponse = 'Email not retrieved due to error: ' + httpStatus;
+        }
+    */
 
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
@@ -65,7 +82,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>1b5912ac8796d550b0c2fc48cebb35d6</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_mod_count>9</sys_mod_count>
         <sys_name>IBM - MEDR Get Address from Salesforce</sys_name>
         <sys_overrides/>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
@@ -73,9 +90,23 @@
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_script_1b5912ac8796d550b0c2fc48cebb35d6</sys_update_name>
         <sys_updated_by>AD20957</sys_updated_by>
-        <sys_updated_on>2022-09-29 12:55:30</sys_updated_on>
+        <sys_updated_on>2022-10-20 13:04:55</sys_updated_on>
         <template/>
         <when>before</when>
     </sys_script>
     <sys_translated_text action="delete_multiple" query="documentkey=1b5912ac8796d550b0c2fc48cebb35d6"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fafb3a0000001</claim_timestamp>
+        <metadata_update_name>sys_script_1b5912ac8796d550b0c2fc48cebb35d6</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:38</sys_created_on>
+        <sys_id>51d68ca28727151094fa0e58cebb359c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:38</sys_updated_on>
+    </sys_claim>
 </record_update>

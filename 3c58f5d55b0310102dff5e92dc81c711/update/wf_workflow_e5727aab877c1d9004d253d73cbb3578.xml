@@ -33,12 +33,12 @@
         <sys_created_by>AD13765</sys_created_by>
         <sys_created_on>2022-07-26 10:42:00</sys_created_on>
         <sys_id>187e0f2387705d9004d253d73cbb3541</sys_id>
-        <sys_mod_count>12</sys_mod_count>
-        <sys_updated_by>AD13765</sys_updated_by>
-        <sys_updated_on>2022-07-26 11:00:00</sys_updated_on>
+        <sys_mod_count>13</sys_mod_count>
+        <sys_updated_by>AD13897</sys_updated_by>
+        <sys_updated_on>2022-10-13 05:23:40</sys_updated_on>
         <table>sn_ind_tmt_orm_order_line_item</table>
         <timezone/>
-        <validated>false</validated>
+        <validated>true</validated>
         <workflow display_value="Contract Term dates">e5727aab877c1d9004d253d73cbb3578</workflow>
     </wf_workflow_version>
     <wf_workflow action="INSERT_OR_UPDATE">
@@ -897,4 +897,18 @@ answer = 0;</value>
     <wf_workflow_version action="update_multiple" query="workflow=e5727aab877c1d9004d253d73cbb3578^sys_id!=187e0f2387705d9004d253d73cbb3541">
         <published>false</published>
     </wf_workflow_version>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fad41c0000001</claim_timestamp>
+        <metadata_update_name>wf_workflow_e5727aab877c1d9004d253d73cbb3578</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:28</sys_created_on>
+        <sys_id>b6c688a28727151094fa0e58cebb35f1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:28</sys_updated_on>
+    </sys_claim>
 </record_update>

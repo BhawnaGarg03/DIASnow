@@ -4,38 +4,43 @@
         <basic_auth_password/>
         <basic_auth_profile/>
         <basic_auth_user/>
-        <content>{&#13;
-  "org_key": "${org_key}",&#13;
-  "api_id": "${api_id}",&#13;
-  "api_key": "${api_key}",&#13;
-  "sid": "${sid}",&#13;
-  "region": "NA",&#13;
-  "snow_id": "${snow_id}",&#13;
-  "create_ssp": "true",&#13;
-  "create_confluence": "true"&#13;
-}</content>
+        <content/>
         <function_name>POSTDetails</function_name>
         <http_method>post</http_method>
         <lock>false</lock>
         <oauth2_profile/>
         <protocol_name/>
         <qualified_name>SOAREndpoint [ POSTDetails ]</qualified_name>
-        <rest_endpoint>https://api-test.lumen.com/Security/v1/MEDR/configuration/${org_id}</rest_endpoint>
+        <rest_endpoint>https://api-test.lumen.com/Security/v1/MEDR/user</rest_endpoint>
         <rest_message display_value="SOAREndpoint">77ba8754872dd910e10064ed0ebb3598</rest_message>
         <sys_class_name>sys_rest_message_fn</sys_class_name>
         <sys_created_by>AD13956</sys_created_by>
         <sys_created_on>2022-08-22 14:58:39</sys_created_on>
         <sys_id>709b8b54872dd910e10064ed0ebb3599</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>0</sys_mod_count>
         <sys_name>POSTDetails</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_rest_message_fn_709b8b54872dd910e10064ed0ebb3599</sys_update_name>
         <sys_updated_by>AD13956</sys_updated_by>
-        <sys_updated_on>2022-10-18 15:49:29</sys_updated_on>
+        <sys_updated_on>2022-08-22 14:58:39</sys_updated_on>
         <use_basic_auth>false</use_basic_auth>
         <use_mid_server/>
         <use_mutual_auth>false</use_mutual_auth>
     </sys_rest_message_fn>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4707c090000001</claim_timestamp>
+        <metadata_update_name>sys_rest_message_fn_709b8b54872dd910e10064ed0ebb3599</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:28</sys_created_on>
+        <sys_id>d13429931b251d500f4ccbb8624bcb1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:28</sys_updated_on>
+    </sys_claim>
 </record_update>

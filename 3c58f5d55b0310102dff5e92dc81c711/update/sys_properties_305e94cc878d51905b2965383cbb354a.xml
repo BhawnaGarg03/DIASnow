@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_properties">
+    <sys_properties action="INSERT_OR_UPDATE">
+        <choices/>
+        <description/>
+        <ignore_cache>true</ignore_cache>
+        <is_private>false</is_private>
+        <name>sn_ind_tmt_orm.Characteristic.InvoiceGroupingID</name>
+        <read_roles/>
+        <suffix>Characteristic.InvoiceGroupingID</suffix>
+        <sys_class_name>sys_properties</sys_class_name>
+        <sys_created_by>AD13666</sys_created_by>
+        <sys_created_on>2022-07-27 11:10:43</sys_created_on>
+        <sys_id>305e94cc878d51905b2965383cbb354a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sn_ind_tmt_orm.Characteristic.InvoiceGroupingID</sys_name>
+        <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+        <sys_update_name>sys_properties_305e94cc878d51905b2965383cbb354a</sys_update_name>
+        <sys_updated_by>AD13666</sys_updated_by>
+        <sys_updated_on>2022-07-27 11:10:43</sys_updated_on>
+        <type>string</type>
+        <value>18ea97b887581d5025a20edc0ebb35b0</value>
+        <write_roles/>
+    </sys_properties>
+    <sys_translated_text action="delete_multiple" query="documentkey=305e94cc878d51905b2965383cbb354a"/>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f4707f340000001</claim_timestamp>
+        <metadata_update_name>sys_properties_305e94cc878d51905b2965383cbb354a</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:29</sys_created_on>
+        <sys_id>253429931b251d500f4ccbb8624bcb93</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:29</sys_updated_on>
+    </sys_claim>
+</record_update>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="u_contact_name" label="Contact Name" language="en" table="sn_ind_tmt_orm_order_line_item_contact">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>u_contact_name</element>
+            <help/>
+            <hint/>
+            <label>Contact Name</label>
+            <language>en</language>
+            <name>sn_ind_tmt_orm_order_line_item_contact</name>
+            <plural>Contact Names</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>AD12076</sys_created_by>
+            <sys_created_on>2022-06-21 13:36:40</sys_created_on>
+            <sys_id>e1c6639c8754595025a20edc0ebb354a</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Contact Name</sys_name>
+            <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
+            <sys_update_name>sys_documentation_sn_ind_tmt_orm_order_line_item_contact_u_contact_name_en</sys_update_name>
+            <sys_updated_by>AD12076</sys_updated_by>
+            <sys_updated_on>2022-06-21 13:36:40</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>182f47090100000001</claim_timestamp>
+        <metadata_update_name>sys_documentation_sn_ind_tmt_orm_order_line_item_contact_u_contact_name_en</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD13956</sys_created_by>
+        <sys_created_on>2022-08-31 15:06:33</sys_created_on>
+        <sys_id>ae34a9931b251d500f4ccbb8624bcbea</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD13956</sys_updated_by>
+        <sys_updated_on>2022-08-31 15:06:33</sys_updated_on>
+    </sys_claim>
+</record_update>

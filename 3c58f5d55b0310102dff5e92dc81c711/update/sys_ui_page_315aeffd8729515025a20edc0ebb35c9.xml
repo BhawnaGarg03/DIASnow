@@ -91,7 +91,20 @@
 			odrline.getDisplayValue('order');
 		}
 	</g:evaluate>	
-	
+	<g:evaluate var="jvar_Serviceord">
+		<!-- var service = []; -->
+		<!-- var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + ''; -->
+		 var Serviceorder = RP.getParameterValue('sysparm_service_order') + '';
+		var odrline1 = new GlideRecord('sn_ind_tmt_orm_service_order');
+		odrline1.addQuery("order_line_item.order", Serviceorder); 
+		
+		odrline1.query();
+		while(odrline1.next()) {
+	odrline1.getDisplayValue('number');
+			<!-- service.push(odrline.getDisplayValue('number')); -->
+		gs.info(odrline1.getDisplayValue('number')+"test1testing");
+		}
+	</g:evaluate>
     <g:ui_form>
         <table id="charTable" width="100%">
             <tr>
@@ -102,6 +115,23 @@
                    	<input type="number"  value="${jvar_custord}"   name="cust_ord" id="cust_ord" readonly="readonly" maxlength="40"/>
                 </td>
             </tr>
+			<tr>
+		<td style="width:25%">
+                    <g:form_label>Service Order</g:form_label>
+                </td>
+                <td style="width:60%">
+                   	<select type="string"   name="service_ord" id="service_ord"  maxlength="40">
+						<option value="odrline">${jvar_Serviceord}</option>
+					</select>
+                </td>
+				<!-- <select id="service_ord" name="service_ord">
+					<option value="odrline">Service Order</option>
+				</select> -->
+            </tr>
+				
+				
+                
+           
 			
 						
 			<g:evaluate>
@@ -199,13 +229,27 @@
         <sys_created_by>AD11761</sys_created_by>
         <sys_created_on>2022-08-27 09:25:20</sys_created_on>
         <sys_id>315aeffd8729515025a20edc0ebb35c9</sys_id>
-        <sys_mod_count>501</sys_mod_count>
+        <sys_mod_count>527</sys_mod_count>
         <sys_name>DIA_TDG_Test_EndPoint</sys_name>
         <sys_package display_value="Order Management for Telecom, Media &amp; Tech" source="sn_ind_tmt_orm">3c58f5d55b0310102dff5e92dc81c711</sys_package>
         <sys_policy/>
         <sys_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</sys_scope>
         <sys_update_name>sys_ui_page_315aeffd8729515025a20edc0ebb35c9</sys_update_name>
-        <sys_updated_by>AD25084</sys_updated_by>
-        <sys_updated_on>2022-11-18 10:10:56</sys_updated_on>
+        <sys_updated_by>AD23312</sys_updated_by>
+        <sys_updated_on>2022-11-22 12:13:06</sys_updated_on>
     </sys_ui_page>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fae1100000001</claim_timestamp>
+        <metadata_update_name>sys_ui_page_315aeffd8729515025a20edc0ebb35c9</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:32</sys_created_on>
+        <sys_id>afc60ca28727151094fa0e58cebb350e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:32</sys_updated_on>
+    </sys_claim>
 </record_update>

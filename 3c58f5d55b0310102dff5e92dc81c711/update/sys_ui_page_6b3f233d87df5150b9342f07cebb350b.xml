@@ -794,4 +794,18 @@ a:visited.ui-button,
         <sys_updated_by>AD25084</sys_updated_by>
         <sys_updated_on>2022-12-05 09:23:13</sys_updated_on>
     </sys_ui_page>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fad4250000001</claim_timestamp>
+        <metadata_update_name>sys_ui_page_6b3f233d87df5150b9342f07cebb350b</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:28</sys_created_on>
+        <sys_id>b2c688a28727151094fa0e58cebb35f2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:28</sys_updated_on>
+    </sys_claim>
 </record_update>

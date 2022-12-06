@@ -16,4 +16,18 @@
         <sys_updated_on>2022-10-17 15:13:55</sys_updated_on>
         <value>application/json</value>
     </sys_rest_message_fn_headers>
+    <sys_claim action="INSERT_OR_UPDATE">
+        <claim_owner_scope display_value="Order Management for Telecom, Media &amp; Tech">3c58f5d55b0310102dff5e92dc81c711</claim_owner_scope>
+        <claim_timestamp>184e6fad9300000001</claim_timestamp>
+        <metadata_update_name>sys_rest_message_fn_headers_286957568762d110b0c2fc48cebb3572</metadata_update_name>
+        <previous_claim_app_version>2.0.2</previous_claim_app_version>
+        <previous_claim_name>Order Management for Telecom, Media &amp; Tech</previous_claim_name>
+        <previous_claim_scope>3c58f5d55b0310102dff5e92dc81c711</previous_claim_scope>
+        <sys_created_by>AD25084</sys_created_by>
+        <sys_created_on>2022-12-06 10:28:30</sys_created_on>
+        <sys_id>0fc6c8a28727151094fa0e58cebb3562</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>AD25084</sys_updated_by>
+        <sys_updated_on>2022-12-06 10:28:30</sys_updated_on>
+    </sys_claim>
 </record_update>
