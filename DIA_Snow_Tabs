@@ -1,1 +1,622 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<j:jelly trim="false" xmlns:j="jelly:core" xmlns:g="glide" xmlns:j2="null" xmlns:g2="null">
+    <style>
+		tr:nth-child(even) {
+			background-color: white !important;
+		}
+		
+		div#sn_ind_tmt_orm_DIA_TDG_Test_EndPoint_Tabs, table#window\.sn_ind_tmt_orm_DIA_TDG_Test_EndPoint_Tabs {
+		border-radius: 12px;
+		background-color: #3d7cb1;
+		}
+		table.drag_section_header {
+		display: none;
+		}
+		
+.did-floating-label-content { 
+  position:relative; 
+  margin-bottom:20px; 
+}
+		
+.did-floating-label {
+  color:#1e4c82; 
+  font-size:13px;
+  font-weight:normal;
+  position:absolute;
+  pointer-events:none;
+  left:15px;
+  top: -8px;
+  padding:0 5px;
+  background:#fff;
+  transition:0.2s ease all; 
+  -moz-transition:0.2s ease all; 
+  -webkit-transition:0.2s ease all;
+}
+.did-floating-input, .did-floating-select {
+  font-size:12px;
+  display:block;
+  width:100%;
+  height:36px;
+  padding: 0 20px;
+  background: #fff;
+  color: #323840;
+  border: 1px solid #3D85D8;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
 
+.did-floating-input:focus, .did-floating-select:focus{
+    outline:none;
+		}
+    .did-floating-input:focus + .did-floating-label, did-floating-select:focus + .did-floating-label{
+      top:-8px !important;
+      font-size:13px;
+    }
+
+		
+select.did-floating-select {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+select.did-floating-select::-ms-expand {
+  display: none;
+}
+
+.did-floating-select[value=""] + .did-floating-label {
+  top:-25px;
+  font-size:13px;
+}
+		
+.did-floating-input[value=""] + .did-floating-label {
+  top:25px;
+  font-size:13px;
+}
+
+		
+.did-floating-select:not([multiple]):not([size]) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 8 6'%3E%3Cpath id='Path_1' data-name='Path 1' d='M371,294l4,6,4-6Z' transform='translate(-371 -294)' fill='%23003d71'/%3E%3C/svg%3E%0A");
+    background-position: right 15px top 50%;
+    background-repeat: no-repeat;
+}
+
+.did-error-input{
+  .did-floating-input, .did-floating-select {
+    border: 2px solid #9d3b3b;
+    color:#9d3b3b;
+  }
+  .did-floating-label{
+    font-weight: 600;
+    color:#9d3b3b;
+  }
+  .did-floating-select:not([multiple]):not([size]) {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='8' height='6' viewBox='0 0 8 6'%3E%3Cpath id='Path_1' data-name='Path 1' d='M371,294l4,6,4-6Z' transform='translate(-371 -294)' fill='%239d3b3b'/%3E%3C/svg%3E%0A");
+}
+}
+
+.input-group {
+  display: flex;
+  .did-floating-input{
+    border-radius:0 4px 4px 0;
+    border-left:0;
+    padding-left:0;
+  }
+}
+.input-group-append {
+  display:flex;
+  align-items:center;
+/*   margin-left:-1px; */
+}
+.input-group-text {
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+    height:34px;
+    color: #323840;
+    padding: 0 5px 0 20px;
+  font-size:12px;
+    text-align: center;
+    white-space: nowrap;
+    border: 1px solid #3D85D8;
+  border-radius: 4px 0 0 4px;
+  border-right:none;
+}		
+		.btn-primary {
+	margin: 0 1px;
+	padding: 6px 15px 5px;
+	font-weight: bold;
+	font-size: 100%;
+	color: #fff;
+	text-align: center;
+	border: none;
+	border-right: 1px solid rgba(0,0,0,.2);
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	background: #3d7cb1;
+	background: -webkit-linear-gradient(top, #2cb0e5, #1a7cd3);
+	background: -moz-linear-gradient(top, #2cb0e5, #1a7cd3);
+	background: -ms-linear-gradient(top, #2cb0e5, #1a7cd3);
+	background: -o-linear-gradient(top, #2cb0e5, #1a7cd3);
+	background: linear-gradient(to bottom, #2cb0e5, #1a7cd3);
+	text-shadow: rgba(0,0,0,.25) 1px 1px 1px;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px !important;
+	text-decoration: none;
+}
+
+.btn-primary:hover {
+	background: #1e80bc;
+	background: -webkit-linear-gradient(top, #26a0cd, #1661ab);
+	background: -moz-linear-gradient(top, #26a0cd, #1661ab);
+	background: -ms-linear-gradient(top, #26a0cd, #1661ab);
+	background: -o-linear-gradient(top, #26a0cd, #1661ab);
+	background: linear-gradient(to bottom, #26a0cd, #1661ab);
+}
+
+.btn-primary:active {
+	background: #fff;
+}
+
+		.btn-default#cancelData {
+	margin: 0 1px;
+	padding: 6px 15px 5px;
+	font-weight: bold;
+	font-size: 100%;
+	color: #3d7cb1;
+	text-align: center;
+	border: none;
+	border-right: 1px solid rgba(0,0,0,.2);
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	background: #fff;
+	text-shadow: rgba(0,0,0,.25) 1px 1px 1px;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	text-decoration: none;
+}
+
+		.ui-state-default, .ui-state-default a {
+	margin: 0 1px;
+	padding: 6px 15px 5px;
+	font-weight: bold;
+	font-size: 100%;
+	color: #3d7cb1 !important;
+	text-align: center;
+	border: none;
+	border-right: 1px solid rgba(0,0,0,.2);
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	background: #fff;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	text-decoration: none;
+}
+
+		
+.btn-default#cancelData:hover {
+	background: #fff;
+}
+
+.btn-default#cancelData:active {
+	background: #fff;
+}
+
+		.ui-state-default a:hover {
+	background: #fff;
+		box-shadow: 0 6px 18px -9px #000000;
+    transition: box-shadow 0.2s;
+}
+
+
+		*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  color: rgb(80, 85, 90);
+  padding: 100px 20px;
+}
+
+nav{
+  z-index: 9;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.bg-color{
+  background-color: #46a1de;
+  transition-duration: .5s;
+}
+
+.text-color{
+  color: #46a1de;
+  transition-duration: .5s;
+}
+
+footer{
+  padding: 40px 0;
+  text-align: center;
+  opacity: .33;
+  color: white;
+}
+
+.wrapper{
+  min-width: 600px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+        * { box-sizing: border-box; }
+        .row { display: flex; margin-left: -5px; margin-right: -5px; }
+        .column { flex: 50%; padding: 5px; }
+        table { border-collapse: collapse; border-spacing: 0; width: 100%; border: 1px solid #ddd; }
+        th,
+        td { text-align: left; padding: 16px; }
+        .nopadding { padding: 0px; }
+        tr:nth-child(even) { background-color: #f2f2f2;}
+		
+		.ui-menu .ui-state-focus,
+.ui-menu .ui-state-active {
+	margin: -1px;
+}
+		.input-box {
+			font-family: SourceSansPro-Bold;
+			font-size: 16px;
+			color: #4b2354;
+			line-height: 1.2;
+			display: block;
+			width: 100%;
+			height: 25px;
+			background: 0 0;
+			padding: 0 20px 0 23px;
+		}
+		
+		#optnTable {
+		overflow: auto;
+		min-height: 30px;
+    min-width: 30px;
+    resize: vertical;
+    max-width: fit-content;
+    max-height: fit-content;
+		height: 300px;
+		}
+		
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active,
+a.ui-button:active,
+.ui-button:active,
+.ui-button.ui-state-active:hover {
+	color: #fff;
+	text-align: center;
+	border: none;
+	border-right: 1px solid rgba(0,0,0,.2);
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	background: #3d7cb1;
+	background: -webkit-linear-gradient(top, #2cb0e5, #1a7cd3);
+	background: -moz-linear-gradient(top, #2cb0e5, #1a7cd3);
+	background: -ms-linear-gradient(top, #2cb0e5, #1a7cd3);
+	background: -o-linear-gradient(top, #2cb0e5, #1a7cd3);
+	background: linear-gradient(to bottom, #2cb0e5, #1a7cd3);
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+}
+		
+		
+		.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+
+/* We use html here because we need a greater specificity to make sure disabled
+works properly when clicked or hovered */
+html .ui-button.ui-state-disabled:hover,
+html .ui-button.ui-state-disabled:active {
+	
+	font-weight: normal;
+	color: #454545;
+}
+.ui-state-default a,
+.ui-state-default a:link,
+.ui-state-default a:visited,
+a.ui-button,
+a:link.ui-button,
+a:visited.ui-button,
+.ui-button {
+	margin: 0 1px;
+	padding: 6px 15px 5px;
+	font-weight: bold;
+	font-size: 100%;
+	color: #3d7cb1;
+	text-align: center;
+	border: none;
+	border-right: 1px solid rgba(0,0,0,.2);
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	background: #fff;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	text-decoration: none;
+}
+		
+		.ui-tabs {
+	position: relative;/* position: relative prevents IE scroll bug (element with position: relative inside container with overflow: auto appear as "fixed") */
+		margin: 0 1px;
+	padding: 6px 15px 5px;
+	font-weight: bold;
+	font-size: 100%;
+	color: #3d7cb1;
+	text-align: center;
+	border: none;
+	border-right: 1px solid rgba(0,0,0,.2);
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	background: #fff;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	text-decoration: none;
+}
+.ui-tabs .ui-tabs-nav {
+	margin: 0;
+	padding: .2em .2em 0;
+}
+.ui-tabs .ui-tabs-nav li {
+	list-style: none;
+	float: left;
+	position: relative;
+	top: 0;
+	margin: 1px .2em 0 0;
+	border-bottom-width: 0;
+	padding: 0;
+	white-space: nowrap;
+		border-radius: 13px;
+}
+.ui-tabs .ui-tabs-nav .ui-tabs-anchor {
+	float: left;
+	padding: .5em 1em;
+	text-decoration: none;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active {
+	margin-bottom: -1px;
+	padding-bottom: 1px;
+}
+.ui-tabs .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-state-disabled .ui-tabs-anchor,
+.ui-tabs .ui-tabs-nav li.ui-tabs-loading .ui-tabs-anchor {
+	cursor: text;
+}
+.ui-tabs-collapsible .ui-tabs-nav li.ui-tabs-active .ui-tabs-anchor {
+	cursor: pointer;
+}
+.ui-tabs .ui-tabs-panel {
+	display: block;
+	border-width: 0;
+	padding: 1em 1.4em;
+	background: none;
+}
+		
+		.ui-widget {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 1em;
+}
+.ui-widget .ui-widget {
+	font-size: 1em;
+}
+.ui-widget input,
+.ui-widget select,
+.ui-widget textarea,
+.ui-widget button {
+	font-family: Arial,Helvetica,sans-serif;
+	font-size: 1em;
+}
+.ui-widget.ui-widget-content {
+	border: 1px solid #c5c5c5;
+}
+.ui-widget-content {
+	border: 1px solid #dddddd;
+	background: #ffffff;
+	color: #333333;
+}
+.ui-widget-content a {
+	color: #333333;
+}
+.ui-widget-header {
+	border: 1px solid #dddddd;
+	background: #e9e9e9;
+	color: #333333;
+	font-weight: bold;
+}		
+		.ui-corner-all,
+.ui-corner-top,
+.ui-corner-left,
+.ui-corner-tl {
+	border-top-left-radius: 3px;
+}
+.ui-corner-all,
+.ui-corner-top,
+.ui-corner-right,
+.ui-corner-tr {
+	border-top-right-radius: 3px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-left,
+.ui-corner-bl {
+	border-bottom-left-radius: 3px;
+}
+.ui-corner-all,
+.ui-corner-bottom,
+.ui-corner-right,
+.ui-corner-br {
+	border-bottom-right-radius: 3px;
+}
+		
+		.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+		.ui-tabs-tab {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black;
+}
+
+.ui-tabs-tab .tooltip {
+  visibility: hidden;
+  width: fit-content;
+		height: fit-content;
+  background-color: #555 !important;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -60px;
+  opacity: 0;
+		top: -70px;
+  transition: opacity 0.3s;
+}
+
+.ui-tabs-tab .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+		
+		.ui-tabs-tab:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+		.one h4 {
+    text-align: center;
+    text-transform: uppercase;
+    padding-bottom: 5px;
+		position: relative;
+    padding: 0;
+    margin: 0;
+    font-family: "Raleway", sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    color: #080808;
+    -webkit-transition: all 0.4s ease 0s;
+    -o-transition: all 0.4s ease 0s;
+    transition: all 0.4s ease 0s;
+}
+		
+		#charTable {
+	font-weight: bold;
+	color: #3d7cb1 !important;
+	text-align: center;
+	border-right: 1px solid rgba(0,0,0,.2);
+	border-bottom: 1px solid rgba(0,0,0,.2);
+	background: #fff;
+	text-shadow: rgba(0,0,0,.25) 1px 1px 1px;
+	-webkit-border-radius: 13px;
+	-moz-border-radius: 13px;
+	border-radius: 13px;
+	text-decoration: none;
+		}
+		
+		#charTable span.label-text {
+		color: #3d7cb1 !important;
+		}
+		
+    </style>
+	
+	<g:evaluate var="jvar_custord">
+		var orderLineItem = RP.getParameterValue('sysparm_order_line_item') + '';
+		var odrline = new GlideRecord('sn_ind_tmt_orm_order_line_item');
+		odrline.addQuery("sys_id", orderLineItem); 
+		odrline.query();
+		while(odrline.next()) {
+			odrline.getDisplayValue('order');
+		}
+	</g:evaluate>
+	
+	<g:evaluate var="jvar_serviceOrders">
+				//add short desc
+				var serviceOrders = new GlideRecord("sn_ind_tmt_orm_service_order");
+				serviceOrders.addEncodedQuery("top_order_line_item=" + odrline.sys_id);
+				serviceOrders.orderBy("number");
+				serviceOrders.query();
+				var orders = [];
+				while(serviceOrders.next()) {
+				var order = {};
+					order.num = serviceOrders.number.toString();
+				order.value = serviceOrders.sys_id.toString();
+				order.tip = serviceOrders.short_description.toString();
+				orders.push(order);
+				}
+				
+				orders;
+	</g:evaluate>
+	
+	<g:evaluate var="jvar_soAvailable">
+		var serviceOrderExist = new GlideRecord("sn_ind_tmt_orm_service_order");
+		serviceOrderExist.addEncodedQuery("top_order_line_item=" + odrline.sys_id);
+		serviceOrderExist.orderBy("number");
+		serviceOrderExist.query();
+		if(serviceOrderExist.hasNext()) {
+			true;
+		}
+		else {
+			false;
+		}
+	</g:evaluate>
+	<j:if test="${(jvar_soAvailable == true) || (jvar_soAvailable == 'true')}">
+    <g:ui_form>
+        <table id="charTable" width="100%">
+            <tr class="one">
+                <td style="width:80%">
+					<h4><g:form_label>Customer Order ${jvar_custord}</g:form_label></h4>
+                </td>
+                
+            </tr>
+		</table>
+		<div id="tabs" class="ui-tabs ui-corner-all ui-widget ui-widget-content">
+	<ul role="tablist" id="tablist" class="ui-tabs-nav ui-corner-all ui-helper-reset ui-helper-clearfix ui-widget-header">
+		<j:forEach var="jvar_sOrders" items="${orders}">
+		<li role="tab" name="serviceOrders" class="ui-tabs-tab ui-corner-top ui-tab ui-state-default" aria-controls="tabs-1" aria-labelledby="ui-id-1" aria-selected="true" aria-expanded="true" onclick="populateChars(this)" id="${jvar_sOrders.value}"><a class="ui-tabs-anchor"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">${jvar_sOrders.num}</font></font></a><span class="tooltip">${jvar_sOrders.tip}</span></li>
+			</j:forEach>
+		</ul>
+			<div id="optnDiv"></div>
+</div>
+        <table width="100%">   
+		<tr>
+                <td>
+                    <g:dialog_buttons_ok_cancel ok_id="submitData" ok="return continueOK()" ok_type="button" ok_text="${gs.getMessage('Save')}" ok_style_class="btn btn-primary" cancel_type="button" cancel_id="cancelData" cancel_style_class="btn btn-default" cancel="return continueCancel()" />
+                </td>
+            </tr>
+        </table>
+    </g:ui_form>
+	</j:if> 
+	<j:if test="${(jvar_soAvailable == false) || (jvar_soAvailable == 'false')}">
+		<table id="charTable" width="100%">
+            <tr class="one">
+                <td style="width:80%">
+					<h4><g:form_label>Customer Order ${jvar_custord}</g:form_label></h4>
+					<p style="text-align: center; margin-top: 20px; font-size: 20px;">No Service Orders Available</p>
+                </td>
+                
+            </tr>
+		</table>
+ </j:if>
+</j:jelly>
